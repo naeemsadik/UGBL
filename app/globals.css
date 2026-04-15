@@ -68,9 +68,7 @@ body {
 }
 
 .inner-hero {
-  background-image: url("/hero-ship.png");
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(180deg, #0b3766 0%, #114d86 100%);
 }
 
 .inner-overlay {
