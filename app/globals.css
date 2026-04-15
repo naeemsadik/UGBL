@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #dfe4ef;
+  --foreground: #1f2937;
 }
 
 @theme inline {
@@ -12,15 +12,115 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.hero-banner {
+  height: min(82vh, 720px);
+  min-height: 520px;
+  background-image: url("/hero-ship.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-overlay {
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(3, 30, 61, 0.76) 0%,
+    rgba(3, 35, 68, 0.7) 46%,
+    rgba(3, 35, 68, 0.78) 100%
+  );
+}
+
+.hero-btn-primary,
+.hero-btn-secondary {
+  display: inline-flex;
+  min-width: 190px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+  padding: 0.75rem 1.2rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero-btn-primary {
+  background: linear-gradient(90deg, #1172d1, #0d55a5);
+  color: #fff;
+}
+
+.hero-btn-primary:hover {
+  background: linear-gradient(90deg, #0e66ba, #0a4c91);
+}
+
+.hero-btn-secondary {
+  border: 1px solid rgba(191, 205, 225, 0.5);
+  background: rgba(43, 70, 103, 0.6);
+  color: #e7effb;
+}
+
+.hero-btn-secondary:hover {
+  border-color: rgba(232, 241, 255, 0.7);
+  background: rgba(49, 77, 112, 0.75);
+}
+
+.inner-hero {
+  background-image: url("/hero-ship.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.inner-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(3, 33, 64, 0.82) 0%,
+    rgba(3, 37, 72, 0.72) 100%
+  );
+}
+
+.info-card {
+  border-radius: 0.45rem;
+  border: 1px solid #d5dce9;
+  background: #fff;
+  padding: 1.65rem;
+  box-shadow: 0 12px 20px rgba(14, 39, 69, 0.06);
+}
+
+.info-card h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #12385d;
+}
+
+.info-card p {
+  margin-top: 0.7rem;
+  font-size: 1.04rem;
+  line-height: 1.75;
+  color: #4a586d;
+}
+
+.field {
+  width: 100%;
+  border-radius: 0.45rem;
+  border: 1px solid #ccd6e4;
+  background-color: #f9fbfe;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.95rem;
+  color: #203146;
+  outline: none;
+}
+
+.field::placeholder {
+  color: #8c9aad;
+}
+
+.field:focus {
+  border-color: #0e6cc7;
+  box-shadow: 0 0 0 2px rgba(14, 108, 199, 0.17);
 }
