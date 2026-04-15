@@ -21,9 +21,6 @@ body {
 .hero-banner {
   height: min(82vh, 720px);
   min-height: 520px;
-  background-image: url("/hero-ship.png");
-  background-position: center;
-  background-size: cover;
 }
 
 .hero-overlay {

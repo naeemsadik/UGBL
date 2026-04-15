@@ -1,32 +1,10 @@
 import Link from "next/link";
+import { HeroCarousel } from "@/components/hero-carousel";
 
 export default function Home() {
   return (
     <div className="text-[#243041]">
-      <section className="hero-banner">
-        <div className="hero-overlay">
-          <div className="mx-auto flex h-full w-full max-w-[1200px] flex-col items-center justify-center px-6 text-center">
-            <p className="text-2xl font-semibold text-white">Welcome to</p>
-            <h1 className="mt-1 text-5xl font-extrabold uppercase leading-[0.98] text-white md:text-7xl">
-              Universe Logistics
-              <br />
-              <span className="text-[#4ce6eb]">Ltd.</span>
-            </h1>
-            <p className="mt-6 max-w-2xl text-base text-slate-200">
-              We are a reliable shipping, logistics and chartering agent. All
-              shipping services under one umbrella.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <Link href="/services" className="hero-btn-primary">
-                Our Services
-              </Link>
-              <Link href="/contact" className="hero-btn-secondary">
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroCarousel />
 
       <section className="bg-[#0d4e89] py-8 text-white">
         <div className="mx-auto grid w-full max-w-[1200px] gap-6 px-6 md:grid-cols-3">
