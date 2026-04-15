@@ -1,6 +1,21 @@
 import Link from "next/link";
 import { HeroCarousel } from "@/components/hero-carousel";
 
+const CERTIFICATIONS = [
+  "BIMCO",
+  "ISO 9001:2015",
+  "ITIC",
+  "CCI-FBCCI",
+  "FBCCI",
+  "BAFFA",
+  "DCCI",
+  "BSC",
+  "BSAA",
+  "SCB",
+  "BPTOA",
+  "MetLife",
+];
+
 export default function Home() {
   return (
     <div className="text-[#243041]">
@@ -26,7 +41,10 @@ export default function Home() {
             },
           ].map((item) => (
             <div key={item.label} className="flex gap-3">
-              <div className="mt-1 h-8 w-8 rounded-full border border-cyan-200/40" aria-hidden />
+              <div
+                className="mt-1 h-8 w-8 rounded-full border border-cyan-200/40"
+                aria-hidden
+              />
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-widest text-cyan-100">
                   {item.label}
@@ -46,10 +64,11 @@ export default function Home() {
             logistics service providers, chartering and trading companies.
           </p>
           <p>
-            Universe Logistics Ltd is 17 years of experience in handling multiple
-            breakbulk commodities including coal, clinker, stone, and boulder
-            from overseas origin to local delivery sites in the country through
-            Chattogram / Mongla / Payra port as per consignee&apos;s requirement.
+            Universe Logistics Ltd is 17 years of experience in handling
+            multiple breakbulk commodities including coal, clinker, stone, and
+            boulder from overseas origin to local delivery sites in the country
+            through Chattogram / Mongla / Payra port as per consignee&apos;s
+            requirement.
           </p>
           <p>
             We have the capacity to provide complete logistics solutions.
@@ -66,18 +85,22 @@ export default function Home() {
 
         <div className="mx-auto mt-10 grid max-w-3xl gap-10 border-t border-slate-300 pt-10 md:grid-cols-2">
           <div>
-            <h3 className="text-4xl font-bold uppercase text-[#0e3e68]">Connections:</h3>
+            <h3 className="text-4xl font-bold uppercase text-[#0e3e68]">
+              Connections:
+            </h3>
             <p className="mt-4 text-lg leading-8 text-[#3d4756]">
-              Principals can tap into Universe&apos;s excellent local connections and
-              relations with both public and private sectors in the shipping
-              industry.
+              Principals can tap into Universe&apos;s excellent local
+              connections and relations with both public and private sectors in
+              the shipping industry.
             </p>
           </div>
           <div>
-            <h3 className="text-4xl font-bold uppercase text-[#0e3e68]">24/7 Response:</h3>
+            <h3 className="text-4xl font-bold uppercase text-[#0e3e68]">
+              24/7 Response:
+            </h3>
             <p className="mt-4 text-lg leading-8 text-[#3d4756]">
-              In addition to fast turnaround for all port calls, clients can also
-              expect response to all inquiries within 24 hours.
+              In addition to fast turnaround for all port calls, clients can
+              also expect response to all inquiries within 24 hours.
             </p>
           </div>
         </div>
@@ -118,8 +141,12 @@ export default function Home() {
                 key={item.title}
                 className="rounded-sm border border-slate-200 bg-white p-7 shadow-[0_12px_20px_rgba(14,39,69,0.08)]"
               >
-                <h3 className="text-3xl font-bold text-[#13395f]">{item.title}</h3>
-                <p className="mt-4 text-lg leading-8 text-[#4a5565]">{item.body}</p>
+                <h3 className="text-3xl font-bold text-[#13395f]">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-lg leading-8 text-[#4a5565]">
+                  {item.body}
+                </p>
                 <Link
                   href="/services"
                   className="mt-6 inline-block text-sm font-semibold uppercase tracking-wider text-[#0e4f8a]"
@@ -138,43 +165,33 @@ export default function Home() {
             GAC
           </div>
           <p className="max-w-4xl text-4xl italic leading-[1.45] text-white">
-            GAC-Universe is a partnership between GAC and Universe Logistics Ltd,
-            an established agency house headquartered in Dhaka, with branch
+            GAC-Universe is a partnership between GAC and Universe Logistics
+            Ltd, an established agency house headquartered in Dhaka, with branch
             offices at the key ports of Chattogram and Mongla.
           </p>
         </div>
       </section>
 
-      <section className="bg-[#e4e8f3] px-6 py-14">
-        <div className="mx-auto w-full max-w-[1200px]">
-          <h2 className="text-center text-5xl font-bold uppercase tracking-[0.14em] text-[#0e3d6b]">
+      <section className="bg-[#0d4b81] px-6 py-20">
+        <div className="mx-auto w-full max-w-[1320px]">
+          <h2 className="text-center text-4xl font-medium uppercase tracking-[0.12em] text-white md:text-6xl">
             Certifications
           </h2>
-          <div className="mt-9 grid grid-cols-2 gap-4 md:grid-cols-6">
-            {[
-              "BIMCO",
-              "ISO 9001",
-              "ITIC",
-              "CCI",
-              "FBCCI",
-              "BAFFA",
-              "DCCB",
-              "BSC",
-              "BSAA",
-              "MCI",
-              "BPTOA",
-              "MictLife",
-            ].map((item) => (
+
+          <div className="mt-11 grid grid-cols-2 border border-white/12 md:grid-cols-6">
+            {CERTIFICATIONS.map((item) => (
               <div
                 key={item}
-                className="flex h-14 items-center justify-center rounded-sm bg-white text-xs font-semibold text-slate-400"
+                className="flex min-h-[172px] items-center justify-center border-b border-r border-white/12 p-5 last:border-r-0 md:[&:nth-child(6n)]:border-r-0 md:[&:nth-last-child(-n+6)]:border-b-0"
               >
-                {item}
+                <div className="flex h-[92px] w-[190px] items-center justify-center bg-white px-3 text-center shadow-[0_8px_20px_rgba(0,0,0,0.2)]">
+                  <span className="text-[1.1rem] font-semibold uppercase tracking-[0.06em] text-[#113860]">
+                    {item}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
-
-          <div className="mt-8 h-[320px] rounded-sm bg-[#cfd6e4] bg-[linear-gradient(120deg,#d8deea_0%,#cdd5e4_100%)]" />
         </div>
       </section>
     </div>
