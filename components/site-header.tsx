@@ -179,11 +179,6 @@ export function SiteHeader() {
           ))}
         </nav>
       </div>
-
-      <div
-        className={`h-px transition-colors duration-300 ${scrolled ? "bg-[#e5eaf0]" : "bg-white/15"
-          }`}
-      />
     </header>
   );
 }
