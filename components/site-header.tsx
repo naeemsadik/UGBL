@@ -14,12 +14,18 @@ export function SiteHeader() {
   return (
     <header className="absolute inset-x-0 top-0 z-50 border-b border-white/20 bg-[linear-gradient(180deg,rgba(1,22,48,0.74),rgba(1,22,48,0.26)_65%,rgba(1,22,48,0))] text-white">
       <div className="mx-auto flex w-full max-w-[1280px] items-center justify-between px-6 py-4 text-[0.82rem]">
-        <Link href="/" className="text-4xl font-bold tracking-tight leading-none">
+        <Link
+          href="/"
+          className="text-4xl font-bold tracking-tight leading-none"
+        >
           <span className="text-[#16a4ff]">U</span>niverse
         </Link>
 
         <div className="hidden items-center gap-6 lg:flex">
-          <Link href="/contact" className="uppercase tracking-wide text-white/90 transition hover:text-white">
+          <Link
+            href="/contact"
+            className="uppercase tracking-wide text-white/90 transition hover:text-white"
+          >
             Contacts
           </Link>
           <label htmlFor="language-select" className="sr-only">
@@ -44,7 +50,10 @@ export function SiteHeader() {
               Bangla
             </option>
           </select>
-          <Link href="/contact" className="font-semibold uppercase tracking-[0.12em] text-white/85 transition hover:text-white">
+          <Link
+            href="/contact"
+            className="font-semibold uppercase tracking-[0.12em] text-white/85 transition hover:text-white"
+          >
             Inquire
           </Link>
         </div>
