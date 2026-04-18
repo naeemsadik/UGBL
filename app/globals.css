@@ -4,7 +4,7 @@
   --background: #ffffff;
   --foreground: #1f2937;
   --accent: #1a8ec8;
-  --accent-dark: #15749f;
+  --accent-dark: #1578a8;
 }
 
 @theme inline {
@@ -71,14 +71,14 @@ body {
 }
 
 .inner-hero {
-  background: linear-gradient(180deg, #0b3766 0%, #114d86 100%);
+  background: linear-gradient(180deg, #1a8ec8 0%, #1578a8 100%);
 }
 
 .inner-overlay {
   background: linear-gradient(
     180deg,
-    rgba(3, 33, 64, 0.82) 0%,
-    rgba(3, 37, 72, 0.72) 100%
+    rgba(11, 65, 97, 0.36) 0%,
+    rgba(8, 53, 81, 0.28) 100%
   );
 }
 
@@ -93,7 +93,7 @@ body {
 .info-card h2 {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #12385d;
+  color: #1a2d42;
 }
 
 .info-card p {

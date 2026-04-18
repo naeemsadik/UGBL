@@ -139,7 +139,7 @@ export function SiteHeader() {
             }`}
         >
           <span className="text-[#1a8ec8]">U</span>
-          <span className={scrolled ? "text-[#0f2d4a]" : ""}>niverse</span>
+          <span className={scrolled ? "text-[#1a2d42]" : ""}>niverse</span>
         </Link>
 
         <div className="hidden items-center gap-5 lg:flex">

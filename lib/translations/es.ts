@@ -22,7 +22,7 @@ export const es: Record<TranslationKey, string> = {
   "nav.selectLanguage": "Seleccionar idioma",
 
   // Hero
-  "hero.title": "Universe Logistics",
+  "hero.title": "Universe Shipping Lines",
   "hero.subtitle": "Socio Global de Envíos",
   "hero.ourServices": "Nuestros Servicios",
   "hero.contactUs": "Contáctenos",
@@ -40,13 +40,13 @@ export const es: Record<TranslationKey, string> = {
 
   // Home – About
   "home.aboutP1":
-    "Universe Logistics Ltd. es uno de los principales agentes de envío, proveedores de servicios logísticos y empresas de fletamento y comercio.",
+    "Universe Shipping Lines. es uno de los principales agentes de envío, proveedores de servicios logísticos y empresas de fletamento y comercio.",
   "home.aboutP2":
-    "Universe Logistics Ltd cuenta con 17 años de experiencia en el manejo de múltiples productos a granel, incluidos carbón, clinker, piedra y roca desde origen extranjero hasta sitios de entrega locales a través de los puertos de Chattogram / Mongla / Payra.",
+    "Universe Shipping Lines cuenta con 17 años de experiencia en el manejo de múltiples productos a granel, incluidos carbón, clinker, piedra y roca desde origen extranjero hasta sitios de entrega locales a través de los puertos de Chattogram / Mongla / Payra.",
   "home.aboutP3":
     "Tenemos la capacidad de brindar soluciones logísticas completas. Nada es imposible para Universe, sin importar el tamaño o la cantidad de la carga o el modo de transporte.",
   "home.aboutP4":
-    "Universe Logistics Ltd. es una empresa certificada ISO 9001: 2015, líder en agencia de envíos, proveedor de servicios logísticos, fletamento y comercio.",
+    "Universe Shipping Lines. es una empresa certificada ISO 9001: 2015, líder en agencia de envíos, proveedor de servicios logísticos, fletamento y comercio.",
 
   // Home – Connections / Response
   "home.connections": "Conexiones:",
@@ -76,36 +76,34 @@ export const es: Record<TranslationKey, string> = {
 
   // Home – GAC
   "home.gacPartnership":
-    "GAC-Universe es una asociación entre GAC y Universe Logistics Ltd, una casa de agencia establecida con sede en Dhaka, con oficinas en los puertos clave de Chattogram y Mongla.",
+    "GAC-Universe es una asociación entre GAC y Universe Shipping Lines, una casa de agencia establecida con sede en Dhaka, con oficinas en los puertos clave de Chattogram y Mongla.",
 
   // Certifications
   "home.certifications": "Certificaciones",
 
   // Footer
-  "footer.recentPosts": "Publicaciones Recientes",
-  "footer.photoGallery": "Galería de Fotos",
-  "footer.quickLinks": "Enlaces Rápidos",
-  "footer.contact": "Contacto",
-  "footer.faqs": "Preguntas Frecuentes",
-  "footer.home": "Inicio",
-  "footer.visionMission": "Visión y Misión",
-  "footer.managementTeam": "Equipo Directivo",
-  "footer.ourPolicy": "Nuestra Política",
+  "footer.aboutText":
+    "Universe Shipping Lines ofrece servicios expertos de envío y marina en todos los principales puertos de Bangladesh.",
   "footer.ourServices": "Nuestros Servicios",
-  "footer.ourFleet": "Nuestra Flota",
-  "footer.ourTeam": "Nuestro Equipo",
-  "footer.ourPortfolio": "Nuestro Portafolio",
-  "footer.dhakOffice": "Oficina de Dhaka (Local Propio)",
-  "footer.ctgOffice": "Oficina de Chattogram (Local Propio)",
-  "footer.khulnaOffice": "Oficina de Khulna / Mongla (Alquiler)",
-  "footer.awardMPA": "Premio recibido de MPA",
-  "footer.newShipping": "Nuevas Noticias de Envío",
-  "footer.newWarehouse": "Nuevo almacén ya operativo",
+  "footer.portAgency": "Agencia Portuaria / Gestión Naviera",
+  "footer.crewChanges": "Soporte de Cambio de Tripulación",
+  "footer.shipChandling": "Aprovisionamiento y Suministros",
+  "footer.bunkering": "Suministro de Combustible y Agua",
+  "footer.hullCleaning": "Limpieza de Casco y Reparación",
+  "footer.getInTouch": "Contacto",
+  "footer.stayUpdated": "Manténgase Actualizado",
+  "footer.stayUpdatedDesc":
+    "Suscríbase a nuestro boletín para las últimas noticias de Universe Shipping Lines.",
+  "footer.yourEmail": "Su Correo Electrónico",
+  "footer.subscribe": "Suscribirse",
+  "footer.termsConditions": "Términos y Condiciones",
+  "footer.privacyPolicy": "Política de Privacidad",
+  "footer.disclaimer": "Descargo de Responsabilidad",
 
   // About Page
   "about.title": "Sobre Nosotros",
   "about.subtitle":
-    "Universe Logistics Ltd. es una agencia confiable de envío, logística y fletamento establecida en 2004.",
+    "Universe Shipping Lines. es una agencia confiable de envío, logística y fletamento establecida en 2004.",
   "about.whoWeAre": "Quiénes Somos",
   "about.whoWeAreDesc":
     "Somos uno de los principales agentes de envío en Bangladesh con servicios que abarcan agencia de buques, fletamento, soporte de gestión y logística de carga.",
@@ -162,7 +160,7 @@ export const es: Record<TranslationKey, string> = {
   // Portfolio Page
   "portfolio.title": "Portafolio",
   "portfolio.subtitle":
-    "Una muestra de asignaciones logísticas y marítimas realizadas por Universe Logistics.",
+    "Una muestra de asignaciones logísticas y marítimas realizadas por Universe Shipping Lines.",
   "portfolio.coalVessel": "Programa de Descarga de Buques de Carbón",
   "portfolio.coalVesselDesc":
     "Soporte integral de agencia y logística para importaciones de alto volumen de clinker y carbón.",

@@ -22,7 +22,7 @@ export const zh: Record<TranslationKey, string> = {
   "nav.selectLanguage": "选择语言",
 
   // Hero
-  "hero.title": "Universe Logistics",
+  "hero.title": "Universe Shipping Lines",
   "hero.subtitle": "全球航运合作伙伴",
   "hero.ourServices": "我们的服务",
   "hero.contactUs": "联系我们",
@@ -40,13 +40,13 @@ export const zh: Record<TranslationKey, string> = {
 
   // Home – About
   "home.aboutP1":
-    "Universe Logistics Ltd. 是领先的航运代理、物流服务提供商、租船和贸易公司之一。",
+    "Universe Shipping Lines. 是领先的航运代理、物流服务提供商、租船和贸易公司之一。",
   "home.aboutP2":
-    "Universe Logistics Ltd 拥有17年处理多种散杂货的经验，包括煤炭、熟料、石材和碎石，从海外产地通过吉大港/蒙格拉/帕亚拉港运送到国内交付地点。",
+    "Universe Shipping Lines 拥有17年处理多种散杂货的经验，包括煤炭、熟料、石材和碎石，从海外产地通过吉大港/蒙格拉/帕亚拉港运送到国内交付地点。",
   "home.aboutP3":
     "我们有能力提供完整的物流解决方案。对Universe来说没有不可能，无论货物大小或数量、运输方式如何。",
   "home.aboutP4":
-    "Universe Logistics Ltd. 是通过ISO 9001: 2015认证的领先航运代理、物流服务提供商、租船和贸易公司。",
+    "Universe Shipping Lines. 是通过ISO 9001: 2015认证的领先航运代理、物流服务提供商、租船和贸易公司。",
 
   // Home – Connections / Response
   "home.connections": "联系网络：",
@@ -76,36 +76,32 @@ export const zh: Record<TranslationKey, string> = {
 
   // Home – GAC
   "home.gacPartnership":
-    "GAC-Universe是GAC与Universe Logistics Ltd的合作伙伴关系，后者是一家总部位于达卡的老牌代理公司，在吉大港和蒙格拉的主要港口设有分支机构。",
+    "GAC-Universe是GAC与Universe Shipping Lines的合作伙伴关系，后者是一家总部位于达卡的老牌代理公司，在吉大港和蒙格拉的主要港口设有分支机构。",
 
   // Certifications
   "home.certifications": "认证资质",
 
   // Footer
-  "footer.recentPosts": "最近动态",
-  "footer.photoGallery": "图片集锦",
-  "footer.quickLinks": "快速链接",
-  "footer.contact": "联系方式",
-  "footer.faqs": "常见问题",
-  "footer.home": "首页",
-  "footer.visionMission": "愿景与使命",
-  "footer.managementTeam": "管理团队",
-  "footer.ourPolicy": "我们的政策",
+  "footer.aboutText": "Universe Shipping Lines 在孟加拉国所有主要港口提供专业的航运和海事服务。",
   "footer.ourServices": "我们的服务",
-  "footer.ourFleet": "我们的船队",
-  "footer.ourTeam": "我们的团队",
-  "footer.ourPortfolio": "我们的业绩",
-  "footer.dhakOffice": "达卡办事处（自有物业）",
-  "footer.ctgOffice": "吉大港办事处（自有物业）",
-  "footer.khulnaOffice": "库尔纳/蒙格拉办事处（租赁）",
-  "footer.awardMPA": "获得MPA颁发的奖项",
-  "footer.newShipping": "新航运资讯",
-  "footer.newWarehouse": "新仓库已投入运营",
+  "footer.portAgency": "港口代理 / 船舶管理服务",
+  "footer.crewChanges": "船员换班支持",
+  "footer.shipChandling": "船舶供应与物资",
+  "footer.bunkering": "燃油和淡水供应",
+  "footer.hullCleaning": "船体清洁与维修",
+  "footer.getInTouch": "联系我们",
+  "footer.stayUpdated": "保持更新",
+  "footer.stayUpdatedDesc": "订阅我们的新闻通讯，获取 Universe Shipping Lines 的最新消息。",
+  "footer.yourEmail": "您的邮箱",
+  "footer.subscribe": "订阅",
+  "footer.termsConditions": "条款与条件",
+  "footer.privacyPolicy": "隐私政策",
+  "footer.disclaimer": "免责声明",
 
   // About Page
   "about.title": "关于我们",
   "about.subtitle":
-    "Universe Logistics Ltd. 是一家成立于2004年的值得信赖的航运、物流和租船代理公司。",
+    "Universe Shipping Lines. 是一家成立于2004年的值得信赖的航运、物流和租船代理公司。",
   "about.whoWeAre": "我们是谁",
   "about.whoWeAreDesc":
     "我们是孟加拉国领先的航运代理之一，服务涵盖船舶代理、租船、船舶管理支持和货物物流。",
@@ -162,7 +158,7 @@ export const zh: Record<TranslationKey, string> = {
   // Portfolio Page
   "portfolio.title": "业绩案例",
   "portfolio.subtitle":
-    "Universe Logistics完成的物流和海事任务概览。",
+    "Universe Shipping Lines完成的物流和海事任务概览。",
   "portfolio.coalVessel": "煤炭船舶卸载计划",
   "portfolio.coalVesselDesc":
     "为大批量熟料和煤炭进口提供端到端的代理和物流支持。",

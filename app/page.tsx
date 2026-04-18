@@ -77,7 +77,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <h3 className="text-4xl font-bold uppercase text-[#0e3e68]">
+            <h3 className="text-4xl font-bold uppercase text-[#1a8ec8]">
               {t("home.response")}
             </h3>
             <p className="mt-4 text-lg leading-8 text-[#3d4756]">
@@ -93,7 +93,7 @@ export default function Home() {
             <p className="text-xs font-semibold uppercase tracking-widest text-[#1a8ec8]">
               {t("home.ourServicesLabel")}
             </p>
-            <h2 className="mt-3 text-5xl font-extrabold uppercase leading-[1.02] text-[#0e2745]">
+            <h2 className="mt-3 text-5xl font-extrabold uppercase leading-[1.02] text-[#1a2d42]">
               {t("home.whatWeCanDo")}
               <br />
               {t("home.forYou")}
@@ -105,7 +105,7 @@ export default function Home() {
                 key={item.title}
                 className="rounded-sm border border-slate-200 bg-white p-7 shadow-[0_12px_20px_rgba(14,39,69,0.08)]"
               >
-                <h3 className="text-3xl font-bold text-[#12385d]">
+                <h3 className="text-3xl font-bold text-[#1a2d42]">
                   {item.title}
                 </h3>
                 <p className="mt-4 text-lg leading-8 text-[#4a5565]">
@@ -123,9 +123,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#0d3b5e] py-16">
+      <section className="bg-[#1a8ec8] py-16">
         <div className="mx-auto grid w-full max-w-[1200px] items-center gap-8 px-6 md:grid-cols-[220px_1fr]">
-          <div className="grid h-[190px] place-items-center rounded-xl bg-white text-6xl font-bold text-[#1a8ec8]">
+          <div className="grid h-[190px] place-items-center rounded-xl bg-white text-6xl font-bold text-[#1a2d42]">
             GAC
           </div>
           <p className="max-w-4xl text-4xl italic leading-[1.45] text-white">
@@ -134,7 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#15749f] px-6 py-20">
+      <section className="bg-[#1a8ec8] px-6 py-20">
         <div className="mx-auto w-full max-w-[1320px]">
           <h2 className="text-center text-4xl font-medium uppercase tracking-[0.12em] text-white md:text-6xl">
             {t("home.certifications")}
@@ -147,7 +147,7 @@ export default function Home() {
                 className="flex min-h-[172px] items-center justify-center border-b border-r border-white/12 p-5 last:border-r-0 md:[&:nth-child(6n)]:border-r-0 md:[&:nth-last-child(-n+6)]:border-b-0"
               >
                 <div className="flex h-[92px] w-[190px] items-center justify-center bg-white px-3 text-center shadow-[0_8px_20px_rgba(0,0,0,0.2)]">
-                  <span className="text-[1.1rem] font-semibold uppercase tracking-[0.06em] text-[#113860]">
+                  <span className="text-[1.1rem] font-semibold uppercase tracking-[0.06em] text-[#1a2d42]">
                     {item}
                   </span>
                 </div>
