@@ -42,16 +42,12 @@ export function HeroCarousel() {
       </div>
 
       <div className="hero-overlay relative z-10">
-        <div className="mx-auto flex h-full w-full max-w-[1200px] flex-col items-center justify-center px-6 text-center">
-          <p className="text-2xl font-semibold text-white">Welcome to</p>
-          <h1 className="mt-1 text-5xl font-extrabold uppercase leading-[0.98] text-white md:text-7xl">
+        <div className="mx-auto flex h-full w-full max-w-[1200px] flex-col items-center justify-center px-6 pt-24 text-center md:pt-28">
+          <h1 className="text-5xl font-extrabold uppercase leading-[0.98] text-white md:text-7xl">
             Universe Logistics
-            <br />
-            <span className="text-[#4ce6eb]">Ltd.</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-base text-slate-200">
-            We are a reliable shipping, logistics and chartering agent. All
-            shipping services under one umbrella.
+          <p className="mt-4 text-lg font-medium tracking-[0.1em] text-[#cde6ff] md:text-xl">
+            Global Shipping Partner
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link href="/services" className="hero-btn-primary">

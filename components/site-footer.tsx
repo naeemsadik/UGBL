@@ -7,7 +7,7 @@ import hero3 from "@/assets/hero3.jpeg";
 import hero4 from "@/assets/hero4.jpeg";
 
 const MAP_EMBED_URL =
-  "https://www.google.com/maps?q=Taher+Tower+Gulshan+Circle+2+Dhaka&output=embed";
+  "https://www.google.com/maps/place/Taher+Tower,+10+DIT+II+Cir,+Dhaka+1212,+Bangladesh/@23.794939,90.413738,18z/data=!4m6!3m5!1s0x3755c7a772dc07ed:0xdc353e764238d1e5!8m2!3d23.7948847!4d90.4136575!16s%2Fg%2F12hw6r7vx?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D";
 
 const OFFICE_LOCATIONS = [
   {
