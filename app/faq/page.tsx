@@ -1,35 +1,21 @@
+"use client";
+
+import { useTranslation } from "@/lib/language-context";
 import { InnerHero } from "@/components/inner-hero";
 
-export const metadata = {
-  title: "FAQ",
-};
-
-const faqs = [
-  {
-    q: "Which ports do you cover?",
-    a: "We actively support port calls at Chattogram, Mongla, and Payra with associated inland logistics.",
-  },
-  {
-    q: "Do you provide 24/7 response?",
-    a: "Yes. Our operations desk remains available around the clock for urgent vessel and cargo matters.",
-  },
-  {
-    q: "Can you handle project cargo?",
-    a: "Yes, we manage planning, permits, handling, and delivery for oversized and project cargo assignments.",
-  },
-  {
-    q: "Do you offer chartering support?",
-    a: "Our chartering team supports voyage and time charter requirements for different vessel classes.",
-  },
-];
-
 export default function FaqPage() {
+  const { t } = useTranslation();
+
+  const faqs = [
+    { q: t("faq.q1"), a: t("faq.a1") },
+    { q: t("faq.q2"), a: t("faq.a2") },
+    { q: t("faq.q3"), a: t("faq.a3") },
+    { q: t("faq.q4"), a: t("faq.a4") },
+  ];
+
   return (
     <div>
-      <InnerHero
-        title="FAQ"
-        subtitle="Common questions about our shipping, chartering, and logistics operations."
-      />
+      <InnerHero title={t("faq.title")} subtitle={t("faq.subtitle")} />
       <section className="mx-auto w-full max-w-[1200px] px-6 py-14">
         <div className="space-y-5">
           {faqs.map((item) => (

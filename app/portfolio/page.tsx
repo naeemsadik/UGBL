@@ -1,35 +1,21 @@
+"use client";
+
+import { useTranslation } from "@/lib/language-context";
 import { InnerHero } from "@/components/inner-hero";
 
-export const metadata = {
-  title: "Portfolio",
-};
-
-const projects = [
-  {
-    title: "Coal Vessel Discharge Program",
-    desc: "End-to-end agency and logistics support for high-volume clinker and coal imports.",
-  },
-  {
-    title: "Multi-Port Charter Execution",
-    desc: "Coordinated chartering and berth planning across major ports with strict turnaround goals.",
-  },
-  {
-    title: "Industrial Project Cargo Handling",
-    desc: "Managed heavy and oversized equipment delivery from vessel to inland destination.",
-  },
-  {
-    title: "24/7 Husbandry Support Operation",
-    desc: "Continuous support for vessel crew changes, supplies, and clearance operations.",
-  },
-];
-
 export default function PortfolioPage() {
+  const { t } = useTranslation();
+
+  const projects = [
+    { title: t("portfolio.coalVessel"), desc: t("portfolio.coalVesselDesc") },
+    { title: t("portfolio.multiPort"), desc: t("portfolio.multiPortDesc") },
+    { title: t("portfolio.industrialCargo"), desc: t("portfolio.industrialCargoDesc") },
+    { title: t("portfolio.husbandry"), desc: t("portfolio.husbandryDesc") },
+  ];
+
   return (
     <div>
-      <InnerHero
-        title="Portfolio"
-        subtitle="A snapshot of logistics and maritime assignments delivered by Universe Logistics."
-      />
+      <InnerHero title={t("portfolio.title")} subtitle={t("portfolio.subtitle")} />
       <section className="mx-auto w-full max-w-[1200px] px-6 py-14">
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project) => (

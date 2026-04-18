@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #dfe4ef;
+  --background: #ffffff;
   --foreground: #1f2937;
+  --accent: #1a8ec8;
+  --accent-dark: #15749f;
 }
 
 @theme inline {
@@ -45,15 +47,16 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  transition: all 0.2s ease;
 }
 
 .hero-btn-primary {
-  background: linear-gradient(90deg, #1172d1, #0d55a5);
+  background: var(--accent);
   color: #fff;
 }
 
 .hero-btn-primary:hover {
-  background: linear-gradient(90deg, #0e66ba, #0a4c91);
+  background: var(--accent-dark);
 }
 
 .hero-btn-secondary {
@@ -81,10 +84,10 @@ body {
 
 .info-card {
   border-radius: 0.45rem;
-  border: 1px solid #d5dce9;
+  border: 1px solid #e5eaf0;
   background: #fff;
   padding: 1.65rem;
-  box-shadow: 0 12px 20px rgba(14, 39, 69, 0.06);
+  box-shadow: 0 4px 16px rgba(14, 39, 69, 0.05);
 }
 
 .info-card h2 {
@@ -116,6 +119,6 @@ body {
 }
 
 .field:focus {
-  border-color: #0e6cc7;
-  box-shadow: 0 0 0 2px rgba(14, 108, 199, 0.17);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(26, 142, 200, 0.17);
 }

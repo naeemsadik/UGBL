@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useTranslation } from "@/lib/language-context";
 
 import hero1 from "@/assets/hero1.jpeg";
 import hero2 from "@/assets/hero2.jpeg";
@@ -14,6 +15,7 @@ const ROTATE_INTERVAL_MS = 5000;
 
 export function HeroCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const timer = window.setInterval(() => {
@@ -44,17 +46,17 @@ export function HeroCarousel() {
       <div className="hero-overlay relative z-10">
         <div className="mx-auto flex h-full w-full max-w-[1200px] flex-col items-center justify-center px-6 pt-24 text-center md:pt-28">
           <h1 className="text-5xl font-extrabold uppercase leading-[0.98] text-white md:text-7xl">
-            Universe Logistics
+            {t("hero.title")}
           </h1>
           <p className="mt-4 text-lg font-medium tracking-[0.1em] text-[#cde6ff] md:text-xl">
-            Global Shipping Partner
+            {t("hero.subtitle")}
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link href="/services" className="hero-btn-primary">
-              Our Services
+              {t("hero.ourServices")}
             </Link>
             <Link href="/contact" className="hero-btn-secondary">
-              Contact Us
+              {t("hero.contactUs")}
             </Link>
           </div>
         </div>

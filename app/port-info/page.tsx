@@ -1,31 +1,20 @@
+"use client";
+
+import { useTranslation } from "@/lib/language-context";
 import { InnerHero } from "@/components/inner-hero";
 
-export const metadata = {
-  title: "Port Info",
-};
-
-const ports = [
-  {
-    name: "Chattogram Port",
-    info: "Primary seaport with extensive cargo handling, container operations, and vessel services.",
-  },
-  {
-    name: "Mongla Port",
-    info: "Strategic secondary gateway supporting bulk and breakbulk marine operations.",
-  },
-  {
-    name: "Payra Port",
-    info: "Emerging deep-sea access point for growing industrial and project cargo traffic.",
-  },
-];
-
 export default function PortInfoPage() {
+  const { t } = useTranslation();
+
+  const ports = [
+    { name: t("portInfo.chattogram"), info: t("portInfo.chattogramDesc") },
+    { name: t("portInfo.mongla"), info: t("portInfo.monglaDesc") },
+    { name: t("portInfo.payra"), info: t("portInfo.payraDesc") },
+  ];
+
   return (
     <div>
-      <InnerHero
-        title="Port Info"
-        subtitle="Operational insight and support coverage across Bangladesh's key maritime gateways."
-      />
+      <InnerHero title={t("portInfo.title")} subtitle={t("portInfo.subtitle")} />
       <section className="mx-auto w-full max-w-[1200px] px-6 py-14">
         <div className="grid gap-6 md:grid-cols-3">
           {ports.map((port) => (

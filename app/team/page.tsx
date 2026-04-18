@@ -1,29 +1,27 @@
+"use client";
+
+import { useTranslation } from "@/lib/language-context";
 import { InnerHero } from "@/components/inner-hero";
 
-export const metadata = {
-  title: "Our Team",
-};
-
-const team = [
-  { role: "Managing Director", name: "Abdul Karim", exp: "20+ years maritime experience" },
-  { role: "Head of Operations", name: "Sadia Rahman", exp: "Port call optimization specialist" },
-  { role: "Chartering Lead", name: "Rezaul Haque", exp: "Dry cargo and voyage charter expert" },
-  { role: "Logistics Manager", name: "Fahim Islam", exp: "Multi-modal delivery coordinator" },
-];
-
 export default function TeamPage() {
+  const { t } = useTranslation();
+
+  const team = [
+    { name: t("team.abdulKarim"), role: t("team.abdulKarimRole"), exp: t("team.abdulKarimExp") },
+    { name: t("team.sadiaRahman"), role: t("team.sadiaRahmanRole"), exp: t("team.sadiaRahmanExp") },
+    { name: t("team.rezaulHaque"), role: t("team.rezaulHaqueRole"), exp: t("team.rezaulHaqueExp") },
+    { name: t("team.fahimIslam"), role: t("team.fahimIslamRole"), exp: t("team.fahimIslamExp") },
+  ];
+
   return (
     <div>
-      <InnerHero
-        title="Our Team"
-        subtitle="Experienced professionals dedicated to reliable shipping and logistics support."
-      />
+      <InnerHero title={t("team.title")} subtitle={t("team.subtitle")} />
       <section className="mx-auto w-full max-w-[1200px] px-6 py-14">
         <div className="grid gap-6 md:grid-cols-2">
           {team.map((member) => (
             <article key={member.name} className="info-card">
               <h2>{member.name}</h2>
-              <p className="font-semibold text-[#0e4f8a]">{member.role}</p>
+              <p className="font-semibold text-[#1a8ec8]">{member.role}</p>
               <p>{member.exp}</p>
             </article>
           ))}
