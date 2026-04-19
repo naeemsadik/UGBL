@@ -143,24 +143,58 @@ export function SiteHeader() {
         </Link>
 
         <div className="hidden items-center gap-5 lg:flex">
-          <label htmlFor="language-select" className="sr-only">
-            {t("nav.selectLanguage")}
-          </label>
-          <select
-            id="language-select"
-            value={locale}
-            onChange={(e) => setLocale(e.target.value as Locale)}
-            className={`rounded-sm border px-2.5 py-1 uppercase tracking-wide outline-none transition-colors duration-300 ${scrolled
-                ? "border-[#c8d5e2] bg-[#f4f7fa] text-[#1a2d42]"
-                : "border-white/35 bg-white/10 text-white backdrop-blur-sm"
+          <div className="group relative">
+            <button
+              type="button"
+              className={`inline-flex items-center gap-1.5 rounded-sm border px-3 py-1.5 text-sm font-medium tracking-wide outline-none transition-colors duration-300 ${
+                scrolled
+                  ? "border-[#c8d5e2] bg-[#f4f7fa] text-[#1a2d42]"
+                  : "border-white/35 bg-white/10 text-white backdrop-blur-sm"
               }`}
-            aria-label="Language"
-          >
-            <option value="EN" className="text-[#0f2d52]">EN</option>
-            <option value="ES" className="text-[#0f2d52]">Spanish</option>
-            <option value="ZH" className="text-[#0f2d52]">Chinese</option>
-            <option value="BN" className="text-[#0f2d52]">Bangla</option>
-          </select>
+              aria-label={t("nav.selectLanguage")}
+            >
+              {locale === "EN"
+                ? "English"
+                : locale === "ES"
+                  ? "Español"
+                  : locale === "ZH"
+                    ? "中文"
+                    : "বাংলা"}
+              <svg
+                className="h-3 w-3 opacity-60 transition-transform group-hover:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2.5}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <div className="pointer-events-none absolute right-0 top-full z-50 pt-2 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
+              <div className="min-w-[150px] rounded-lg border border-[#e5eaf0] bg-white py-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
+                {([
+                  { code: "EN" as Locale, label: "English" },
+                  { code: "ES" as Locale, label: "Español" },
+                  { code: "ZH" as Locale, label: "中文" },
+                  { code: "BN" as Locale, label: "বাংলা" },
+                ] as const).map((lang) => (
+                  <button
+                    key={lang.code}
+                    type="button"
+                    onClick={() => setLocale(lang.code)}
+                    className={`block w-full px-4 py-2 text-left text-[0.88rem] font-medium transition ${
+                      locale === lang.code
+                        ? "bg-[#f0f7fc] text-[#1a8ec8]"
+                        : "text-[#3a4f63] hover:bg-[#f4f8fc] hover:text-[#1a8ec8]"
+                    }`}
+                  >
+                    {lang.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -103,10 +103,10 @@ export const es: Record<TranslationKey, string> = {
   // About Page
   "about.title": "Sobre Nosotros",
   "about.subtitle":
-    "Universe Shipping Lines. es una agencia confiable de envío, logística y fletamento establecida en 2004.",
+    "Universe Shipping Lines es una agencia de envíos líder y proveedor de servicios logísticos establecida en 2022.",
   "about.whoWeAre": "Quiénes Somos",
   "about.whoWeAreDesc":
-    "Somos uno de los principales agentes de envío en Bangladesh con servicios que abarcan agencia de buques, fletamento, soporte de gestión y logística de carga.",
+    "Somos una agencia de envíos líder, proveedor de servicios logísticos y empresa comercial en Bangladesh, con soluciones marítimas y de cadena de suministro integrales.",
   "about.ourVision": "Nuestra Visión",
   "about.ourVisionDesc":
     "Ser el proveedor de servicios marítimos más confiable y receptivo de la región, conocido por la precisión y la velocidad.",
@@ -115,47 +115,47 @@ export const es: Record<TranslationKey, string> = {
     "Ofrecer soluciones completas para principales y clientes a través de equipos experimentados, redes locales sólidas y comunicación las 24 horas.",
   "about.certifications": "Certificaciones",
   "about.certificationsDesc":
-    "Certificado ISO 9001:2015 con membresías activas en importantes asociaciones marítimas locales y globales.",
+    "Membresías activas en importantes asociaciones marítimas locales y globales con búsqueda continua de excelencia.",
 
   // Services Page
   "services.title": "Servicios",
   "services.subtitle":
     "Soporte integral de envío y logística para propietarios de buques, operadores y clientes de carga.",
-  "services.websiteStrategy": "Estrategia Web",
+  "services.websiteStrategy": "Agencia Portuaria",
   "services.websiteStrategyDesc":
-    "Investigación de audiencia, arquitectura de información y planificación enfocada en conversión antes de comenzar el diseño.",
-  "services.uiuxDesign": "Diseño UI/UX",
+    "Agencia portuaria integral para llegadas, salidas, documentación y enlace con autoridades portuarias.",
+  "services.uiuxDesign": "Agencia OPA/CPA",
   "services.uiuxDesignDesc":
-    "Interfaces modernas y responsivas construidas en torno a la voz de su marca y posicionamiento empresarial.",
-  "services.nextjsDev": "Desarrollo Next.js",
+    "Servicios de Agente Protector del Propietario y del Fletador asegurando la protección de todos los intereses.",
+  "services.nextjsDev": "Agencia de Gestión Naviera",
   "services.nextjsDevDesc":
-    "Implementación lista para producción con componentes reutilizables, código limpio y soporte CMS.",
-  "services.seoAnalytics": "SEO + Configuración de Analítica",
+    "Gestión naviera 24/7 incluyendo cambios de tripulación, suministros, provisiones y despacho.",
+  "services.seoAnalytics": "Agencia Logística",
   "services.seoAnalyticsDesc":
-    "SEO técnico, esquema, metadatos e instrumentación analítica para informes claros.",
-  "services.perfOptimization": "Optimización de Rendimiento",
+    "Logística de extremo a extremo cubriendo transporte interior, almacenamiento y entrega de carga multimodal.",
+  "services.perfOptimization": "Aprovisionamiento y Suministros",
   "services.perfOptimizationDesc":
-    "Mejoras de Core Web Vitals, optimización de imágenes y refinamientos enfocados en la velocidad de la página.",
-  "services.ongoingSupport": "Soporte Continuo",
+    "Provisión integral para todos los tipos de buques que llegan a los puertos de Bangladesh.",
+  "services.ongoingSupport": "Combustible y Agua Dulce",
   "services.ongoingSupportDesc":
-    "Mantenimiento post-lanzamiento, soporte de pruebas A/B y mejoras iterativas cada mes.",
+    "Servicios de suministro de combustible y agua dulce en todos los principales puertos operativos.",
 
   // Fleet Page
   "fleet.title": "Nuestra Flota",
   "fleet.subtitle":
-    "Soporte operativo para múltiples clases de buques en Chattogram, Mongla y Payra.",
+    "Soporte operativo para múltiples clases de buques en Chattogram, Matarbari, Mongla y Payra.",
   "fleet.bulkCarriers": "Graneleros",
   "fleet.bulkCarriersDesc":
-    "Soporte para operaciones de carga a granel seca, incluido el movimiento de carbón, clinker y piedra.",
+    "Soporte para operaciones de carga a granel seca, incluido carbón, clinker y piedra.",
   "fleet.containerVessels": "Buques Portacontenedores",
   "fleet.containerVesselsDesc":
-    "Gestión completa de buques y coordinación de escalas portuarias para líneas de transporte de contenedores.",
+    "Gestión completa de buques y coordinación de escalas portuarias para líneas de contenedores.",
   "fleet.projectCargo": "Buques de Carga de Proyecto",
   "fleet.projectCargoDesc":
     "Manejo especializado para carga pesada y de gran tamaño con planificación logística personalizada.",
-  "fleet.tankers": "Tanqueros",
+  "fleet.tankers": "Operaciones de Remolcador",
   "fleet.tankersDesc":
-    "Soporte operativo para escalas de tanqueros de combustible y GLP en todos los puertos principales.",
+    "Operación de remolcador marítimo para apoyar operaciones marinas en todos los puertos principales.",
 
   // Portfolio Page
   "portfolio.title": "Portafolio",
