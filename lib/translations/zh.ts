@@ -268,4 +268,45 @@ export const zh: Record<TranslationKey, string> = {
   "contact.projectDetails": "项目详情",
   "contact.messagePlaceholder": "告诉我们您的需求...",
   "contact.sendInquiry": "发送询价",
+
+  // Home – Info Cards
+  "home.card1Label": "公司概况",
+  "home.card1Title": "孟加拉国领先的航运代理和物流提供商",
+  "home.card2Label": "我们的服务",
+  "home.card2Title": "港口代理、OPA/CPA、船舶管理和物流解决方案",
+  "home.card3Label": "港口信息",
+  "home.card3Title": "在吉大港、马塔巴里、帕亚拉和蒙格拉的运营",
+  "home.card4Label": "全球网络",
+  "home.card4Title": "24/7支持和全球值得信赖的合作伙伴关系",
+  "home.viewMore": "查看更多",
+
+  // Home – Fleet & Network Stats
+  "home.fleetTitle": "我们的服务与网络",
+  "home.fleetSubtitle": "我们在孟加拉国主要港口运营，提供全面的海事和物流解决方案。",
+  "home.stat1Label": "覆盖主要港口",
+  "home.stat2Label": "专业员工",
+  "home.stat3Label": "运营年限",
+  "home.stat4Label": "运营支持",
+  "home.stat5Label": "核心服务线",
+  "home.stat6Label": "服务客户",
+  "home.statYears": "年",
+  "home.statServices": "核心",
+  "home.fleetDesc": "我们广泛的网络使员工靠近客户，以提供一流的个性化服务。",
+  "home.learnMoreFleet": "了解更多关于我们的服务",
+  "home.fleetFootnote": "在吉大港、马塔巴里、帕亚拉和蒙格拉港口提供运营支持。",
+
+  // Home – Promo Cards
+  "home.promoAboutLabel": "关于我们",
+  "home.promoAboutDesc": "River Tyne Shipping成立于2022年，在孟加拉国主要海上门户建立了可靠的声誉。",
+  "home.promoAboutCta": "阅读更多",
+  "home.promoServicesLabel": "我们的服务",
+  "home.promoServicesDesc": "为船东和货主提供全面的港口代理、船舶管理和物流解决方案。",
+  "home.promoServicesCta": "我们的服务",
+  "home.promoPortsLabel": "港口信息",
+  "home.promoPortsDesc": "在所有主要孟加拉国港口提供运营覆盖，配备专业本地团队。",
+  "home.promoPortsCta": "探索港口",
+
+  // Footer extras
+  "footer.aboutLink": "关于我们",
+  "footer.servicesLink": "服务",
 };

@@ -270,4 +270,45 @@ export const es: Record<TranslationKey, string> = {
   "contact.projectDetails": "Detalles del proyecto",
   "contact.messagePlaceholder": "Díganos qué necesita...",
   "contact.sendInquiry": "Enviar Consulta",
+
+  // Home – Info Cards
+  "home.card1Label": "Descripción de la Empresa",
+  "home.card1Title": "Agencia de Envíos y Proveedor Logístico Líder en Bangladesh",
+  "home.card2Label": "Nuestros Servicios",
+  "home.card2Title": "Agencia Portuaria, OPA/CPA, Gestión Naviera y Soluciones Logísticas",
+  "home.card3Label": "Información Portuaria",
+  "home.card3Title": "Operaciones en Chattogram, Matarbari, Payra y Mongla",
+  "home.card4Label": "Red Global",
+  "home.card4Title": "Soporte 24/7 y Asociaciones Confiables en Todo el Mundo",
+  "home.viewMore": "Ver Más",
+
+  // Home – Fleet & Network Stats
+  "home.fleetTitle": "Nuestros Servicios y Red",
+  "home.fleetSubtitle": "Operamos en los principales puertos de Bangladesh, proporcionando soluciones marítimas y logísticas integrales.",
+  "home.stat1Label": "Puertos Principales Cubiertos",
+  "home.stat2Label": "Personal Profesional",
+  "home.stat3Label": "Años de Operaciones",
+  "home.stat4Label": "Soporte Operativo",
+  "home.stat5Label": "Líneas de Servicio Principal",
+  "home.stat6Label": "Clientes Atendidos",
+  "home.statYears": "años",
+  "home.statServices": "principales",
+  "home.fleetDesc": "Nuestra extensa red posiciona a nuestro personal cerca de nuestros clientes para ofrecer un servicio personalizado de primera clase.",
+  "home.learnMoreFleet": "Más información sobre nuestros servicios",
+  "home.fleetFootnote": "Operaciones apoyadas en los puertos de Chattogram, Matarbari, Payra y Mongla.",
+
+  // Home – Promo Cards
+  "home.promoAboutLabel": "Sobre Nosotros",
+  "home.promoAboutDesc": "Establecida en 2022, River Tyne Shipping ha construido una reputación de confiabilidad en las principales puertas marítimas de Bangladesh.",
+  "home.promoAboutCta": "Leer Más",
+  "home.promoServicesLabel": "Nuestros Servicios",
+  "home.promoServicesDesc": "Soluciones integrales de agencia portuaria, gestión naviera y logística para propietarios de buques y clientes de carga.",
+  "home.promoServicesCta": "Nuestros Servicios",
+  "home.promoPortsLabel": "Información Portuaria",
+  "home.promoPortsDesc": "Cobertura operativa en todos los principales puertos de Bangladesh con equipos locales dedicados.",
+  "home.promoPortsCta": "Explorar Puertos",
+
+  // Footer extras
+  "footer.aboutLink": "Sobre Nosotros",
+  "footer.servicesLink": "Servicios",
 };

@@ -1,10 +1,21 @@
 @import "tailwindcss";
 
 :root {
+  /* River Tyne brand palette – derived from logo */
+  --navy: #1B2D5A;
+  --navy-dark: #12203F;
+  --navy-light: #2A4170;
+  --green: #2E9E6F;
+  --green-dark: #238058;
+  --green-light: #45B585;
+  --blue: #2088C0;
+  --blue-dark: #186DA0;
+  --blue-light: #3BA0D6;
+  --teal: #1F9A8F;
+
   --background: #ffffff;
   --foreground: #1f2937;
-  --accent: #1a8ec8;
-  --accent-dark: #1578a8;
+  --section-bg: #EFF5F8;
 }
 
 @theme inline {
@@ -14,74 +25,77 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* ── Base ─────────────────────────────────────── */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
+/* ── Hero banner ──────────────────────────────── */
 .hero-banner {
-  height: min(82vh, 720px);
-  min-height: 520px;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 900px;
 }
 
 .hero-overlay {
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(3, 30, 61, 0.76) 0%,
-    rgba(3, 35, 68, 0.7) 46%,
-    rgba(3, 35, 68, 0.78) 100%
+    rgba(18, 32, 63, 0.72) 0%,
+    rgba(18, 32, 63, 0.45) 50%,
+    rgba(18, 32, 63, 0.6) 100%
   );
 }
 
-.hero-btn-primary,
-.hero-btn-secondary {
-  display: inline-flex;
-  min-width: 190px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.4rem;
-  padding: 0.75rem 1.2rem;
-  font-size: 0.82rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  transition: all 0.2s ease;
+/* ── Scroll indicator bounce ─────────────────── */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(8px); }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
 }
 
-.hero-btn-primary {
-  background: var(--accent);
-  color: #fff;
+/* ── Carousel dot ─────────────────────────────── */
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.hero-dot.active {
+  background: var(--green);
+  border-color: var(--green);
+  transform: scale(1.25);
 }
 
-.hero-btn-primary:hover {
-  background: var(--accent-dark);
-}
-
-.hero-btn-secondary {
-  border: 1px solid rgba(191, 205, 225, 0.5);
-  background: rgba(43, 70, 103, 0.6);
-  color: #e7effb;
-}
-
-.hero-btn-secondary:hover {
-  border-color: rgba(232, 241, 255, 0.7);
-  background: rgba(49, 77, 112, 0.75);
-}
-
+/* ── Inner page hero ──────────────────────────── */
 .inner-hero {
-  background: linear-gradient(180deg, #1a8ec8 0%, #1578a8 100%);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--blue-dark) 100%);
 }
-
 .inner-overlay {
   background: linear-gradient(
     180deg,
-    rgba(11, 65, 97, 0.36) 0%,
-    rgba(8, 53, 81, 0.28) 100%
+    rgba(11, 65, 97, 0.3) 0%,
+    rgba(8, 53, 81, 0.2) 100%
   );
 }
 
+/* ── Stats counter animation ─────────────────── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+/* ── Info card ────────────────────────────────── */
 .info-card {
   border-radius: 0.45rem;
   border: 1px solid #e5eaf0;
@@ -89,13 +103,11 @@ body {
   padding: 1.65rem;
   box-shadow: 0 4px 16px rgba(14, 39, 69, 0.05);
 }
-
 .info-card h2 {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #1a2d42;
+  color: var(--navy);
 }
-
 .info-card p {
   margin-top: 0.7rem;
   font-size: 1.04rem;
@@ -103,6 +115,7 @@ body {
   color: #4a586d;
 }
 
+/* ── Form fields ──────────────────────────────── */
 .field {
   width: 100%;
   border-radius: 0.45rem;
@@ -113,12 +126,65 @@ body {
   color: #203146;
   outline: none;
 }
-
-.field::placeholder {
-  color: #8c9aad;
+.field::placeholder { color: #8c9aad; }
+.field:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px rgba(46, 158, 111, 0.17);
 }
 
-.field:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgba(26, 142, 200, 0.17);
+/* ── Buttons ──────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 2rem;
+  padding: 0.7rem 1.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background: var(--green);
+  color: #fff;
+  border: 2px solid var(--green);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: var(--green-dark);
+  border-color: var(--green-dark);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 2rem;
+  padding: 0.7rem 1.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.btn-outline:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Promo card overlay ──────────────────────── */
+.promo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  min-height: 260px;
+}
+.promo-card img {
+  transition: transform 0.5s ease;
+}
+.promo-card:hover img {
+  transform: scale(1.05);
 }

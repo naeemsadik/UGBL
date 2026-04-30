@@ -14,13 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://universeshipping.example"),
+  metadataBase: new URL("https://rivertyneshipping.example"),
   title: {
-    default: "Universe Shipping Lines",
-    template: "%s | Universe Shipping Lines",
+    default: "River Tyne Shipping",
+    template: "%s | River Tyne Shipping",
   },
   description:
-    "Universe Shipping Lines is a leading shipping agency, logistics service provider, and trading company in Bangladesh.",
+    "River Tyne Shipping is a leading shipping agency, logistics service provider, and trading company in Bangladesh.",
 };
 
 export default function RootLayout({

@@ -184,4 +184,45 @@ export const bn: Record<TranslationKey, string> = {
   "contact.projectDetails": "প্রকল্পের বিবরণ",
   "contact.messagePlaceholder": "আপনার প্রয়োজন জানান...",
   "contact.sendInquiry": "অনুসন্ধান পাঠান",
+
+  // Home – Info Cards
+  "home.card1Label": "কোম্পানি পরিচিতি",
+  "home.card1Title": "বাংলাদেশে শীর্ষস্থানীয় শিপিং এজেন্সি ও লজিস্টিক প্রদানকারী",
+  "home.card2Label": "আমাদের সেবা",
+  "home.card2Title": "পোর্ট এজেন্সি, OPA/CPA, হাজব্যান্ড্রি ও লজিস্টিক সমাধান",
+  "home.card3Label": "বন্দর তথ্য",
+  "home.card3Title": "চট্টগ্রাম, মাতারবাড়ি, পায়রা ও মোংলায় অপারেশন",
+  "home.card4Label": "বৈশ্বিক নেটওয়ার্ক",
+  "home.card4Title": "২৪/৭ সহায়তা ও বিশ্বব্যাপী বিশ্বস্ত অংশীদারিত্ব",
+  "home.viewMore": "আরও দেখুন",
+
+  // Home – Fleet & Network Stats
+  "home.fleetTitle": "আমাদের সেবা ও নেটওয়ার্ক",
+  "home.fleetSubtitle": "আমরা বাংলাদেশের প্রধান বন্দরগুলিতে ব্যাপক সামুদ্রিক ও লজিস্টিক সমাধান প্রদান করি।",
+  "home.stat1Label": "প্রধান বন্দর কভার",
+  "home.stat2Label": "পেশাদার কর্মী",
+  "home.stat3Label": "অপারেশনের বছর",
+  "home.stat4Label": "অপারেশনাল সহায়তা",
+  "home.stat5Label": "মূল সেবা লাইন",
+  "home.stat6Label": "সেবাকৃত ক্লায়েন্ট",
+  "home.statYears": "বছর",
+  "home.statServices": "মূল",
+  "home.fleetDesc": "আমাদের বিস্তৃত নেটওয়ার্ক ক্লায়েন্টদের কাছে আমাদের কর্মীদের অবস্থান করে প্রথম শ্রেণীর ব্যক্তিগতকৃত সেবা প্রদান করে।",
+  "home.learnMoreFleet": "আমাদের সেবা সম্পর্কে আরও জানুন",
+  "home.fleetFootnote": "চট্টগ্রাম, মাতারবাড়ি, পায়রা ও মোংলা বন্দরে অপারেশন সহায়তা।",
+
+  // Home – Promo Cards
+  "home.promoAboutLabel": "আমাদের সম্পর্কে",
+  "home.promoAboutDesc": "২০২২ সালে প্রতিষ্ঠিত, River Tyne Shipping বাংলাদেশের প্রধান সামুদ্রিক গেটওয়েতে নির্ভরযোগ্যতার সুনাম তৈরি করেছে।",
+  "home.promoAboutCta": "আরও পড়ুন",
+  "home.promoServicesLabel": "আমাদের সেবা",
+  "home.promoServicesDesc": "জাহাজ মালিক ও কার্গো ক্লায়েন্টদের জন্য ব্যাপক পোর্ট এজেন্সি, হাজব্যান্ড্রি ও লজিস্টিক সমাধান।",
+  "home.promoServicesCta": "আমাদের সেবা",
+  "home.promoPortsLabel": "বন্দর তথ্য",
+  "home.promoPortsDesc": "নিবেদিত স্থানীয় দল সহ সকল প্রধান বাংলাদেশি বন্দরে অপারেশনাল কভারেজ।",
+  "home.promoPortsCta": "বন্দর দেখুন",
+
+  // Footer extras
+  "footer.aboutLink": "আমাদের সম্পর্কে",
+  "footer.servicesLink": "সেবাসমূহ",
 };

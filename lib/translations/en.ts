@@ -20,12 +20,55 @@ export const en = {
   "nav.selectLanguage": "Select language",
 
   // Hero
-  "hero.title": "Universe Shipping Lines",
+  "hero.title": "River Tyne Shipping",
   "hero.subtitle": "Leading Shipping Agency & Logistics Service Provider",
   "hero.ourServices": "Our Services",
   "hero.contactUs": "Contact Us",
 
-  // Home – Contact Bar
+  // Home – Info Cards
+  "home.card1Label": "Company Overview",
+  "home.card1Title": "Leading Shipping Agency & Logistics Provider in Bangladesh",
+  "home.card2Label": "Our Services",
+  "home.card2Title": "Port Agency, OPA/CPA, Husbandry & Logistics Solutions",
+  "home.card3Label": "Port Information",
+  "home.card3Title": "Operations Across Chattogram, Matarbari, Payra & Mongla",
+  "home.card4Label": "Global Network",
+  "home.card4Title": "24/7 Support & Trusted Partnerships Worldwide",
+  "home.viewMore": "View More",
+
+  // Home – Fleet & Network Stats
+  "home.fleetTitle": "Our Services & Network",
+  "home.fleetSubtitle":
+    "We operate across Bangladesh's major ports, providing comprehensive maritime and logistics solutions designed to fit our clients' needs for the long term.",
+  "home.stat1Label": "Major Ports Covered",
+  "home.stat2Label": "Professional Staff",
+  "home.stat3Label": "Years of Operations",
+  "home.stat4Label": "Operational Support",
+  "home.stat5Label": "Core Service Lines",
+  "home.stat6Label": "Clients Served",
+  "home.statYears": "years",
+  "home.statServices": "core",
+  "home.fleetDesc":
+    "Our extensive network positions our staff close to our clients so we can better understand their shipping needs and deliver first-rate personalized service.",
+  "home.learnMoreFleet": "Learn more about our services",
+  "home.fleetFootnote":
+    "Operations supported at Chattogram, Matarbari, Payra, and Mongla ports with associated inland logistics.",
+
+  // Home – Promo Cards
+  "home.promoAboutLabel": "About Us",
+  "home.promoAboutDesc":
+    "Established in 2022, River Tyne Shipping has built a reputation for reliability across Bangladesh's key maritime gateways.",
+  "home.promoAboutCta": "Read More",
+  "home.promoServicesLabel": "Our Services",
+  "home.promoServicesDesc":
+    "Comprehensive port agency, husbandry, and logistics solutions tailored to vessel owners and cargo clients.",
+  "home.promoServicesCta": "Our Services",
+  "home.promoPortsLabel": "Port Information",
+  "home.promoPortsDesc":
+    "Operational coverage across all major Bangladeshi ports with dedicated local teams.",
+  "home.promoPortsCta": "Explore Ports",
+
+  // Home – Contact Bar (legacy, used by other pages potentially)
   "home.callCenter": "Call Center",
   "home.callCenterSub": "Give us a call",
   "home.callCenterValue": "+880 258811819",
@@ -36,15 +79,15 @@ export const en = {
   "home.ourLocationSub": "Corporate Head Office",
   "home.ourLocationValue": "Dhaka, Bangladesh",
 
-  // Home – About Section (client data)
+  // Home – About Section
   "home.aboutP1":
-    "Universe Shipping Lines is a leading shipping agency, logistics service provider, and trading company in Bangladesh, offering comprehensive maritime and supply chain solutions.",
+    "River Tyne Shipping is a leading shipping agency, logistics service provider, and trading company in Bangladesh, offering comprehensive maritime and supply chain solutions.",
   "home.aboutP2":
-    "With over four years of operational experience, Universe Shipping Lines has successfully handled a wide range of breakbulk commodities, including coal, clinker, stone, and boulder cargoes, from overseas origins to designated inland delivery locations. Operations are efficiently conducted through the country\u2019s major ports \u2014 Chattogram, Matarbari, Mongla, and Payra \u2014 in accordance with consignees\u2019 requirements.",
+    "With over four years of operational experience, River Tyne Shipping has successfully handled a wide range of breakbulk commodities, including coal, clinker, stone, and boulder cargoes, from overseas origins to designated inland delivery locations.",
   "home.aboutP3":
-    "The company provides complete end-to-end logistics solutions across Bangladesh. Regardless of cargo size, quantity, or transportation mode, Universe Shipping Lines is committed to delivering reliable, efficient, and customized services through its experienced and dedicated team.",
+    "The company provides complete end-to-end logistics solutions across Bangladesh. Regardless of cargo size, quantity, or transportation mode, River Tyne Shipping is committed to delivering reliable, efficient, and customized services.",
   "home.aboutP4":
-    "Established in 2022, the company\u2019s corporate head office is located in Dhaka, the capital city of Bangladesh. In addition, Universe Shipping Lines maintains branch offices in Chattogram, Khulna/Mongla, and Payra Port to ensure strong operational coverage nationwide. The organization employs approximately 50 professional staff members and operates a seagoing bollard pull tugboat to support marine operations.",
+    "Established in 2022, the company's corporate head office is located in Dhaka, the capital city of Bangladesh. River Tyne Shipping maintains branch offices in Chattogram, Khulna/Mongla, and Payra Port.",
 
   // Home – Connections
   "home.connections": "Connections",
@@ -52,7 +95,7 @@ export const en = {
     "Customs and Port Authorities \u2022 Embassies and Government Agencies \u2022 Classification Societies \u2022 Shipping Associations \u2022 Terminal Operators \u2022 Stevedoring Companies \u2022 Shipyard Facilities \u2022 Marine Suppliers and Service Providers",
   "home.response": "24/7 Operational Response",
   "home.responseDesc":
-    "Universe Shipping Lines ensures fast turnaround for all port calls while maintaining round-the-clock operational support. Clients can expect prompt responses to all inquiries within 24 hours. Our operational efficiency focuses on minimizing port stay, optimizing vessel performance, and reducing overall operational costs for Principals.",
+    "River Tyne Shipping ensures fast turnaround for all port calls while maintaining round-the-clock operational support.",
 
   // Home – Services
   "home.ourServicesLabel": "Our Services",
@@ -63,7 +106,7 @@ export const en = {
     "Full-service port agency support for vessel arrivals, departures, and all port call requirements at major Bangladeshi ports.",
   "home.charteringServices": "OPA/CPA Agency",
   "home.charteringServicesDesc":
-    "Owner\u2019s Protecting Agent and Charterer\u2019s Protecting Agent services ensuring interests are safeguarded at every port call.",
+    "Owner's Protecting Agent and Charterer's Protecting Agent services ensuring interests are safeguarded at every port call.",
   "home.logisticsServices": "Husbandry Agency",
   "home.logisticsServicesDesc":
     "24/7 vessel husbandry support including crew changes, supplies, provisions, and clearance operations.",
@@ -74,14 +117,16 @@ export const en = {
 
   // Home – GAC
   "home.gacPartnership":
-    "GAC-Universe is a partnership between GAC and Universe Shipping Lines, an established agency house headquartered in Dhaka, with branch offices at the key ports of Chattogram, Mongla, and Payra.",
+    "GAC-River Tyne is a partnership between GAC and River Tyne Shipping, an established agency house headquartered in Dhaka, with branch offices at the key ports of Chattogram, Mongla, and Payra.",
 
   // Certifications
   "home.certifications": "Certifications",
 
   // Footer
   "footer.aboutText":
-    "Universe Shipping Lines offers expert shipping and marine services across all major Bangladeshi ports.",
+    "River Tyne Shipping offers expert shipping and marine services across all major Bangladeshi ports.",
+  "footer.aboutLink": "About Us",
+  "footer.servicesLink": "Services",
   "footer.ourServices": "Our Services",
   "footer.portAgency": "Port Agency / Husbandry Services",
   "footer.crewChanges": "Crew Changes Support",
@@ -91,9 +136,9 @@ export const en = {
   "footer.getInTouch": "Get In Touch",
   "footer.stayUpdated": "Stay Updated",
   "footer.stayUpdatedDesc":
-    "Subscribe to our newsletter for the latest news, insights, and exclusive offers from Universe Shipping Lines.",
+    "Subscribe to our newsletter for the latest news, insights, and exclusive offers from River Tyne Shipping.",
   "footer.yourEmail": "Your Email",
-  "footer.subscribe": "Subscribe",
+  "footer.subscribe": "Subscribe for updates",
   "footer.termsConditions": "Terms & Conditions",
   "footer.privacyPolicy": "Privacy Policy",
   "footer.disclaimer": "Disclaimer",
@@ -101,7 +146,7 @@ export const en = {
   // About Page
   "about.title": "About Us",
   "about.subtitle":
-    "Universe Shipping Lines is a leading shipping agency and logistics service provider established in 2022.",
+    "River Tyne Shipping is a leading shipping agency and logistics service provider established in 2022.",
   "about.whoWeAre": "Who We Are",
   "about.whoWeAreDesc":
     "We are a leading shipping agency, logistics service provider, and trading company in Bangladesh, offering comprehensive maritime and supply chain solutions.",
@@ -124,7 +169,7 @@ export const en = {
     "Full-service port agency handling vessel arrivals, departures, documentation, and port authority liaison.",
   "services.uiuxDesign": "OPA/CPA Agency",
   "services.uiuxDesignDesc":
-    "Owner\u2019s and Charterer\u2019s Protecting Agent services ensuring all interests are safeguarded.",
+    "Owner's and Charterer's Protecting Agent services ensuring all interests are safeguarded.",
   "services.nextjsDev": "Husbandry Agency",
   "services.nextjsDevDesc":
     "24/7 vessel husbandry including crew changes, supplies, provisions, and clearance.",
@@ -158,7 +203,7 @@ export const en = {
   // Portfolio Page
   "portfolio.title": "Portfolio",
   "portfolio.subtitle":
-    "A snapshot of logistics and maritime assignments delivered by Universe Shipping Lines.",
+    "A snapshot of logistics and maritime assignments delivered by River Tyne Shipping.",
   "portfolio.coalVessel": "Coal Vessel Discharge Program",
   "portfolio.coalVesselDesc":
     "End-to-end agency and logistics support for high-volume clinker and coal imports.",
@@ -192,7 +237,7 @@ export const en = {
   // Port Info Page
   "portInfo.title": "Port Info",
   "portInfo.subtitle":
-    "Operational insight and support coverage across Bangladesh\u2019s key maritime gateways.",
+    "Operational insight and support coverage across Bangladesh's key maritime gateways.",
   "portInfo.chattogram": "Chattogram Port",
   "portInfo.chattogramDesc":
     "Primary seaport with extensive cargo handling, container operations, and vessel services.",
@@ -255,7 +300,7 @@ export const en = {
   "contact.contactInfo": "Contact Information",
   "contact.contactInfoDesc":
     "Corporate Head Office, Dhaka, Bangladesh. Email and hotline support are available around the clock for all active calls.",
-  "contact.email": "Email: operations@universeshipping.com",
+  "contact.email": "Email: operations@rivertyneshipping.com",
   "contact.phone": "Phone: +880 258811819",
   "contact.hours": "Hours: 24/7 support desk",
   "contact.sendMessage": "Send a Message",

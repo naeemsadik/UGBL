@@ -1,144 +1,75 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "@/lib/language-context";
-
-import hero1 from "@/assets/hero1.jpeg";
+import { RTLogo } from "@/components/rt-logo";
 
 export function SiteFooter() {
   const { t } = useTranslation();
 
-  const services = [
-    t("footer.portAgency"),
-    t("footer.crewChanges"),
-    t("footer.shipChandling"),
-    t("footer.bunkering"),
-    t("footer.hullCleaning"),
-  ];
-
   return (
-    <footer className="relative text-white">
-      {/* Background image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={hero1}
-          alt=""
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-[#081c30]/92" />
+    <footer className="bg-white">
+      {/* Logo */}
+      <div className="flex flex-col items-center pt-14 pb-6">
+        <RTLogo size={52} />
+        <span className="mt-2 text-xl font-bold tracking-wide text-[#1B2D5A]">
+          <span className="text-[#2E9E6F]">River</span> Tyne
+        </span>
       </div>
 
-      {/* Main footer content */}
-      <div className="relative z-10 mx-auto grid w-full max-w-[1200px] gap-10 px-6 pt-16 pb-12 md:grid-cols-[1.1fr_1fr_1fr_1.2fr]">
-        {/* Column 1: Brand */}
-        <div>
-          <Link href="/" className="text-3xl font-bold tracking-tight">
-            <span className="text-[#1a8ec8]">U</span>niverse
-          </Link>
-          <p className="mt-5 text-[0.92rem] leading-7 text-white/75">
-            {t("footer.aboutText")}
-          </p>
-          <div className="mt-6 flex items-center gap-3 text-sm text-white/60">
-            <span>Mon – Sun</span>
-          </div>
-          <p className="mt-1 text-sm text-white/60">24/7/365 Support</p>
-        </div>
+      {/* Subscribe + social */}
+      <div className="flex flex-wrap items-center justify-center gap-5 px-6 pb-8">
+        <Link
+          href="/contact"
+          className="inline-flex items-center gap-2 rounded-full border border-[#d0dbe6] px-5 py-2.5 text-sm font-medium text-[#1B2D5A] transition hover:border-[#2E9E6F] hover:text-[#2E9E6F]"
+        >
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          {t("footer.subscribe")}
+        </Link>
 
-        {/* Column 2: Our Services */}
-        <div>
-          <h3 className="text-lg font-semibold">{t("footer.ourServices")}</h3>
-          <div className="mt-2 h-[2px] w-10 bg-[#1a8ec8]" />
-          <ul className="mt-5 space-y-3 text-[0.92rem] text-white/75">
-            {services.map((service) => (
-              <li key={service}>
-                <Link
-                  href="/services"
-                  className="transition hover:text-[#1a8ec8]"
-                >
-                  {service}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Column 3: Get In Touch */}
-        <div>
-          <h3 className="text-lg font-semibold">{t("footer.getInTouch")}</h3>
-          <div className="mt-2 h-[2px] w-10 bg-[#1a8ec8]" />
-          <div className="mt-5 space-y-4 text-[0.92rem] leading-7 text-white/75">
-            <p>
-              Corporate Head Office
-              <br />
-              Dhaka, Bangladesh
-            </p>
-            <p>
-              Phone: +880 258811819
-            </p>
-            <p>
-              Email: info@universeshipping.com
-            </p>
-            <div className="mt-4 flex gap-3">
-              {["fb", "ig", "in", "wa"].map((icon) => (
-                <span
-                  key={icon}
-                  className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-xs uppercase text-white/60 transition hover:border-[#1a8ec8] hover:text-[#1a8ec8]"
-                >
-                  {icon}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Column 4: Stay Updated */}
-        <div>
-          <h3 className="text-lg font-semibold">{t("footer.stayUpdated")}</h3>
-          <div className="mt-2 h-[2px] w-10 bg-[#1a8ec8]" />
-          <p className="mt-5 text-[0.92rem] leading-7 text-white/75">
-            {t("footer.stayUpdatedDesc")}
-          </p>
-          <div className="mt-5">
-            <label htmlFor="footer-email" className="text-sm text-white/60">
-              {t("footer.yourEmail")}
-            </label>
-            <input
-              id="footer-email"
-              type="email"
-              placeholder="Email"
-              className="mt-2 w-full rounded border border-white/15 bg-white/5 px-3.5 py-2.5 text-sm text-white outline-none placeholder:text-white/40 focus:border-[#1a8ec8]"
-            />
-            <button
-              type="button"
-              className="mt-3 w-full rounded bg-[#1a8ec8] py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-[#158ab8]"
+        {/* Social icons */}
+        <div className="flex items-center gap-3">
+          {[
+            { label: "Facebook", path: "M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" },
+            { label: "Instagram", path: "M16 4H8a4 4 0 00-4 4v8a4 4 0 004 4h8a4 4 0 004-4V8a4 4 0 00-4-4zm-4 11a3 3 0 110-6 3 3 0 010 6zm4.5-7a1 1 0 110-2 1 1 0 010 2z" },
+            { label: "LinkedIn", path: "M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z" },
+          ].map((social) => (
+            <a
+              key={social.label}
+              href="#"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-[#d0dbe6] text-[#6a7a8d] transition hover:border-[#2E9E6F] hover:text-[#2E9E6F]"
+              aria-label={social.label}
             >
-              {t("footer.subscribe")}
-            </button>
-          </div>
+              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d={social.path} />
+              </svg>
+            </a>
+          ))}
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="relative z-10 border-t border-white/10 bg-black/20">
-        <div className="mx-auto flex w-full max-w-[1200px] flex-wrap items-center justify-between gap-4 px-6 py-4 text-xs text-white/50">
-          <p>
-            Universe Shipping Lines 2024 © All Rights Reserved.
-          </p>
-          <div className="flex gap-6">
-            <Link href="#" className="transition hover:text-white/80">
-              {t("footer.termsConditions")}
-            </Link>
-            <Link href="#" className="transition hover:text-white/80">
-              {t("footer.privacyPolicy")}
-            </Link>
-            <Link href="#" className="transition hover:text-white/80">
-              {t("footer.disclaimer")}
-            </Link>
-          </div>
+      {/* Bottom links */}
+      <div className="border-t border-gray-100">
+        <div className="mx-auto flex w-full max-w-[1320px] flex-wrap items-center justify-center gap-x-5 gap-y-2 px-6 py-4 text-xs text-[#8a99ab]">
+          <Link href="/about" className="transition hover:text-[#2E9E6F]">{t("footer.aboutLink")}</Link>
+          <span className="text-gray-200">|</span>
+          <Link href="/services" className="transition hover:text-[#2E9E6F]">{t("footer.servicesLink")}</Link>
+          <span className="text-gray-200">|</span>
+          <Link href="/faq" className="transition hover:text-[#2E9E6F]">FAQ</Link>
+          <span className="text-gray-200">|</span>
+          <Link href="#" className="transition hover:text-[#2E9E6F]">{t("footer.termsConditions")}</Link>
+          <span className="text-gray-200">|</span>
+          <Link href="#" className="transition hover:text-[#2E9E6F]">{t("footer.privacyPolicy")}</Link>
+          <span className="text-gray-200">|</span>
+          <Link href="#" className="transition hover:text-[#2E9E6F]">{t("footer.disclaimer")}</Link>
         </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="bg-[#f7f9fc] py-3 text-center text-xs text-[#a0acb9]">
+        © 2026 River Tyne Shipping Limited
       </div>
     </footer>
   );
