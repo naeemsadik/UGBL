@@ -13,8 +13,8 @@ export function PromoCards() {
       label: t("home.promoAboutLabel"),
       desc: t("home.promoAboutDesc"),
       cta: t("home.promoAboutCta"),
-      href: "/about",
-      overlay: "from-[#1B2D5A]/90 to-[#1B2D5A]/50",
+      href: "/mission-vision",
+      overlay: "from-[#1D2E54]/90 to-[#1D2E54]/50",
     },
     {
       image: "/card-services.png",
@@ -22,7 +22,7 @@ export function PromoCards() {
       desc: t("home.promoServicesDesc"),
       cta: t("home.promoServicesCta"),
       href: "/services",
-      overlay: "from-[#2E9E6F]/85 to-[#2E9E6F]/40",
+      overlay: "from-[#2D5B4F]/85 to-[#49A98F]/40",
     },
     {
       image: "/card-ports.png",
@@ -30,15 +30,19 @@ export function PromoCards() {
       desc: t("home.promoPortsDesc"),
       cta: t("home.promoPortsCta"),
       href: "/port-info",
-      overlay: "from-[#2088C0]/85 to-[#2088C0]/40",
+      overlay: "from-[#1D2E54]/85 to-[#3B71B5]/40",
     },
   ];
 
   return (
-    <section className="bg-[#EFF5F8] py-16">
+    <section className="bg-[#F6FAFF] py-16">
       <div className="mx-auto grid w-full max-w-[1320px] gap-5 px-6 md:grid-cols-3">
         {cards.map((card) => (
-          <Link key={card.label} href={card.href} className="promo-card group block">
+          <Link
+            key={card.label}
+            href={card.href}
+            className="promo-card group block"
+          >
             {/* Background image */}
             <Image
               src={card.image}
@@ -49,7 +53,9 @@ export function PromoCards() {
             />
 
             {/* Gradient overlay */}
-            <div className={`absolute inset-0 bg-gradient-to-t ${card.overlay}`} />
+            <div
+              className={`absolute inset-0 bg-gradient-to-t ${card.overlay}`}
+            />
 
             {/* Content */}
             <div className="relative z-10 flex h-full min-h-[260px] flex-col justify-end p-6">
@@ -61,8 +67,18 @@ export function PromoCards() {
               </p>
               <p className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white transition-all group-hover:gap-2.5">
                 {card.cta}
-                <svg className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                <svg
+                  className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </p>
             </div>

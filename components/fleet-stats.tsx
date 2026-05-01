@@ -6,7 +6,7 @@ import { useTranslation } from "@/lib/language-context";
 /* ── Stat icons ──────────────────────────────────── */
 function ShipIcon() {
   return (
-    <svg className="h-12 w-12 text-[#1B2D5A]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg className="h-12 w-12 text-[#1D2E54]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <path d="M6 36l6-18h24l6 18" />
       <path d="M12 18v-6h24v6" />
       <path d="M20 12V8h8v4" />
@@ -17,7 +17,7 @@ function ShipIcon() {
 
 function AnchorIcon() {
   return (
-    <svg className="h-12 w-12 text-[#1B2D5A]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg className="h-12 w-12 text-[#1D2E54]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="24" cy="10" r="4" />
       <path d="M24 14v26" />
       <path d="M16 20h16" />
@@ -28,7 +28,7 @@ function AnchorIcon() {
 
 function CargoIcon() {
   return (
-    <svg className="h-12 w-12 text-[#1B2D5A]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg className="h-12 w-12 text-[#1D2E54]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <rect x="8" y="16" width="32" height="24" rx="2" />
       <path d="M8 24h32" />
       <path d="M8 32h32" />
@@ -41,7 +41,7 @@ function CargoIcon() {
 
 function GlobeIcon() {
   return (
-    <svg className="h-12 w-12 text-[#1B2D5A]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg className="h-12 w-12 text-[#1D2E54]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="24" cy="24" r="18" />
       <ellipse cx="24" cy="24" rx="9" ry="18" />
       <path d="M8 16h32M8 32h32" />
@@ -51,7 +51,7 @@ function GlobeIcon() {
 
 function TeamIcon() {
   return (
-    <svg className="h-12 w-12 text-[#1B2D5A]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg className="h-12 w-12 text-[#1D2E54]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="24" cy="14" r="6" />
       <path d="M12 40c0-8 5-14 12-14s12 6 12 14" />
       <circle cx="38" cy="16" r="4" />
@@ -64,7 +64,7 @@ function TeamIcon() {
 
 function CustomersIcon() {
   return (
-    <svg className="h-12 w-12 text-[#1B2D5A]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg className="h-12 w-12 text-[#1D2E54]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="16" cy="16" r="5" />
       <path d="M6 36c0-7 4-12 10-12s10 5 10 12" />
       <circle cx="34" cy="16" r="5" />
@@ -80,22 +80,22 @@ export function FleetStats() {
   const row1 = [
     {
       icon: <ShipIcon />,
-      number: "4",
+      number: "3",
       label: t("home.stat1Label"),
-      color: "#2E9E6F",
+      color: "#49A98F",
     },
     {
       icon: <AnchorIcon />,
-      number: "50+",
+      number: "60+",
       label: t("home.stat2Label"),
-      color: "#2088C0",
+      color: "#3B71B5",
     },
     {
       icon: <CargoIcon />,
-      number: "4+",
+      number: "10+",
       suffix: t("home.statYears"),
       label: t("home.stat3Label"),
-      color: "#2E9E6F",
+      color: "#49A98F",
     },
   ];
 
@@ -104,28 +104,28 @@ export function FleetStats() {
       icon: <GlobeIcon />,
       number: "24/7",
       label: t("home.stat4Label"),
-      color: "#2088C0",
+      color: "#3B71B5",
     },
     {
       icon: <TeamIcon />,
-      number: "4",
-      suffix: t("home.statServices"),
+      number: "5",
+      suffix: "",
       label: t("home.stat5Label"),
-      color: "#2E9E6F",
+      color: "#49A98F",
     },
     {
       icon: <CustomersIcon />,
       number: "100+",
       label: t("home.stat6Label"),
-      color: "#2088C0",
+      color: "#3B71B5",
     },
   ];
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-[#F6FAFF] py-20">
       <div className="mx-auto w-full max-w-[1000px] px-6 text-center">
         {/* Heading */}
-        <h2 className="text-3xl font-bold text-[#1B2D5A] md:text-4xl">
+        <h2 className="text-3xl font-bold text-[#1D2E54] md:text-4xl">
           {t("home.fleetTitle")}
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-[1rem] leading-7 text-[#5a6a7d]">

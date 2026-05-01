@@ -57,7 +57,7 @@ export const en = {
   // Home – Promo Cards
   "home.promoAboutLabel": "About Us",
   "home.promoAboutDesc":
-    "Established in 2022, River Tyne Shipping has built a reputation for reliability across Bangladesh's key maritime gateways.",
+    "Established in 2016, River Tyne Ltd has built a reputation for reliability across Bangladesh's key maritime gateways.",
   "home.promoAboutCta": "Read More",
   "home.promoServicesLabel": "Our Services",
   "home.promoServicesDesc":
@@ -81,21 +81,23 @@ export const en = {
 
   // Home – About Section
   "home.aboutP1":
-    "River Tyne Shipping is a leading shipping agency, logistics service provider, and trading company in Bangladesh, offering comprehensive maritime and supply chain solutions.",
+    "River Tyne Ltd is the one of leading Shipping Agent, Logistics service provider in Bangladesh.",
   "home.aboutP2":
-    "With over four years of operational experience, River Tyne Shipping has successfully handled a wide range of breakbulk commodities, including coal, clinker, stone, and boulder cargoes, from overseas origins to designated inland delivery locations.",
+    "River Tyne Ltd has 10 years of experience in handling of multiple breakbulk commodities including Coal, Stone, Gypsum, Aggregates, Soybean, Sugar, Chickpeas, Clinker, Manganese Ore, TSP, Lentils, LNG, LPG, Condensate, HSFO, VEG OIL, MOGAS from overseas origin to local delivery site in the country through Chattogram, Mongla, Payra port as per consignee's requirement.",
   "home.aboutP3":
-    "The company provides complete end-to-end logistics solutions across Bangladesh. Regardless of cargo size, quantity, or transportation mode, River Tyne Shipping is committed to delivering reliable, efficient, and customized services.",
+    "We have the capacity to provide complete logistics solution in Bangladesh. Nothing impossible for River Tyne, whatever the size / quantity of the cargo or whatever the mode of transportation is not matter to River Tyne Logistics team/company.",
   "home.aboutP4":
-    "Established in 2022, the company's corporate head office is located in Dhaka, the capital city of Bangladesh. River Tyne Shipping maintains branch offices in Chattogram, Khulna/Mongla, and Payra Port.",
+    "River Tyne Ltd is an ISO 9001: 2015 certified leading Shipping agent, Logistics service provider in Bangladesh. The company was established in 2016 and the corporate office is situated in the capital city of Dhaka. River Tyne Ltd has also four branch offices located in Chittagong, Khulna, Mongla and Payra port. River Tyne has total strength of 60 staffs excluding offshore staff as we are having one seagoing Bollard pull Tug Boat and one classed Oil tanker enlisted with Bangladesh Petroleum Corporation for carrying their furnished oil to different destination in Bangladesh.",
 
   // Home – Connections
   "home.connections": "Connections",
   "home.connectionsDesc":
-    "Customs and Port Authorities \u2022 Embassies and Government Agencies \u2022 Classification Societies \u2022 Shipping Associations \u2022 Terminal Operators \u2022 Stevedoring Companies \u2022 Shipyard Facilities \u2022 Marine Suppliers and Service Providers",
-  "home.response": "24/7 Operational Response",
+    "Principals can tap into River Tyne's excellent local connections and relations with both public and private sectors in the shipping industry. These include customs & port authorities, embassies, classification societies, shipping associations, terminals operators, stevedores, shipyard facilities and suppliers.",
+  "home.response": "24/7 Response",
   "home.responseDesc":
-    "River Tyne Shipping ensures fast turnaround for all port calls while maintaining round-the-clock operational support.",
+    "In addition to fast turnaround for all port calls, clients can also expect response to all inquiries within 24 hours. Our efficient operations are aimed at reducing time at port and ultimately minimize costs for Principals.",
+  "home.isoCommitment":
+    "We River Tyne Ltd are committed to provide quality customized service & complete compliance as per legal & customers' requirements as well as the requirements of ISO-9001: 2015 by continuously improving of our system through monitoring, analysis & training.",
 
   // Home – Services
   "home.ourServicesLabel": "Our Services",

@@ -55,6 +55,8 @@ export const es: Record<TranslationKey, string> = {
   "home.response": "Respuesta 24/7:",
   "home.responseDesc":
     "Además del rápido retorno para todas las escalas portuarias, los clientes también pueden esperar respuesta a todas las consultas dentro de 24 horas.",
+  "home.isoCommitment":
+    "En River Tyne Ltd estamos comprometidos a brindar un servicio personalizado de calidad y cumplimiento completo según los requisitos legales y de los clientes.",
 
   // Home – Services
   "home.ourServicesLabel": "Nuestros Servicios",

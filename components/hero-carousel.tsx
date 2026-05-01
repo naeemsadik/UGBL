@@ -81,7 +81,7 @@ export function HeroCarousel() {
           {/* Scroll indicator */}
           <button
             onClick={scrollDown}
-            className="absolute left-1/2 -translate-x-1/2 bottom-4 flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/60 bg-[#2E9E6F] text-white transition hover:bg-[#238058] animate-bounce-slow"
+            className="absolute left-1/2 -translate-x-1/2 bottom-4 flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/60 bg-[#1D2E54] text-white transition hover:bg-[#141F3A] animate-bounce-slow"
             aria-label="Scroll down"
           >
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

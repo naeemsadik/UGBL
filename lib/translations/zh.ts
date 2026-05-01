@@ -55,6 +55,8 @@ export const zh: Record<TranslationKey, string> = {
   "home.response": "24/7 响应：",
   "home.responseDesc":
     "除了为所有港口停靠提供快速周转外，客户还可以期望在24小时内对所有查询做出回应。",
+  "home.isoCommitment":
+    "River Tyne Ltd致力于按照法律和客户要求以及ISO-9001:2015的要求提供优质定制服务和完全合规。",
 
   // Home – Services
   "home.ourServicesLabel": "我们的服务",
