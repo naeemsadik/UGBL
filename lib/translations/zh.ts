@@ -4,6 +4,7 @@ export const zh: Record<TranslationKey, string> = {
   // Navigation
   "nav.home": "首页",
   "nav.aboutUs": "关于我们",
+  "nav.atAGlance": "一目了然",
   "nav.missionVision": "使命与愿景",
   "nav.policyCompliance": "政策与合规",
   "nav.services": "服务",
@@ -22,7 +23,7 @@ export const zh: Record<TranslationKey, string> = {
   "nav.selectLanguage": "选择语言",
 
   // Hero
-  "hero.title": "Universe Shipping Lines",
+  "hero.title": "River Tyne Shipping",
   "hero.subtitle": "全球航运合作伙伴",
   "hero.ourServices": "我们的服务",
   "hero.contactUs": "联系我们",

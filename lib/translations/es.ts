@@ -4,6 +4,7 @@ export const es: Record<TranslationKey, string> = {
   // Navigation
   "nav.home": "Inicio",
   "nav.aboutUs": "Sobre Nosotros",
+  "nav.atAGlance": "Un vistazo",
   "nav.missionVision": "Misión y Visión",
   "nav.policyCompliance": "Política y Cumplimiento",
   "nav.services": "Servicios",
@@ -22,7 +23,7 @@ export const es: Record<TranslationKey, string> = {
   "nav.selectLanguage": "Seleccionar idioma",
 
   // Hero
-  "hero.title": "Universe Shipping Lines",
+  "hero.title": "River Tyne Shipping",
   "hero.subtitle": "Socio Global de Envíos",
   "hero.ourServices": "Nuestros Servicios",
   "hero.contactUs": "Contáctenos",

@@ -3,6 +3,7 @@ import type { TranslationKey } from "./en";
 export const bn: Record<TranslationKey, string> = {
   "nav.home": "হোম",
   "nav.aboutUs": "আমাদের সম্পর্কে",
+  "nav.atAGlance": "এক নজরে",
   "nav.missionVision": "মিশন ও ভিশন",
   "nav.policyCompliance": "নীতি ও সম্মতি",
   "nav.services": "সেবাসমূহ",
@@ -19,7 +20,7 @@ export const bn: Record<TranslationKey, string> = {
   "nav.webMail": "ওয়েব মেইল",
   "nav.contactUs": "যোগাযোগ করুন",
   "nav.selectLanguage": "ভাষা নির্বাচন করুন",
-  "hero.title": "Universe Shipping Lines",
+  "hero.title": "River Tyne Shipping",
   "hero.subtitle": "বৈশ্বিক শিপিং পার্টনার",
   "hero.ourServices": "আমাদের সেবা",
   "hero.contactUs": "যোগাযোগ করুন",
