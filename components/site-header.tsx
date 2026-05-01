@@ -50,7 +50,7 @@ const navItems: NavItem[] = [
   },
   {
     key: "nav.webMail",
-    href: "https://webmail.ugblgroup.com/",
+    href: "https://www.rivertyneltd.com:2096/",
     external: true,
   },
   { key: "nav.contactUs", href: "/contact" },
@@ -67,7 +67,7 @@ function DropdownItem({
   const { t } = useTranslation();
   const hasChildren = item.children && item.children.length > 0;
 
-  const baseLinkClass = `inline-flex items-center h-full font-semibold uppercase tracking-wider text-[0.78rem] transition-colors duration-200 whitespace-nowrap ${
+  const baseLinkClass = `inline-flex items-center h-full font-medium uppercase tracking-wider text-[1.05rem] transition-colors duration-200 whitespace-nowrap ${
     scrolled
       ? "text-[#1D2E54] hover:text-[#3B71B5]"
       : "text-white/90 hover:text-white"
@@ -111,7 +111,7 @@ function DropdownItem({
             <Link
               key={child.key}
               href={child.href}
-              className="block px-5 py-2.5 text-[0.84rem] font-medium text-[#3a4f63] transition hover:bg-[#F6FAFF] hover:text-[#3B71B5]"
+              className="block px-5 py-2.5 text-base font-medium text-[#3a4f63] transition hover:bg-[#F6FAFF] hover:text-[#3B71B5]"
             >
               {t(child.key)}
             </Link>
@@ -163,7 +163,7 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
               <Link
                 href={item.href}
                 onClick={onClose}
-                className="block py-2.5 text-[0.92rem] font-semibold uppercase tracking-wide text-[#1D2E54] hover:text-[#3B71B5]"
+                className="block py-2.5 text-base font-medium uppercase tracking-wide text-[#1D2E54] hover:text-[#3B71B5]"
               >
                 {t(item.key)}
               </Link>
@@ -172,7 +172,7 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
                   key={child.key}
                   href={child.href}
                   onClick={onClose}
-                  className="block py-2 pl-4 text-sm text-[#4a5a70] hover:text-[#3B71B5]"
+                  className="block py-2 pl-4 text-base text-[#4a5a70] hover:text-[#3B71B5]"
                 >
                   {t(child.key)}
                 </Link>
@@ -199,7 +199,7 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
                 key={lang.code}
                 type="button"
                 onClick={() => setLocale(lang.code)}
-                className={`rounded-full px-3 py-1.5 text-sm font-medium transition ${
+                className={`rounded-full px-3 py-1.5 text-base font-medium transition ${
                   locale === lang.code
                     ? "bg-[#1D2E54] text-white"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -234,7 +234,7 @@ export function SiteHeader() {
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           scrolled
             ? "bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.08)]"
-            : "bg-gradient-to-b from-[rgba(29,46,84,0.85)] via-[rgba(29,46,84,0.5)] to-transparent"
+            : "bg-transparent"
         }`}
       >
         {/*
@@ -243,7 +243,7 @@ export function SiteHeader() {
         */}
         <div
           className={`mx-auto flex w-full max-w-[1400px] items-center px-6 transition-all duration-300 ${
-            scrolled ? "h-[56px]" : "h-[82px]"
+            scrolled ? "h-[64px]" : "h-[82px]"
           }`}
         >
           {/* ── Left: Logo ─────────────────────────────── */}
@@ -251,14 +251,14 @@ export function SiteHeader() {
             <Image
               src={logoImg}
               alt="River Tyne"
-              width={scrolled ? 40 : 70}
-              height={scrolled ? 40 : 70}
+              width={scrolled ? 56 : 70}
+              height={scrolled ? 56 : 70}
               className="transition-all duration-300"
             />
           </Link>
 
           {/* ── Center: Navigation ─────────────────────── */}
-          <nav className="hidden lg:flex items-center justify-center gap-6 flex-1 h-full">
+          <nav className="hidden lg:flex items-center justify-center gap-8 flex-1 h-full">
             {navItems.map((item) => (
               <DropdownItem key={item.key} item={item} scrolled={scrolled} />
             ))}
@@ -271,7 +271,7 @@ export function SiteHeader() {
               <div className="group relative">
                 <button
                   type="button"
-                  className={`inline-flex items-center gap-1 text-sm font-semibold tracking-wide transition-colors ${
+                  className={`inline-flex items-center gap-1 text-base font-medium tracking-wide transition-colors ${
                     scrolled
                       ? "text-[#1D2E54] hover:text-[#3B71B5]"
                       : "text-white/90 hover:text-white"
@@ -315,7 +315,7 @@ export function SiteHeader() {
                         key={lang.code}
                         type="button"
                         onClick={() => setLocale(lang.code)}
-                        className={`block w-full px-4 py-2 text-left text-sm font-medium transition ${
+                        className={`block w-full px-4 py-2 text-left text-base font-medium transition ${
                           locale === lang.code
                             ? "bg-[#F6FAFF] text-[#3B71B5]"
                             : "text-[#3a4f63] hover:bg-[#F6FAFF] hover:text-[#3B71B5]"
