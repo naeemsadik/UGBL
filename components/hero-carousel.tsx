@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTranslation } from "@/lib/language-context";
 
@@ -11,54 +10,87 @@ import hero3 from "@/assets/hero3.jpeg";
 import hero4 from "@/assets/hero4.jpeg";
 
 const HERO_IMAGES = [hero1, hero2, hero3, hero4];
-const ROTATE_INTERVAL_MS = 5000;
+const ROTATE_MS = 6000;
+
+const TAGLINES: { key: string; sub: string }[] = [
+  { key: "Navigating Your", sub: "Maritime Success" },
+  { key: "Trusted Port Agency", sub: "& Logistics Partner" },
+  { key: "Connecting Oceans,", sub: "Delivering Promise" },
+  { key: "With You For", sub: "The Long Haul" },
+];
 
 export function HeroCarousel() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [idx, setIdx] = useState(0);
   const { t } = useTranslation();
 
   useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveIndex((previous) => (previous + 1) % HERO_IMAGES.length);
-    }, ROTATE_INTERVAL_MS);
-
-    return () => window.clearInterval(timer);
+    const timer = setInterval(() => setIdx((p) => (p + 1) % HERO_IMAGES.length), ROTATE_MS);
+    return () => clearInterval(timer);
   }, []);
+
+  const scrollDown = () => {
+    window.scrollTo({ top: window.innerHeight - 80, behavior: "smooth" });
+  };
 
   return (
     <section className="hero-banner relative overflow-hidden">
+      {/* Background images */}
       <div className="absolute inset-0" aria-hidden>
-        {HERO_IMAGES.map((image, index) => (
+        {HERO_IMAGES.map((img, i) => (
           <Image
-            key={image.src}
-            src={image}
+            key={img.src}
+            src={img}
             alt=""
             fill
-            priority={index === 0}
-            className={`object-cover transition-opacity duration-1000 ${
-              index === activeIndex ? "opacity-100" : "opacity-0"
+            priority={i === 0}
+            className={`object-cover transition-opacity duration-[1500ms] ${
+              i === idx ? "opacity-100" : "opacity-0"
             }`}
             sizes="100vw"
           />
         ))}
       </div>
 
-      <div className="hero-overlay relative z-10">
-        <div className="mx-auto flex h-full w-full max-w-[1200px] flex-col items-center justify-center px-6 pt-24 text-center md:pt-28">
-          <h1 className="text-5xl font-extrabold uppercase leading-[0.98] text-white md:text-7xl">
-            {t("hero.title")}
+      {/* Overlay */}
+      <div className="hero-overlay relative z-10 flex flex-col">
+        {/* Spacer for header */}
+        <div className="flex-1" />
+
+        {/* Tagline — left aligned like Pacific Basin */}
+        <div className="mx-auto w-full max-w-[1320px] px-8 pb-28 md:pb-32">
+          <h1 className="text-4xl font-light italic leading-[1.15] text-white md:text-6xl lg:text-7xl">
+            <span className="block">{TAGLINES[idx].key}</span>
+            <span className="block">{TAGLINES[idx].sub}</span>
           </h1>
-          <p className="mt-4 text-lg font-medium tracking-[0.1em] text-[#cde6ff] md:text-xl">
-            {t("hero.subtitle")}
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link href="/services" className="hero-btn-primary">
-              {t("hero.ourServices")}
-            </Link>
-            <Link href="/contact" className="hero-btn-secondary">
-              {t("hero.contactUs")}
-            </Link>
+        </div>
+
+        {/* Bottom bar: dots + scroll indicator */}
+        <div className="relative flex items-end justify-between px-8 pb-6 md:px-12">
+          {/* Carousel dots */}
+          <div className="flex items-center gap-2.5">
+            {HERO_IMAGES.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setIdx(i)}
+                className={`hero-dot ${i === idx ? "active" : ""}`}
+                aria-label={`Slide ${i + 1}`}
+              />
+            ))}
           </div>
+
+          {/* Scroll indicator */}
+          <button
+            onClick={scrollDown}
+            className="absolute left-1/2 -translate-x-1/2 bottom-4 flex h-11 w-11 items-center justify-center rounded-full border-2 border-white/60 bg-[#2E9E6F] text-white transition hover:bg-[#238058] animate-bounce-slow"
+            aria-label="Scroll down"
+          >
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          {/* Empty spacer for flex alignment */}
+          <div className="w-20" />
         </div>
       </div>
     </section>

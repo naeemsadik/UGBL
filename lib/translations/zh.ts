@@ -101,10 +101,10 @@ export const zh: Record<TranslationKey, string> = {
   // About Page
   "about.title": "关于我们",
   "about.subtitle":
-    "Universe Shipping Lines. 是一家成立于2004年的值得信赖的航运、物流和租船代理公司。",
+    "Universe Shipping Lines 是一家成立于2022年的领先航运代理和物流服务提供商。",
   "about.whoWeAre": "我们是谁",
   "about.whoWeAreDesc":
-    "我们是孟加拉国领先的航运代理之一，服务涵盖船舶代理、租船、船舶管理支持和货物物流。",
+    "我们是孟加拉国领先的航运代理、物流服务提供商和贸易公司，提供全面的海事和供应链解决方案。",
   "about.ourVision": "我们的愿景",
   "about.ourVisionDesc":
     "成为该地区最可靠、最具响应力的海事服务提供商，以精准和速度著称。",
@@ -113,35 +113,35 @@ export const zh: Record<TranslationKey, string> = {
     "通过经验丰富的团队、强大的本地网络和全天候沟通，为委托方和客户提供完整的解决方案。",
   "about.certifications": "认证资质",
   "about.certificationsDesc":
-    "通过ISO 9001:2015认证，是主要本地和全球海事协会的活跃会员。",
+    "积极参与主要本地和全球海事协会，持续追求卓越。",
 
   // Services Page
   "services.title": "服务",
   "services.subtitle":
     "为船东、运营商和货主提供全面的航运和物流支持。",
-  "services.websiteStrategy": "网站策略",
+  "services.websiteStrategy": "港口代理",
   "services.websiteStrategyDesc":
-    "在设计开始前进行受众研究、信息架构和以转化为重点的规划。",
-  "services.uiuxDesign": "UI/UX 设计",
+    "全面的港口代理服务，处理船舶进出港、文件办理和港口当局联络。",
+  "services.uiuxDesign": "OPA/CPA 代理",
   "services.uiuxDesignDesc":
-    "围绕您的品牌声音和商业定位构建现代化、响应式界面。",
-  "services.nextjsDev": "Next.js 开发",
+    "船东保护代理和租船人保护代理服务，确保所有利益得到保障。",
+  "services.nextjsDev": "船舶管理代理",
   "services.nextjsDevDesc":
-    "使用可复用组件、干净代码和CMS支持的生产就绪实现。",
-  "services.seoAnalytics": "SEO + 分析设置",
+    "24/7船舶管理服务，包括船员换班、物资供应、给养和通关。",
+  "services.seoAnalytics": "物流代理",
   "services.seoAnalyticsDesc":
-    "技术SEO、架构、元数据和分析工具，以获得清晰的报告。",
-  "services.perfOptimization": "性能优化",
+    "端到端物流服务，涵盖内陆运输、仓储和多式联运货物交付。",
+  "services.perfOptimization": "船舶供应与物资",
   "services.perfOptimizationDesc":
-    "Core Web Vitals改进、图像优化和以页面速度为重点的优化。",
-  "services.ongoingSupport": "持续支持",
+    "为停靠孟加拉国港口的所有船型提供全面的供应和物资服务。",
+  "services.ongoingSupport": "燃油和淡水供应",
   "services.ongoingSupportDesc":
-    "发布后维护、A/B测试支持和每月迭代改进。",
+    "在所有主要运营港口提供燃油加注和淡水供应服务。",
 
   // Fleet Page
   "fleet.title": "我们的船队",
   "fleet.subtitle":
-    "为吉大港、蒙格拉和帕亚拉的多种船型提供运营支持。",
+    "为吉大港、马塔巴里、蒙格拉和帕亚拉的多种船型提供运营支持。",
   "fleet.bulkCarriers": "散货船",
   "fleet.bulkCarriersDesc":
     "支持干散货运营，包括煤炭、熟料和石材运输。",
@@ -151,9 +151,9 @@ export const zh: Record<TranslationKey, string> = {
   "fleet.projectCargo": "项目货船",
   "fleet.projectCargoDesc":
     "专门处理重型和超大型货物，并提供定制物流规划。",
-  "fleet.tankers": "油轮",
+  "fleet.tankers": "拖轮作业",
   "fleet.tankersDesc":
-    "为所有主要本地港口的燃料和LPG油轮停靠提供运营支持。",
+    "运营远洋系柱拉力拖轮，在所有主要港口支持海上作业。",
 
   // Portfolio Page
   "portfolio.title": "业绩案例",
@@ -268,4 +268,45 @@ export const zh: Record<TranslationKey, string> = {
   "contact.projectDetails": "项目详情",
   "contact.messagePlaceholder": "告诉我们您的需求...",
   "contact.sendInquiry": "发送询价",
+
+  // Home – Info Cards
+  "home.card1Label": "公司概况",
+  "home.card1Title": "孟加拉国领先的航运代理和物流提供商",
+  "home.card2Label": "我们的服务",
+  "home.card2Title": "港口代理、OPA/CPA、船舶管理和物流解决方案",
+  "home.card3Label": "港口信息",
+  "home.card3Title": "在吉大港、马塔巴里、帕亚拉和蒙格拉的运营",
+  "home.card4Label": "全球网络",
+  "home.card4Title": "24/7支持和全球值得信赖的合作伙伴关系",
+  "home.viewMore": "查看更多",
+
+  // Home – Fleet & Network Stats
+  "home.fleetTitle": "我们的服务与网络",
+  "home.fleetSubtitle": "我们在孟加拉国主要港口运营，提供全面的海事和物流解决方案。",
+  "home.stat1Label": "覆盖主要港口",
+  "home.stat2Label": "专业员工",
+  "home.stat3Label": "运营年限",
+  "home.stat4Label": "运营支持",
+  "home.stat5Label": "核心服务线",
+  "home.stat6Label": "服务客户",
+  "home.statYears": "年",
+  "home.statServices": "核心",
+  "home.fleetDesc": "我们广泛的网络使员工靠近客户，以提供一流的个性化服务。",
+  "home.learnMoreFleet": "了解更多关于我们的服务",
+  "home.fleetFootnote": "在吉大港、马塔巴里、帕亚拉和蒙格拉港口提供运营支持。",
+
+  // Home – Promo Cards
+  "home.promoAboutLabel": "关于我们",
+  "home.promoAboutDesc": "River Tyne Shipping成立于2022年，在孟加拉国主要海上门户建立了可靠的声誉。",
+  "home.promoAboutCta": "阅读更多",
+  "home.promoServicesLabel": "我们的服务",
+  "home.promoServicesDesc": "为船东和货主提供全面的港口代理、船舶管理和物流解决方案。",
+  "home.promoServicesCta": "我们的服务",
+  "home.promoPortsLabel": "港口信息",
+  "home.promoPortsDesc": "在所有主要孟加拉国港口提供运营覆盖，配备专业本地团队。",
+  "home.promoPortsCta": "探索港口",
+
+  // Footer extras
+  "footer.aboutLink": "关于我们",
+  "footer.servicesLink": "服务",
 };
