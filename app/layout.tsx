@@ -36,7 +36,7 @@ export default function RootLayout({
       className={`${inter.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full font-[family-name:var(--font-inter)]">
+      <body className="min-h-full font-[family-name:var(--font-inter)]" suppressHydrationWarning>
         <SiteShell>{children}</SiteShell>
       </body>
     </html>

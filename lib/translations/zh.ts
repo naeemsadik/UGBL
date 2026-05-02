@@ -312,4 +312,27 @@ export const zh: Record<TranslationKey, string> = {
   // Footer extras
   "footer.aboutLink": "关于我们",
   "footer.servicesLink": "服务",
+
+  // Office Addresses
+  "offices.sectionTitle": "我们的办事处",
+  "offices.sectionSubtitle":
+    "联系我们在孟加拉国各地的任何办事处，获取航运和物流支持。",
+  "offices.dhakaTitle": "达卡办事处（自有物业）",
+  "offices.dhakaLine1": "Taher Tower (9th Floor)",
+  "offices.dhakaLine2": "Plot-10, Gulshan C/A, Circle-2",
+  "offices.dhakaLine3": "Dhaka 1212, Bangladesh",
+  "offices.dhakaPhone": "+8802581819, +8802222286574",
+  "offices.dhakaEmail": "uni-global.bd@ugblgroup.com",
+  "offices.chattogramTitle": "吉大港办事处（自有物业）",
+  "offices.chattogramLine1": "Yunusco City Center (8th Floor)",
+  "offices.chattogramLine2": "807, C.D.A Avenue GEC Circle",
+  "offices.chattogramLine3": "Chattogram 4100, Bangladesh",
+  "offices.chattogramPhone": "+880-31 2866327",
+  "offices.chattogramEmail": "uni-global.ctg@ugblgroup.com",
+  "offices.khulnaTitle": "库尔纳/蒙格拉办事处（租赁）",
+  "offices.khulnaLine1": "Khan Tower",
+  "offices.khulnaLine2": "A-50 (2nd Floor), K.D.A. Majid Sharani",
+  "offices.khulnaLine3": "Shibbari, Khulna -9100",
+  "offices.khulnaPhone": "+880-41-722971, 724245",
+  "offices.khulnaEmail": "uni-global.khl@ugblgroup.com",
 };
