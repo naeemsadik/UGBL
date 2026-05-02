@@ -68,11 +68,7 @@ function NavDropdown({
   const hasChildren = item.children && item.children.length > 0;
 
   /* Pacific Basin spec: Purista-Bold / 14px / 20px line-height / normal spacing */
-  const linkCls = `inline-flex items-center font-bold uppercase text-[14px] leading-[20px] tracking-normal whitespace-nowrap transition-colors duration-200 ${
-    scrolled
-      ? "text-[#1D2E54] hover:text-[#49A98F]"
-      : "text-white/90 hover:text-white"
-  }`;
+  const linkCls = "inline-flex items-center font-bold uppercase text-[14px] leading-[20px] tracking-normal whitespace-nowrap transition-colors duration-200 text-[#1D2E54] hover:text-[#49A98F]";
 
   const LinkOrA = item.external ? "a" : Link;
   const extra = item.external
@@ -133,11 +129,7 @@ function LangSwitcher({ scrolled }: { scrolled: boolean }) {
     <div className="group relative">
       <button
         type="button"
-        className={`inline-flex items-center gap-1 font-bold uppercase text-[14px] leading-[20px] tracking-normal transition-colors duration-200 ${
-          scrolled
-            ? "text-[#1D2E54] hover:text-[#49A98F]"
-            : "text-white/90 hover:text-white"
-        }`}
+        className="inline-flex items-center gap-1 font-bold uppercase text-[14px] leading-[20px] tracking-normal transition-colors duration-200 text-[#1D2E54] hover:text-[#49A98F]"
         aria-label={t("nav.selectLanguage")}
       >
         {locale === "EN"
@@ -303,63 +295,42 @@ export function SiteHeader() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-[0_1px_10px_rgba(0,0,0,0.06)]"
-            : "bg-transparent"
+        className={`fixed inset-x-0 top-0 z-50 bg-white transition-shadow duration-300 ${
+          scrolled ? "shadow-[0_2px_12px_rgba(0,0,0,0.08)]" : ""
         }`}
       >
-        {/* ── UTILITY ROW — collapses on scroll ─────── */}
+        {/* Single row: Logo — Nav — Language — Hamburger */}
         <div
-          className={`transition-all duration-300 ${
-            scrolled ? "h-0 opacity-0 pointer-events-none" : "h-[34px] opacity-100"
+          className={`mx-auto max-w-[1320px] flex items-center px-8 md:px-10 transition-all duration-300 ${
+            scrolled ? "h-[70px]" : "h-[90px]"
           }`}
         >
-          <div className="mx-auto max-w-[1320px] flex justify-end items-center h-[34px] px-10">
-            <LangSwitcher scrolled={false} />
-          </div>
-        </div>
-
-        {/* ── MAIN NAV ROW — always visible ──────────── */}
-        <div
-          className={`mx-auto max-w-[1320px] flex items-center transition-all duration-300 px-10 ${
-            scrolled ? "h-[50px]" : "h-[52px] pb-2"
-          }`}
-        >
-          {/* Logo — pl-6 pushes it slightly inward from the left edge */}
-          <Link href="/" className="shrink-0 pl-6">
+          {/* Logo — stays large, minimal shrink */}
+          <Link href="/" className="shrink-0 pl-4">
             <Image
               src={logoImg}
               alt="River Tyne"
-              width={scrolled ? 34 : 86}
-              height={scrolled ? 34 : 86}
+              width={scrolled ? 72 : 86}
+              height={scrolled ? 72 : 86}
               className="transition-all duration-300"
             />
           </Link>
 
-          {/* Desktop nav — centered in remaining space */}
+          {/* Desktop nav — centered */}
           <nav className="hidden lg:flex flex-1 items-center justify-center gap-9 h-full">
             {navItems.map((item) => (
               <NavDropdown key={item.key} item={item} scrolled={scrolled} />
             ))}
           </nav>
 
-          {/* Lang — hidden when unscrolled (it's in utility row), visible when scrolled (merges into nav row) */}
-          <div
-            className={`hidden lg:block shrink-0 transition-all duration-300 ${
-              scrolled
-                ? "opacity-100 max-w-[80px]"
-                : "opacity-0 max-w-0 overflow-hidden pointer-events-none"
-            }`}
-          >
+          {/* Language — always visible inline */}
+          <div className="hidden lg:block shrink-0">
             <LangSwitcher scrolled={true} />
           </div>
 
-          {/* Mobile hamburger — always far right */}
+          {/* Mobile hamburger */}
           <button
-            className={`lg:hidden ml-auto p-2 transition-colors ${
-              scrolled ? "text-[#1D2E54]" : "text-white"
-            }`}
+            className="lg:hidden ml-auto p-2 text-[#1D2E54]"
             onClick={() => setMobileOpen(true)}
             aria-label="Open menu"
           >
