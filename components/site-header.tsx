@@ -122,15 +122,33 @@ function DropdownItem({
 }
 
 /* ─── Mobile menu ────────────────────────────────── */
-function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
+function MobileMenu({
+  open,
+  onClose,
+}: {
+  open: boolean;
+  onClose: () => void;
+}) {
   const { t, locale, setLocale } = useTranslation();
 
-  if (!open) return null;
-
   return (
-    <div className="fixed inset-0 z-[60] lg:hidden">
-      <div className="absolute inset-0 bg-black/50" onClick={onClose} />
-      <nav className="absolute right-0 top-0 h-full w-[300px] overflow-y-auto bg-white shadow-2xl">
+    <div
+      className={`fixed inset-0 z-[60] lg:hidden transition-opacity duration-300 ${
+        open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+      }`}
+      aria-hidden={!open}
+    >
+      <div
+        className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${
+          open ? "opacity-100" : "opacity-0"
+        }`}
+        onClick={onClose}
+      />
+      <nav
+        className={`absolute right-0 top-0 h-full w-[300px] overflow-y-auto bg-white shadow-2xl transition-transform duration-300 ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4">
           <div className="flex items-center gap-2">
             <Image src={logoImg} alt="River Tyne" width={36} height={36} />
@@ -141,7 +159,9 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
             aria-label="Close menu"
           >
             <svg
-              className="h-6 w-6"
+              className={`h-6 w-6 transition-transform duration-300 ${
+                open ? "rotate-0" : "rotate-90"
+              }`}
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -264,7 +284,7 @@ export function SiteHeader() {
           </nav>
 
           {/* ── Right: Language + Mobile hamburger ─────── */}
-          <div className="flex items-center gap-4 shrink-0">
+          <div className="ml-auto flex items-center gap-4 shrink-0">
             {/* Language switcher — inline text, no pill/border */}
             <div className="hidden lg:block">
               <div className="group relative">
@@ -336,19 +356,23 @@ export function SiteHeader() {
               onClick={() => setMobileOpen(true)}
               aria-label="Open menu"
             >
-              <svg
-                className="h-7 w-7"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
+              <span className="relative block h-6 w-7">
+                <span
+                  className={`absolute left-0 top-0 h-0.5 w-7 rounded bg-current transition-all duration-300 ${
+                    mobileOpen ? "translate-y-[11px] rotate-45" : "" 
+                  }`}
                 />
-              </svg>
+                <span
+                  className={`absolute left-0 top-[11px] h-0.5 w-7 rounded bg-current transition-all duration-300 ${
+                    mobileOpen ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <span
+                  className={`absolute left-0 top-[22px] h-0.5 w-7 rounded bg-current transition-all duration-300 ${
+                    mobileOpen ? "-translate-y-[11px] -rotate-45" : "" 
+                  }`}
+                />
+              </span>
             </button>
           </div>
         </div>
