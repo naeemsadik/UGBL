@@ -20,8 +20,9 @@ const navItems: NavItem[] = [
   { key: "nav.home", href: "/" },
   {
     key: "nav.aboutUs",
-    href: "/mission-vision",
+    href: "/about",
     children: [
+      { key: "nav.atAGlance", href: "/about" },
       { key: "nav.missionVision", href: "/mission-vision" },
       { key: "nav.policyCompliance", href: "/policy-compliance" },
     ],
@@ -56,7 +57,7 @@ const navItems: NavItem[] = [
 ];
 
 /* ─── Nav link / dropdown ────────────────────────── */
-function DropdownItem({
+function NavDropdown({
   item,
   scrolled,
 }: {
@@ -66,35 +67,34 @@ function DropdownItem({
   const { t } = useTranslation();
   const hasChildren = item.children && item.children.length > 0;
 
-  const baseLinkClass = `inline-flex items-center h-full font-medium uppercase tracking-wider text-[1.05rem] transition-colors duration-200 whitespace-nowrap ${
-    scrolled
-      ? "text-[#1D2E54] hover:text-[#3B71B5]"
-      : "text-white/90 hover:text-white"
-  }`;
+  /* Pacific Basin spec: Purista-Bold / 14px / 20px line-height / normal spacing */
+  const linkCls = "inline-flex items-center font-bold uppercase text-[14px] leading-[20px] tracking-normal whitespace-nowrap transition-colors duration-200 text-[#1D2E54] hover:text-[#49A98F]";
 
-  const LinkOrAnchor = item.external ? "a" : Link;
-  const extraProps = item.external
-    ? { target: "_blank", rel: "noopener noreferrer" }
+  const LinkOrA = item.external ? "a" : Link;
+  const extra = item.external
+    ? { target: "_blank" as const, rel: "noopener noreferrer" }
     : {};
 
   if (!hasChildren) {
     return (
-      <LinkOrAnchor href={item.href} className={baseLinkClass} {...extraProps}>
-        {t(item.key)}
-      </LinkOrAnchor>
+      <div className="relative flex items-center">
+        <LinkOrA href={item.href} className={linkCls} {...extra}>
+          {t(item.key)}
+        </LinkOrA>
+      </div>
     );
   }
 
   return (
-    <div className="group relative flex items-center h-full">
-      <Link href={item.href} className={`${baseLinkClass} gap-1`}>
+    <div className="group relative flex items-center">
+      <Link href={item.href} className={`${linkCls} gap-1`}>
         {t(item.key)}
         <svg
-          className="h-3 w-3 opacity-60 transition-transform group-hover:rotate-180"
+          className="h-2.5 w-2.5 opacity-50 transition-transform duration-200 group-hover:rotate-180"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          strokeWidth={2.5}
+          strokeWidth={2}
         >
           <path
             strokeLinecap="round"
@@ -104,13 +104,13 @@ function DropdownItem({
         </svg>
       </Link>
 
-      <div className="pointer-events-none absolute left-1/2 top-full z-50 pt-2 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100 -translate-x-1/2">
-        <div className="min-w-[210px] rounded-lg border border-[#e5eaf0] bg-white py-2 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
+      <div className="pointer-events-none absolute left-1/2 top-full z-50 pt-3 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100 -translate-x-1/2">
+        <div className="min-w-[220px] rounded border border-[#e5eaf0] bg-white py-1.5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
           {item.children!.map((child) => (
             <Link
               key={child.key}
               href={child.href}
-              className="block px-5 py-2.5 text-base font-medium text-[#3a4f63] transition hover:bg-[#F6FAFF] hover:text-[#3B71B5]"
+              className="block px-5 py-2.5 text-[13px] leading-[18px] font-normal text-[#3a4f63] tracking-[0.02em] transition hover:bg-[#F6FAFF] hover:text-[#1D2E54]"
             >
               {t(child.key)}
             </Link>
@@ -121,7 +121,69 @@ function DropdownItem({
   );
 }
 
-/* ─── Mobile menu ────────────────────────────────── */
+/* ─── Language switcher (reusable) ────────────────── */
+function LangSwitcher({ scrolled }: { scrolled: boolean }) {
+  const { locale, setLocale, t } = useTranslation();
+
+  return (
+    <div className="group relative">
+      <button
+        type="button"
+        className="inline-flex items-center gap-1 font-bold uppercase text-[14px] leading-[20px] tracking-normal transition-colors duration-200 text-[#1D2E54] hover:text-[#49A98F]"
+        aria-label={t("nav.selectLanguage")}
+      >
+        {locale === "EN"
+          ? "EN"
+          : locale === "ES"
+            ? "ES"
+            : locale === "ZH"
+              ? "中文"
+              : "বাং"}
+        <svg
+          className="h-2.5 w-2.5 opacity-50 transition-transform duration-200 group-hover:rotate-180"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+
+      <div className="pointer-events-none absolute right-0 top-full z-50 pt-3 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
+        <div className="min-w-[150px] rounded border border-[#e5eaf0] bg-white py-1.5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
+          {(
+            [
+              { code: "EN" as Locale, label: "English" },
+              { code: "ES" as Locale, label: "Español" },
+              { code: "ZH" as Locale, label: "中文" },
+              { code: "BN" as Locale, label: "বাংলা" },
+            ] as const
+          ).map((lang) => (
+            <button
+              key={lang.code}
+              type="button"
+              onClick={() => setLocale(lang.code)}
+              className={`block w-full px-4 py-2 text-left text-[0.82rem] transition ${
+                locale === lang.code
+                  ? "bg-[#F6FAFF] text-[#1D2E54] font-medium"
+                  : "text-[#3a4f63] font-normal hover:bg-[#F6FAFF] hover:text-[#1D2E54]"
+              }`}
+            >
+              {lang.label}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Mobile slide-out menu ──────────────────────── */
 function MobileMenu({
   open,
   onClose,
@@ -132,57 +194,29 @@ function MobileMenu({
   const { t, locale, setLocale } = useTranslation();
 
   return (
-    <div
-      className={`fixed inset-0 z-[60] lg:hidden transition-opacity duration-300 ${
-        open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-      }`}
-      aria-hidden={!open}
-    >
-      <div
-        className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${
-          open ? "opacity-100" : "opacity-0"
-        }`}
-        onClick={onClose}
-      />
-      <nav
-        className={`absolute right-0 top-0 h-full w-[300px] overflow-y-auto bg-white shadow-2xl transition-transform duration-300 ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="flex items-center justify-between border-b border-gray-100 px-5 py-4">
-          <div className="flex items-center gap-2">
-            <Image src={logoImg} alt="River Tyne" width={36} height={36} />
-          </div>
+    <div className="fixed inset-0 z-[60] lg:hidden">
+      <div className="absolute inset-0 bg-black/50" onClick={onClose} />
+      <nav className="absolute right-0 top-0 h-full w-[280px] overflow-y-auto bg-white shadow-2xl">
+        {/* Close row — no logo to avoid duplication */}
+        <div className="flex items-center justify-end px-5 py-4 border-b border-gray-100">
           <button
             onClick={onClose}
-            className="p-2 text-gray-500 hover:text-gray-800"
+            className="p-2 text-gray-400 hover:text-gray-700 transition-colors"
             aria-label="Close menu"
           >
-            <svg
-              className={`h-6 w-6 transition-transform duration-300 ${
-                open ? "rotate-0" : "rotate-90"
-              }`}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
-        <div className="px-5 py-4 space-y-1">
+        <div className="px-6 py-5 space-y-1">
           {navItems.map((item) => (
             <div key={item.key}>
               <Link
                 href={item.href}
                 onClick={onClose}
-                className="block py-2.5 text-base font-medium uppercase tracking-wide text-[#1D2E54] hover:text-[#3B71B5]"
+                className="block py-2.5 text-[0.82rem] font-medium uppercase tracking-[0.12em] text-[#1D2E54] hover:text-[#49A98F] transition-colors"
               >
                 {t(item.key)}
               </Link>
@@ -191,7 +225,7 @@ function MobileMenu({
                   key={child.key}
                   href={child.href}
                   onClick={onClose}
-                  className="block py-2 pl-4 text-base text-[#4a5a70] hover:text-[#3B71B5]"
+                  className="block py-2 pl-4 text-[0.8rem] text-[#5a6a7d] hover:text-[#49A98F] transition-colors"
                 >
                   {t(child.key)}
                 </Link>
@@ -200,9 +234,8 @@ function MobileMenu({
           ))}
         </div>
 
-        {/* Language selector */}
-        <div className="border-t border-gray-100 px-5 py-4">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-gray-400">
+        <div className="border-t border-gray-100 px-6 py-4">
+          <p className="mb-2 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-gray-400">
             Language
           </p>
           <div className="flex flex-wrap gap-2">
@@ -218,10 +251,10 @@ function MobileMenu({
                 key={lang.code}
                 type="button"
                 onClick={() => setLocale(lang.code)}
-                className={`rounded-full px-3 py-1.5 text-base font-medium transition ${
+                className={`rounded-full px-3 py-1.5 text-[0.78rem] font-medium transition ${
                   locale === lang.code
                     ? "bg-[#1D2E54] text-white"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                    : "bg-gray-50 text-gray-600 hover:bg-gray-100"
                 }`}
               >
                 {lang.label}
@@ -234,9 +267,19 @@ function MobileMenu({
   );
 }
 
-/* ─── Header ─────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════
+   HEADER
+   ─────────────────────────────────────────────────
+   BEFORE SCROLL (spacious, two-row feel):
+   ┌──────────────────────────────────── EN ∨ ┐  ← utility row
+   │  LOGO    HOME  ABOUT US ∨  SERVICES ∨ … │  ← main nav row
+   └──────────────────────────────────────────┘
+
+   AFTER SCROLL (compact, single merged row):
+   ┌ LOGO  HOME  ABOUT US ∨  SERVICES ∨ … EN ∨ ┐
+   └────────────────────────────────────────────┘
+   ═══════════════════════════════════════════════ */
 export function SiteHeader() {
-  const { locale, setLocale, t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -250,131 +293,49 @@ export function SiteHeader() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.08)]"
-            : "bg-transparent"
+        className={`fixed inset-x-0 top-0 z-50 bg-white transition-shadow duration-300 ${
+          scrolled ? "shadow-[0_2px_12px_rgba(0,0,0,0.08)]" : ""
         }`}
       >
-        {/*
-          SINGLE-ROW layout like Pacific Basin:
-          Left = Logo | Center = Nav | Right = Lang + Hamburger
-        */}
+        {/* Single row: Logo — Nav — Language — Hamburger */}
         <div
-          className={`mx-auto flex w-full max-w-[1400px] items-center px-6 transition-all duration-300 ${
-            scrolled ? "h-[64px]" : "h-[82px]"
+          className={`mx-auto max-w-[1320px] flex items-center px-8 md:px-10 transition-all duration-300 ${
+            scrolled ? "h-[70px]" : "h-[90px]"
           }`}
         >
-          {/* ── Left: Logo ─────────────────────────────── */}
-          <Link href="/" className="shrink-0">
+          {/* Logo — stays large, minimal shrink */}
+          <Link href="/" className="shrink-0 pl-4">
             <Image
               src={logoImg}
               alt="River Tyne"
-              width={scrolled ? 56 : 70}
-              height={scrolled ? 56 : 70}
+              width={scrolled ? 72 : 86}
+              height={scrolled ? 72 : 86}
               className="transition-all duration-300"
             />
           </Link>
 
-          {/* ── Center: Navigation ─────────────────────── */}
-          <nav className="hidden lg:flex items-center justify-center gap-8 flex-1 h-full">
+          {/* Desktop nav — centered */}
+          <nav className="hidden lg:flex flex-1 items-center justify-center gap-9 h-full">
             {navItems.map((item) => (
-              <DropdownItem key={item.key} item={item} scrolled={scrolled} />
+              <NavDropdown key={item.key} item={item} scrolled={scrolled} />
             ))}
           </nav>
 
-          {/* ── Right: Language + Mobile hamburger ─────── */}
-          <div className="ml-auto flex items-center gap-4 shrink-0">
-            {/* Language switcher — inline text, no pill/border */}
-            <div className="hidden lg:block">
-              <div className="group relative">
-                <button
-                  type="button"
-                  className={`inline-flex items-center gap-1 text-base font-medium tracking-wide transition-colors ${
-                    scrolled
-                      ? "text-[#1D2E54] hover:text-[#3B71B5]"
-                      : "text-white/90 hover:text-white"
-                  }`}
-                  aria-label={t("nav.selectLanguage")}
-                >
-                  {locale === "EN"
-                    ? "EN"
-                    : locale === "ES"
-                      ? "ES"
-                      : locale === "ZH"
-                        ? "中文"
-                        : "বাং"}
-                  <svg
-                    className="h-3 w-3 opacity-60 transition-transform group-hover:rotate-180"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-
-                {/* Dropdown panel */}
-                <div className="pointer-events-none absolute right-0 top-full z-50 pt-2 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
-                  <div className="min-w-[150px] rounded-lg border border-[#e5eaf0] bg-white py-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
-                    {(
-                      [
-                        { code: "EN" as Locale, label: "English" },
-                        { code: "ES" as Locale, label: "Español" },
-                        { code: "ZH" as Locale, label: "中文" },
-                        { code: "BN" as Locale, label: "বাংলা" },
-                      ] as const
-                    ).map((lang) => (
-                      <button
-                        key={lang.code}
-                        type="button"
-                        onClick={() => setLocale(lang.code)}
-                        className={`block w-full px-4 py-2 text-left text-base font-medium transition ${
-                          locale === lang.code
-                            ? "bg-[#F6FAFF] text-[#3B71B5]"
-                            : "text-[#3a4f63] hover:bg-[#F6FAFF] hover:text-[#3B71B5]"
-                        }`}
-                      >
-                        {lang.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Hamburger — mobile */}
-            <button
-              className={`lg:hidden p-1.5 transition-colors ${
-                scrolled ? "text-[#1D2E54]" : "text-white"
-              }`}
-              onClick={() => setMobileOpen(true)}
-              aria-label="Open menu"
-            >
-              <span className="relative block h-6 w-7">
-                <span
-                  className={`absolute left-0 top-0 h-0.5 w-7 rounded bg-current transition-all duration-300 ${
-                    mobileOpen ? "translate-y-[11px] rotate-45" : "" 
-                  }`}
-                />
-                <span
-                  className={`absolute left-0 top-[11px] h-0.5 w-7 rounded bg-current transition-all duration-300 ${
-                    mobileOpen ? "opacity-0" : "opacity-100"
-                  }`}
-                />
-                <span
-                  className={`absolute left-0 top-[22px] h-0.5 w-7 rounded bg-current transition-all duration-300 ${
-                    mobileOpen ? "-translate-y-[11px] -rotate-45" : "" 
-                  }`}
-                />
-              </span>
-            </button>
+          {/* Language — always visible inline */}
+          <div className="hidden lg:block shrink-0">
+            <LangSwitcher scrolled={true} />
           </div>
+
+          {/* Mobile hamburger */}
+          <button
+            className="lg:hidden ml-auto p-2 text-[#1D2E54]"
+            onClick={() => setMobileOpen(true)}
+            aria-label="Open menu"
+          >
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </header>
 
