@@ -67,10 +67,11 @@ function NavDropdown({
   const { t } = useTranslation();
   const hasChildren = item.children && item.children.length > 0;
 
-  const linkCls = `inline-flex items-center font-medium uppercase text-[0.8rem] tracking-[0.13em] whitespace-nowrap transition-colors duration-200 ${
+  /* Pacific Basin spec: Purista-Bold / 14px / 20px line-height / normal spacing */
+  const linkCls = `inline-flex items-center font-bold uppercase text-[14px] leading-[20px] tracking-normal whitespace-nowrap transition-colors duration-200 ${
     scrolled
       ? "text-[#1D2E54] hover:text-[#49A98F]"
-      : "text-white/85 hover:text-white"
+      : "text-white/90 hover:text-white"
   }`;
 
   const LinkOrA = item.external ? "a" : Link;
@@ -113,7 +114,7 @@ function NavDropdown({
             <Link
               key={child.key}
               href={child.href}
-              className="block px-5 py-2.5 text-[0.82rem] font-normal text-[#3a4f63] tracking-[0.02em] transition hover:bg-[#F6FAFF] hover:text-[#1D2E54]"
+              className="block px-5 py-2.5 text-[13px] leading-[18px] font-normal text-[#3a4f63] tracking-[0.02em] transition hover:bg-[#F6FAFF] hover:text-[#1D2E54]"
             >
               {t(child.key)}
             </Link>
@@ -132,10 +133,10 @@ function LangSwitcher({ scrolled }: { scrolled: boolean }) {
     <div className="group relative">
       <button
         type="button"
-        className={`inline-flex items-center gap-1 font-medium uppercase text-[0.8rem] tracking-[0.13em] transition-colors duration-200 ${
+        className={`inline-flex items-center gap-1 font-bold uppercase text-[14px] leading-[20px] tracking-normal transition-colors duration-200 ${
           scrolled
             ? "text-[#1D2E54] hover:text-[#49A98F]"
-            : "text-white/80 hover:text-white"
+            : "text-white/90 hover:text-white"
         }`}
         aria-label={t("nav.selectLanguage")}
       >
@@ -337,7 +338,7 @@ export function SiteHeader() {
           </Link>
 
           {/* Desktop nav — centered in remaining space */}
-          <nav className="hidden lg:flex flex-1 items-center justify-center gap-7 h-full">
+          <nav className="hidden lg:flex flex-1 items-center justify-center gap-9 h-full">
             {navItems.map((item) => (
               <NavDropdown key={item.key} item={item} scrolled={scrolled} />
             ))}
