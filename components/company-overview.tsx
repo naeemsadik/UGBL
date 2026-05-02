@@ -6,11 +6,11 @@ export function CompanyOverview() {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-white py-16 md:py-20">
-      <div className="mx-auto w-full max-w-[1200px] px-0.5 md:px-0">
+    <section className="bg-[#F6FAFF] py-10 md:py-12">
+      <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10">
         {/* Main paragraphs */}
         <div>
-          <div className="space-y-6 text-xl font-bold leading-[1.9] text-[#2f3b4f] md:text-2xl">
+          <div className="space-y-6 text-left text-xl font-bold leading-[1.75] text-[#2f3b4f] md:text-2xl">
             <p className="font-bold text-[#1D2E54]">
               {t("home.aboutP1")}
             </p>

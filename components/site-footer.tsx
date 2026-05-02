@@ -1,23 +1,16 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "@/lib/language-context";
-
-import logoImg from "@/assets/River Tyne Ltd. logo transparent.png";
 
 export function SiteFooter() {
   const { t } = useTranslation();
 
   return (
     <footer className="bg-white">
-      {/* Logo */}
-      <div className="flex flex-col items-center pt-14 pb-6">
-        <Image src={logoImg} alt="River Tyne" width={72} height={72} />
-      </div>
 
       {/* Subscribe + social */}
-      <div className="flex flex-wrap items-center justify-center gap-5 px-6 pb-8">
+      <div className="flex flex-wrap items-center justify-center gap-5 px-6 pt-10 pb-8">
         <Link
           href="/contact"
           className="inline-flex items-center gap-2 rounded-full border border-[#d0dbe6] px-5 py-2.5 text-sm font-medium text-[#1D2E54] transition hover:border-[#3B71B5] hover:text-[#3B71B5]"
@@ -102,7 +95,7 @@ export function SiteFooter() {
 
       {/* Copyright */}
       <div className="bg-[#F6FAFF] py-3 text-center text-xs text-[#a0acb9]">
-        © 2026 River Tyne Shipping Limited
+        © River Tyne Ltd
       </div>
     </footer>
   );
