@@ -85,6 +85,27 @@ const offices = [
     phone: "offices.khulnaPhone" as const,
     email: "offices.khulnaEmail" as const,
   },
+  {
+    titleKey: "offices.monglaPortTitle" as const,
+    lines: [
+      { type: "address" as const, key: "offices.monglaPortLine1" as const },
+      { type: "address" as const, key: "offices.monglaPortLine2" as const },
+      { type: "address" as const, key: "offices.monglaPortLine3" as const },
+    ],
+    phone: "offices.monglaPortPhone" as const,
+    email: "offices.monglaPortEmail" as const,
+  },
+  {
+    titleKey: "offices.payraTitle" as const,
+    lines: [
+      { type: "address" as const, key: "offices.payraLine1" as const },
+      { type: "address" as const, key: "offices.payraLine2" as const },
+      { type: "address" as const, key: "offices.payraLine3" as const },
+      { type: "address" as const, key: "offices.payraLine4" as const },
+    ],
+    phone: "offices.payraPhone" as const,
+    email: "offices.payraEmail" as const,
+  },
 ];
 
 export function OfficeAddresses() {
@@ -109,11 +130,15 @@ export function OfficeAddresses() {
               <div className="office-card-row">
                 <LocationIcon />
                 <div>
-                  {office.lines.map((line) => (
-                    <p key={line.key} className="office-card-text">
-                      {t(line.key)}
-                    </p>
-                  ))}
+                  {office.lines.map((line) => {
+                    const text = t(line.key);
+                    if (!text) return null;
+                    return (
+                      <p key={line.key} className="office-card-text">
+                        {text}
+                      </p>
+                    );
+                  })}
                 </div>
               </div>
 
