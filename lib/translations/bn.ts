@@ -243,7 +243,7 @@ export const bn: Record<TranslationKey, string> = {
   "offices.chattogramLine2": "৮০৭, সি.ডি.এ এভিনিউ জিইসি সার্কেল",
   "offices.chattogramLine3": "চট্টগ্রাম ৪১০০, বাংলাদেশ",
   "offices.chattogramPhone": "+৮৮০-৩১ ২৮৬৬৩২৭",
-  "offices.chattogramEmail": "uni-global.ctg@ugblgroup.com",
+  "offices.chattogramEmail": "info@rivertyneltd.com",
   "offices.khulnaTitle": "খুলনা / মোংলা অফিস (ভাড়া)",
   "offices.khulnaLine1": "খান টাওয়ার",
   "offices.khulnaLine2": "এ-৫০ (২য় তলা), কে.ডি.এ. মজিদ শরণি",

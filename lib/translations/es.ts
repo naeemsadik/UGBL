@@ -330,7 +330,7 @@ export const es: Record<TranslationKey, string> = {
   "offices.chattogramLine2": "807, C.D.A Avenue GEC Circle",
   "offices.chattogramLine3": "Chattogram 4100, Bangladesh",
   "offices.chattogramPhone": "+880-31 2866327",
-  "offices.chattogramEmail": "uni-global.ctg@ugblgroup.com",
+  "offices.chattogramEmail": "info@rivertyneltd.com",
   "offices.khulnaTitle": "Oficina de Khulna / Mongla (Alquilada)",
   "offices.khulnaLine1": "Khan Tower",
   "offices.khulnaLine2": "A-50 (2nd Floor), K.D.A. Majid Sharani",
