@@ -193,7 +193,9 @@ function MobileMenu({
 }) {
   const { t, locale, setLocale } = useTranslation();
 
-  if (!open) return null;
+  if (!open) {
+    return null;
+  }
 
   return (
     <div className="fixed inset-0 z-[60] lg:hidden">

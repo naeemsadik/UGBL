@@ -227,4 +227,27 @@ export const bn: Record<TranslationKey, string> = {
   // Footer extras
   "footer.aboutLink": "আমাদের সম্পর্কে",
   "footer.servicesLink": "সেবাসমূহ",
+
+  // Office Addresses
+  "offices.sectionTitle": "আমাদের অফিসসমূহ",
+  "offices.sectionSubtitle":
+    "শিপিং ও লজিস্টিক সহায়তার জন্য বাংলাদেশ জুড়ে আমাদের যেকোনো অফিসে যোগাযোগ করুন।",
+  "offices.dhakaTitle": "ঢাকা অফিস (নিজস্ব প্রাঙ্গণ)",
+  "offices.dhakaLine1": "তাহের টাওয়ার (৯ম তলা)",
+  "offices.dhakaLine2": "প্লট-১০, গুলশান সি/এ, সার্কেল-২",
+  "offices.dhakaLine3": "ঢাকা ১২১২, বাংলাদেশ",
+  "offices.dhakaPhone": "+৮৮০২৫৮১৮১৯, +৮৮০২২২২২৮৬৫৭৪",
+  "offices.dhakaEmail": "uni-global.bd@ugblgroup.com",
+  "offices.chattogramTitle": "চট্টগ্রাম অফিস (নিজস্ব প্রাঙ্গণ)",
+  "offices.chattogramLine1": "ইউনুসকো সিটি সেন্টার (৮ম তলা)",
+  "offices.chattogramLine2": "৮০৭, সি.ডি.এ এভিনিউ জিইসি সার্কেল",
+  "offices.chattogramLine3": "চট্টগ্রাম ৪১০০, বাংলাদেশ",
+  "offices.chattogramPhone": "+৮৮০-৩১ ২৮৬৬৩২৭",
+  "offices.chattogramEmail": "uni-global.ctg@ugblgroup.com",
+  "offices.khulnaTitle": "খুলনা / মোংলা অফিস (ভাড়া)",
+  "offices.khulnaLine1": "খান টাওয়ার",
+  "offices.khulnaLine2": "এ-৫০ (২য় তলা), কে.ডি.এ. মজিদ শরণি",
+  "offices.khulnaLine3": "শিববাড়ী, খুলনা -৯১০০",
+  "offices.khulnaPhone": "+৮৮০-৪১-৭২২৯৭১, ৭২৪২৪৫",
+  "offices.khulnaEmail": "uni-global.khl@ugblgroup.com",
 };

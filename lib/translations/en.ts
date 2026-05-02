@@ -316,6 +316,29 @@ export const en = {
   "contact.projectDetails": "Project details",
   "contact.messagePlaceholder": "Tell us what you need...",
   "contact.sendInquiry": "Send Inquiry",
+
+  // Office Addresses
+  "offices.sectionTitle": "Our Offices",
+  "offices.sectionSubtitle":
+    "Reach out to any of our offices across Bangladesh for shipping and logistics support.",
+  "offices.dhakaTitle": "Dhaka Office (Own Premises)",
+  "offices.dhakaLine1": "Taher Tower (9th Floor)",
+  "offices.dhakaLine2": "Plot-10, Gulshan C/A, Circle-2",
+  "offices.dhakaLine3": "Dhaka 1212, Bangladesh",
+  "offices.dhakaPhone": "+8802581819, +8802222286574",
+  "offices.dhakaEmail": "uni-global.bd@ugblgroup.com",
+  "offices.chattogramTitle": "Chattogram Office (Own Premises)",
+  "offices.chattogramLine1": "Yunusco City Center (8th Floor)",
+  "offices.chattogramLine2": "807, C.D.A Avenue GEC Circle",
+  "offices.chattogramLine3": "Chattogram 4100, Bangladesh",
+  "offices.chattogramPhone": "+880-31 2866327",
+  "offices.chattogramEmail": "uni-global.ctg@ugblgroup.com",
+  "offices.khulnaTitle": "Khulna / Mongla Office (Rental)",
+  "offices.khulnaLine1": "Khan Tower",
+  "offices.khulnaLine2": "A-50 (2nd Floor), K.D.A. Majid Sharani",
+  "offices.khulnaLine3": "Shibbari, Khulna -9100",
+  "offices.khulnaPhone": "+880-41-722971, 724245",
+  "offices.khulnaEmail": "uni-global.khl@ugblgroup.com",
 } as const;
 
 export type TranslationKey = keyof typeof en;
