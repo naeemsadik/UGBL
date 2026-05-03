@@ -16,8 +16,8 @@ type PortFact = {
 type PortDetailPageProps = {
   title: string;
   subtitle: string;
-  heroImage: StaticImageData;
-  breadcrumbs: Breadcrumb[];
+  heroImage: StaticImageData | string;
+  breadcrumbs?: Breadcrumb[];
   overviewTitle: string;
   overview: string;
   facts: PortFact[];
@@ -58,7 +58,7 @@ export function PortDetailPage({
       <InnerHero
         title={title}
         subtitle={subtitle}
-        image={heroImage}
+        backgroundImage={heroImage}
         breadcrumbs={breadcrumbs}
       />
 

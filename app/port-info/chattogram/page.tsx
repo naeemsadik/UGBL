@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero3.jpeg";
+import heroImg from "@/assets/Chattogram Port.jpg";
 import { PortDetailPage } from "@/components/port-detail-page";
 
 export default function ChattogramPortPage() {
@@ -7,11 +7,6 @@ export default function ChattogramPortPage() {
       title="Chattogram Port"
       subtitle="Bangladesh's primary seaport and the network's broadest cargo-handling gateway."
       heroImage={heroImg}
-      breadcrumbs={[
-        { label: "HOME", href: "/" },
-        { label: "PORT INFO", href: "/port-info" },
-        { label: "CHATTOGRAM PORT" },
-      ]}
       overviewTitle="Core seaport operations"
       overview="Chattogram is the country's main seaport and the anchor for day-to-day cargo, container, and vessel-service coordination. The published berth profile highlights the largest operating envelope in the network and makes it the natural hub for high-volume calls."
       mapTitle="Chattogram Port"

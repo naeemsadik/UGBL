@@ -130,15 +130,12 @@ export function OfficeAddresses() {
               <div className="office-card-row">
                 <LocationIcon />
                 <div>
-                  {office.lines.map((line) => {
-                    const text = t(line.key);
-                    if (!text) return null;
-                    return (
-                      <p key={line.key} className="office-card-text">
-                        {text}
-                      </p>
-                    );
-                  })}
+                  <p className="office-card-text">
+                    {office.lines
+                      .map((line) => t(line.key))
+                      .filter(Boolean)
+                      .join(", ")}
+                  </p>
                 </div>
               </div>
 

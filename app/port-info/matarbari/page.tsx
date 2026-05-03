@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero3.jpeg";
+import heroImg from "@/assets/Matarbari Port.jpg";
 import { PortDetailPage } from "@/components/port-detail-page";
 
 export default function MatarbariPortPage() {
@@ -7,11 +7,6 @@ export default function MatarbariPortPage() {
       title="Matarbari Port"
       subtitle="A deep-sea gateway built for heavier project cargo and modern port operations."
       heroImage={heroImg}
-      breadcrumbs={[
-        { label: "HOME", href: "/" },
-        { label: "PORT INFO", href: "/port-info" },
-        { label: "MATARBARI PORT" },
-      ]}
       overviewTitle="Deep-sea project cargo focus"
       overview="The Matarbari Coal Jetty is the most specialized port profile in the documentation. It supports larger vessels, relies on tide-aware berthing, and is positioned for faster cargo discharge through self-unloader operations."
       mapTitle="Matarbari Coal Jetty"

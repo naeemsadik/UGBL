@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import heroImg from "@/assets/hero3.jpeg";
+import heroImg from "@/assets/port.jpg";
 import { InnerHero } from "@/components/inner-hero";
 import { useTranslation } from "@/lib/language-context";
 
@@ -46,11 +46,7 @@ export default function PortInfoPage() {
       <InnerHero
         title={t("portInfo.title")}
         subtitle={t("portInfo.subtitle")}
-        image={heroImg}
-        breadcrumbs={[
-          { label: t("nav.home"), href: "/" },
-          { label: t("nav.portInfo") },
-        ]}
+        backgroundImage={heroImg}
       />
 
       <section className="mx-auto w-full max-w-[1400px] px-6 py-16 md:py-20">

@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero3.jpeg";
+import heroImg from "@/assets/Mongla Port.jpg";
 import { PortDetailPage } from "@/components/port-detail-page";
 
 export default function MonglaPortPage() {
@@ -7,11 +7,6 @@ export default function MonglaPortPage() {
       title="Mongla Port"
       subtitle="A strategic secondary gateway for bulk and breakbulk operations in the south-west corridor."
       heroImage={heroImg}
-      breadcrumbs={[
-        { label: "HOME", href: "/" },
-        { label: "PORT INFO", href: "/port-info" },
-        { label: "MONGLA PORT" },
-      ]}
       overviewTitle="Bulk and breakbulk gateway"
       overview="Mongla is the port profile for steady bulk flows, breakbulk handling, and flexible working windows. The documentation points to low congestion, accessible drafts, and enough operating flexibility to support both direct berthing and anchorage work." 
       mapTitle="Mongla Port"

@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero3.jpeg";
+import heroImg from "@/assets/Payra Port.jpg";
 import { PortDetailPage } from "@/components/port-detail-page";
 
 export default function PayraPortPage() {
@@ -7,11 +7,6 @@ export default function PayraPortPage() {
       title="Payra Port"
       subtitle="An emerging deep-sea access point for industrial cargo and project moves through the Rabnabad Channel."
       heroImage={heroImg}
-      breadcrumbs={[
-        { label: "HOME", href: "/" },
-        { label: "PORT INFO", href: "/port-info" },
-        { label: "PAYRA PORT" },
-      ]}
       overviewTitle="Deep-sea access for project cargo"
       overview="Payra is the most tide-sensitive of the port profiles in the documentation and is especially relevant for cargo movements that need anchorage handling, pilotage, and flexible channel access. It is a strong fit for project cargo and larger industrial moves." 
       mapTitle="Payra Port"
