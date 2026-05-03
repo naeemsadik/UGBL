@@ -16,7 +16,7 @@ const HERO_IMAGES = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
 const ROTATE_MS = 6000;
 
 const TAGLINES: { key: string; sub: string }[] = [
-  { key: "Navigating Your", sub: "Maritime Success" },
+  { key: "We Work", sub: "Together" },
   { key: "Trusted Port Agency", sub: "& Logistics Partner" },
   { key: "Connecting Oceans,", sub: "Delivering Promise" },
   { key: "With You For", sub: "The Long Haul" },
@@ -49,9 +49,8 @@ export function HeroCarousel() {
             alt=""
             fill
             priority={i === 0}
-            className={`object-cover transition-opacity duration-[1500ms] ${
-              i === idx ? "opacity-100" : "opacity-0"
-            }`}
+            className={`object-cover transition-opacity duration-[1500ms] ${i === idx ? "opacity-100" : "opacity-0"
+              }`}
             sizes="100vw"
           />
         ))}
@@ -63,8 +62,8 @@ export function HeroCarousel() {
         <div className="flex-1" />
 
         {/* Tagline — left aligned like Pacific Basin */}
-        <div className="mx-auto w-full max-w-[1320px] px-8 pb-28 md:pb-32">
-          <h1 className="text-4xl font-light italic leading-[1.15] text-white md:text-6xl lg:text-7xl">
+        <div className="mx-auto w-full max-w-[1320px] pl-5 pr-8 py-6 md:py-7 lg:pl-[30px] lg:py-6">
+          <h1 className="text-justify text-[40px] leading-[40px] font-bold tracking-normal text-white md:text-[50px] md:leading-[50px] lg:text-[59px] lg:leading-[56px]" style={{ textShadow: '1px 0px 20px rgba(0, 0, 0, 0.5)' }}>
             <span className="block">{TAGLINES[idx].key}</span>
             <span className="block">{TAGLINES[idx].sub}</span>
           </h1>

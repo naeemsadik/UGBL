@@ -6,16 +6,18 @@ export function CompanyOverview() {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-white py-16 md:py-20">
-      <div className="mx-auto w-full max-w-[960px] px-6">
+    <section className="bg-[#F6FAFF] py-10 md:py-12">
+      <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10">
         {/* Main paragraphs */}
-        <div className="space-y-6 text-[1.05rem] leading-[1.8] text-[#3d4756]">
-          <p className="font-semibold text-[#1D2E54]">
-            {t("home.aboutP1")}
-          </p>
-          <p>{t("home.aboutP2")}</p>
-          <p>{t("home.aboutP3")}</p>
-          <p>{t("home.aboutP4")}</p>
+        <div>
+          <div className="space-y-6 text-left text-xl font-bold leading-[1.75] text-[#2f3b4f] md:text-2xl">
+            <p className="font-bold text-[#1D2E54]">
+              {t("home.aboutP1")}
+            </p>
+            <p>{t("home.aboutP2")}</p>
+            <p>{t("home.aboutP3")}</p>
+            <p>{t("home.aboutP4")}</p>
+          </div>
         </div>
 
         {/* Connections + 24/7 Response grid */}

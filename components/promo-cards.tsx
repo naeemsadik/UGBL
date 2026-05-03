@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "@/lib/language-context";
 
+import cardServicesImg from "@/assets/card-services.jpeg";
+
 export function PromoCards() {
   const { t } = useTranslation();
 
@@ -17,7 +19,7 @@ export function PromoCards() {
       overlay: "from-[#1D2E54]/90 to-[#1D2E54]/50",
     },
     {
-      image: "/card-services.png",
+      image: cardServicesImg,
       label: t("home.promoServicesLabel"),
       desc: t("home.promoServicesDesc"),
       cta: t("home.promoServicesCta"),
