@@ -4,6 +4,7 @@ export const es: Record<TranslationKey, string> = {
   // Navigation
   "nav.home": "Inicio",
   "nav.aboutUs": "Sobre Nosotros",
+  "nav.atAGlance": "Un vistazo",
   "nav.missionVision": "Misión y Visión",
   "nav.policyCompliance": "Política y Cumplimiento",
   "nav.services": "Servicios",
@@ -22,7 +23,7 @@ export const es: Record<TranslationKey, string> = {
   "nav.selectLanguage": "Seleccionar idioma",
 
   // Hero
-  "hero.title": "Universe Shipping Lines",
+  "hero.title": "River Tyne Shipping",
   "hero.subtitle": "Socio Global de Envíos",
   "hero.ourServices": "Nuestros Servicios",
   "hero.contactUs": "Contáctenos",
@@ -55,6 +56,8 @@ export const es: Record<TranslationKey, string> = {
   "home.response": "Respuesta 24/7:",
   "home.responseDesc":
     "Además del rápido retorno para todas las escalas portuarias, los clientes también pueden esperar respuesta a todas las consultas dentro de 24 horas.",
+  "home.isoCommitment":
+    "En River Tyne Ltd estamos comprometidos a brindar un servicio personalizado de calidad y cumplimiento completo según los requisitos legales y de los clientes.",
 
   // Home – Services
   "home.ourServicesLabel": "Nuestros Servicios",
@@ -311,4 +314,40 @@ export const es: Record<TranslationKey, string> = {
   // Footer extras
   "footer.aboutLink": "Sobre Nosotros",
   "footer.servicesLink": "Servicios",
+
+  // Office Addresses
+  "offices.sectionTitle": "Nuestras Oficinas",
+  "offices.sectionSubtitle":
+    "Comuníquese con cualquiera de nuestras oficinas en Bangladesh para soporte de envío y logística.",
+  "offices.dhakaTitle": "Oficina de Dhaka (Propia)",
+  "offices.dhakaLine1": "Taher Tower (9th Floor)",
+  "offices.dhakaLine2": "Plot-10, Gulshan C/A, Circle-2",
+  "offices.dhakaLine3": "Dhaka 1212, Bangladesh",
+  "offices.dhakaPhone": "+8802581819, +8802222286574",
+  "offices.dhakaEmail": "info@rivertyneltd.com",
+  "offices.chattogramTitle": "Oficina de Chattogram (Propia)",
+  "offices.chattogramLine1": "Yunusco City Center (8th Floor)",
+  "offices.chattogramLine2": "807, C.D.A Avenue GEC Circle",
+  "offices.chattogramLine3": "Chattogram 4100, Bangladesh",
+  "offices.chattogramPhone": "+880-31 2866327",
+  "offices.chattogramEmail": "info@rivertyneltd.com",
+  "offices.khulnaTitle": "Oficina de Khulna / Mongla (Alquilada)",
+  "offices.khulnaLine1": "Khan Tower",
+  "offices.khulnaLine2": "A-50 (2nd Floor), K.D.A. Majid Sharani",
+  "offices.khulnaLine3": "Shibbari, Khulna -9100",
+  "offices.khulnaPhone": "+880-41-722971, 724245",
+  "offices.khulnaEmail": "info@rivertyneltd.com",
+  "offices.monglaPortTitle": "Oficina del Puerto de Mongla",
+  "offices.monglaPortLine1": "Bandhor Bhabon",
+  "offices.monglaPortLine2": "Room No: A-01, B-02",
+  "offices.monglaPortLine3": "Mongla, Bagerhat",
+  "offices.monglaPortPhone": "+8802477726285",
+  "offices.monglaPortEmail": "info@rivertyneltd.com",
+  "offices.payraTitle": "Oficina de Payra",
+  "offices.payraLine1": "Sufia Bhaban, (1st Floor), Word No. 09",
+  "offices.payraLine2": "Town Kalikapara, Hepalia",
+  "offices.payraLine3": "Bathghat, Patuakhali",
+  "offices.payraLine4": "",
+  "offices.payraPhone": "+8801713017571 and +8801908411380",
+  "offices.payraEmail": "info@rivertyneltd.com",
 };

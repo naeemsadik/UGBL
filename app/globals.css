@@ -1,27 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  /* River Tyne brand palette – derived from logo */
-  --navy: #1B2D5A;
-  --navy-dark: #12203F;
-  --navy-light: #2A4170;
-  --green: #2E9E6F;
-  --green-dark: #238058;
-  --green-light: #45B585;
-  --blue: #2088C0;
-  --blue-dark: #186DA0;
-  --blue-light: #3BA0D6;
-  --teal: #1F9A8F;
+  /* ── River Tyne exact logo palette ──────────────── */
+  --navy:        #1D2E54;   /* Dark Imperial Blue – text, icons, dark BGs */
+  --navy-dark:   #141F3A;   /* Darker shade for deep sections */
+  --teal:        #49A98F;   /* Ziggurat / Viridian Green – primary accent */
+  --teal-dark:   #3A8A74;   /* Darker teal for hover states */
+  --blue:        #3B71B5;   /* Denim Blue – secondary accent */
+  --blue-light:  #4A86C9;   /* Cerulean – gradient tip */
 
-  --background: #ffffff;
-  --foreground: #1f2937;
-  --section-bg: #EFF5F8;
+  /* Gradient endpoints from logo */
+  --green-deep:  #2D5B4F;   /* Forest green – gradient base */
+  --green-light: #79C9A1;   /* Seafoam green – gradient tip */
+
+  --background:  #F6FAFF;   /* Pale blue-tinted white */
+  --foreground:  #1D2E54;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -29,7 +28,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), 'Inter', Arial, Helvetica, sans-serif;
 }
 
 /* ── Hero banner ──────────────────────────────── */
@@ -43,9 +42,9 @@ body {
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(18, 32, 63, 0.72) 0%,
-    rgba(18, 32, 63, 0.45) 50%,
-    rgba(18, 32, 63, 0.6) 100%
+    rgba(29, 46, 84, 0.72) 0%,
+    rgba(29, 46, 84, 0.40) 50%,
+    rgba(29, 46, 84, 0.58) 100%
   );
 }
 
@@ -69,20 +68,20 @@ body {
   transition: all 0.3s;
 }
 .hero-dot.active {
-  background: var(--green);
-  border-color: var(--green);
+  background: var(--teal);
+  border-color: var(--teal);
   transform: scale(1.25);
 }
 
 /* ── Inner page hero ──────────────────────────── */
 .inner-hero {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--blue-dark) 100%);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
 }
 .inner-overlay {
   background: linear-gradient(
     180deg,
-    rgba(11, 65, 97, 0.3) 0%,
-    rgba(8, 53, 81, 0.2) 100%
+    rgba(29, 46, 84, 0.3) 0%,
+    rgba(29, 46, 84, 0.2) 100%
   );
 }
 
@@ -101,7 +100,7 @@ body {
   border: 1px solid #e5eaf0;
   background: #fff;
   padding: 1.65rem;
-  box-shadow: 0 4px 16px rgba(14, 39, 69, 0.05);
+  box-shadow: 0 4px 16px rgba(29, 46, 84, 0.05);
 }
 .info-card h2 {
   font-size: 1.75rem;
@@ -123,13 +122,13 @@ body {
   background-color: #f9fbfe;
   padding: 0.7rem 0.85rem;
   font-size: 0.95rem;
-  color: #203146;
+  color: var(--navy);
   outline: none;
 }
 .field::placeholder { color: #8c9aad; }
 .field:focus {
-  border-color: var(--green);
-  box-shadow: 0 0 0 2px rgba(46, 158, 111, 0.17);
+  border-color: var(--teal);
+  box-shadow: 0 0 0 2px rgba(73, 169, 143, 0.2);
 }
 
 /* ── Buttons ──────────────────────────────────── */
@@ -143,15 +142,15 @@ body {
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  background: var(--green);
+  background: var(--navy);
   color: #fff;
-  border: 2px solid var(--green);
+  border: 2px solid var(--navy);
   transition: all 0.25s ease;
   cursor: pointer;
 }
 .btn-primary:hover {
-  background: var(--green-dark);
-  border-color: var(--green-dark);
+  background: var(--navy-dark);
+  border-color: var(--navy-dark);
 }
 
 .btn-outline {
@@ -187,4 +186,157 @@ body {
 }
 .promo-card:hover img {
   transform: scale(1.05);
+}
+
+/* ── Office Addresses Section ────────────────────── */
+.office-addresses {
+  position: relative;
+  background: linear-gradient(135deg, #1D2E54 0%, #2c4a7a 50%, #4A86C9 100%);
+  overflow: hidden;
+}
+
+/* Subtle dot-pattern texture */
+.office-addresses::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.office-addresses-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.office-section-title {
+  text-align: center;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.office-section-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 540px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+/* ── Grid ─────────────────────────────────────────── */
+.office-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .office-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .office-grid {
+    grid-template-columns: 1fr;
+  }
+  .office-addresses-inner {
+    padding: 3rem 1.25rem;
+  }
+  .office-section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* ── Card ─────────────────────────────────────────── */
+.office-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 1.75rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.office-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(73, 169, 143, 0.2),
+    0 0 24px rgba(73, 169, 143, 0.08);
+  border-color: rgba(73, 169, 143, 0.35);
+}
+
+/* Top accent bar */
+.office-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--teal) 0%, var(--blue-light) 100%);
+  border-radius: 14px 14px 0 0;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.office-card:hover .office-card-accent {
+  opacity: 1;
+}
+
+/* ── Card title ───────────────────────────────────── */
+.office-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* ── Row: icon + text ─────────────────────────────── */
+.office-card-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+}
+
+.office-card-row:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Icons ────────────────────────────────────────── */
+.office-icon {
+  width: 17px;
+  height: 17px;
+  min-width: 17px;
+  color: var(--teal);
+  margin-top: 2px;
+}
+
+/* ── Text ─────────────────────────────────────────── */
+.office-card-text {
+  font-size: 0.89rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.55;
+}
+
+.office-card-highlight {
+  font-size: 0.89rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 500;
+  line-height: 1.55;
 }

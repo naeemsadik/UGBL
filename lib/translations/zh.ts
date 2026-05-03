@@ -4,6 +4,7 @@ export const zh: Record<TranslationKey, string> = {
   // Navigation
   "nav.home": "首页",
   "nav.aboutUs": "关于我们",
+  "nav.atAGlance": "一目了然",
   "nav.missionVision": "使命与愿景",
   "nav.policyCompliance": "政策与合规",
   "nav.services": "服务",
@@ -22,7 +23,7 @@ export const zh: Record<TranslationKey, string> = {
   "nav.selectLanguage": "选择语言",
 
   // Hero
-  "hero.title": "Universe Shipping Lines",
+  "hero.title": "River Tyne Shipping",
   "hero.subtitle": "全球航运合作伙伴",
   "hero.ourServices": "我们的服务",
   "hero.contactUs": "联系我们",
@@ -55,6 +56,8 @@ export const zh: Record<TranslationKey, string> = {
   "home.response": "24/7 响应：",
   "home.responseDesc":
     "除了为所有港口停靠提供快速周转外，客户还可以期望在24小时内对所有查询做出回应。",
+  "home.isoCommitment":
+    "River Tyne Ltd致力于按照法律和客户要求以及ISO-9001:2015的要求提供优质定制服务和完全合规。",
 
   // Home – Services
   "home.ourServicesLabel": "我们的服务",
@@ -309,4 +312,40 @@ export const zh: Record<TranslationKey, string> = {
   // Footer extras
   "footer.aboutLink": "关于我们",
   "footer.servicesLink": "服务",
+
+  // Office Addresses
+  "offices.sectionTitle": "我们的办事处",
+  "offices.sectionSubtitle":
+    "联系我们在孟加拉国各地的任何办事处，获取航运和物流支持。",
+  "offices.dhakaTitle": "达卡办事处（自有物业）",
+  "offices.dhakaLine1": "Taher Tower (9th Floor)",
+  "offices.dhakaLine2": "Plot-10, Gulshan C/A, Circle-2",
+  "offices.dhakaLine3": "Dhaka 1212, Bangladesh",
+  "offices.dhakaPhone": "+8802581819, +8802222286574",
+  "offices.dhakaEmail": "info@rivertyneltd.com",
+  "offices.chattogramTitle": "吉大港办事处（自有物业）",
+  "offices.chattogramLine1": "Yunusco City Center (8th Floor)",
+  "offices.chattogramLine2": "807, C.D.A Avenue GEC Circle",
+  "offices.chattogramLine3": "Chattogram 4100, Bangladesh",
+  "offices.chattogramPhone": "+880-31 2866327",
+  "offices.chattogramEmail": "info@rivertyneltd.com",
+  "offices.khulnaTitle": "库尔纳/蒙格拉办事处（租赁）",
+  "offices.khulnaLine1": "Khan Tower",
+  "offices.khulnaLine2": "A-50 (2nd Floor), K.D.A. Majid Sharani",
+  "offices.khulnaLine3": "Shibbari, Khulna -9100",
+  "offices.khulnaPhone": "+880-41-722971, 724245",
+  "offices.khulnaEmail": "info@rivertyneltd.com",
+  "offices.monglaPortTitle": "蒙格拉港口办事处",
+  "offices.monglaPortLine1": "Bandhor Bhabon",
+  "offices.monglaPortLine2": "Room No: A-01, B-02",
+  "offices.monglaPortLine3": "Mongla, Bagerhat",
+  "offices.monglaPortPhone": "+8802477726285",
+  "offices.monglaPortEmail": "info@rivertyneltd.com",
+  "offices.payraTitle": "帕亚拉办事处",
+  "offices.payraLine1": "Sufia Bhaban, (1st Floor), Word No. 09",
+  "offices.payraLine2": "Town Kalikapara, Hepalia",
+  "offices.payraLine3": "Bathghat, Patuakhali",
+  "offices.payraLine4": "",
+  "offices.payraPhone": "+8801713017571 and +8801908411380",
+  "offices.payraEmail": "info@rivertyneltd.com",
 };

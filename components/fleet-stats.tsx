@@ -1,12 +1,20 @@
 "use client";
 
+import type { MouseEvent } from "react";
 import Link from "next/link";
 import { useTranslation } from "@/lib/language-context";
 
-/* ── Stat icons ──────────────────────────────────── */
 function ShipIcon() {
   return (
-    <svg className="h-12 w-12 text-[#1B2D5A]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      className="h-6 w-6"
+      viewBox="0 0 48 48"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <path d="M6 36l6-18h24l6 18" />
       <path d="M12 18v-6h24v6" />
       <path d="M20 12V8h8v4" />
@@ -15,180 +23,165 @@ function ShipIcon() {
   );
 }
 
-function AnchorIcon() {
+function ShieldIcon() {
   return (
-    <svg className="h-12 w-12 text-[#1B2D5A]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="24" cy="10" r="4" />
-      <path d="M24 14v26" />
-      <path d="M16 20h16" />
-      <path d="M8 36c4-8 12-10 16-10s12 2 16 10" />
+    <svg
+      className="h-6 w-6"
+      viewBox="0 0 48 48"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M24 6l14 6v10c0 10-6 16-14 20-8-4-14-10-14-20V12l14-6z" />
+      <path d="M16 24l6 6 10-12" />
     </svg>
   );
 }
 
-function CargoIcon() {
+function CrewIcon() {
   return (
-    <svg className="h-12 w-12 text-[#1B2D5A]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="8" y="16" width="32" height="24" rx="2" />
-      <path d="M8 24h32" />
-      <path d="M8 32h32" />
-      <path d="M20 16v24" />
-      <path d="M28 16v24" />
-      <path d="M16 10l8-4 8 4" />
+    <svg
+      className="h-6 w-6"
+      viewBox="0 0 48 48"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="24" cy="16" r="6" />
+      <path d="M10 40c0-8 6-14 14-14s14 6 14 14" />
     </svg>
   );
 }
 
-function GlobeIcon() {
+function BoxIcon() {
   return (
-    <svg className="h-12 w-12 text-[#1B2D5A]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="24" cy="24" r="18" />
-      <ellipse cx="24" cy="24" rx="9" ry="18" />
-      <path d="M8 16h32M8 32h32" />
+    <svg
+      className="h-6 w-6"
+      viewBox="0 0 48 48"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="8" y="12" width="32" height="28" rx="3" />
+      <path d="M8 22h32" />
+      <path d="M18 12v28" />
     </svg>
   );
 }
 
-function TeamIcon() {
-  return (
-    <svg className="h-12 w-12 text-[#1B2D5A]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="24" cy="14" r="6" />
-      <path d="M12 40c0-8 5-14 12-14s12 6 12 14" />
-      <circle cx="38" cy="16" r="4" />
-      <path d="M38 22c5 1 8 5 8 10" />
-      <circle cx="10" cy="16" r="4" />
-      <path d="M10 22c-5 1-8 5-8 10" />
-    </svg>
-  );
-}
-
-function CustomersIcon() {
-  return (
-    <svg className="h-12 w-12 text-[#1B2D5A]" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="16" cy="16" r="5" />
-      <path d="M6 36c0-7 4-12 10-12s10 5 10 12" />
-      <circle cx="34" cy="16" r="5" />
-      <path d="M24 36c0-7 4-12 10-12s10 5 10 12" />
-    </svg>
-  );
-}
-
-/* ── Fleet & Network Stats ────────────────────────── */
 export function FleetStats() {
   const { t } = useTranslation();
 
-  const row1 = [
-    {
-      icon: <ShipIcon />,
-      number: "4",
-      label: t("home.stat1Label"),
-      color: "#2E9E6F",
-    },
-    {
-      icon: <AnchorIcon />,
-      number: "50+",
-      label: t("home.stat2Label"),
-      color: "#2088C0",
-    },
-    {
-      icon: <CargoIcon />,
-      number: "4+",
-      suffix: t("home.statYears"),
-      label: t("home.stat3Label"),
-      color: "#2E9E6F",
-    },
-  ];
+  const handleCardMouseMove = (event: MouseEvent<HTMLElement>) => {
+    const target = event.currentTarget;
+    const rect = target.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * 100;
+    const y = ((event.clientY - rect.top) / rect.height) * 100;
+    target.style.setProperty("--x", `${x}%`);
+    target.style.setProperty("--y", `${y}%`);
+  };
 
-  const row2 = [
+  const handleCardMouseLeave = (event: MouseEvent<HTMLElement>) => {
+    const target = event.currentTarget;
+    target.style.setProperty("--x", "50%");
+    target.style.setProperty("--y", "50%");
+  };
+
+  const services = [
     {
-      icon: <GlobeIcon />,
-      number: "24/7",
-      label: t("home.stat4Label"),
-      color: "#2088C0",
+      title: t("home.shippingServices"),
+      desc: t("home.shippingServicesDesc"),
+      icon: <ShipIcon />,
+      href: "/services",
     },
     {
-      icon: <TeamIcon />,
-      number: "4",
-      suffix: t("home.statServices"),
-      label: t("home.stat5Label"),
-      color: "#2E9E6F",
+      title: t("home.charteringServices"),
+      desc: t("home.charteringServicesDesc"),
+      icon: <ShieldIcon />,
+      href: "/services",
     },
     {
-      icon: <CustomersIcon />,
-      number: "100+",
-      label: t("home.stat6Label"),
-      color: "#2088C0",
+      title: t("home.logisticsServices"),
+      desc: t("home.logisticsServicesDesc"),
+      icon: <CrewIcon />,
+      href: "/services",
+    },
+    {
+      title: t("home.husbandryServices"),
+      desc: t("home.husbandryServicesDesc"),
+      icon: <BoxIcon />,
+      href: "/services",
     },
   ];
 
   return (
-    <section className="bg-white py-20">
-      <div className="mx-auto w-full max-w-[1000px] px-6 text-center">
-        {/* Heading */}
-        <h2 className="text-3xl font-bold text-[#1B2D5A] md:text-4xl">
-          {t("home.fleetTitle")}
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-[1rem] leading-7 text-[#5a6a7d]">
-          {t("home.fleetSubtitle")}
-        </p>
-
-        {/* Stats row 1 */}
-        <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-3">
-          {row1.map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center gap-3 animate-fade-up">
-              <div className="flex h-16 w-16 items-center justify-center">
-                {stat.icon}
+    <section className="relative overflow-hidden bg-[#F6FAFF] py-20">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-60"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, rgba(29,46,84,0.18) 1px, transparent 1px)",
+          backgroundSize: "22px 22px",
+          backgroundPosition: "center",
+        }}
+      />
+      <div className="relative mx-auto w-full max-w-[1200px] px-6">
+        <div className="mx-auto max-w-[640px] text-center">
+          <p className="text-lg font-semibold uppercase tracking-[0.2em] text-[#3B71B5] md:text-xl">
+            {t("home.ourServicesLabel")}
+          </p>
+          <h2 className="mt-6 text-3xl font-semibold uppercase leading-tight text-[#1D2E54] md:text-4xl">
+            {t("home.whatWeCanDo")}
+            <span className="block text-[#49A98F]">{t("home.forYou")}</span>
+          </h2>
+          <p className="mt-6 text-[0.98rem] leading-7 text-[#51627A]">
+            {t("home.fleetSubtitle")}
+          </p>
+        </div>
+        <div className="mt-12 grid gap-7 md:grid-cols-2 lg:gap-8">
+          {services.map((service) => (
+            <article
+              key={service.title}
+              className="group relative overflow-hidden rounded-2xl border border-[rgba(29,46,84,0.12)] bg-white p-6 shadow-[0_10px_30px_rgba(29,46,84,0.10)] transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:border-[rgba(59,113,181,0.45)] hover:shadow-[0_18px_45px_rgba(29,46,84,0.18)]"
+              onMouseMove={handleCardMouseMove}
+              onMouseLeave={handleCardMouseLeave}
+            >
+              <span
+                className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                style={{
+                  background:
+                    "radial-gradient(220px circle at var(--x, 50%) var(--y, 50%), rgba(73,169,143,0.18), rgba(73,169,143,0.06) 40%, transparent 65%)",
+                }}
+              />
+              <div className="relative">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[rgba(59,113,181,0.12)] text-[#3B71B5] transition-transform duration-300 group-hover:scale-105 group-hover:bg-[rgba(73,169,143,0.18)] group-hover:text-[#49A98F]">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#1D2E54] md:text-[1.15rem]">
+                    {service.title}
+                  </h3>
+                </div>
+                <p className="mt-5 text-[0.97rem] leading-7 text-[#4a5a70]">
+                  {service.desc}
+                </p>
+                <Link
+                  href={service.href}
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#3B71B5] transition group-hover:text-[#49A98F]"
+                >
+                  {t("home.readMore")}
+                  <span className="h-px w-0 bg-[#49A98F] transition-all duration-300 group-hover:w-6" />
+                </Link>
               </div>
-              <p className="text-3xl font-bold md:text-4xl" style={{ color: stat.color }}>
-                {stat.number}
-                {stat.suffix && (
-                  <span className="ml-1 text-lg font-medium text-[#5a6a7d]">{stat.suffix}</span>
-                )}
-              </p>
-              <p className="text-sm font-semibold uppercase tracking-wider text-[#4a5a70]">
-                {stat.label}
-              </p>
-            </div>
+            </article>
           ))}
         </div>
-
-        {/* Divider text */}
-        <p className="mx-auto mt-12 max-w-xl text-[0.92rem] leading-7 text-[#6a7a8d]">
-          {t("home.fleetDesc")}
-        </p>
-
-        {/* Stats row 2 */}
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-          {row2.map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center gap-3 animate-fade-up">
-              <div className="flex h-16 w-16 items-center justify-center">
-                {stat.icon}
-              </div>
-              <p className="text-3xl font-bold md:text-4xl" style={{ color: stat.color }}>
-                {stat.number}
-                {stat.suffix && (
-                  <span className="ml-1 text-lg font-medium text-[#5a6a7d]">{stat.suffix}</span>
-                )}
-              </p>
-              <p className="text-sm font-semibold uppercase tracking-wider text-[#4a5a70]">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA button */}
-        <Link href="/services" className="btn-primary mt-14 inline-flex">
-          {t("home.learnMoreFleet")}
-          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
-
-        {/* Footnote */}
-        <p className="mt-8 text-xs italic text-[#8a99ab]">
-          {t("home.fleetFootnote")}
-        </p>
       </div>
     </section>
   );

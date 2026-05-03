@@ -2,6 +2,7 @@ export const en = {
   // Navigation
   "nav.home": "Home",
   "nav.aboutUs": "About Us",
+  "nav.atAGlance": "At a Glance",
   "nav.missionVision": "Mission and Vision",
   "nav.policyCompliance": "Policy and Compliance",
   "nav.services": "Services",
@@ -57,7 +58,7 @@ export const en = {
   // Home – Promo Cards
   "home.promoAboutLabel": "About Us",
   "home.promoAboutDesc":
-    "Established in 2022, River Tyne Shipping has built a reputation for reliability across Bangladesh's key maritime gateways.",
+    "Established in 2016, River Tyne Ltd has built a reputation for reliability across Bangladesh's key maritime gateways.",
   "home.promoAboutCta": "Read More",
   "home.promoServicesLabel": "Our Services",
   "home.promoServicesDesc":
@@ -81,21 +82,23 @@ export const en = {
 
   // Home – About Section
   "home.aboutP1":
-    "River Tyne Shipping is a leading shipping agency, logistics service provider, and trading company in Bangladesh, offering comprehensive maritime and supply chain solutions.",
+    "River Tyne Ltd is the one of leading Shipping Agent, Logistics service provider in Bangladesh.",
   "home.aboutP2":
-    "With over four years of operational experience, River Tyne Shipping has successfully handled a wide range of breakbulk commodities, including coal, clinker, stone, and boulder cargoes, from overseas origins to designated inland delivery locations.",
+    "River Tyne Ltd has 10 years of experience in handling of multiple breakbulk commodities including Coal, Stone, Gypsum, Aggregates, Soybean, Sugar, Chickpeas, Clinker, Manganese Ore, TSP, Lentils, LNG, LPG, Condensate, HSFO, VEG OIL, MOGAS from overseas origin to local delivery site in the country through Chattogram, Mongla, Payra port as per consignee's requirement.",
   "home.aboutP3":
-    "The company provides complete end-to-end logistics solutions across Bangladesh. Regardless of cargo size, quantity, or transportation mode, River Tyne Shipping is committed to delivering reliable, efficient, and customized services.",
+    "We have the capacity to provide complete logistics solution in Bangladesh. Nothing impossible for River Tyne, whatever the size / quantity of the cargo or whatever the mode of transportation is not matter to River Tyne Logistics team/company.",
   "home.aboutP4":
-    "Established in 2022, the company's corporate head office is located in Dhaka, the capital city of Bangladesh. River Tyne Shipping maintains branch offices in Chattogram, Khulna/Mongla, and Payra Port.",
+    "River Tyne Ltd is an ISO 9001: 2015 certified leading Shipping agent, Logistics service provider in Bangladesh. The company was established in 2016 and the corporate office is situated in the capital city of Dhaka. River Tyne Ltd has also four branch offices located in Chittagong, Khulna, Mongla and Payra port. River Tyne has total strength of 60 staffs excluding offshore staff as we are having one seagoing Bollard pull Tug Boat and one classed Oil tanker enlisted with Bangladesh Petroleum Corporation for carrying their furnished oil to different destination in Bangladesh.",
 
   // Home – Connections
   "home.connections": "Connections",
   "home.connectionsDesc":
-    "Customs and Port Authorities \u2022 Embassies and Government Agencies \u2022 Classification Societies \u2022 Shipping Associations \u2022 Terminal Operators \u2022 Stevedoring Companies \u2022 Shipyard Facilities \u2022 Marine Suppliers and Service Providers",
-  "home.response": "24/7 Operational Response",
+    "Principals can tap into River Tyne's excellent local connections and relations with both public and private sectors in the shipping industry. These include customs & port authorities, embassies, classification societies, shipping associations, terminals operators, stevedores, shipyard facilities and suppliers.",
+  "home.response": "24/7 Response",
   "home.responseDesc":
-    "River Tyne Shipping ensures fast turnaround for all port calls while maintaining round-the-clock operational support.",
+    "In addition to fast turnaround for all port calls, clients can also expect response to all inquiries within 24 hours. Our efficient operations are aimed at reducing time at port and ultimately minimize costs for Principals.",
+  "home.isoCommitment":
+    "We River Tyne Ltd are committed to provide quality customized service & complete compliance as per legal & customers' requirements as well as the requirements of ISO-9001: 2015 by continuously improving of our system through monitoring, analysis & training.",
 
   // Home – Services
   "home.ourServicesLabel": "Our Services",
@@ -313,6 +316,42 @@ export const en = {
   "contact.projectDetails": "Project details",
   "contact.messagePlaceholder": "Tell us what you need...",
   "contact.sendInquiry": "Send Inquiry",
+
+  // Office Addresses
+  "offices.sectionTitle": "Our Offices",
+  "offices.sectionSubtitle":
+    "Reach out to any of our offices across Bangladesh for shipping and logistics support.",
+  "offices.dhakaTitle": "Dhaka Office (Own Premises)",
+  "offices.dhakaLine1": "Taher Tower (9th Floor)",
+  "offices.dhakaLine2": "Plot-10, Gulshan C/A, Circle-2",
+  "offices.dhakaLine3": "Dhaka 1212, Bangladesh",
+  "offices.dhakaPhone": "+8802581819, +8802222286574",
+  "offices.dhakaEmail": "info@rivertyneltd.com",
+  "offices.chattogramTitle": "Chattogram Office (Own Premises)",
+  "offices.chattogramLine1": "Yunusco City Center (8th Floor)",
+  "offices.chattogramLine2": "807, C.D.A Avenue GEC Circle",
+  "offices.chattogramLine3": "Chattogram 4100, Bangladesh",
+  "offices.chattogramPhone": "+880-31 2866327",
+  "offices.chattogramEmail": "info@rivertyneltd.com",
+  "offices.khulnaTitle": "Khulna / Mongla Office (Rental)",
+  "offices.khulnaLine1": "Khan Tower",
+  "offices.khulnaLine2": "A-50 (2nd Floor), K.D.A. Majid Sharani",
+  "offices.khulnaLine3": "Shibbari, Khulna -9100",
+  "offices.khulnaPhone": "+880-41-722971, 724245",
+  "offices.khulnaEmail": "info@rivertyneltd.com",
+  "offices.monglaPortTitle": "Mongla Port Office",
+  "offices.monglaPortLine1": "Bandhor Bhabon",
+  "offices.monglaPortLine2": "Room No: A-01, B-02",
+  "offices.monglaPortLine3": "Mongla, Bagerhat",
+  "offices.monglaPortPhone": "+8802477726285",
+  "offices.monglaPortEmail": "info@rivertyneltd.com",
+  "offices.payraTitle": "Payra Office",
+  "offices.payraLine1": "Sufia Bhaban, (1st Floor), Word No. 09",
+  "offices.payraLine2": "Town Kalikapara, Hepalia",
+  "offices.payraLine3": "Bathghat, Patuakhali",
+  "offices.payraLine4": "",
+  "offices.payraPhone": "+8801713017571 and +8801908411380",
+  "offices.payraEmail": "info@rivertyneltd.com",
 } as const;
 
 export type TranslationKey = keyof typeof en;
