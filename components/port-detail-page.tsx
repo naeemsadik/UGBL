@@ -21,6 +21,9 @@ type PortDetailPageProps = {
   overviewTitle: string;
   overview: string;
   facts: PortFact[];
+  mapTitle: string;
+  mapDescription: string;
+  mapQuery: string;
   notesTitle: string;
   notes: string[];
   ctaTitle: string;
@@ -37,6 +40,9 @@ export function PortDetailPage({
   overviewTitle,
   overview,
   facts,
+  mapTitle,
+  mapDescription,
+  mapQuery,
   notesTitle,
   notes,
   ctaTitle,
@@ -44,6 +50,9 @@ export function PortDetailPage({
   ctaLabel,
   ctaHref,
 }: PortDetailPageProps) {
+  const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&output=embed`;
+  const mapLinkUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
+
   return (
     <div className="bg-slate-50">
       <InnerHero
@@ -124,6 +133,36 @@ export function PortDetailPage({
             </div>
           </div>
         </div>
+
+        <section className="mt-8 rounded-[28px] border border-white/60 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-8">
+          <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
+            {mapTitle}
+          </span>
+          <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-5xl">
+            Location map
+          </h2>
+          <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg">
+            {mapDescription}
+          </p>
+          <a
+            href={mapLinkUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center justify-center rounded-full bg-[#1D2E54] px-5 py-3 text-sm font-black text-white transition-transform duration-300 hover:-translate-y-0.5"
+          >
+            Open in Google Maps
+          </a>
+
+          <div className="mt-8 overflow-hidden rounded-[24px] border border-slate-200 bg-slate-100 shadow-[0_14px_40px_rgba(15,23,42,0.08)]">
+            <iframe
+              title={`${title} map`}
+              src={mapEmbedUrl}
+              className="h-[520px] w-full md:h-[720px]"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </section>
       </section>
     </div>
   );

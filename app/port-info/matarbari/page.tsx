@@ -14,6 +14,9 @@ export default function MatarbariPortPage() {
       ]}
       overviewTitle="Deep-sea project cargo focus"
       overview="The Matarbari Coal Jetty is the most specialized port profile in the documentation. It supports larger vessels, relies on tide-aware berthing, and is positioned for faster cargo discharge through self-unloader operations."
+      mapTitle="Matarbari Coal Jetty"
+      mapDescription="The map centers the Matarbari coal jetty area described in the document, which is the relevant location for the berth, tide-aware operations, and pilotage coordination."
+      mapQuery="Matarbari Coal Jetty, Bangladesh"
       facts={[
         {
           label: "Max LOA",

@@ -14,6 +14,9 @@ export default function MonglaPortPage() {
       ]}
       overviewTitle="Bulk and breakbulk gateway"
       overview="Mongla is the port profile for steady bulk flows, breakbulk handling, and flexible working windows. The documentation points to low congestion, accessible drafts, and enough operating flexibility to support both direct berthing and anchorage work." 
+      mapTitle="Mongla Port"
+      mapDescription="The document highlights Mongla Fairway Buoy and Harbaria anchorage as the working reference points, so the map focuses on the Mongla port area and its access routes."
+      mapQuery="Mongla Port, Bangladesh"
       facts={[
         {
           label: "Fairway draft",

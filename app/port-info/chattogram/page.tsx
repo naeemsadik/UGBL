@@ -14,6 +14,9 @@ export default function ChattogramPortPage() {
       ]}
       overviewTitle="Core seaport operations"
       overview="Chattogram is the country's main seaport and the anchor for day-to-day cargo, container, and vessel-service coordination. The published berth profile highlights the largest operating envelope in the network and makes it the natural hub for high-volume calls."
+      mapTitle="Chattogram Port"
+      mapDescription="The source document references Chattogram Port and its anchorage profile. Use the map to view the broader port area and connect the berth information to the location context in the doc."
+      mapQuery="Chattogram Port, Bangladesh"
       facts={[
         {
           label: "Berth displacement",

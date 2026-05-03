@@ -14,6 +14,9 @@ export default function PayraPortPage() {
       ]}
       overviewTitle="Deep-sea access for project cargo"
       overview="Payra is the most tide-sensitive of the port profiles in the documentation and is especially relevant for cargo movements that need anchorage handling, pilotage, and flexible channel access. It is a strong fit for project cargo and larger industrial moves." 
+      mapTitle="Payra Port"
+      mapDescription="The document references the fairway buoy, inner anchorage, and berth access at Payra, so the map is centered on the Payra port area and its working waters."
+      mapQuery="Payra Port, Bangladesh"
       facts={[
         {
           label: "Fairway draft",
