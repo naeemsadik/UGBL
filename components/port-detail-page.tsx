@@ -73,7 +73,6 @@ export function PortDetailPage({
         title={title}
         subtitle={subtitle}
         backgroundImage={heroImage}
-        breadcrumbs={breadcrumbs}
       />
 
       <section className="mx-auto w-full max-w-[1400px] px-6 py-16 md:py-20">
