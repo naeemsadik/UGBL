@@ -1,17 +1,31 @@
 import heroImg from "@/assets/hero3.jpeg";
 import { PortDetailPage } from "@/components/port-detail-page";
 
+const readMoreLinks = [
+  { label: "Chattogram Port", href: "/port-info/chattogram" },
+  { label: "Mongla Port", href: "/port-info/mongla" },
+  { label: "Matarbari Port", href: "/port-info/matarbari" },
+];
+
+const downloadLinks = [
+  { label: "Company Profile", href: "/downloads/company-profile.pdf" },
+  { label: "Draft Chart", href: "/downloads/draft-chart.pdf" },
+  { label: "Tide Table", href: "/downloads/tide-table.pdf" },
+];
+
+const contact = {
+  phone: "+880-2588-811813",
+  email: "uni-global.bd@ugblgroup.com",
+  contactHref: "/contact",
+  contactLabel: "Send Message",
+};
+
 export default function PayraPortPage() {
   return (
     <PortDetailPage
       title="Payra Port"
       subtitle="An emerging deep-sea access point for industrial cargo and project moves through the Rabnabad Channel."
       heroImage={heroImg}
-      breadcrumbs={[
-        { label: "HOME", href: "/" },
-        { label: "PORT INFO", href: "/port-info" },
-        { label: "PAYRA PORT" },
-      ]}
       overviewTitle="Deep-sea access for project cargo"
       overview="Payra is the most tide-sensitive of the port profiles in the documentation and is especially relevant for cargo movements that need anchorage handling, pilotage, and flexible channel access. It is a strong fit for project cargo and larger industrial moves." 
       mapTitle="Payra Port"
@@ -49,6 +63,9 @@ export default function PayraPortPage() {
       ctaText="Payra is a strong option for project cargo and tide-window planning when you need anchorage access, pilotage coordination, and broad working flexibility."
       ctaLabel="Contact us"
       ctaHref="/contact"
+      readMoreLinks={readMoreLinks}
+      downloadLinks={downloadLinks}
+      contact={contact}
     />
   );
 }

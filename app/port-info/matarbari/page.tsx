@@ -1,17 +1,31 @@
 import heroImg from "@/assets/hero3.jpeg";
 import { PortDetailPage } from "@/components/port-detail-page";
 
+const readMoreLinks = [
+  { label: "Chattogram Port", href: "/port-info/chattogram" },
+  { label: "Mongla Port", href: "/port-info/mongla" },
+  { label: "Payra Port", href: "/port-info/payra" },
+];
+
+const downloadLinks = [
+  { label: "Company Profile", href: "/downloads/company-profile.pdf" },
+  { label: "Draft Chart", href: "/downloads/draft-chart.pdf" },
+  { label: "Tide Table", href: "/downloads/tide-table.pdf" },
+];
+
+const contact = {
+  phone: "+880-2588-811813",
+  email: "uni-global.bd@ugblgroup.com",
+  contactHref: "/contact",
+  contactLabel: "Send Message",
+};
+
 export default function MatarbariPortPage() {
   return (
     <PortDetailPage
       title="Matarbari Port"
       subtitle="A deep-sea gateway built for heavier project cargo and modern port operations."
       heroImage={heroImg}
-      breadcrumbs={[
-        { label: "HOME", href: "/" },
-        { label: "PORT INFO", href: "/port-info" },
-        { label: "MATARBARI PORT" },
-      ]}
       overviewTitle="Deep-sea project cargo focus"
       overview="The Matarbari Coal Jetty is the most specialized port profile in the documentation. It supports larger vessels, relies on tide-aware berthing, and is positioned for faster cargo discharge through self-unloader operations."
       mapTitle="Matarbari Coal Jetty"
@@ -49,6 +63,9 @@ export default function MatarbariPortPage() {
       ctaText="This port is the best match for project cargo and high-throughput discharge plans that need tide-sensitive coordination and tug support."
       ctaLabel="Contact us"
       ctaHref="/contact"
+      readMoreLinks={readMoreLinks}
+      downloadLinks={downloadLinks}
+      contact={contact}
     />
   );
 }

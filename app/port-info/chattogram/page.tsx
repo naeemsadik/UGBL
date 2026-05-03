@@ -1,17 +1,31 @@
 import heroImg from "@/assets/hero3.jpeg";
 import { PortDetailPage } from "@/components/port-detail-page";
 
+const readMoreLinks = [
+  { label: "Mongla Port", href: "/port-info/mongla" },
+  { label: "Payra Port", href: "/port-info/payra" },
+  { label: "Matarbari Port", href: "/port-info/matarbari" },
+];
+
+const downloadLinks = [
+  { label: "Company Profile", href: "/downloads/company-profile.pdf" },
+  { label: "Draft Chart", href: "/downloads/draft-chart.pdf" },
+  { label: "Tide Table", href: "/downloads/tide-table.pdf" },
+];
+
+const contact = {
+  phone: "+880-2588-811813",
+  email: "uni-global.bd@ugblgroup.com",
+  contactHref: "/contact",
+  contactLabel: "Send Message",
+};
+
 export default function ChattogramPortPage() {
   return (
     <PortDetailPage
       title="Chattogram Port"
       subtitle="Bangladesh's primary seaport and the network's broadest cargo-handling gateway."
       heroImage={heroImg}
-      breadcrumbs={[
-        { label: "HOME", href: "/" },
-        { label: "PORT INFO", href: "/port-info" },
-        { label: "CHATTOGRAM PORT" },
-      ]}
       overviewTitle="Core seaport operations"
       overview="Chattogram is the country's main seaport and the anchor for day-to-day cargo, container, and vessel-service coordination. The published berth profile highlights the largest operating envelope in the network and makes it the natural hub for high-volume calls."
       mapTitle="Chattogram Port"
@@ -49,6 +63,9 @@ export default function ChattogramPortPage() {
       ctaText="River Tyne can coordinate the arrival, berth planning, port-side services, and follow-on cargo movement for Chattogram calls."
       ctaLabel="Contact us"
       ctaHref="/contact"
+      readMoreLinks={readMoreLinks}
+      downloadLinks={downloadLinks}
+      contact={contact}
     />
   );
 }
