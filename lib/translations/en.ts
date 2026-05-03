@@ -12,6 +12,7 @@ export const en = {
   "nav.logisticsAgency": "Logistics Agency",
   "nav.ourTeam": "Our Team",
   "nav.portInfo": "Port Info",
+  "nav.portInfoOverview": "Port Info Overview",
   "nav.chattogramPort": "Chattogram Port",
   "nav.matarbariPort": "Matarbari Port",
   "nav.payraPort": "Payra Port",
@@ -241,9 +242,29 @@ export const en = {
   "portInfo.title": "Port Info",
   "portInfo.subtitle":
     "Operational insight and support coverage across Bangladesh's key maritime gateways.",
+  "portInfo.kicker": "Four Port Network",
+  "portInfo.overviewTitle": "Coverage built around Bangladesh's most important gateways",
+  "portInfo.overview":
+    "River Tyne Shipping coordinates activity across four strategic ports, matching the right support model to each location while keeping vessel calls, cargo flow, and inland movement aligned.",
+  "portInfo.coveragePoint1": "Dedicated local handling at every port",
+  "portInfo.coveragePoint2": "Support for vessel calls and cargo movement",
+  "portInfo.coveragePoint3": "Flexible coordination for inland delivery",
+  "portInfo.sideLabel": "What to expect",
+  "portInfo.sideCopy":
+    "Each port plays a different role in the network, but all of them are managed with the same focus on communication, turnaround time, and practical support.",
+  "portInfo.sideDetail": "Aligned planning, local coordination, and responsive follow-up.",
+  "portInfo.footerLabel": "Operational view",
+  "portInfo.footerTitle": "One network, four distinct port profiles",
+  "portInfo.footerCopy":
+    "From the main seaport to the deep-sea and regional gateways, our teams keep the flow of people, vessel movement, and cargo on track.",
+  "portInfo.footerTag": "Built for cargo owners, vessel principals, and chartering teams.",
+  "portInfo.viewDetails": "View details",
   "portInfo.chattogram": "Chattogram Port",
   "portInfo.chattogramDesc":
     "Primary seaport with extensive cargo handling, container operations, and vessel services.",
+  "portInfo.matarbari": "Matarbari Port",
+  "portInfo.matarbariDesc":
+    "Deep-sea gateway supporting heavier project cargo, modern port development, and future-facing logistics flows.",
   "portInfo.mongla": "Mongla Port",
   "portInfo.monglaDesc":
     "Strategic secondary gateway supporting bulk and breakbulk marine operations.",

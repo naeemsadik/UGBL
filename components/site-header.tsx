@@ -42,10 +42,11 @@ const navItems: NavItem[] = [
     key: "nav.portInfo",
     href: "/port-info",
     children: [
-      { key: "nav.chattogramPort", href: "/port-info" },
-      { key: "nav.matarbariPort", href: "/port-info" },
-      { key: "nav.payraPort", href: "/port-info" },
-      { key: "nav.monglaPort", href: "/port-info" },
+      { key: "nav.portInfoOverview", href: "/port-info" },
+      { key: "nav.chattogramPort", href: "/port-info/chattogram" },
+      { key: "nav.matarbariPort", href: "/port-info/matarbari" },
+      { key: "nav.payraPort", href: "/port-info/payra" },
+      { key: "nav.monglaPort", href: "/port-info/mongla" },
     ],
   },
   {

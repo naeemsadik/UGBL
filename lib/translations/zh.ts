@@ -14,6 +14,7 @@ export const zh: Record<TranslationKey, string> = {
   "nav.logisticsAgency": "物流代理",
   "nav.ourTeam": "我们的团队",
   "nav.portInfo": "港口信息",
+  "nav.portInfoOverview": "港口信息概览",
   "nav.chattogramPort": "吉大港",
   "nav.matarbariPort": "马塔巴里港",
   "nav.payraPort": "帕亚拉港",
@@ -196,9 +197,29 @@ export const zh: Record<TranslationKey, string> = {
   "portInfo.title": "港口信息",
   "portInfo.subtitle":
     "孟加拉国主要海上门户的运营洞察和支持覆盖。",
+  "portInfo.kicker": "四港网络",
+  "portInfo.overviewTitle": "围绕孟加拉国最重要门户构建的覆盖体系",
+  "portInfo.overview":
+    "River Tyne Shipping 协调四个战略港口的业务，为每个地点匹配合适的支持模式，同时让船舶靠泊、货物流转和内陆运输保持一致。",
+  "portInfo.coveragePoint1": "每个港口都提供专属本地支持",
+  "portInfo.coveragePoint2": "支持船舶挂靠与货物流转",
+  "portInfo.coveragePoint3": "为内陆交付提供灵活协调",
+  "portInfo.sideLabel": "您可以期待",
+  "portInfo.sideCopy":
+    "每个港口在网络中承担不同角色，但都以相同标准管理沟通、周转时间和实际支持。",
+  "portInfo.sideDetail": "统一规划、本地协调和及时跟进。",
+  "portInfo.footerLabel": "运营视图",
+  "portInfo.footerTitle": "一张网络，四种不同的港口定位",
+  "portInfo.footerCopy":
+    "从主要海港到深水与区域门户，我们的团队让人员、船舶流动和货物流保持在正确轨道上。",
+  "portInfo.footerTag": "为货主、船东和租船团队打造。",
+  "portInfo.viewDetails": "查看详情",
   "portInfo.chattogram": "吉大港",
   "portInfo.chattogramDesc":
     "主要海港，拥有广泛的货物处理、集装箱运营和船舶服务。",
+  "portInfo.matarbari": "马塔巴里港",
+  "portInfo.matarbariDesc":
+    "支持更重的项目货、现代化港口开发和面向未来的物流流转的深水门户。",
   "portInfo.mongla": "蒙格拉港",
   "portInfo.monglaDesc":
     "战略性二级门户，支持散货和杂货海上运营。",

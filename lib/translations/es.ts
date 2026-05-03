@@ -14,6 +14,7 @@ export const es: Record<TranslationKey, string> = {
   "nav.logisticsAgency": "Agencia Logística",
   "nav.ourTeam": "Nuestro Equipo",
   "nav.portInfo": "Info de Puertos",
+  "nav.portInfoOverview": "Resumen de Puertos",
   "nav.chattogramPort": "Puerto de Chattogram",
   "nav.matarbariPort": "Puerto de Matarbari",
   "nav.payraPort": "Puerto de Payra",
@@ -198,9 +199,29 @@ export const es: Record<TranslationKey, string> = {
   "portInfo.title": "Info de Puertos",
   "portInfo.subtitle":
     "Perspectiva operativa y cobertura de soporte en las principales puertas marítimas de Bangladesh.",
+  "portInfo.kicker": "Red de cuatro puertos",
+  "portInfo.overviewTitle": "Cobertura construida alrededor de las puertas más importantes de Bangladesh",
+  "portInfo.overview":
+    "River Tyne Shipping coordina la actividad en cuatro puertos estratégicos, adaptando el modelo de soporte adecuado a cada ubicación mientras mantiene alineados las escalas de buques, el flujo de carga y el movimiento interior.",
+  "portInfo.coveragePoint1": "Atención local dedicada en cada puerto",
+  "portInfo.coveragePoint2": "Soporte para escalas de buques y movimiento de carga",
+  "portInfo.coveragePoint3": "Coordinación flexible para entrega interior",
+  "portInfo.sideLabel": "Qué esperar",
+  "portInfo.sideCopy":
+    "Cada puerto cumple una función distinta en la red, pero todos se gestionan con el mismo enfoque en comunicación, tiempo de respuesta y apoyo práctico.",
+  "portInfo.sideDetail": "Planificación alineada, coordinación local y seguimiento ágil.",
+  "portInfo.footerLabel": "Vista operativa",
+  "portInfo.footerTitle": "Una red, cuatro perfiles portuarios distintos",
+  "portInfo.footerCopy":
+    "Desde el puerto marítimo principal hasta las puertas de aguas profundas y regionales, nuestros equipos mantienen el flujo de personas, movimiento de buques y carga en marcha.",
+  "portInfo.footerTag": "Diseñado para propietarios de carga, armadores y equipos de fletamento.",
+  "portInfo.viewDetails": "Ver detalles",
   "portInfo.chattogram": "Puerto de Chattogram",
   "portInfo.chattogramDesc":
     "Puerto marítimo principal con amplio manejo de carga, operaciones de contenedores y servicios de buques.",
+  "portInfo.matarbari": "Puerto de Matarbari",
+  "portInfo.matarbariDesc":
+    "Puerta de entrada de aguas profundas que apoya carga de proyecto más pesada, desarrollo portuario moderno y flujos logísticos orientados al futuro.",
   "portInfo.mongla": "Puerto de Mongla",
   "portInfo.monglaDesc":
     "Puerta de entrada secundaria estratégica que apoya operaciones marinas a granel.",
