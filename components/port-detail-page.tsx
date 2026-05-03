@@ -72,7 +72,7 @@ export function PortDetailPage({
       <InnerHero
         title={title}
         subtitle={subtitle}
-        image={heroImage}
+        backgroundImage={heroImage}
       />
 
       <section className="mx-auto w-full max-w-[1400px] px-6 py-16 md:py-20">

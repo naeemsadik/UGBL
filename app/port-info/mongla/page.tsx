@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero3.jpeg";
+import heroImg from "@/assets/Mongla Port.jpg";
 import { PortDetailPage } from "@/components/port-detail-page";
 
 const readMoreLinks = [
