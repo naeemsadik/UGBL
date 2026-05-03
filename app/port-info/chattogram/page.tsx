@@ -1,6 +1,25 @@
 import heroImg from "@/assets/Chattogram Port.jpg";
 import { PortDetailPage } from "@/components/port-detail-page";
 
+const readMoreLinks = [
+  { label: "Mongla Port", href: "/port-info/mongla" },
+  { label: "Payra Port", href: "/port-info/payra" },
+  { label: "Matarbari Port", href: "/port-info/matarbari" },
+];
+
+const downloadLinks = [
+  { label: "Company Profile", href: "/downloads/company-profile.pdf" },
+  { label: "Draft Chart", href: "/downloads/draft-chart.pdf" },
+  { label: "Tide Table", href: "/downloads/tide-table.pdf" },
+];
+
+const contact = {
+  phone: "+880-2588-811813",
+  email: "uni-global.bd@ugblgroup.com",
+  contactHref: "/contact",
+  contactLabel: "Send Message",
+};
+
 export default function ChattogramPortPage() {
   return (
     <PortDetailPage
@@ -44,6 +63,9 @@ export default function ChattogramPortPage() {
       ctaText="River Tyne can coordinate the arrival, berth planning, port-side services, and follow-on cargo movement for Chattogram calls."
       ctaLabel="Contact us"
       ctaHref="/contact"
+      readMoreLinks={readMoreLinks}
+      downloadLinks={downloadLinks}
+      contact={contact}
     />
   );
 }

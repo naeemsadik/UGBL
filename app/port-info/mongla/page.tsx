@@ -1,6 +1,25 @@
 import heroImg from "@/assets/Mongla Port.jpg";
 import { PortDetailPage } from "@/components/port-detail-page";
 
+const readMoreLinks = [
+  { label: "Chattogram Port", href: "/port-info/chattogram" },
+  { label: "Payra Port", href: "/port-info/payra" },
+  { label: "Matarbari Port", href: "/port-info/matarbari" },
+];
+
+const downloadLinks = [
+  { label: "Company Profile", href: "/downloads/company-profile.pdf" },
+  { label: "Draft Chart", href: "/downloads/draft-chart.pdf" },
+  { label: "Tide Table", href: "/downloads/tide-table.pdf" },
+];
+
+const contact = {
+  phone: "+880-2588-811813",
+  email: "uni-global.bd@ugblgroup.com",
+  contactHref: "/contact",
+  contactLabel: "Send Message",
+};
+
 export default function MonglaPortPage() {
   return (
     <PortDetailPage
@@ -44,6 +63,9 @@ export default function MonglaPortPage() {
       ctaText="Use Mongla when you need a secondary gateway that can still support direct berthing, anchorage operations, and bulk cargo handling without heavy congestion."
       ctaLabel="Contact us"
       ctaHref="/contact"
+      readMoreLinks={readMoreLinks}
+      downloadLinks={downloadLinks}
+      contact={contact}
     />
   );
 }

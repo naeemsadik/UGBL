@@ -1,6 +1,25 @@
 import heroImg from "@/assets/Matarbari Port.jpg";
 import { PortDetailPage } from "@/components/port-detail-page";
 
+const readMoreLinks = [
+  { label: "Chattogram Port", href: "/port-info/chattogram" },
+  { label: "Mongla Port", href: "/port-info/mongla" },
+  { label: "Payra Port", href: "/port-info/payra" },
+];
+
+const downloadLinks = [
+  { label: "Company Profile", href: "/downloads/company-profile.pdf" },
+  { label: "Draft Chart", href: "/downloads/draft-chart.pdf" },
+  { label: "Tide Table", href: "/downloads/tide-table.pdf" },
+];
+
+const contact = {
+  phone: "+880-2588-811813",
+  email: "uni-global.bd@ugblgroup.com",
+  contactHref: "/contact",
+  contactLabel: "Send Message",
+};
+
 export default function MatarbariPortPage() {
   return (
     <PortDetailPage
@@ -44,6 +63,9 @@ export default function MatarbariPortPage() {
       ctaText="This port is the best match for project cargo and high-throughput discharge plans that need tide-sensitive coordination and tug support."
       ctaLabel="Contact us"
       ctaHref="/contact"
+      readMoreLinks={readMoreLinks}
+      downloadLinks={downloadLinks}
+      contact={contact}
     />
   );
 }
