@@ -319,7 +319,7 @@ export default function ContactPage() {
             />
           </div>
 
-          <button type="submit" className="hero-btn-primary w-full justify-center">
+          <button type="submit" className="btn-primary w-full justify-center">
             {t("contact.sendInquiry")}
           </button>
         </form>
