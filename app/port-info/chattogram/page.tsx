@@ -15,7 +15,7 @@ const downloadLinks = [
 
 const contact = {
   phone: "+880-2588-811813",
-  email: "uni-global.bd@ugblgroup.com",
+  email: "info@rivertyneltd.com",
   contactHref: "/contact",
   contactLabel: "Send Message",
 };

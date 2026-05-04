@@ -15,7 +15,7 @@ const downloadLinks = [
 
 const contact = {
   phone: "+880-2588-811813",
-  email: "uni-global.bd@ugblgroup.com",
+  email: "info@rivertyneltd.com",
   contactHref: "/contact",
   contactLabel: "Send Message",
 };
@@ -27,7 +27,7 @@ export default function PayraPortPage() {
       subtitle="An emerging deep-sea access point for industrial cargo and project moves through the Rabnabad Channel."
       heroImage={heroImg}
       overviewTitle="Deep-sea access for project cargo"
-      overview="Payra is the most tide-sensitive of the port profiles in the documentation and is especially relevant for cargo movements that need anchorage handling, pilotage, and flexible channel access. It is a strong fit for project cargo and larger industrial moves." 
+      overview="Payra is the most tide-sensitive of the port profiles in the documentation and is especially relevant for cargo movements that need anchorage handling, pilotage, and flexible channel access. It is a strong fit for project cargo and larger industrial moves."
       mapTitle="Payra Port"
       mapDescription="The document references the fairway buoy, inner anchorage, and berth access at Payra, so the map is centered on the Payra port area and its working waters."
       mapQuery="Payra Port, Bangladesh"
