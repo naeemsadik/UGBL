@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero3.jpeg";
+import heroImg from "@/assets/Mongla Port.jpg";
 import { PortDetailPage } from "@/components/port-detail-page";
 
 const readMoreLinks = [
@@ -15,7 +15,7 @@ const downloadLinks = [
 
 const contact = {
   phone: "+880-2588-811813",
-  email: "uni-global.bd@ugblgroup.com",
+  email: "info@rivertyneltd.com",
   contactHref: "/contact",
   contactLabel: "Send Message",
 };
@@ -80,4 +80,4 @@ export default function MonglaPortPage() {
       contact={contact}
     />
   );
-}
+}
