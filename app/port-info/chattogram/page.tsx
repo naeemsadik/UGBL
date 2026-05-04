@@ -33,19 +33,19 @@ export default function ChattogramPortPage() {
       mapQuery="Chattogram Port, Bangladesh"
       facts={[
         {
-          label: "Berth displacement",
-          value: "180,000 MT",
-          description: "Maximum displacement at berth.",
+          label: "Primary Anchorage",
+          value: "Alpha",
+          description: "Deep draft berth with 11-11.5 M FW draft.",
         },
         {
-          label: "Maximum LOA",
-          value: "320 M",
-          description: "Length overall supported by the berth profile.",
+          label: "Max Draft (Inner)",
+          value: "9.55 M",
+          description: "Permissible draft for entering/leaving port berths.",
         },
         {
-          label: "Maximum draft",
-          value: "12.50 M",
-          description: "Operational draft ceiling reported in the port spec.",
+          label: "Max LOA (Inner)",
+          value: "190.00 M",
+          description: "Length overall supported for port berths.",
         },
         {
           label: "Role in network",
@@ -53,11 +53,64 @@ export default function ChattogramPortPage() {
           description: "Best suited for broad cargo mix and standard port calls.",
         },
       ]}
+      technicalSections={[
+        {
+          title: "General Jetty Information",
+          items: [
+            { label: "Max Draft (Berth)", value: "9.55 M", description: "Permissible for entering/leaving." },
+            { label: "Max LOA (Berth)", value: "190.00 M", description: "Standard permissible length." },
+            { label: "Night Navigation LOA", value: "175.00 M", description: "Maximum for night entry." },
+            { label: "Jetty 2-9 Draft", value: "8.55 M", description: "Main Jetty areas." },
+            { label: "Jetty 10-13 Draft", value: "9.50 M", description: "Includes CCT, NCT, GSJ, DOJ-4-7." },
+          ],
+        },
+        {
+          title: "Anchorage & Lightening",
+          items: [
+            { label: "Kutubdia Draft", value: "13-14 M", description: "No LOA/Beam/Air Draft restrictions." },
+            { label: "Alpha FW Draft", value: "11-11.5 M", description: "Discharging bulk cargo as per tide." },
+            { label: "Lightening Requirement", value: "> 11.5 M Draft", description: "Must lighten at Kutubdia to achieve suitable draft." },
+          ],
+        },
+      ]}
+      berthRestrictions={{
+        title: "Tanker Vessel Berth Restrictions",
+        items: [
+          { name: "TSP Jetty (Small)", maxLOA: "143.40 M", maxDraft: "8.25 M", details: "FW Draft" },
+          { name: "TSP Jetty (Large)", maxLOA: "175.25 M", maxDraft: "7.90 M", details: "FW Draft" },
+          { name: "DOJ-3", maxLOA: "183.00 M", maxDraft: "7.60 M", details: "Dolphin Oil Jetty-3" },
+          { name: "DOJ-4", maxLOA: "160.00 M", maxDraft: "9.50 M", details: "Dolphin Oil Jetty-4" },
+          { name: "DOJ-5/6/7", maxLOA: "186.00 M", maxDraft: "9.50 M", details: "Can go up to 190M/9.00M with special permission" },
+          { name: "RM-10", maxLOA: "130.00 M", maxDraft: "7.80 M", details: "River Mooring-10" },
+          { name: "UTT Jetty", maxLOA: "183.00 M", maxDraft: "9.50 M", details: "United Tanker Terminal" },
+        ],
+      }}
+      lngTerminals={[
+        {
+          name: "Summit LNG Terminal",
+          location: "Northwest of Sonadia Island, 1.5 Miles from Moheshkhali",
+          position: "Lat. 21-33.20N, Long: 091-48.58 E",
+          maxDWT: "180,000 MT",
+          maxDisplacement: "160,000 MT",
+          maxLOA: "320 M",
+          maxDraft: "12.50 M",
+        },
+        {
+          name: "Moheshkhali Floating LNG (MLNG)",
+          location: "2.40 KM offshore Sonadia Island, 20 KM NW of Cox’s Bazar",
+          position: "Lat.: 21-32.04′ N, Long : 091-49.07’E",
+          maxDisplacement: "180,000 MT",
+          maxLOA: "350 M",
+          maxBerthingSpeed: "0.12 M/Sec",
+        },
+      ]}
       notesTitle="Operational context"
       notes={[
-        "Use Chattogram when the call needs the widest service coverage and the broadest berth profile.",
-        "Coordinate berth windows closely, especially when vessel size or cargo volume pushes the port envelope.",
-        "This is the strongest fit for container traffic, general cargo, and standard support-heavy port calls.",
+        "Bulk Cargo Discharging done by ship’s Crane and Grabs by STS operation.",
+        "At Chattogram vessel can work round the clock even in holiday (double payment).",
+        "All vessels must have at least 16 ropes for safe berthing.",
+        "Tanker vessels having wire ropes must have at least 12 polypropylene ropes.",
+        "Entry permissible draft depends on the day’s maximum permissible draft.",
       ]}
       ctaTitle="Need Chattogram support?"
       ctaText="River Tyne can coordinate the arrival, berth planning, port-side services, and follow-on cargo movement for Chattogram calls."
@@ -68,4 +121,4 @@ export default function ChattogramPortPage() {
       contact={contact}
     />
   );
-}
+}

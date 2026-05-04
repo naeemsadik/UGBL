@@ -27,40 +27,52 @@ export default function MonglaPortPage() {
       subtitle="A strategic secondary gateway for bulk and breakbulk operations in the south-west corridor."
       heroImage={heroImg}
       overviewTitle="Bulk and breakbulk gateway"
-      overview="Mongla is the port profile for steady bulk flows, breakbulk handling, and flexible working windows. The documentation points to low congestion, accessible drafts, and enough operating flexibility to support both direct berthing and anchorage work." 
+      overview="Mongla is a key gateway for bulk flows and breakbulk handling. The documentation points to low congestion, accessible drafts, and enough operating flexibility to support both direct berthing and anchorage work."
       mapTitle="Mongla Port"
-      mapDescription="The document highlights Mongla Fairway Buoy and Harbaria anchorage as the working reference points, so the map focuses on the Mongla port area and its access routes."
+      mapDescription="The document highlights Mongla Fairway Buoy and Harbaria anchorage as the working reference points."
       mapQuery="Mongla Port, Bangladesh"
       facts={[
         {
-          label: "Fairway draft",
+          label: "Fairway Draft",
           value: "13-14.5 M",
           description: "Available draft at the fairway buoy.",
         },
         {
           label: "Maximum LOA",
           value: "200 M",
-          description: "Maximum vessel length stated in the note.",
+          description: "Maximum vessel length supported.",
         },
         {
-          label: "STS window",
-          value: "Oct-March",
-          description: "STS operations are permissible in the stated seasonal window.",
+          label: "Working Hours",
+          value: "24/7",
+          description: "Includes holidays with double payment.",
         },
         {
-          label: "Water density",
+          label: "Water Density",
           value: "998-1003 kg/m3",
-          description: "Density range recorded for Mongla waters.",
+          description: "Operational range for Mongla waters.",
+        },
+      ]}
+      technicalSections={[
+        {
+          title: "Anchorage & Berthing",
+          items: [
+            { label: "Harbaria Anchorage", value: "Permissible Draft", description: "No congestion to call any vessel." },
+            { label: "Direct Berthing", value: "On Arrival", description: "Subject to achieving permissible draft." },
+            { label: "Fairway Buoy", value: "No Restriction", description: "No congestion reported for calls." },
+          ],
         },
       ]}
       notesTitle="Operational context"
       notes={[
-        "Vessels with an 8.0-8.5 metre draft can enter and depart via the new channel.",
-        "Bulk discharge is handled by ship cranes and grabs, including STS operations where permitted.",
-        "The port note says work can continue around the clock, including holidays, with double payment.",
+        "Vessels can make direct berthing upon arrival by achieving permissible draft.",
+        "There is no congestion to call any vessel at Mongla Fairway Buoy and Harbaria anchorage.",
+        "At Mongla, vessels can work round the clock even on holidays.",
+        "Vessel can continue work by paying double payment on holidays.",
+        "Bulk Cargo Discharging is done by ship’s Crane and Grabs by STS operation.",
       ]}
       ctaTitle="Need Mongla support?"
-      ctaText="Use Mongla when you need a secondary gateway that can still support direct berthing, anchorage operations, and bulk cargo handling without heavy congestion."
+      ctaText="River Tyne can coordinate the arrival, berth planning, port-side services, and follow-on cargo movement for Mongla calls."
       ctaLabel="Contact us"
       ctaHref="/contact"
       readMoreLinks={readMoreLinks}
@@ -68,4 +80,4 @@ export default function MonglaPortPage() {
       contact={contact}
     />
   );
-}
+}

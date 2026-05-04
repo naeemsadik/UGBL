@@ -27,40 +27,53 @@ export default function MatarbariPortPage() {
       subtitle="A deep-sea gateway built for heavier project cargo and modern port operations."
       heroImage={heroImg}
       overviewTitle="Deep-sea project cargo focus"
-      overview="The Matarbari Coal Jetty is the most specialized port profile in the documentation. It supports larger vessels, relies on tide-aware berthing, and is positioned for faster cargo discharge through self-unloader operations."
+      overview="The Matarbari Coal Jetty is a specialized port profile supporting larger vessels and tide-aware berthing. It is positioned for faster cargo discharge through self-unloader operations and heavy project cargo handling."
       mapTitle="Matarbari Coal Jetty"
-      mapDescription="The map centers the Matarbari coal jetty area described in the document, which is the relevant location for the berth, tide-aware operations, and pilotage coordination."
+      mapDescription="The map centers the Matarbari coal jetty area, which is the relevant location for the berth, tide-aware operations, and pilotage coordination."
       mapQuery="Matarbari Coal Jetty, Bangladesh"
       facts={[
         {
           label: "Max LOA",
           value: "230 M",
-          description: "Vessels up to 230 metres can take berth at the coal jetty.",
+          description: "Vessels up to 230 metres can take berth.",
         },
         {
-          label: "Fresh water draft",
+          label: "Fresh Water Draft",
           value: "11.5 M",
-          description: "Fresh water draft limit stated in the port note.",
+          description: "Fresh water draft limit for berthing.",
         },
         {
-          label: "Channel draft",
+          label: "Channel Draft",
           value: "12.0 M",
           description: "Channel draft with sufficient UKC.",
         },
         {
-          label: "Discharge rate",
+          label: "Discharge Rate",
           value: "25k-30k MT/day",
-          description: "Typical discharge rate by terminal self-unloader.",
+          description: "Typical rate by terminal self-unloader.",
+        },
+      ]}
+      technicalSections={[
+        {
+          title: "Berthing & Pilotage",
+          items: [
+            { label: "Pilotage Source", value: "Chittagong Port", description: "Compulsory for all vessels." },
+            { label: "Tug Support", value: "4 Tugs", description: "Used for berthing and unberthing." },
+            { label: "Tide Condition", value: "High-Water", description: "Berthing/unberthing on high-water tide." },
+            { label: "Lightering", value: "Strictly Prohibited", description: "Direct berthing only." },
+          ],
         },
       ]}
       notesTitle="Operational context"
       notes={[
-        "No restriction is noted for DWT, beam, or air draft in the document.",
-        "Berthing and unberthing are performed on high-water tide and lightering is strictly prohibited.",
-        "Pilotage comes from Chittagong Port, and four tugs are used for berthing and unberthing.",
+        "No restriction is noted for DWT, beam, or air draft for the Coal Jetty.",
+        "Berthing and unberthing are performed on high-water tide.",
+        "Four tugs are mandatory for berthing and unberthing operations.",
+        "Lightering is strictly prohibited at this terminal.",
+        "Pilotage is coordinated through Chittagong Port Authority.",
       ]}
       ctaTitle="Need Matarbari support?"
-      ctaText="This port is the best match for project cargo and high-throughput discharge plans that need tide-sensitive coordination and tug support."
+      ctaText="River Tyne can coordinate the arrival, berth planning, port-side services, and follow-on cargo movement for Matarbari calls."
       ctaLabel="Contact us"
       ctaHref="/contact"
       readMoreLinks={readMoreLinks}
@@ -68,4 +81,4 @@ export default function MatarbariPortPage() {
       contact={contact}
     />
   );
-}
+}
