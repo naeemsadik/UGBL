@@ -3,6 +3,7 @@
 import type { MouseEvent } from "react";
 import { useTranslation } from "@/lib/language-context";
 import { InnerHero } from "@/components/inner-hero";
+import servicesBg from "@/assets/services.jpg";
 
 export default function ServicesPage() {
   const { t } = useTranslation();
@@ -33,7 +34,11 @@ export default function ServicesPage() {
 
   return (
     <div>
-      <InnerHero title={t("services.title")} subtitle={t("services.subtitle")} />
+      <InnerHero
+        title={t("services.title")}
+        subtitle={t("services.subtitle")}
+        backgroundImage={servicesBg}
+      />
       <section className="mx-auto w-full max-w-[1200px] px-6 py-16">
         <div className="grid gap-7 md:grid-cols-2 lg:gap-8">
           {services.map((service) => (
