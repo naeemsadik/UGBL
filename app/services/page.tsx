@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useTranslation } from "@/lib/language-context";
 import { InnerHero } from "@/components/inner-hero";
-import servicesBg from "@/assets/services.jpg";
+import servicesBg from "@/assets/card-services.jpeg";
 
 export default function ServicesPage() {
   const { t } = useTranslation();

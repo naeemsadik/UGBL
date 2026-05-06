@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslation } from "@/lib/language-context";
 import { InnerHero } from "@/components/inner-hero";
 import { BangladeshMap, OFFICES } from "@/components/bangladesh-map";
+import contactBg from "@/assets/contactus.jpg";
 
 /* ── Office detail data (addresses pulled from translations) ── */
 const OFFICE_DATA = [
@@ -105,7 +106,7 @@ export default function ContactPage() {
 
   return (
     <div className="bg-white">
-      <InnerHero title={t("contact.title")} subtitle={t("contact.subtitle")} />
+      <InnerHero title={t("contact.title")} subtitle={t("contact.subtitle")} backgroundImage={contactBg} />
 
       {/* ══ SECTION 1: BGN-style Bangladesh Map + Office Tabs ══ */}
       <section className="bg-[#07111f] py-20">
