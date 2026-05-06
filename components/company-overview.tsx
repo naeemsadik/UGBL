@@ -7,7 +7,7 @@ export function CompanyOverview() {
 
   return (
     <section className="bg-[#F6FAFF] py-10 md:py-12">
-      <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10">
+      <div className="mx-auto w-full max-w-300 px-6 md:px-10">
         {/* Main paragraphs */}
         <div>
           <div className="space-y-6 text-left text-xl font-bold leading-[1.75] text-[#2f3b4f] md:text-2xl">
