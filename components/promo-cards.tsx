@@ -38,7 +38,7 @@ export function PromoCards() {
 
   return (
     <section className="bg-[#F6FAFF] py-16">
-      <div className="mx-auto grid w-full max-w-[1320px] gap-5 px-6 md:grid-cols-3">
+      <div className="mx-auto grid w-full max-w-330 gap-5 px-6 md:grid-cols-3">
         {cards.map((card) => (
           <Link
             key={card.label}
@@ -56,11 +56,11 @@ export function PromoCards() {
 
             {/* Gradient overlay */}
             <div
-              className={`absolute inset-0 bg-gradient-to-t ${card.overlay}`}
+              className={`absolute inset-0 bg-linear-to-t ${card.overlay}`}
             />
 
             {/* Content */}
-            <div className="relative z-10 flex h-full min-h-[260px] flex-col justify-end p-6">
+            <div className="relative z-10 flex h-full min-h-65 flex-col justify-end p-6">
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/70">
                 {card.label}
               </p>

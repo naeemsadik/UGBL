@@ -134,9 +134,6 @@ export const en = {
   "footer.ourServices": "Our Services",
   "footer.portAgency": "Port Agency / Husbandry Services",
   "footer.crewChanges": "Crew Changes Support",
-  "footer.shipChandling": "Ship Chandling & Supplies",
-  "footer.bunkering": "Bunkering & Fresh Water Supply",
-  "footer.hullCleaning": "Hull Cleaning & Ship Repair",
   "footer.getInTouch": "Get In Touch",
   "footer.stayUpdated": "Stay Updated",
   "footer.stayUpdatedDesc":
@@ -180,12 +177,7 @@ export const en = {
   "services.seoAnalytics": "Logistics Agency",
   "services.seoAnalyticsDesc":
     "End-to-end logistics covering inland transport, warehousing, and multimodal cargo delivery.",
-  "services.perfOptimization": "Ship Chandling & Supplies",
-  "services.perfOptimizationDesc":
-    "Comprehensive provisioning and supplies for all vessel types calling at Bangladeshi ports.",
-  "services.ongoingSupport": "Bunkering & Fresh Water",
-  "services.ongoingSupportDesc":
-    "Fuel bunkering and fresh water supply services at all major operational ports.",
+
 
   // Fleet Page
   "fleet.title": "Our Fleet",

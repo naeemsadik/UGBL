@@ -90,9 +90,6 @@ export const zh: Record<TranslationKey, string> = {
   "footer.ourServices": "我们的服务",
   "footer.portAgency": "港口代理 / 船舶管理服务",
   "footer.crewChanges": "船员换班支持",
-  "footer.shipChandling": "船舶供应与物资",
-  "footer.bunkering": "燃油和淡水供应",
-  "footer.hullCleaning": "船体清洁与维修",
   "footer.getInTouch": "联系我们",
   "footer.stayUpdated": "保持更新",
   "footer.stayUpdatedDesc": "订阅我们的新闻通讯，获取 Universe Shipping Lines 的最新消息。",
@@ -135,12 +132,6 @@ export const zh: Record<TranslationKey, string> = {
   "services.seoAnalytics": "物流代理",
   "services.seoAnalyticsDesc":
     "端到端物流服务，涵盖内陆运输、仓储和多式联运货物交付。",
-  "services.perfOptimization": "船舶供应与物资",
-  "services.perfOptimizationDesc":
-    "为停靠孟加拉国港口的所有船型提供全面的供应和物资服务。",
-  "services.ongoingSupport": "燃油和淡水供应",
-  "services.ongoingSupportDesc":
-    "在所有主要运营港口提供燃油加注和淡水供应服务。",
 
   // Fleet Page
   "fleet.title": "我们的船队",
