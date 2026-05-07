@@ -91,9 +91,6 @@ export const es: Record<TranslationKey, string> = {
   "footer.ourServices": "Nuestros Servicios",
   "footer.portAgency": "Agencia Portuaria / Gestión Naviera",
   "footer.crewChanges": "Soporte de Cambio de Tripulación",
-  "footer.shipChandling": "Aprovisionamiento y Suministros",
-  "footer.bunkering": "Suministro de Combustible y Agua",
-  "footer.hullCleaning": "Limpieza de Casco y Reparación",
   "footer.getInTouch": "Contacto",
   "footer.stayUpdated": "Manténgase Actualizado",
   "footer.stayUpdatedDesc":
@@ -137,12 +134,6 @@ export const es: Record<TranslationKey, string> = {
   "services.seoAnalytics": "Agencia Logística",
   "services.seoAnalyticsDesc":
     "Logística de extremo a extremo cubriendo transporte interior, almacenamiento y entrega de carga multimodal.",
-  "services.perfOptimization": "Aprovisionamiento y Suministros",
-  "services.perfOptimizationDesc":
-    "Provisión integral para todos los tipos de buques que llegan a los puertos de Bangladesh.",
-  "services.ongoingSupport": "Combustible y Agua Dulce",
-  "services.ongoingSupportDesc":
-    "Servicios de suministro de combustible y agua dulce en todos los principales puertos operativos.",
 
   // Fleet Page
   "fleet.title": "Nuestra Flota",

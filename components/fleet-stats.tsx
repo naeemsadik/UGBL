@@ -131,8 +131,8 @@ export function FleetStats() {
           backgroundPosition: "center",
         }}
       />
-      <div className="relative mx-auto w-full max-w-[1200px] px-6">
-        <div className="mx-auto max-w-[640px] text-center">
+      <div className="relative mx-auto w-full max-w-300 px-6">
+        <div className="mx-auto max-w-160 text-center">
           <p className="text-lg font-semibold uppercase tracking-[0.2em] text-[#3B71B5] md:text-xl">
             {t("home.ourServicesLabel")}
           </p>

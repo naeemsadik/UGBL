@@ -31,10 +31,10 @@ const navItems: NavItem[] = [
     key: "nav.services",
     href: "/services",
     children: [
-      { key: "nav.portAgency", href: "/services" },
-      { key: "nav.opaCpaAgency", href: "/services" },
-      { key: "nav.husbandryAgency", href: "/services" },
-      { key: "nav.logisticsAgency", href: "/services" },
+      { key: "nav.portAgency", href: "/services/port-agency" },
+      { key: "nav.opaCpaAgency", href: "/services/opa-cpa-agency" },
+      { key: "nav.husbandryAgency", href: "/services/husbandry-agency" },
+      { key: "nav.logisticsAgency", href: "/services/logistics-agency" },
     ],
   },
   { key: "nav.ourTeam", href: "/team" },
@@ -69,7 +69,7 @@ function NavDropdown({
   const hasChildren = item.children && item.children.length > 0;
 
   /* Pacific Basin spec: Purista-Bold / 14px / 20px line-height / normal spacing */
-  const linkCls = "inline-flex items-center font-bold uppercase text-[14px] leading-[20px] tracking-normal whitespace-nowrap transition-colors duration-200 text-[#1D2E54] hover:text-[#49A98F]";
+  const linkCls = "inline-flex items-center font-bold uppercase text-[14px] leading-5 tracking-normal whitespace-nowrap transition-colors duration-200 text-[#1D2E54] hover:text-[#49A98F]";
 
   const LinkOrA = item.external ? "a" : Link;
   const extra = item.external
@@ -106,12 +106,12 @@ function NavDropdown({
       </Link>
 
       <div className="pointer-events-none absolute left-1/2 top-full z-50 pt-3 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100 -translate-x-1/2">
-        <div className="min-w-[220px] rounded border border-[#e5eaf0] bg-white py-1.5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
+        <div className="min-w-55 rounded border border-[#e5eaf0] bg-white py-1.5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
           {item.children!.map((child) => (
             <Link
               key={child.key}
               href={child.href}
-              className="block px-5 py-2.5 text-[13px] leading-[18px] font-normal text-[#3a4f63] tracking-[0.02em] transition hover:bg-[#F6FAFF] hover:text-[#1D2E54]"
+              className="block px-5 py-2.5 text-[13px] leading-4.5 font-normal text-[#3a4f63] tracking-[0.02em] transition hover:bg-[#F6FAFF] hover:text-[#1D2E54]"
             >
               {t(child.key)}
             </Link>
@@ -130,7 +130,7 @@ function LangSwitcher({ scrolled }: { scrolled: boolean }) {
     <div className="group relative">
       <button
         type="button"
-        className="inline-flex items-center gap-1 font-bold uppercase text-[14px] leading-[20px] tracking-normal transition-colors duration-200 text-[#1D2E54] hover:text-[#49A98F]"
+        className="inline-flex items-center gap-1 font-bold uppercase text-[14px] leading-5 tracking-normal transition-colors duration-200 text-[#1D2E54] hover:text-[#49A98F]"
         aria-label={t("nav.selectLanguage")}
       >
         {locale === "EN"
@@ -156,7 +156,7 @@ function LangSwitcher({ scrolled }: { scrolled: boolean }) {
       </button>
 
       <div className="pointer-events-none absolute right-0 top-full z-50 pt-3 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
-        <div className="min-w-[150px] rounded border border-[#e5eaf0] bg-white py-1.5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
+        <div className="min-w-37.5 rounded border border-[#e5eaf0] bg-white py-1.5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
           {(
             [
               { code: "EN" as Locale, label: "English" },
@@ -199,9 +199,9 @@ function MobileMenu({
   }
 
   return (
-    <div className="fixed inset-0 z-[60] lg:hidden">
+    <div className="fixed inset-0 z-60 lg:hidden">
       <div className="absolute inset-0 bg-black/50" onClick={onClose} />
-      <nav className="absolute right-0 top-0 h-full w-[280px] overflow-y-auto bg-white shadow-2xl">
+      <nav className="absolute right-0 top-0 h-full w-70 overflow-y-auto bg-white shadow-2xl">
         {/* Close row — no logo to avoid duplication */}
         <div className="flex items-center justify-end px-5 py-4 border-b border-gray-100">
           <button
@@ -304,8 +304,8 @@ export function SiteHeader() {
       >
         {/* Single row: Logo — Nav — Language — Hamburger */}
         <div
-          className={`mx-auto max-w-[1320px] flex items-center px-8 md:px-10 transition-all duration-300 ${
-            scrolled ? "h-[70px]" : "h-[90px]"
+          className={`mx-auto max-w-330 flex items-center px-8 md:px-10 transition-all duration-300 ${
+            scrolled ? "h-17.5" : "h-22.5"
           }`}
         >
           {/* Logo — stays large, minimal shrink */}

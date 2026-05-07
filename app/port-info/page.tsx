@@ -49,7 +49,7 @@ export default function PortInfoPage() {
         backgroundImage={heroImg}
       />
 
-      <section className="mx-auto w-full max-w-[1400px] px-6 py-16 md:py-20">
+      <section className="mx-auto w-full max-w-350 px-6 py-16 md:py-20">
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
             <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
@@ -123,14 +123,14 @@ export default function PortInfoPage() {
                 {t("portInfo.viewDetails")}
                 <span aria-hidden>→</span>
               </p>
-              <div className="mt-6 h-px w-full bg-gradient-to-r from-[#3B71B5] via-[#A9C4EA] to-transparent" />
+              <div className="mt-6 h-px w-full bg-linear-to-r from-[#3B71B5] via-[#A9C4EA] to-transparent" />
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-[1400px] px-6 pb-16 md:pb-24">
-        <div className="rounded-[28px] bg-gradient-to-r from-[#1D2E54] to-[#3B71B5] px-8 py-10 text-white shadow-[0_24px_70px_rgba(29,46,84,0.24)] md:px-12">
+      <section className="mx-auto w-full max-w-350 px-6 pb-16 md:pb-24">
+        <div className="rounded-[28px] bg-linear-to-r from-[#1D2E54] to-[#3B71B5] px-8 py-10 text-white shadow-[0_24px_70px_rgba(29,46,84,0.24)] md:px-12">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
               <p className="text-[0.7rem] font-black uppercase tracking-[0.24em] text-white/60">
