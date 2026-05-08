@@ -1,79 +1,84 @@
+"use client";
+
 import heroImg from "@/assets/Mongla Port.jpg";
 import { PortDetailPage } from "@/components/port-detail-page";
-
-const readMoreLinks = [
-  { label: "Chattogram Port", href: "/port-info/chattogram" },
-  { label: "Payra Port", href: "/port-info/payra" },
-  { label: "Matarbari Port", href: "/port-info/matarbari" },
-];
-
-const downloadLinks = [
-  { label: "Company Profile", href: "/downloads/company-profile.pdf" },
-  { label: "Draft Chart", href: "/downloads/draft-chart.pdf" },
-  { label: "Tide Table", href: "/downloads/tide-table.pdf" },
-];
-
-const contact = {
-  phone: "+880-2588-811813",
-  email: "info@rivertyneltd.com",
-  contactHref: "/contact",
-  contactLabel: "Send Message",
-};
+import { useTranslation } from "@/lib/language-context";
 
 export default function MonglaPortPage() {
+  const { t } = useTranslation();
+
+  const readMoreLinks = [
+    { label: t("nav.chattogramPort"), href: "/port-info/chattogram" },
+    { label: t("nav.payraPort"), href: "/port-info/payra" },
+    { label: t("nav.matarbariPort"), href: "/port-info/matarbari" },
+  ];
+
+  const downloadLinks = [
+    { label: t("port.common.companyProfile"), href: "/downloads/company-profile.pdf" },
+    { label: t("port.common.draftChart"), href: "/downloads/draft-chart.pdf" },
+    { label: t("port.common.tideTable"), href: "/downloads/tide-table.pdf" },
+  ];
+
+  const contact = {
+    phone: "+880-2588-811813",
+    email: "info@rivertyneltd.com",
+    contactHref: "/contact",
+    contactLabel: t("port.common.sendMessage"),
+  };
+
   return (
     <PortDetailPage
-      title="Mongla Port"
-      subtitle="A strategic secondary gateway for bulk and breakbulk operations in the south-west corridor."
+      title={t("port.mongla.mapTitle")}
+      subtitle={t("port.mongla.subtitle")}
       heroImage={heroImg}
-      overviewTitle="Bulk and breakbulk gateway"
-      overview="Mongla is a key gateway for bulk flows and breakbulk handling. The documentation points to low congestion, accessible drafts, and enough operating flexibility to support both direct berthing and anchorage work."
-      mapTitle="Mongla Port"
-      mapDescription="The document highlights Mongla Fairway Buoy and Harbaria anchorage as the working reference points."
+      overviewTitle={t("port.mongla.overviewTitle")}
+      overview={t("port.mongla.overview")}
+      mapTitle={t("port.mongla.mapTitle")}
+      mapDescription={t("port.mongla.mapDescription")}
       mapQuery="Mongla Port, Bangladesh"
       facts={[
         {
-          label: "Fairway Draft",
+          label: t("port.mongla.fact1Label"),
           value: "13-14.5 M",
-          description: "Available draft at the fairway buoy.",
+          description: t("port.mongla.fact1Desc"),
         },
         {
-          label: "Maximum LOA",
+          label: t("port.mongla.fact2Label"),
           value: "200 M",
-          description: "Maximum vessel length supported.",
+          description: t("port.mongla.fact2Desc"),
         },
         {
-          label: "Working Hours",
+          label: t("port.mongla.fact3Label"),
           value: "24/7",
-          description: "Includes holidays with double payment.",
+          description: t("port.mongla.fact3Desc"),
         },
         {
-          label: "Water Density",
+          label: t("port.mongla.fact4Label"),
           value: "998-1003 kg/m3",
-          description: "Operational range for Mongla waters.",
+          description: t("port.mongla.fact4Desc"),
         },
       ]}
       technicalSections={[
         {
-          title: "Anchorage & Berthing",
+          title: t("port.mongla.tech1Title"),
           items: [
-            { label: "Harbaria Anchorage", value: "Permissible Draft", description: "No congestion to call any vessel." },
-            { label: "Direct Berthing", value: "On Arrival", description: "Subject to achieving permissible draft." },
-            { label: "Fairway Buoy", value: "No Restriction", description: "No congestion reported for calls." },
+            { label: t("port.mongla.tech1Item1Label"), value: t("port.mongla.tech1Item1Value"), description: t("port.mongla.tech1Item1Desc") },
+            { label: t("port.mongla.tech1Item2Label"), value: t("port.mongla.tech1Item2Value"), description: t("port.mongla.tech1Item2Desc") },
+            { label: t("port.mongla.tech1Item3Label"), value: t("port.mongla.tech1Item3Value"), description: t("port.mongla.tech1Item3Desc") },
           ],
         },
       ]}
-      notesTitle="Operational context"
+      notesTitle={t("port.mongla.notesTitle")}
       notes={[
-        "Vessels can make direct berthing upon arrival by achieving permissible draft.",
-        "There is no congestion to call any vessel at Mongla Fairway Buoy and Harbaria anchorage.",
-        "At Mongla, vessels can work round the clock even on holidays.",
-        "Vessel can continue work by paying double payment on holidays.",
-        "Bulk Cargo Discharging is done by ship’s Crane and Grabs by STS operation.",
+        t("port.mongla.note1"),
+        t("port.mongla.note2"),
+        t("port.mongla.note3"),
+        t("port.mongla.note4"),
+        t("port.mongla.note5"),
       ]}
-      ctaTitle="Need Mongla support?"
-      ctaText="River Tyne can coordinate the arrival, berth planning, port-side services, and follow-on cargo movement for Mongla calls."
-      ctaLabel="Contact us"
+      ctaTitle={t("port.mongla.ctaTitle")}
+      ctaText={t("port.mongla.ctaText")}
+      ctaLabel={t("port.chattogram.ctaLabel")}
       ctaHref="/contact"
       readMoreLinks={readMoreLinks}
       downloadLinks={downloadLinks}
