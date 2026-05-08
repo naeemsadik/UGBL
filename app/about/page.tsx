@@ -1,5 +1,5 @@
 import { InnerHero } from "@/components/inner-hero";
-import heroImg from "@/assets/hero4.jpeg";
+import heroImg from "@/assets/hero4.jpg";
 
 export default function AboutPage() {
   return (
