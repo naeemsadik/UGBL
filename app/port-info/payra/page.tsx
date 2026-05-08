@@ -1,79 +1,84 @@
+"use client";
+
 import heroImg from "@/assets/Payra Port.jpg";
 import { PortDetailPage } from "@/components/port-detail-page";
-
-const readMoreLinks = [
-  { label: "Chattogram Port", href: "/port-info/chattogram" },
-  { label: "Mongla Port", href: "/port-info/mongla" },
-  { label: "Matarbari Port", href: "/port-info/matarbari" },
-];
-
-const downloadLinks = [
-  { label: "Company Profile", href: "/downloads/company-profile.pdf" },
-  { label: "Draft Chart", href: "/downloads/draft-chart.pdf" },
-  { label: "Tide Table", href: "/downloads/tide-table.pdf" },
-];
-
-const contact = {
-  phone: "+880-2588-811813",
-  email: "info@rivertyneltd.com",
-  contactHref: "/contact",
-  contactLabel: "Send Message",
-};
+import { useTranslation } from "@/lib/language-context";
 
 export default function PayraPortPage() {
+  const { t } = useTranslation();
+
+  const readMoreLinks = [
+    { label: t("nav.chattogramPort"), href: "/port-info/chattogram" },
+    { label: t("nav.monglaPort"), href: "/port-info/mongla" },
+    { label: t("nav.matarbariPort"), href: "/port-info/matarbari" },
+  ];
+
+  const downloadLinks = [
+    { label: t("port.common.companyProfile"), href: "/downloads/company-profile.pdf" },
+    { label: t("port.common.draftChart"), href: "/downloads/draft-chart.pdf" },
+    { label: t("port.common.tideTable"), href: "/downloads/tide-table.pdf" },
+  ];
+
+  const contact = {
+    phone: "+880-2588-811813",
+    email: "info@rivertyneltd.com",
+    contactHref: "/contact",
+    contactLabel: t("port.common.sendMessage"),
+  };
+
   return (
     <PortDetailPage
-      title="Payra Port"
-      subtitle="An emerging deep-sea access point for industrial cargo and project moves through the Rabnabad Channel."
+      title={t("port.payra.mapTitle")}
+      subtitle={t("port.payra.subtitle")}
       heroImage={heroImg}
-      overviewTitle="Deep-sea access for project cargo"
-      overview="Payra is a strategic deep-water port profile relevant for cargo movements that need anchorage handling, pilotage, and flexible channel access. It is a strong fit for project cargo and larger industrial moves with established STS operation windows."
-      mapTitle="Payra Port"
-      mapDescription="The document references the fairway buoy, inner anchorage (Lat 21°56.0΄N Long 090°17.8΄E), and Rabnabad Channel access."
+      overviewTitle={t("port.payra.overviewTitle")}
+      overview={t("port.payra.overview")}
+      mapTitle={t("port.payra.mapTitle")}
+      mapDescription={t("port.payra.mapDescription")}
       mapQuery="Payra Port, Bangladesh"
       facts={[
         {
-          label: "Fairway Draft",
+          label: t("port.payra.fact1Label"),
           value: "13-14 M",
-          description: "No draft restriction at Fairway Buoy.",
+          description: t("port.payra.fact1Desc"),
         },
         {
-          label: "Maximum LOA",
+          label: t("port.payra.fact2Label"),
           value: "200 M",
-          description: "Length overall supported for port calls.",
+          description: t("port.payra.fact2Desc"),
         },
         {
-          label: "Channel Draft",
+          label: t("port.payra.fact3Label"),
           value: "6-6.5 M",
-          description: "Vessels can enter/depart through Rabnabad Channel.",
+          description: t("port.payra.fact3Desc"),
         },
         {
-          label: "STS Season",
-          value: "Mid-Sep to March",
-          description: "Permissible by Payra Port Authority.",
+          label: t("port.payra.fact4Label"),
+          value: t("port.payra.fact4Value"),
+          description: t("port.payra.fact4Desc"),
         },
       ]}
       technicalSections={[
         {
-          title: "Anchorage & Access",
+          title: t("port.payra.tech1Title"),
           items: [
-            { label: "Inner Anchorage", value: "Lat 21°56.0΄N Long 090°17.8΄E", description: "Wide anchorage established at PPA." },
-            { label: "Rabnabad Channel", value: "6-6.5 M Draft", description: "Main entry/departure route." },
-            { label: "Water Density", value: "998-1001 kg/m3", description: "Standard operational range." },
+            { label: t("port.payra.tech1Item1Label"), value: t("port.payra.tech1Item1Value"), description: t("port.payra.tech1Item1Desc") },
+            { label: t("port.payra.tech1Item2Label"), value: t("port.payra.tech1Item2Value"), description: t("port.payra.tech1Item2Desc") },
+            { label: t("port.payra.tech1Item3Label"), value: "998-1001 kg/m3", description: t("port.payra.tech1Item3Desc") },
           ],
         },
       ]}
-      notesTitle="Operational context"
+      notesTitle={t("port.payra.notesTitle")}
       notes={[
-        "STS operations at Fairway Buoy are permissible from Mid-September to the end of March.",
-        "Bulk Cargo Discharging done by ship's Crane and Grabs by STS operation at anchorage.",
-        "Vessels can make direct berthing upon arrival by achieving permissible draft.",
-        "Port operates round the clock even on holidays (double payment applicable).",
-        "No congestion reported for calling vessels subject to permissible draft.",
+        t("port.payra.note1"),
+        t("port.payra.note2"),
+        t("port.payra.note3"),
+        t("port.payra.note4"),
+        t("port.payra.note5"),
       ]}
-      ctaTitle="Need Payra support?"
-      ctaText="River Tyne can coordinate the arrival, berth planning, port-side services, and follow-on cargo movement for Payra calls."
-      ctaLabel="Contact us"
+      ctaTitle={t("port.payra.ctaTitle")}
+      ctaText={t("port.payra.ctaText")}
+      ctaLabel={t("port.chattogram.ctaLabel")}
       ctaHref="/contact"
       readMoreLinks={readMoreLinks}
       downloadLinks={downloadLinks}
