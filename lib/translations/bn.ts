@@ -301,6 +301,10 @@ export const bn: Record<TranslationKey, string> = {
   "port.common.readMore": "আরও পড়ুন",
   "port.common.download": "ডাউনলোড",
   "port.common.contactUs": "যোগাযোগ করুন",
+  "port.common.companyProfile": "কোম্পানি প্রোফাইল",
+  "port.common.draftChart": "ড্রাফট চার্ট",
+  "port.common.tideTable": "জোয়ারের তালিকা",
+  "port.common.sendMessage": "বার্তা পাঠান",
 
   // Port Detail - Chattogram
   "port.chattogram.subtitle": "বাংলাদেশের প্রধান সমুদ্রবন্দর এবং নেটওয়ার্কের সবচেয়ে প্রশস্ত কার্গো-হ্যান্ডলিং গেটওয়ে।",

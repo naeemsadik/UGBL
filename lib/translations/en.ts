@@ -393,6 +393,10 @@ export const en = {
   "port.common.readMore": "Read More",
   "port.common.download": "Download",
   "port.common.contactUs": "Contact Us",
+  "port.common.companyProfile": "Company Profile",
+  "port.common.draftChart": "Draft Chart",
+  "port.common.tideTable": "Tide Table",
+  "port.common.sendMessage": "Send Message",
 
   // Port Detail - Chattogram
   "port.chattogram.subtitle": "Bangladesh's primary seaport and the network's broadest cargo-handling gateway.",

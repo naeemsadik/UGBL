@@ -390,6 +390,10 @@ export const zh: Record<TranslationKey, string> = {
   "port.common.readMore": "阅读更多",
   "port.common.download": "下载",
   "port.common.contactUs": "联系我们",
+  "port.common.companyProfile": "公司简介",
+  "port.common.draftChart": "吃水图表",
+  "port.common.tideTable": "潮汐表",
+  "port.common.sendMessage": "发送消息",
 
   // Port Detail - Chattogram
   "port.chattogram.subtitle": "孟加拉国的主要海港，也是网络中最广泛的货物处理门户。",

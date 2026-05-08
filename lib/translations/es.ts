@@ -392,6 +392,10 @@ export const es: Record<TranslationKey, string> = {
   "port.common.readMore": "Leer más",
   "port.common.download": "Descargar",
   "port.common.contactUs": "Contáctenos",
+  "port.common.companyProfile": "Perfil de la empresa",
+  "port.common.draftChart": "Tabla de calado",
+  "port.common.tideTable": "Tabla de mareas",
+  "port.common.sendMessage": "Enviar mensaje",
 
   // Port Detail - Chattogram
   "port.chattogram.subtitle": "El principal puerto marítimo de Bangladesh y la puerta de entrada de manejo de carga más amplia de la red.",
