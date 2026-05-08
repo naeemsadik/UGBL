@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { useTranslation } from "@/lib/language-context";
 import { InnerHero } from "@/components/inner-hero";
 import { BangladeshMap, OFFICES } from "@/components/bangladesh-map";
@@ -98,11 +99,82 @@ function EmailIcon() {
 /* ── Main page ── */
 export default function ContactPage() {
   const { t } = useTranslation();
+  const searchParams = useSearchParams();
   const [activeId, setActiveId] = useState<string>("dhaka");
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
+  // Form state
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [showModal, setShowModal] = useState(false);
+
   const displayId = hoveredId ?? activeId;
   const activeOffice = OFFICE_DATA.find((o) => o.id === displayId) ?? OFFICE_DATA[0];
+
+  useEffect(() => {
+    const submitStatus = searchParams.get("submit");
+    if (submitStatus === "success") {
+      setStatus("success");
+      setShowModal(true);
+    } else if (submitStatus === "error") {
+      setStatus("error");
+      setShowModal(true);
+    } else {
+      return;
+    }
+
+    const nextUrl = new URL(window.location.href);
+    nextUrl.searchParams.delete("submit");
+    nextUrl.searchParams.delete("requestId");
+    window.history.replaceState({}, "", `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`);
+  }, [searchParams]);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("submitting");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data = {
+      name: String(formData.get("name") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      company: String(formData.get("company") ?? ""),
+      message: String(formData.get("message") ?? ""),
+    };
+    console.info("[contact] submit:start", {
+      name: data.name,
+      email: data.email,
+      company: data.company,
+      messageLength: data.message.length,
+    });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const payload = await response.json().catch(() => null);
+      console.info("[contact] submit:response", {
+        ok: response.ok,
+        status: response.status,
+        payload,
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setShowModal(true);
+        form.reset();
+      } else {
+        console.error("Contact API error:", payload?.error ?? `HTTP ${response.status}`);
+        setStatus("error");
+        setShowModal(true);
+      }
+    } catch (err) {
+      console.error("Submission error:", err);
+      setStatus("error");
+      setShowModal(true);
+    }
+  };
 
   return (
     <div className="bg-white">
@@ -284,8 +356,9 @@ export default function ContactPage() {
         {/* Form */}
         <form
           className="space-y-5"
-          action="https://formspree.io/f/xnjwvawe"
-          method="POST"
+          onSubmit={handleSubmit}
+          method="post"
+          action="/api/contact"
         >
           <h2 className="text-2xl font-bold text-[#1D2E54]">
             {t("contact.sendMessage")}
@@ -302,6 +375,7 @@ export default function ContactPage() {
               placeholder={t("contact.namePlaceholder")}
               className="field"
               required
+              disabled={status === "submitting"}
             />
           </div>
 
@@ -316,6 +390,7 @@ export default function ContactPage() {
               placeholder={t("contact.emailPlaceholder")}
               className="field"
               required
+              disabled={status === "submitting"}
             />
           </div>
 
@@ -329,6 +404,7 @@ export default function ContactPage() {
               type="text"
               placeholder={t("contact.companyPlaceholder")}
               className="field"
+              disabled={status === "submitting"}
             />
           </div>
 
@@ -343,14 +419,52 @@ export default function ContactPage() {
               rows={5}
               className="field resize-none"
               required
+              disabled={status === "submitting"}
             />
           </div>
 
-          <button type="submit" className="btn-primary w-full justify-center">
-            {t("contact.sendInquiry")}
+          <button
+            type="submit"
+            className="btn-primary w-full justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+            disabled={status === "submitting"}
+          >
+            {status === "submitting" ? t("contact.sending") : t("contact.sendInquiry")}
           </button>
         </form>
       </section>
+
+      {/* ══ Status Modal ══ */}
+      {showModal && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#07111f]/60 backdrop-blur-sm animate-in fade-in duration-300">
+          <div className="bg-white rounded-2xl p-8 max-w-sm w-full shadow-[0_20px_60px_rgba(0,0,0,0.3)] border border-[#e2eaf2] text-center animate-in zoom-in-95 duration-300">
+            <div className={`mx-auto w-16 h-16 rounded-full flex items-center justify-center mb-6 ${
+              status === "success" ? "bg-[#49A98F]/10 text-[#49A98F]" : "bg-red-50 text-red-500"
+            }`}>
+              {status === "success" ? (
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              ) : (
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              )}
+            </div>
+            <h3 className="text-xl font-bold text-[#1D2E54] mb-2">
+              {status === "success" ? t("contact.successTitle") : t("contact.errorTitle")}
+            </h3>
+            <p className="text-[#5a6a7d] text-sm leading-relaxed mb-8">
+              {status === "success" ? t("contact.successMessage") : t("contact.errorMessage")}
+            </p>
+            <button
+              onClick={() => setShowModal(false)}
+              className="btn-primary w-full justify-center"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
