@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { StaticImageData } from "next/image";
 import { Download, BookOpen, Phone, Mail } from "lucide-react";
 import { InnerHero } from "@/components/inner-hero";
+import { useTranslation } from "@/lib/language-context";
 
 type PortFact = {
   label: string;
@@ -96,6 +97,7 @@ export function PortDetailPage({
   berthRestrictions,
   lngTerminals,
 }: PortDetailPageProps) {
+  const { t } = useTranslation();
   const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&output=embed`;
   const mapLinkUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
 
@@ -113,7 +115,7 @@ export function PortDetailPage({
           <div className="grid gap-8">
             <div className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
               <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                Port profile
+                {t("port.common.profile")}
               </span>
               <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-5xl">
                 {overviewTitle}
@@ -148,7 +150,7 @@ export function PortDetailPage({
             {technicalSections?.map((section) => (
               <div key={section.title} className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
                 <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  Technical Specs
+                  {t("port.common.techSpecs")}
                 </span>
                 <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-4xl">
                   {section.title}
@@ -175,7 +177,7 @@ export function PortDetailPage({
             {berthRestrictions && (
               <div className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
                 <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  Restrictions
+                  {t("port.common.restrictions")}
                 </span>
                 <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-4xl">
                   {berthRestrictions.title}
@@ -184,10 +186,10 @@ export function PortDetailPage({
                   <table className="w-full text-left text-sm">
                     <thead>
                       <tr className="border-b border-slate-200">
-                        <th className="pb-4 font-black uppercase tracking-wider text-slate-500">Berth/Jetty</th>
-                        <th className="pb-4 font-black uppercase tracking-wider text-slate-500">Max LOA</th>
-                        <th className="pb-4 font-black uppercase tracking-wider text-slate-500">Max Draft</th>
-                        <th className="pb-4 font-black uppercase tracking-wider text-slate-500">Details</th>
+                        <th className="pb-4 font-black uppercase tracking-wider text-slate-500">{t("port.common.berthJetty")}</th>
+                        <th className="pb-4 font-black uppercase tracking-wider text-slate-500">{t("port.common.maxLOA")}</th>
+                        <th className="pb-4 font-black uppercase tracking-wider text-slate-500">{t("port.common.maxDraft")}</th>
+                        <th className="pb-4 font-black uppercase tracking-wider text-slate-500">{t("port.common.details")}</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">
@@ -209,10 +211,10 @@ export function PortDetailPage({
             {lngTerminals && lngTerminals.length > 0 && (
               <div className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
                 <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  Specialized Terminals
+                  {t("port.common.specializedTerminals")}
                 </span>
                 <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-4xl">
-                  LNG Terminal Information
+                  {t("port.common.lngInfo")}
                 </h2>
                 <div className="mt-8 grid gap-6">
                   {lngTerminals.map((terminal) => (
@@ -222,37 +224,37 @@ export function PortDetailPage({
                       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                         {terminal.position && (
                           <div>
-                            <p className="text-[0.6rem] font-black uppercase tracking-widest text-[#3B71B5]">Position</p>
+                            <p className="text-[0.6rem] font-black uppercase tracking-widest text-[#3B71B5]">{t("port.common.position")}</p>
                             <p className="mt-1 text-sm font-bold text-slate-700">{terminal.position}</p>
                           </div>
                         )}
                         {terminal.maxDWT && (
                           <div>
-                            <p className="text-[0.6rem] font-black uppercase tracking-widest text-[#3B71B5]">Max DWT</p>
+                            <p className="text-[0.6rem] font-black uppercase tracking-widest text-[#3B71B5]">{t("port.common.maxDWT")}</p>
                             <p className="mt-1 text-sm font-bold text-slate-700">{terminal.maxDWT}</p>
                           </div>
                         )}
                         {terminal.maxDisplacement && (
                           <div>
-                            <p className="text-[0.6rem] font-black uppercase tracking-widest text-[#3B71B5]">Max Displacement</p>
+                            <p className="text-[0.6rem] font-black uppercase tracking-widest text-[#3B71B5]">{t("port.common.maxDisplacement")}</p>
                             <p className="mt-1 text-sm font-bold text-slate-700">{terminal.maxDisplacement}</p>
                           </div>
                         )}
                         {terminal.maxLOA && (
                           <div>
-                            <p className="text-[0.6rem] font-black uppercase tracking-widest text-[#3B71B5]">Max LOA</p>
+                            <p className="text-[0.6rem] font-black uppercase tracking-widest text-[#3B71B5]">{t("port.common.maxLOA")}</p>
                             <p className="mt-1 text-sm font-bold text-slate-700">{terminal.maxLOA}</p>
                           </div>
                         )}
                         {terminal.maxDraft && (
                           <div>
-                            <p className="text-[0.6rem] font-black uppercase tracking-widest text-[#3B71B5]">Max Draft</p>
+                            <p className="text-[0.6rem] font-black uppercase tracking-widest text-[#3B71B5]">{t("port.common.maxDraft")}</p>
                             <p className="mt-1 text-sm font-bold text-slate-700">{terminal.maxDraft}</p>
                           </div>
                         )}
                         {terminal.maxBerthingSpeed && (
                           <div>
-                            <p className="text-[0.6rem] font-black uppercase tracking-widest text-[#3B71B5]">Max Berthing Speed</p>
+                            <p className="text-[0.6rem] font-black uppercase tracking-widest text-[#3B71B5]">{t("port.common.maxBerthingSpeed")}</p>
                             <p className="mt-1 text-sm font-bold text-slate-700">{terminal.maxBerthingSpeed}</p>
                           </div>
                         )}
@@ -290,7 +292,7 @@ export function PortDetailPage({
                   {ctaTitle}
                 </p>
                 <p className="mt-3 text-sm leading-6 text-slate-200">
-                  Support this port with agency coordination, cargo planning, and responsive communication.
+                  {t("port.common.supportText")}
                 </p>
                 <Link
                   href={ctaHref}
@@ -307,7 +309,7 @@ export function PortDetailPage({
                 {mapTitle}
               </span>
               <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-5xl">
-                Location map
+                {t("port.common.locationMap")}
               </h2>
               <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg">
                 {mapDescription}
@@ -318,7 +320,7 @@ export function PortDetailPage({
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center justify-center rounded-full bg-[#1D2E54] px-5 py-3 text-sm font-black text-white transition-transform duration-300 hover:-translate-y-0.5"
               >
-                Open in Google Maps
+                {t("port.common.openInMaps")}
               </a>
 
               <div className="mt-8 overflow-hidden rounded-[24px] border border-slate-200 bg-slate-100 shadow-[0_14px_40px_rgba(15,23,42,0.08)]">
@@ -340,7 +342,7 @@ export function PortDetailPage({
               <div className="mb-4 flex items-center gap-2">
                 <BookOpen className="h-5 w-5 text-[#3B71B5]" />
                 <h3 className="text-xs font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  Read More
+                  {t("port.common.readMore")}
                 </h3>
               </div>
               <div className="space-y-2">
@@ -361,7 +363,7 @@ export function PortDetailPage({
               <div className="mb-4 flex items-center gap-2">
                 <Download className="h-5 w-5 text-[#3B71B5]" />
                 <h3 className="text-xs font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  Download
+                  {t("port.common.download")}
                 </h3>
               </div>
               <div className="space-y-2">
@@ -382,7 +384,7 @@ export function PortDetailPage({
               <div className="mb-4 flex items-center gap-2">
                 <Phone className="h-5 w-5 text-[#3B71B5]" />
                 <h3 className="text-xs font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  Contact Us
+                  {t("port.common.contactUs")}
                 </h3>
               </div>
               <div className="space-y-3">
