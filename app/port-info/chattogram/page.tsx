@@ -1,80 +1,85 @@
+"use client";
+
 import heroImg from "@/assets/Chattogram Port.jpg";
 import { PortDetailPage } from "@/components/port-detail-page";
-
-const readMoreLinks = [
-  { label: "Mongla Port", href: "/port-info/mongla" },
-  { label: "Payra Port", href: "/port-info/payra" },
-  { label: "Matarbari Port", href: "/port-info/matarbari" },
-];
-
-const downloadLinks = [
-  { label: "Company Profile", href: "/downloads/company-profile.pdf" },
-  { label: "Draft Chart", href: "/downloads/draft-chart.pdf" },
-  { label: "Tide Table", href: "/downloads/tide-table.pdf" },
-];
-
-const contact = {
-  phone: "+880-2588-811813",
-  email: "info@rivertyneltd.com",
-  contactHref: "/contact",
-  contactLabel: "Send Message",
-};
+import { useTranslation } from "@/lib/language-context";
 
 export default function ChattogramPortPage() {
+  const { t } = useTranslation();
+
+  const readMoreLinks = [
+    { label: t("nav.monglaPort"), href: "/port-info/mongla" },
+    { label: t("nav.payraPort"), href: "/port-info/payra" },
+    { label: t("nav.matarbariPort"), href: "/port-info/matarbari" },
+  ];
+
+  const downloadLinks = [
+    { label: t("port.common.companyProfile"), href: "/downloads/company-profile.pdf" },
+    { label: t("port.common.draftChart"), href: "/downloads/draft-chart.pdf" },
+    { label: t("port.common.tideTable"), href: "/downloads/tide-table.pdf" },
+  ];
+
+  const contact = {
+    phone: "+880-2588-811813",
+    email: "info@rivertyneltd.com",
+    contactHref: "/contact",
+    contactLabel: t("port.common.sendMessage"),
+  };
+
   return (
     <PortDetailPage
-      title="Chattogram Port"
-      subtitle="Bangladesh's primary seaport and the network's broadest cargo-handling gateway."
+      title={t("port.chattogram.mapTitle")}
+      subtitle={t("port.chattogram.subtitle")}
       heroImage={heroImg}
-      overviewTitle="Core seaport operations"
-      overview="Chattogram is the country's main seaport and the anchor for day-to-day cargo, container, and vessel-service coordination. The published berth profile highlights the largest operating envelope in the network and makes it the natural hub for high-volume calls."
-      mapTitle="Chattogram Port"
-      mapDescription="The source document references Chattogram Port and its anchorage profile. Use the map to view the broader port area and connect the berth information to the location context in the doc."
+      overviewTitle={t("port.chattogram.overviewTitle")}
+      overview={t("port.chattogram.overview")}
+      mapTitle={t("port.chattogram.mapTitle")}
+      mapDescription={t("port.chattogram.mapDescription")}
       mapQuery="Chattogram Port, Bangladesh"
       facts={[
         {
-          label: "Primary Anchorage",
-          value: "Alpha",
-          description: "Deep draft berth with 11-11.5 M FW draft.",
+          label: t("port.chattogram.fact1Label"),
+          value: t("port.chattogram.fact1Value"),
+          description: t("port.chattogram.fact1Desc"),
         },
         {
-          label: "Max Draft (Inner)",
-          value: "9.55 M",
-          description: "Permissible draft for entering/leaving port berths.",
+          label: t("port.chattogram.fact2Label"),
+          value: t("port.chattogram.fact2Value"),
+          description: t("port.chattogram.fact2Desc"),
         },
         {
-          label: "Max LOA (Inner)",
-          value: "190.00 M",
-          description: "Length overall supported for port berths.",
+          label: t("port.chattogram.fact3Label"),
+          value: t("port.chattogram.fact3Value"),
+          description: t("port.chattogram.fact3Desc"),
         },
         {
-          label: "Role in network",
-          value: "Primary seaport",
-          description: "Best suited for broad cargo mix and standard port calls.",
+          label: t("port.chattogram.fact4Label"),
+          value: t("port.chattogram.fact4Value"),
+          description: t("port.chattogram.fact4Desc"),
         },
       ]}
       technicalSections={[
         {
-          title: "General Jetty Information",
+          title: t("port.chattogram.tech1Title"),
           items: [
-            { label: "Max Draft (Berth)", value: "9.55 M", description: "Permissible for entering/leaving." },
-            { label: "Max LOA (Berth)", value: "190.00 M", description: "Standard permissible length." },
-            { label: "Night Navigation LOA", value: "175.00 M", description: "Maximum for night entry." },
-            { label: "Jetty 2-9 Draft", value: "8.55 M", description: "Main Jetty areas." },
-            { label: "Jetty 10-13 Draft", value: "9.50 M", description: "Includes CCT, NCT, GSJ, DOJ-4-7." },
+            { label: t("port.chattogram.tech1Item1Label"), value: "9.55 M", description: t("port.chattogram.tech1Item1Desc") },
+            { label: t("port.chattogram.tech1Item2Label"), value: "190.00 M", description: t("port.chattogram.tech1Item2Desc") },
+            { label: t("port.chattogram.tech1Item3Label"), value: "175.00 M", description: t("port.chattogram.tech1Item3Desc") },
+            { label: t("port.chattogram.tech1Item4Label"), value: "8.55 M", description: t("port.chattogram.tech1Item4Desc") },
+            { label: t("port.chattogram.tech1Item5Label"), value: "9.50 M", description: t("port.chattogram.tech1Item5Desc") },
           ],
         },
         {
-          title: "Anchorage & Lightening",
+          title: t("port.chattogram.tech2Title"),
           items: [
-            { label: "Kutubdia Draft", value: "13-14 M", description: "No LOA/Beam/Air Draft restrictions." },
-            { label: "Alpha FW Draft", value: "11-11.5 M", description: "Discharging bulk cargo as per tide." },
-            { label: "Lightening Requirement", value: "> 11.5 M Draft", description: "Must lighten at Kutubdia to achieve suitable draft." },
+            { label: t("port.chattogram.tech2Item1Label"), value: "13-14 M", description: t("port.chattogram.tech2Item1Desc") },
+            { label: t("port.chattogram.tech2Item2Label"), value: "11-11.5 M", description: t("port.chattogram.tech2Item2Desc") },
+            { label: t("port.chattogram.tech2Item3Label"), value: "> 11.5 M Draft", description: t("port.chattogram.tech2Item3Desc") },
           ],
         },
       ]}
       berthRestrictions={{
-        title: "Tanker Vessel Berth Restrictions",
+        title: t("port.chattogram.restrictionsTitle"),
         items: [
           { name: "TSP Jetty (Small)", maxLOA: "143.40 M", maxDraft: "8.25 M", details: "FW Draft" },
           { name: "TSP Jetty (Large)", maxLOA: "175.25 M", maxDraft: "7.90 M", details: "FW Draft" },
@@ -104,17 +109,17 @@ export default function ChattogramPortPage() {
           maxBerthingSpeed: "0.12 M/Sec",
         },
       ]}
-      notesTitle="Operational context"
+      notesTitle={t("port.chattogram.notesTitle")}
       notes={[
-        "Bulk Cargo Discharging done by ship’s Crane and Grabs by STS operation.",
-        "At Chattogram vessel can work round the clock even in holiday (double payment).",
-        "All vessels must have at least 16 ropes for safe berthing.",
-        "Tanker vessels having wire ropes must have at least 12 polypropylene ropes.",
-        "Entry permissible draft depends on the day’s maximum permissible draft.",
+        t("port.chattogram.note1"),
+        t("port.chattogram.note2"),
+        t("port.chattogram.note3"),
+        t("port.chattogram.note4"),
+        t("port.chattogram.note5"),
       ]}
-      ctaTitle="Need Chattogram support?"
-      ctaText="River Tyne can coordinate the arrival, berth planning, port-side services, and follow-on cargo movement for Chattogram calls."
-      ctaLabel="Contact us"
+      ctaTitle={t("port.chattogram.ctaTitle")}
+      ctaText={t("port.chattogram.ctaText")}
+      ctaLabel={t("port.chattogram.ctaLabel")}
       ctaHref="/contact"
       readMoreLinks={readMoreLinks}
       downloadLinks={downloadLinks}
