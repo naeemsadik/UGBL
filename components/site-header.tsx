@@ -37,7 +37,6 @@ const navItems: NavItem[] = [
       { key: "nav.logisticsAgency", href: "/services/logistics-agency" },
     ],
   },
-  { key: "nav.ourTeam", href: "/team" },
   {
     key: "nav.portInfo",
     href: "/port-info",

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "@/lib/language-context";
 
-import hero1 from "@/assets/hero1.jpg";
+import hero1 from "@/assets/hero1.jpeg";
 import hero2 from "@/assets/hero2.jpg";
 import hero3 from "@/assets/hero3.jpeg";
 import hero4 from "@/assets/hero4.jpg";

@@ -1,3 +1,4 @@
+import missionHero from "@/assets/Mission and Vision.jpg";
 import { InnerHero } from "@/components/inner-hero";
 
 export default function MissionVisionPage() {
@@ -6,6 +7,7 @@ export default function MissionVisionPage() {
       <InnerHero
         title="Mission and Vision"
         subtitle="River Tyne Ltd focuses on responsible ship management, long-term partnerships, and performance-led service delivery across every aspect of its operations."
+        backgroundImage={missionHero}
       />
       <section className="mx-auto w-full max-w-[1200px] space-y-8 px-6 py-14">
         <article id="mission-vision" className="info-card">
