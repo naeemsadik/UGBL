@@ -329,6 +329,11 @@ export const en = {
   "contact.projectDetails": "Project details",
   "contact.messagePlaceholder": "Tell us what you need...",
   "contact.sendInquiry": "Send Inquiry",
+  "contact.sending": "Sending...",
+  "contact.successTitle": "Message Sent",
+  "contact.successMessage": "Thank you. Your message has been sent successfully.",
+  "contact.errorTitle": "Sending Failed",
+  "contact.errorMessage": "Sorry, we could not send your message. Please try again.",
 
   // Office Addresses
   "offices.sectionTitle": "Our Offices",
