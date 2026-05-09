@@ -1,67 +1,85 @@
+"use client";
+
 import heroImg from "@/assets/Matarbari Port.jpg";
 import { PortDetailPage } from "@/components/port-detail-page";
-
-const readMoreLinks = [
-  { label: "Chattogram Port", href: "/port-info/chattogram" },
-  { label: "Mongla Port", href: "/port-info/mongla" },
-  { label: "Payra Port", href: "/port-info/payra" },
-];
-
-const downloadLinks = [
-  { label: "Company Profile", href: "/downloads/company-profile.pdf" },
-  { label: "Draft Chart", href: "/downloads/draft-chart.pdf" },
-  { label: "Tide Table", href: "/downloads/tide-table.pdf" },
-];
-
-const contact = {
-  phone: "+880-2588-811813",
-  email: "info@rivertyneltd.com",
-  contactHref: "/contact",
-  contactLabel: "Send Message",
-};
+import { useTranslation } from "@/lib/language-context";
 
 export default function MatarbariPortPage() {
+  const { t } = useTranslation();
+
+  const readMoreLinks = [
+    { label: t("nav.chattogramPort"), href: "/port-info/chattogram" },
+    { label: t("nav.monglaPort"), href: "/port-info/mongla" },
+    { label: t("nav.payraPort"), href: "/port-info/payra" },
+  ];
+
+  const downloadLinks = [
+    { label: t("port.common.companyProfile"), href: "/downloads/company-profile.pdf" },
+    { label: t("port.common.draftChart"), href: "/downloads/draft-chart.pdf" },
+    { label: t("port.common.tideTable"), href: "/downloads/tide-table.pdf" },
+  ];
+
+  const contact = {
+    phone: "+880-2588-811813",
+    email: "info@rivertyneltd.com",
+    contactHref: "/contact",
+    contactLabel: t("port.common.sendMessage"),
+  };
+
   return (
     <PortDetailPage
-      title="Matarbari Port"
-      subtitle="A deep-sea gateway built for heavier project cargo and modern port operations."
+      title={t("port.matarbari.mapTitle")}
+      subtitle={t("port.matarbari.subtitle")}
       heroImage={heroImg}
-      overviewTitle="Deep-sea project cargo focus"
-      overview="The Matarbari Coal Jetty is the most specialized port profile in the documentation. It supports larger vessels, relies on tide-aware berthing, and is positioned for faster cargo discharge through self-unloader operations."
-      mapTitle="Matarbari Coal Jetty"
-      mapDescription="The map centers the Matarbari coal jetty area described in the document, which is the relevant location for the berth, tide-aware operations, and pilotage coordination."
+      overviewTitle={t("port.matarbari.overviewTitle")}
+      overview={t("port.matarbari.overview")}
+      mapTitle={t("port.matarbari.mapTitle")}
+      mapDescription={t("port.matarbari.mapDescription")}
       mapQuery="Matarbari Coal Jetty, Bangladesh"
       facts={[
         {
-          label: "Max LOA",
+          label: t("port.matarbari.fact1Label"),
           value: "230 M",
-          description: "Vessels up to 230 metres can take berth at the coal jetty.",
+          description: t("port.matarbari.fact1Desc"),
         },
         {
-          label: "Fresh water draft",
+          label: t("port.matarbari.fact2Label"),
           value: "11.5 M",
-          description: "Fresh water draft limit stated in the port note.",
+          description: t("port.matarbari.fact2Desc"),
         },
         {
-          label: "Channel draft",
+          label: t("port.matarbari.fact3Label"),
           value: "12.0 M",
-          description: "Channel draft with sufficient UKC.",
+          description: t("port.matarbari.fact3Desc"),
         },
         {
-          label: "Discharge rate",
-          value: "25k-30k MT/day",
-          description: "Typical discharge rate by terminal self-unloader.",
+          label: t("port.matarbari.fact4Label"),
+          value: t("port.matarbari.fact4Value"),
+          description: t("port.matarbari.fact4Desc"),
         },
       ]}
-      notesTitle="Operational context"
-      notes={[
-        "No restriction is noted for DWT, beam, or air draft in the document.",
-        "Berthing and unberthing are performed on high-water tide and lightering is strictly prohibited.",
-        "Pilotage comes from Chittagong Port, and four tugs are used for berthing and unberthing.",
+      technicalSections={[
+        {
+          title: t("port.matarbari.tech1Title"),
+          items: [
+            { label: t("port.matarbari.tech1Item1Label"), value: t("port.matarbari.tech1Item1Value"), description: t("port.matarbari.tech1Item1Desc") },
+            { label: t("port.matarbari.tech1Item2Label"), value: t("port.matarbari.tech1Item2Value"), description: t("port.matarbari.tech1Item2Desc") },
+            { label: t("port.matarbari.tech1Item3Label"), value: t("port.matarbari.tech1Item3Value"), description: t("port.matarbari.tech1Item3Desc") },
+            { label: t("port.matarbari.tech1Item4Label"), value: t("port.matarbari.tech1Item4Value"), description: t("port.matarbari.tech1Item4Desc") },
+          ],
+        },
       ]}
-      ctaTitle="Need Matarbari support?"
-      ctaText="This port is the best match for project cargo and high-throughput discharge plans that need tide-sensitive coordination and tug support."
-      ctaLabel="Contact us"
+      notesTitle={t("port.matarbari.notesTitle")}
+      notes={[
+        t("port.matarbari.note1"),
+        t("port.matarbari.note2"),
+        t("port.matarbari.note3"),
+        t("port.matarbari.note4"),
+        t("port.matarbari.note5"),
+      ]}
+      ctaTitle={t("port.matarbari.ctaTitle")}
+      ctaText={t("port.matarbari.ctaText")}
+      ctaLabel={t("port.chattogram.ctaLabel")}
       ctaHref="/contact"
       readMoreLinks={readMoreLinks}
       downloadLinks={downloadLinks}

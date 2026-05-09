@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslation } from "@/lib/language-context";
 import { InnerHero } from "@/components/inner-hero";
 import { BangladeshMap, OFFICES } from "@/components/bangladesh-map";
+import contactBg from "@/assets/contactus.jpg";
 
 /* ── Office detail data (addresses pulled from translations) ── */
 const OFFICE_DATA = [
@@ -105,7 +106,7 @@ export default function ContactPage() {
 
   return (
     <div className="bg-white">
-      <InnerHero title={t("contact.title")} subtitle={t("contact.subtitle")} />
+      <InnerHero title={t("contact.title")} subtitle={t("contact.subtitle")} backgroundImage={contactBg} />
 
       {/* ══ SECTION 1: BGN-style Bangladesh Map + Office Tabs ══ */}
       <section className="bg-[#07111f] py-20">
@@ -281,7 +282,11 @@ export default function ContactPage() {
         </div>
 
         {/* Form */}
-        <form className="space-y-5">
+        <form
+          className="space-y-5"
+          action="https://formspree.io/f/xnjwvawe"
+          method="POST"
+        >
           <h2 className="text-2xl font-bold text-[#1D2E54]">
             {t("contact.sendMessage")}
           </h2>
@@ -290,21 +295,41 @@ export default function ContactPage() {
             <label htmlFor="name" className="mb-2 block text-sm font-medium text-[#3f4f61]">
               {t("contact.fullName")}
             </label>
-            <input id="name" type="text" placeholder={t("contact.namePlaceholder")} className="field" />
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder={t("contact.namePlaceholder")}
+              className="field"
+              required
+            />
           </div>
 
           <div>
             <label htmlFor="email" className="mb-2 block text-sm font-medium text-[#3f4f61]">
               {t("contact.emailLabel")}
             </label>
-            <input id="email" type="email" placeholder={t("contact.emailPlaceholder")} className="field" />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder={t("contact.emailPlaceholder")}
+              className="field"
+              required
+            />
           </div>
 
           <div>
             <label htmlFor="company" className="mb-2 block text-sm font-medium text-[#3f4f61]">
               {t("contact.company")}
             </label>
-            <input id="company" type="text" placeholder={t("contact.companyPlaceholder")} className="field" />
+            <input
+              id="company"
+              name="company"
+              type="text"
+              placeholder={t("contact.companyPlaceholder")}
+              className="field"
+            />
           </div>
 
           <div>
@@ -313,13 +338,15 @@ export default function ContactPage() {
             </label>
             <textarea
               id="message"
+              name="message"
               placeholder={t("contact.messagePlaceholder")}
               rows={5}
               className="field resize-none"
+              required
             />
           </div>
 
-          <button type="submit" className="hero-btn-primary w-full justify-center">
+          <button type="submit" className="btn-primary w-full justify-center">
             {t("contact.sendInquiry")}
           </button>
         </form>

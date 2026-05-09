@@ -49,7 +49,7 @@ export default function PricingPage() {
                   <li key={feature}>• {feature}</li>
                 ))}
               </ul>
-              <Link href="/contact" className="hero-btn-primary mt-8 w-fit">
+              <Link href="/contact" className="btn-primary mt-8 w-fit">
                 {t("pricing.getStarted")}
               </Link>
             </article>
