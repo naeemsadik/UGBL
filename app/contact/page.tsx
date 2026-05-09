@@ -1,7 +1,7 @@
 "use client";
+export const dynamic = "force-dynamic";
 
 import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import { useTranslation } from "@/lib/language-context";
 import { InnerHero } from "@/components/inner-hero";
 import { BangladeshMap, OFFICES } from "@/components/bangladesh-map";
@@ -99,7 +99,6 @@ function EmailIcon() {
 /* ── Main page ── */
 export default function ContactPage() {
   const { t } = useTranslation();
-  const searchParams = useSearchParams();
   const [activeId, setActiveId] = useState<string>("dhaka");
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
@@ -111,7 +110,8 @@ export default function ContactPage() {
   const activeOffice = OFFICE_DATA.find((o) => o.id === displayId) ?? OFFICE_DATA[0];
 
   useEffect(() => {
-    const submitStatus = searchParams.get("submit");
+    const params = new URLSearchParams(window.location.search);
+    const submitStatus = params.get("submit");
     if (submitStatus === "success") {
       setStatus("success");
       setShowModal(true);
@@ -126,7 +126,7 @@ export default function ContactPage() {
     nextUrl.searchParams.delete("submit");
     nextUrl.searchParams.delete("requestId");
     window.history.replaceState({}, "", `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`);
-  }, [searchParams]);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
