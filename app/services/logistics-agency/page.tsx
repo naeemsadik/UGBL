@@ -1,4 +1,4 @@
-import servicesBg from "@/assets/logistic.jpg";
+import servicesBg from "@/assets/logistic.png";
 import { ServiceDetailPage } from "@/components/service-detail-page";
 
 const readMoreLinks = [
