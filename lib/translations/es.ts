@@ -8,6 +8,7 @@ export const es: Record<TranslationKey, string> = {
   "nav.missionVision": "Misión y Visión",
   "nav.policyCompliance": "Política y Cumplimiento",
   "nav.services": "Servicios",
+  "nav.servicesOverview": "Resumen de Servicios",
   "nav.portAgency": "Agencia Portuaria",
   "nav.opaCpaAgency": "Agencia OPA/CPA",
   "nav.husbandryAgency": "Agencia de Gestión Naviera",

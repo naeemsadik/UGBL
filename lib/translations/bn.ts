@@ -7,6 +7,7 @@ export const bn: Record<TranslationKey, string> = {
   "nav.missionVision": "মিশন ও ভিশন",
   "nav.policyCompliance": "নীতি ও সম্মতি",
   "nav.services": "সেবাসমূহ",
+  "nav.servicesOverview": "সেবাসমূহের সারসংক্ষেপ",
   "nav.portAgency": "পোর্ট এজেন্সি",
   "nav.opaCpaAgency": "OPA/CPA এজেন্সি",
   "nav.husbandryAgency": "হাজব্যান্ড্রি এজেন্সি",

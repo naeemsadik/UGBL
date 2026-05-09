@@ -8,6 +8,7 @@ export const zh: Record<TranslationKey, string> = {
   "nav.missionVision": "使命与愿景",
   "nav.policyCompliance": "政策与合规",
   "nav.services": "服务",
+  "nav.servicesOverview": "服务概览",
   "nav.portAgency": "港口代理",
   "nav.opaCpaAgency": "OPA/CPA代理",
   "nav.husbandryAgency": "船舶管理代理",

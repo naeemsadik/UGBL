@@ -121,7 +121,7 @@ export function FleetStats() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#F6FAFF] py-20">
+    <section className="relative overflow-hidden bg-[#F6FAFF] py-7">
       <div
         className="pointer-events-none absolute inset-0 opacity-60"
         style={{

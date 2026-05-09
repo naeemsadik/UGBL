@@ -89,21 +89,13 @@ export function ServiceDetailPage({
                 <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-4xl">
                   Our Services
                 </h2>
-                <div className="mt-8 grid gap-4 md:grid-cols-2">
-                  {serviceItems.map((item, index) => (
-                    <div
-                      key={item}
-                      className="flex items-start gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-5"
-                    >
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#1D2E54]/10 text-sm font-black text-[#1D2E54]">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <p className="text-sm font-semibold leading-6 text-slate-700">
-                        {item}
-                      </p>
-                    </div>
+                <ul className="mt-8 space-y-4 pl-6 text-base font-semibold leading-7 text-slate-700 md:text-lg">
+                  {serviceItems.map((item) => (
+                    <li key={item} className="list-disc">
+                      {item}
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             )}
 

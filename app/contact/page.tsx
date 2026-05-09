@@ -109,7 +109,18 @@ export default function ContactPage() {
       <InnerHero title={t("contact.title")} subtitle={t("contact.subtitle")} backgroundImage={contactBg} />
 
       {/* ══ SECTION 1: BGN-style Bangladesh Map + Office Tabs ══ */}
-      <section className="bg-[#07111f] py-20">
+      <section
+        className="py-20"
+        style={{
+          background: "hsla(0, 0%, 100%, 1)",
+          backgroundImage:
+            "linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(200, 96%, 43%, 1) 100%)",
+          WebkitBackgroundImage:
+            "-webkit-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(200, 96%, 43%, 1) 100%)",
+          MozBackgroundImage:
+            "-moz-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(200, 96%, 43%, 1) 100%)",
+        }}
+      >
         <div className="mx-auto max-w-[1320px] px-8">
 
           {/* Section header */}
@@ -117,10 +128,10 @@ export default function ContactPage() {
             <p className="text-[0.72rem] font-bold uppercase tracking-[0.22em] text-[#49A98F] mb-3">
               Our Presence
             </p>
-            <h2 className="text-3xl font-bold text-white md:text-4xl">
+            <h2 className="text-3xl font-bold text-[#0d1e35] md:text-4xl">
               {t("offices.sectionTitle")}
             </h2>
-            <p className="mt-3 text-[#8aa4be] text-sm max-w-xl mx-auto">
+            <p className="mt-3 text-[#2b4b6b] text-sm max-w-xl mx-auto">
               {t("offices.sectionSubtitle")}
             </p>
           </div>
@@ -154,8 +165,8 @@ export default function ContactPage() {
                       onMouseLeave={() => setHoveredId(null)}
                       className={`flex items-center gap-3 rounded-xl px-4 py-3 text-left transition-all duration-200 border ${
                         isActive
-                          ? "bg-[#49A98F]/10 border-[#49A98F]/40 text-white"
-                          : "bg-white/4 border-[#1a2d4a] text-[#8aa4be] hover:bg-white/6 hover:border-[#2a4a7f] hover:text-white"
+                          ? "bg-[#49A98F]/10 border-[#49A98F]/40 text-[#0d1e35]"
+                          : "bg-white/4 border-[#1a2d4a] text-[#1D2E54] hover:bg-white/6 hover:border-[#2a4a7f] hover:text-[#0d1e35]"
                       }`}
                     >
                       {/* Pin indicator */}
@@ -166,7 +177,7 @@ export default function ContactPage() {
                         <span className="block text-[13px] font-semibold leading-tight">
                           {office.label}
                         </span>
-                        <span className={`text-[11px] ${isActive ? "text-[#49A98F]" : "text-[#4a6a8a]"}`}>
+                        <span className={`text-[11px] ${isActive ? "text-[#1D2E54]" : "text-[#31556d]"}`}>
                           {office.sublabel}
                         </span>
                       </span>
