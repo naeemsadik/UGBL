@@ -99,7 +99,7 @@ export const en = {
   "home.responseDesc":
     "In addition to fast turnaround for all port calls, clients can also expect response to all inquiries within 24 hours. Our efficient operations are aimed at reducing time at port and ultimately minimize costs for Principals.",
   "home.isoCommitment":
-    "We River Tyne Ltd are committed to provide quality customized service & complete compliance as per legal & customers' requirements as well as the requirements of ISO-9001: 2015 by continuously improving of our system through monitoring, analysis & training.",
+    "We River Tyne Ltd are committed to provide quality customized service & complete compliance by continuously improving of our system through monitoring, analysis & training.",
 
   // Home – Services
   "home.ourServicesLabel": "Our Services",
