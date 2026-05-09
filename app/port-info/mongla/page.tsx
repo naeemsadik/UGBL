@@ -1,6 +1,6 @@
 "use client";
 
-import heroImg from "@/assets/Mongla Port.jpg";
+import heroImg from "@/assets/Mongla Port.webp";
 import { PortDetailPage } from "@/components/port-detail-page";
 import { useTranslation } from "@/lib/language-context";
 

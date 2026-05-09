@@ -1,3 +1,4 @@
+import policyHero from "@/assets/Policy and Complainace .webp";
 import { InnerHero } from "@/components/inner-hero";
 
 const policies = [
@@ -75,6 +76,7 @@ export default function PolicyCompliancePage() {
       <InnerHero
         title="Policy and Compliance"
         subtitle="River Tyne Ltd operates under an Integrated Management System designed to support responsible, ethical, safe, and environmentally sustainable performance."
+        backgroundImage={policyHero}
       />
 
       <section className="mx-auto w-full max-w-[1200px] space-y-8 px-6 py-14">
