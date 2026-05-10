@@ -29,18 +29,16 @@ export default function HusbandryAgencyPage() {
       overview="Our Commitment River Tyne Ltd features an efficient husbandry team committed to providing 24/7 support for all vessels calling under our agency within Bangladesh ports.
 "
       serviceItems={[
-        "Crew change arrangements and immigration",
-        "Medical assistance and hospitalization",
-        "Cash to master delivery",
-        "Provisions and stores supply",
-        "Spare parts delivery and clearance",
-        "Fresh water supply coordination",
-        "Bunker coordination and surveys",
-        "Waste disposal and slop arrangements",
-        "Ship repairs and maintenance coordination",
-        "Launch and boat services",
-        "Communication and mail handling",
-        "Repatriation and travel arrangements",
+        "Crew handling: Meet & greet, hotel booking, shore passes, local transportation, air ticket booking, etc.",
+        "Ship's spares: Prompt and efficient clearance and delivery on board vessels.",
+        "Bunkers and lubricants: Supplied exclusively from the government subsidiary company, Jamuna Oil, at prevailing market prices during the time of supply.",
+        "Provisions and fresh water supply.",
+        "Liaison and communication: Working with local authorities and maintaining proper communication with ships for any required assistance.",
+        "Follow-up activities: Coordinating with workshops, contractors, and vendors.",
+        "Medical support/assistance.",
+        "Waste management: Garbage and sludge disposal.",
+        "Dry docking: Coordination for vessel dry docking, if required.",
+        "General assistance: Any other husbandry-related services required by the owner or principal.",
       ]}
       additionalSections={[
         {

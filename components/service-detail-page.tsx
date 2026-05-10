@@ -102,7 +102,7 @@ export function ServiceDetailPage({
                           : "rounded-2xl border border-[#49A98F]/12 bg-[#F2FBF8] p-5"
                       }
                     >
-                      <ul className="list-disc space-y-3 pl-5 text-sm font-semibold leading-6 text-slate-700">
+                      <ul className="list-disc space-y-3 pl-5 text-lg font-semibold leading-6 text-slate-700">
                         {items.map((item) => (
                           <li key={item}>{item}</li>
                         ))}
