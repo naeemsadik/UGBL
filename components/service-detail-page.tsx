@@ -199,7 +199,7 @@ export function ServiceDetailPage({
             </div>
 
             {/* Contact Section */}
-            <div className="rounded-[20px] border border-white/60 bg-[#F2FBF8] p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+           <div className="rounded-[20px] border border-white/60 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
               <div className="mb-4 flex items-center gap-2">
                 <Phone className="h-5 w-5 text-[#3B71B5]" />
                 <h3 className="text-xs font-black uppercase tracking-[0.24em] text-[#1D2E54]">
