@@ -26,7 +26,8 @@ export default function HusbandryAgencyPage() {
       subtitle="24/7 vessel husbandry including crew changes, supplies, provisions, and clearance operations."
       heroImage={servicesBg}
       overviewTitle="Complete vessel husbandry"
-      overview="River Tyne Ltd provides round-the-clock vessel husbandry services at all major Bangladeshi ports. Our dedicated husbandry team ensures that every vessel's operational and crew needs are met promptly and efficiently, allowing the master and crew to focus on safe vessel operations while we handle all shore-side requirements."
+      overview="Our Commitment River Tyne Ltd features an efficient husbandry team committed to providing 24/7 support for all vessels calling under our agency within Bangladesh ports.
+"
       serviceItems={[
         "Crew change arrangements and immigration",
         "Medical assistance and hospitalization",

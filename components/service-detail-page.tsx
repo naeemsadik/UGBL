@@ -89,13 +89,27 @@ export function ServiceDetailPage({
                 <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-4xl">
                   Our Services
                 </h2>
-                <ul className="mt-8 space-y-4 pl-6 text-base font-semibold leading-7 text-slate-700 md:text-lg">
-                  {serviceItems.map((item) => (
-                    <li key={item} className="list-disc">
-                      {item}
-                    </li>
+                <div className="mt-8 grid gap-6 md:grid-cols-2">
+                  {[
+                    serviceItems.slice(0, Math.ceil(serviceItems.length / 2)),
+                    serviceItems.slice(Math.ceil(serviceItems.length / 2)),
+                  ].map((items, columnIndex) => (
+                    <div
+                      key={`services-col-${columnIndex}`}
+                      className={
+                        columnIndex === 0
+                          ? "rounded-2xl border border-[#1D2E54]/10 bg-[#F3F7FF] p-5"
+                          : "rounded-2xl border border-[#49A98F]/12 bg-[#F2FBF8] p-5"
+                      }
+                    >
+                      <ul className="list-disc space-y-3 pl-5 text-sm font-semibold leading-6 text-slate-700">
+                        {items.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             )}
 
