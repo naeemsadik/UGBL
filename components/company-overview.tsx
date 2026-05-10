@@ -7,10 +7,10 @@ export function CompanyOverview() {
 
   return (
     <section className="bg-[#F6FAFF] py-10 md:py-12">
-      <div className="mx-auto w-full max-w-300 px-6 md:px-10">
+      <div className="mx-auto w-full max-w-300 px-6 md:px-10 xl:max-w-[90%]">
         {/* Main paragraphs */}
         <div>
-          <div className="space-y-6 text-left text-xl font-bold leading-[1.75] text-[#2f3b4f] md:text-2xl">
+          <div className="space-y-6 text-justify text-xl font-bold leading-[1.75] text-[#2f3b4f] md:text-2xl">
             <p className="font-bold text-[#1D2E54]">
               {t("home.aboutP1")}
             </p>

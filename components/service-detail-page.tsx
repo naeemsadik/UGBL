@@ -89,18 +89,24 @@ export function ServiceDetailPage({
                 <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-4xl">
                   Our Services
                 </h2>
-                <div className="mt-8 grid gap-4 md:grid-cols-2">
-                  {serviceItems.map((item, index) => (
+                <div className="mt-8 grid gap-6 md:grid-cols-2">
+                  {[
+                    serviceItems.slice(0, Math.ceil(serviceItems.length / 2)),
+                    serviceItems.slice(Math.ceil(serviceItems.length / 2)),
+                  ].map((items, columnIndex) => (
                     <div
-                      key={item}
-                      className="flex items-start gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-5"
+                      key={`services-col-${columnIndex}`}
+                      className={
+                        columnIndex === 0
+                          ? "rounded-2xl border border-[#1D2E54]/10 bg-[#F3F7FF] p-5"
+                          : "rounded-2xl border border-[#49A98F]/12 bg-[#F2FBF8] p-5"
+                      }
                     >
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#1D2E54]/10 text-sm font-black text-[#1D2E54]">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <p className="text-sm font-semibold leading-6 text-slate-700">
-                        {item}
-                      </p>
+                      <ul className="list-disc space-y-3 pl-5 text-sm font-semibold leading-6 text-slate-700">
+                        {items.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
                     </div>
                   ))}
                 </div>
