@@ -8,6 +8,7 @@ export const zh: Record<TranslationKey, string> = {
   "nav.missionVision": "使命与愿景",
   "nav.policyCompliance": "政策与合规",
   "nav.services": "服务",
+  "nav.servicesOverview": "服务概览",
   "nav.portAgency": "港口代理",
   "nav.opaCpaAgency": "OPA/CPA代理",
   "nav.husbandryAgency": "船舶管理代理",
@@ -283,6 +284,11 @@ export const zh: Record<TranslationKey, string> = {
   "contact.projectDetails": "项目详情",
   "contact.messagePlaceholder": "告诉我们您的需求...",
   "contact.sendInquiry": "发送询价",
+  "contact.sending": "发送中...",
+  "contact.successTitle": "消息已发送",
+  "contact.successMessage": "感谢您，您的消息已成功发送。",
+  "contact.errorTitle": "发送失败",
+  "contact.errorMessage": "抱歉，您的消息未能发送，请重试。",
 
   // Home – Info Cards
   "home.card1Label": "公司概况",

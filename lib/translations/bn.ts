@@ -7,6 +7,7 @@ export const bn: Record<TranslationKey, string> = {
   "nav.missionVision": "মিশন ও ভিশন",
   "nav.policyCompliance": "নীতি ও সম্মতি",
   "nav.services": "সেবাসমূহ",
+  "nav.servicesOverview": "সেবাসমূহের সারসংক্ষেপ",
   "nav.portAgency": "পোর্ট এজেন্সি",
   "nav.opaCpaAgency": "OPA/CPA এজেন্সি",
   "nav.husbandryAgency": "হাজব্যান্ড্রি এজেন্সি",
@@ -196,6 +197,11 @@ export const bn: Record<TranslationKey, string> = {
   "contact.projectDetails": "প্রকল্পের বিবরণ",
   "contact.messagePlaceholder": "আপনার প্রয়োজন জানান...",
   "contact.sendInquiry": "অনুসন্ধান পাঠান",
+  "contact.sending": "পাঠানো হচ্ছে...",
+  "contact.successTitle": "বার্তা পাঠানো হয়েছে",
+  "contact.successMessage": "ধন্যবাদ। আপনার বার্তা সফলভাবে পাঠানো হয়েছে।",
+  "contact.errorTitle": "পাঠানো যায়নি",
+  "contact.errorMessage": "দুঃখিত, আপনার বার্তা পাঠানো যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।",
 
   // Home – Info Cards
   "home.card1Label": "কোম্পানি পরিচিতি",

@@ -109,7 +109,7 @@ export function ServiceDetailPage({
                       </ul>
                     </div>
                   ))}
-                </div>
+                </ul>
               </div>
             )}
 

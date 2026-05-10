@@ -8,6 +8,7 @@ export const es: Record<TranslationKey, string> = {
   "nav.missionVision": "Misión y Visión",
   "nav.policyCompliance": "Política y Cumplimiento",
   "nav.services": "Servicios",
+  "nav.servicesOverview": "Resumen de Servicios",
   "nav.portAgency": "Agencia Portuaria",
   "nav.opaCpaAgency": "Agencia OPA/CPA",
   "nav.husbandryAgency": "Agencia de Gestión Naviera",
@@ -285,6 +286,11 @@ export const es: Record<TranslationKey, string> = {
   "contact.projectDetails": "Detalles del proyecto",
   "contact.messagePlaceholder": "Díganos qué necesita...",
   "contact.sendInquiry": "Enviar Consulta",
+  "contact.sending": "Enviando...",
+  "contact.successTitle": "Mensaje Enviado",
+  "contact.successMessage": "Gracias. Su mensaje fue enviado correctamente.",
+  "contact.errorTitle": "Error al Enviar",
+  "contact.errorMessage": "Lo sentimos, no pudimos enviar su mensaje. Inténtelo de nuevo.",
 
   // Home – Info Cards
   "home.card1Label": "Descripción de la Empresa",
