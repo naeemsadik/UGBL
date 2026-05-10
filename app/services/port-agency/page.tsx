@@ -26,9 +26,10 @@ export default function PortAgencyPage() {
       subtitle="Full-service port agency handling vessel arrivals, departures, documentation, and port authority liaison."
       heroImage={servicesBg}
       overviewTitle="Full-service port agency"
-      overview="River Tyne Ltd is a  shipping agency in Bangladesh, providing comprehensive maritime services across all major ports, including Chattogram, Mongla and Payra.We specialize in serving all types of vessels and handling a wide range of cargoes from international origins to final delivery destinations within the country, ensuring efficient, reliable, and compliant port operations tailored to each consignee’s requirements.
-Our extensive experience covers cargoes such as Coal, Stone, Gypsum, Aggregates, Soybean, Sugar, Chickpeas, Clinker, Manganese Ore, TSP, Lentils, LNG, LPG, Condensate, HSFO, Vegetable Oil, MOGAS, and other bulk and liquid commodities.
-"
+      overview={[
+        "River Tyne Ltd is a shipping agency in Bangladesh, providing comprehensive maritime services across all major ports, including Chattogram, Mongla, and Payra. We specialize in serving all types of vessels and handling a wide range of cargoes from international origins to final delivery destinations within the country, ensuring efficient, reliable, and compliant port operations tailored to each consignee's requirements.",
+        "Our extensive experience covers cargoes such as Coal, Stone, Gypsum, Aggregates, Soybean, Sugar, Chickpeas, Clinker, Manganese Ore, TSP, Lentils, LNG, LPG, Condensate, HSFO, Vegetable Oil, MOGAS, and other bulk and liquid commodities.",
+      ]}
       serviceItems={[
         "Vessel declaration with Port and Customs authorities and coordination of berthing/unberthing operations, including pilotage and tug assistance in compliance with port regulations.",
         "Submission of crew information to Immigration authorities prior to vessel arrival.",

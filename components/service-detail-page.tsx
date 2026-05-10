@@ -22,7 +22,7 @@ type ServiceDetailPageProps = {
   subtitle: string;
   heroImage: StaticImageData | string;
   overviewTitle: string;
-  overview: string;
+  overview: string | string[];
   /** Optional bullet list of services offered */
   serviceItems?: string[];
   /** Optional additional paragraphs */
@@ -75,9 +75,15 @@ export function ServiceDetailPage({
               <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-5xl">
                 {overviewTitle}
               </h2>
-              <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg">
-                {overview}
-              </p>
+              <div className="mt-5 max-w-none space-y-4 text-base leading-relaxed text-slate-600 md:text-lg">
+                {Array.isArray(overview) ? (
+                  overview.map((paragraph, index) => (
+                    <p key={`overview-${index}`}>{paragraph}</p>
+                  ))
+                ) : (
+                  <p>{overview}</p>
+                )}
+              </div>
             </div>
 
             {/* Service Items List */}
@@ -122,7 +128,7 @@ export function ServiceDetailPage({
                 <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-4xl">
                   {section.title}
                 </h2>
-                <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg">
+                <p className="mt-5 max-w-none text-base leading-relaxed text-slate-600 md:text-lg">
                   {section.content}
                 </p>
               </div>
