@@ -187,10 +187,6 @@ export default function ContactPage() {
           background: "hsla(0, 0%, 100%, 1)",
           backgroundImage:
             "linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(200, 96%, 43%, 1) 100%)",
-          WebkitBackgroundImage:
-            "-webkit-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(200, 96%, 43%, 1) 100%)",
-          MozBackgroundImage:
-            "-moz-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(200, 96%, 43%, 1) 100%)",
         }}
       >
         <div className="mx-auto max-w-[1320px] px-8">
