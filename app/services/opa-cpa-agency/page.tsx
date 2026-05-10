@@ -26,7 +26,9 @@ export default function OpaCpaAgencyPage() {
       subtitle="Owner's and Charterer's Protecting Agent services ensuring all interests are safeguarded at every port call."
       heroImage={servicesBg}
       overviewTitle="Protecting agent services"
-      overview="River Tyne Ltd acts as Owner's Protecting Agent (OPA) and Charterer's Protecting Agent (CPA) to safeguard the interests of vessel owners and charterers during port calls in Bangladesh. Our experienced team provides independent oversight, ensuring transparent operations and accurate reporting throughout the entire port stay."
+      overview="River Tyne Ltd provides comprehensive, integrated logistics support tailored to the unique needs of our clients. We specialize in handling complex project cargo for both offshore and onshore projects, as well as terminal equipment.
+We are fully capable of executing complex transport logistics within all government-permissible limits, encompassing break bulk, heavy lift, and Over-Dimensional Cargo (ODC) projects.
+"
       serviceItems={[
         "Independent cargo survey and monitoring",
         "Draft survey attendance and verification",
