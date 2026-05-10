@@ -26,18 +26,21 @@ export default function PortAgencyPage() {
       subtitle="Full-service port agency handling vessel arrivals, departures, documentation, and port authority liaison."
       heroImage={servicesBg}
       overviewTitle="Full-service port agency"
-      overview="River Tyne Ltd offers comprehensive port agency services at all major Bangladeshi ports including Chattogram, Mongla, Payra, and Matarbari. Our experienced team coordinates all aspects of vessel port calls, from pre-arrival planning through to departure, ensuring smooth and efficient turnaround times."
+      overview="River Tyne Ltd is a  shipping agency in Bangladesh, providing comprehensive maritime services across all major ports, including Chattogram, Mongla and Payra.We specialize in serving all types of vessels and handling a wide range of cargoes from international origins to final delivery destinations within the country, ensuring efficient, reliable, and compliant port operations tailored to each consignee’s requirements.
+Our extensive experience covers cargoes such as Coal, Stone, Gypsum, Aggregates, Soybean, Sugar, Chickpeas, Clinker, Manganese Ore, TSP, Lentils, LNG, LPG, Condensate, HSFO, Vegetable Oil, MOGAS, and other bulk and liquid commodities.
+"
       serviceItems={[
-        "Pre-arrival planning and coordination",
-        "Vessel arrival and departure formalities",
-        "Port authority and customs liaison",
-        "Documentation and cargo paperwork",
-        "Berth planning and scheduling",
-        "Cargo supervision and tallying",
-        "Stevedoring coordination",
-        "Port disbursement management",
-        "Crew immigration assistance",
-        "Communication relay between vessel and shore",
+        "Vessel declaration with Port and Customs authorities and coordination of berthing/unberthing operations, including pilotage and tug assistance in compliance with port regulations.",
+        "Submission of crew information to Immigration authorities prior to vessel arrival.",
+        "Verification and preparation of vessel documentation in accordance with international maritime regulations before customs inspection.",
+        "Preparation and submission of Quarantine Pre-Arrival Report (QPAR).",
+        "Notification to Customs authorities regarding vessel arrival and reporting of cargo details.",
+        "Logistics support including supply of provisions, bunkers, and essential vessel requirements.",
+        "Preparation and submission of cargo manifest to appointed stevedores for efficient cargo operations.",
+        "Close coordination with stevedores and terminal operators to ensure safe and efficient handling of containers, break-bulk, dry bulk, and liquid bulk cargoes, while keeping the vessel's Master informed of all shore-side requirements and regulations.",
+        "Proven experience in handling Naval vessels at Chattogram Port.",
+        "Arrangement of crew changes, including immigration documentation, flight booking, hotel accommodation, and transportation services.",
+        "Provision of comprehensive ship services, including technical support, repairs, maintenance, and general supplies.",
       ]}
       additionalSections={[
         {
