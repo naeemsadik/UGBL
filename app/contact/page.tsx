@@ -208,7 +208,7 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-[1fr_360px] gap-8 items-start">
 
             {/* ── Map ── */}
-            <div className="rounded-2xl overflow-hidden border border-[#1a2d4a] shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
+            <div className="rounded-2xl overflow-hidden border border-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
               <BangladeshMap
                 activeId={hoveredId ?? activeId}
                 onHover={(id) => {
@@ -231,21 +231,21 @@ export default function ContactPage() {
                       onClick={() => setActiveId(office.id)}
                       onMouseEnter={() => setHoveredId(office.id)}
                       onMouseLeave={() => setHoveredId(null)}
-                      className={`flex items-center gap-3 rounded-xl px-4 py-3 text-left transition-all duration-200 border ${
+                      className={`flex items-center gap-3 rounded-xl px-4 py-3 text-left transition-all duration-200 border backdrop-blur-md shadow-sm ${
                         isActive
-                          ? "bg-[#49A98F]/10 border-[#49A98F]/40 text-[#0d1e35]"
-                          : "bg-white/4 border-[#1a2d4a] text-[#1D2E54] hover:bg-white/6 hover:border-[#2a4a7f] hover:text-[#0d1e35]"
+                          ? "bg-white/80 border-[#49A98F]/50 shadow-[0_4px_20px_rgba(73,169,143,0.15)]"
+                          : "bg-white/50 border-white/40 hover:bg-white/70 hover:border-white/60 hover:shadow-md"
                       }`}
                     >
                       {/* Pin indicator */}
                       <span className={`h-2.5 w-2.5 rounded-full shrink-0 transition-colors ${
-                        isActive ? "bg-[#49A98F]" : "bg-[#2a4a7f]"
+                        isActive ? "bg-[#49A98F]" : "bg-[#1D2E54]/40"
                       }`} />
                       <span>
-                        <span className="block text-[13px] font-semibold leading-tight">
+                        <span className="block text-[13px] font-semibold leading-tight text-[#0d1e35]">
                           {office.label}
                         </span>
-                        <span className={`text-[11px] ${isActive ? "text-[#1D2E54]" : "text-[#31556d]"}`}>
+                        <span className={`text-[11px] ${isActive ? "text-[#49A98F] font-medium" : "text-[#1D2E54]/60"}`}>
                           {office.sublabel}
                         </span>
                       </span>
@@ -255,7 +255,7 @@ export default function ContactPage() {
               </div>
 
               {/* Active office detail card */}
-              <div className="rounded-2xl border border-[#1a2d4a] bg-[#0d1e35] p-6 transition-all duration-300">
+              <div className="rounded-2xl border border-white/20 bg-[#0d1e35] p-6 transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.2)]">
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h3 className="text-[15px] font-bold text-white leading-tight">
