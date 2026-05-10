@@ -98,23 +98,31 @@ export default function PolicyCompliancePage() {
 
         <article className="info-card">
           <h2>Corporate Policies</h2>
-          <ul className="mt-3 list-disc space-y-2 pl-6 text-[1.04rem] leading-[1.75] text-[#4a586d]">
-            <li>Quality Policy</li>
-            <li>Health, Safety & Environmental Policy</li>
-            <li>Energy Efficiency Management Policy</li>
-            <li>Security Policy</li>
-            <li>Drug & Alcohol Policy</li>
-            <li>Risk Mitigation Policy</li>
-            <li>Human Resource Policy</li>
-            <li>Purchasing Policy</li>
-            <li>Social Media Policy</li>
-            <li>Information & Cyber Security Policy</li>
-            <li>Code of Ethics</li>
-          </ul>
+          <div className="mt-4 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-[#1D2E54]/10 bg-[#F3F7FF] p-5">
+              <ul className="list-disc space-y-2 pl-6 text-[1.04rem] leading-[1.75] text-[#4a586d]">
+                <li>Quality Policy</li>
+                <li>Health, Safety & Environmental Policy</li>
+                <li>Energy Efficiency Management Policy</li>
+                <li>Security Policy</li>
+                <li>Drug & Alcohol Policy</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-[#49A98F]/12 bg-[#F2FBF8] p-5">
+              <ul className="list-disc space-y-2 pl-6 text-[1.04rem] leading-[1.75] text-[#4a586d]">
+                <li>Risk Mitigation Policy</li>
+                <li>Human Resource Policy</li>
+                <li>Purchasing Policy</li>
+                <li>Social Media Policy</li>
+                <li>Information & Cyber Security Policy</li>
+                <li>Code of Ethics</li>
+              </ul>
+            </div>
+          </div>
         </article>
 
         <div className="grid gap-8 md:grid-cols-2">
-          <article className="info-card">
+          <article className="info-card !border-[#1D2E54]/10 !bg-[#F3F7FF]">
             <h2>Code of Ethics</h2>
             <ul className="mt-3 list-disc space-y-2 pl-6 text-[1.04rem] leading-[1.75] text-[#4a586d]">
               {ethicsPoints.map((item) => (
@@ -123,7 +131,7 @@ export default function PolicyCompliancePage() {
             </ul>
           </article>
 
-          <article className="info-card">
+          <article className="info-card !border-[#49A98F]/12 !bg-[#F2FBF8]">
             <h2>HSEQ</h2>
             <ul className="mt-3 list-disc space-y-2 pl-6 text-[1.04rem] leading-[1.75] text-[#4a586d]">
               {hseqPoints.map((item) => (
