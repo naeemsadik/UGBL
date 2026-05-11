@@ -31,13 +31,13 @@ const navItems: NavItem[] = [
     key: "nav.services",
     href: "/services",
     children: [
+      { key: "nav.servicesOverview", href: "/services" },
       { key: "nav.portAgency", href: "/services/port-agency" },
       { key: "nav.opaCpaAgency", href: "/services/opa-cpa-agency" },
       { key: "nav.husbandryAgency", href: "/services/husbandry-agency" },
       { key: "nav.logisticsAgency", href: "/services/logistics-agency" },
     ],
   },
-  { key: "nav.ourTeam", href: "/team" },
   {
     key: "nav.portInfo",
     href: "/port-info",
