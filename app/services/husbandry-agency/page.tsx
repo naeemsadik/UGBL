@@ -5,6 +5,7 @@ const readMoreLinks = [
   { label: "Port Agency", href: "/services/port-agency" },
   { label: "OPA/CPA Agency", href: "/services/opa-cpa-agency" },
   { label: "Logistics Services", href: "/services/logistics-agency" },
+  { label: "Brokering", href: "/services/brokering" },
 ];
 
 const downloadLinks = [
