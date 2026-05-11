@@ -216,7 +216,7 @@ export function Preloader() {
               letterSpacing: "0.12em",
             }}
           >
-            We
+            Let&apos;s
           </div>
           <div
             className="pl-line pl-line--2"
@@ -227,7 +227,7 @@ export function Preloader() {
               letterSpacing: "0.04em",
             }}
           >
-            Work
+            Go
           </div>
           <div
             className="pl-line pl-line--3"

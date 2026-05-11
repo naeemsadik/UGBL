@@ -3,8 +3,8 @@ import { ServiceDetailPage } from "@/components/service-detail-page";
 
 const readMoreLinks = [
   { label: "Port Agency", href: "/services/port-agency" },
-  { label: "Husbandry Agency", href: "/services/husbandry-agency" },
-  { label: "Logistics Agency", href: "/services/logistics-agency" },
+  { label: "Husbandry Services", href: "/services/husbandry-agency" },
+  { label: "Logistics Services", href: "/services/logistics-agency" },
 ];
 
 const downloadLinks = [

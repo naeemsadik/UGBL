@@ -4,7 +4,7 @@ import { ServiceDetailPage } from "@/components/service-detail-page";
 const readMoreLinks = [
   { label: "Port Agency", href: "/services/port-agency" },
   { label: "OPA/CPA Agency", href: "/services/opa-cpa-agency" },
-  { label: "Logistics Agency", href: "/services/logistics-agency" },
+  { label: "Logistics Services", href: "/services/logistics-agency" },
 ];
 
 const downloadLinks = [
@@ -22,7 +22,7 @@ const contact = {
 export default function HusbandryAgencyPage() {
   return (
     <ServiceDetailPage
-      title="Husbandry Agency"
+      title="Husbandry Services"
       subtitle="24/7 vessel husbandry including crew changes, supplies, provisions, and clearance operations."
       heroImage={servicesBg}
       overviewTitle="Complete vessel husbandry"

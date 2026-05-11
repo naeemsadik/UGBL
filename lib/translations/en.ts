@@ -9,8 +9,8 @@ export const en = {
   "nav.servicesOverview": "Services Overview",
   "nav.portAgency": "Port Agency",
   "nav.opaCpaAgency": "OPA/CPA Agency",
-  "nav.husbandryAgency": "Husbandry Agency",
-  "nav.logisticsAgency": "Logistics Agency",
+  "nav.husbandryAgency": "Husbandry Services",
+  "nav.logisticsAgency": "Logistics Services",
   "nav.ourTeam": "Our Team",
   "nav.portInfo": "Port Info",
   "nav.portInfoOverview": "Port Info Overview",
@@ -112,10 +112,10 @@ export const en = {
   "home.charteringServices": "OPA/CPA Agency",
   "home.charteringServicesDesc":
     "Owner's Protecting Agent and Charterer's Protecting Agent services ensuring interests are safeguarded at every port call.",
-  "home.logisticsServices": "Husbandry Agency",
+  "home.logisticsServices": "Husbandry Services",
   "home.logisticsServicesDesc":
     "24/7 vessel husbandry support including crew changes, supplies, provisions, and clearance operations.",
-  "home.husbandryServices": "Logistics Agency",
+  "home.husbandryServices": "Logistics Services",
   "home.husbandryServicesDesc":
     "End-to-end logistics solutions covering inland transportation, warehousing, and multimodal cargo delivery.",
   "home.readMore": "Read More",
@@ -172,10 +172,10 @@ export const en = {
   "services.uiuxDesign": "OPA/CPA Agency",
   "services.uiuxDesignDesc":
     "Owner's and Charterer's Protecting Agent services ensuring all interests are safeguarded.",
-  "services.nextjsDev": "Husbandry Agency",
+  "services.nextjsDev": "Husbandry Services",
   "services.nextjsDevDesc":
     "24/7 vessel husbandry including crew changes, supplies, provisions, and clearance.",
-  "services.seoAnalytics": "Logistics Agency",
+  "services.seoAnalytics": "Logistics Services",
   "services.seoAnalyticsDesc":
     "End-to-end logistics covering inland transport, warehousing, and multimodal cargo delivery.",
 
