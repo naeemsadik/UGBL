@@ -13,6 +13,7 @@ export const zh: Record<TranslationKey, string> = {
   "nav.opaCpaAgency": "OPA/CPA代理",
   "nav.husbandryAgency": "船舶管理代理",
   "nav.logisticsAgency": "物流代理",
+  "nav.brokering": "经纪",
   "nav.ourTeam": "我们的团队",
   "nav.portInfo": "港口信息",
   "nav.portInfoOverview": "港口信息概览",
@@ -133,6 +134,9 @@ export const zh: Record<TranslationKey, string> = {
   "services.seoAnalytics": "物流代理",
   "services.seoAnalyticsDesc":
     "端到端物流服务，涵盖内陆运输、仓储和多式联运货物交付。",
+  "services.brokering": "经纪",
+  "services.brokeringDesc":
+    "专业的船舶和货物经纪服务，连接船东与租船人，提供最佳航运解决方案。",
 
   // Fleet Page
   "fleet.title": "我们的船队",

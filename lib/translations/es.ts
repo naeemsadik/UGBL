@@ -13,6 +13,7 @@ export const es: Record<TranslationKey, string> = {
   "nav.opaCpaAgency": "Agencia OPA/CPA",
   "nav.husbandryAgency": "Agencia de Gestión Naviera",
   "nav.logisticsAgency": "Agencia Logística",
+  "nav.brokering": "Corretaje",
   "nav.ourTeam": "Nuestro Equipo",
   "nav.portInfo": "Info de Puertos",
   "nav.portInfoOverview": "Resumen de Puertos",
@@ -135,6 +136,9 @@ export const es: Record<TranslationKey, string> = {
   "services.seoAnalytics": "Agencia Logística",
   "services.seoAnalyticsDesc":
     "Logística de extremo a extremo cubriendo transporte interior, almacenamiento y entrega de carga multimodal.",
+  "services.brokering": "Corretaje",
+  "services.brokeringDesc":
+    "Servicios expertos de corretaje de buques y carga que conectan armadores con fletadores para soluciones de envío óptimas.",
 
   // Fleet Page
   "fleet.title": "Nuestra Flota",

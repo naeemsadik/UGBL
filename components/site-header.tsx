@@ -36,6 +36,7 @@ const navItems: NavItem[] = [
       { key: "nav.opaCpaAgency", href: "/services/opa-cpa-agency" },
       { key: "nav.husbandryAgency", href: "/services/husbandry-agency" },
       { key: "nav.logisticsAgency", href: "/services/logistics-agency" },
+      { key: "nav.brokering", href: "/services/brokering" },
     ],
   },
   {

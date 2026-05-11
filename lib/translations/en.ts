@@ -11,6 +11,7 @@ export const en = {
   "nav.opaCpaAgency": "OPA/CPA Agency",
   "nav.husbandryAgency": "Husbandry Services",
   "nav.logisticsAgency": "Logistics Services",
+  "nav.brokering": "Brokering",
   "nav.ourTeam": "Our Team",
   "nav.portInfo": "Port Info",
   "nav.portInfoOverview": "Port Info Overview",
@@ -178,6 +179,9 @@ export const en = {
   "services.seoAnalytics": "Logistics Services",
   "services.seoAnalyticsDesc":
     "End-to-end logistics covering inland transport, warehousing, and multimodal cargo delivery.",
+  "services.brokering": "Brokering",
+  "services.brokeringDesc":
+    "Expert vessel and cargo brokering connecting shipowners with charterers for optimal shipping solutions.",
 
 
   // Fleet Page
