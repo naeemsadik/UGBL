@@ -1,10 +1,10 @@
-import servicesBg from "@/assets/services.jpg";
+import servicesBg from "@/assets/logistic.png";
 import { ServiceDetailPage } from "@/components/service-detail-page";
 
 const readMoreLinks = [
   { label: "Port Agency", href: "/services/port-agency" },
   { label: "OPA/CPA Agency", href: "/services/opa-cpa-agency" },
-  { label: "Husbandry Agency", href: "/services/husbandry-agency" },
+  { label: "Husbandry Services", href: "/services/husbandry-agency" },
 ];
 
 const downloadLinks = [
@@ -22,7 +22,7 @@ const contact = {
 export default function LogisticsAgencyPage() {
   return (
     <ServiceDetailPage
-      title="Logistics Agency"
+      title="Logistics Services"
       subtitle="End-to-end logistics solutions covering inland transportation, warehousing, and multimodal cargo delivery."
       heroImage={servicesBg}
       overviewTitle="Comprehensive logistics support"

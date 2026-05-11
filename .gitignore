@@ -31,10 +31,15 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
-.env*
+.env.local
+.env
+
 
 # vercel
 .vercel
+
+# vs code
+.vscode
 
 # typescript
 *.tsbuildinfo
@@ -42,3 +47,6 @@ next-env.d.ts
 1920w light.png
 
 devdoc/
+scripts/
+contact-form-smtp-refactor.md
+port-api.md

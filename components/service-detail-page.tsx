@@ -22,7 +22,7 @@ type ServiceDetailPageProps = {
   subtitle: string;
   heroImage: StaticImageData | string;
   overviewTitle: string;
-  overview: string;
+  overview: string | string[];
   /** Optional bullet list of services offered */
   serviceItems?: string[];
   /** Optional additional paragraphs */
@@ -75,9 +75,15 @@ export function ServiceDetailPage({
               <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-5xl">
                 {overviewTitle}
               </h2>
-              <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg">
-                {overview}
-              </p>
+              <div className="mt-5 max-w-none space-y-4 text-base leading-relaxed text-slate-600 md:text-lg">
+                {Array.isArray(overview) ? (
+                  overview.map((paragraph, index) => (
+                    <p key={`overview-${index}`}>{paragraph}</p>
+                  ))
+                ) : (
+                  <p>{overview}</p>
+                )}
+              </div>
             </div>
 
             {/* Service Items List */}
@@ -89,18 +95,24 @@ export function ServiceDetailPage({
                 <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-4xl">
                   Our Services
                 </h2>
-                <div className="mt-8 grid gap-4 md:grid-cols-2">
-                  {serviceItems.map((item, index) => (
+                <div className="mt-8 grid gap-6 md:grid-cols-2">
+                  {[
+                    serviceItems.slice(0, Math.ceil(serviceItems.length / 2)),
+                    serviceItems.slice(Math.ceil(serviceItems.length / 2)),
+                  ].map((items, columnIndex) => (
                     <div
-                      key={item}
-                      className="flex items-start gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-5"
+                      key={`services-col-${columnIndex}`}
+                      className={
+                        columnIndex === 0
+                          ? "rounded-2xl border border-[#1D2E54]/10 bg-[#F3F7FF] p-5"
+                          : "rounded-2xl border border-[#49A98F]/12 bg-[#F2FBF8] p-5"
+                      }
                     >
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#1D2E54]/10 text-sm font-black text-[#1D2E54]">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <p className="text-sm font-semibold leading-6 text-slate-700">
-                        {item}
-                      </p>
+                      <ul className="list-disc space-y-3 pl-5 text-lg font-semibold leading-6 text-slate-700">
+                        {items.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
                     </div>
                   ))}
                 </div>
@@ -116,7 +128,7 @@ export function ServiceDetailPage({
                 <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-4xl">
                   {section.title}
                 </h2>
-                <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg">
+                <p className="mt-5 max-w-none text-base leading-relaxed text-slate-600 md:text-lg">
                   {section.content}
                 </p>
               </div>
@@ -177,16 +189,17 @@ export function ServiceDetailPage({
                   <a
                     key={link.href}
                     href={link.href}
-                    className="block rounded-lg border border-slate-200 bg-gradient-to-r from-slate-50 to-white p-3 text-xs font-bold text-slate-700 transition-all hover:border-[#3B71B5] hover:bg-blue-50"
+                    className="group flex items-center justify-between rounded-lg border border-slate-200 bg-gradient-to-r from-slate-50 to-white p-3 text-xs font-bold text-slate-700 transition-all hover:border-[#3B71B5] hover:bg-blue-50"
                   >
-                    {link.label}
+                    <span>{link.label}</span>
+                    <Download className="h-4 w-4 text-[#3B71B5] opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
                   </a>
                 ))}
               </div>
             </div>
 
             {/* Contact Section */}
-            <div className="rounded-[20px] border border-white/60 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+           <div className="rounded-[20px] border border-white/60 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
               <div className="mb-4 flex items-center gap-2">
                 <Phone className="h-5 w-5 text-[#3B71B5]" />
                 <h3 className="text-xs font-black uppercase tracking-[0.24em] text-[#1D2E54]">
