@@ -16,7 +16,7 @@ const HERO_IMAGES = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
 const ROTATE_MS = 6000;
 
 const TAGLINES: { key: string; sub: string }[] = [
-  { key: "We Work", sub: "Together" },
+  { key: "Let's Go", sub: "Together" },
   { key: "Trusted Port Agency", sub: "& Logistics Partner" },
   { key: "Connecting Oceans,", sub: "Delivering Promise" },
   { key: "With You For", sub: "The Long Haul" },
