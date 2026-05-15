@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/site-header";
 import { OfficeAddresses } from "@/components/office-addresses";
 import { LanguageProvider } from "@/lib/language-context";
 import { Preloader } from "@/components/preloader";
+import { PageTransition } from "@/components/page-transition";
 
 type SiteShellProps = {
   children: ReactNode;
@@ -15,12 +16,14 @@ export function SiteShell({ children }: SiteShellProps) {
   return (
     <LanguageProvider>
       <Preloader />
-      <div className="flex min-h-screen flex-col bg-white text-[#1f2937]" suppressHydrationWarning>
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <OfficeAddresses />
-        <SiteFooter />
-      </div>
+      <PageTransition>
+        <div className="flex min-h-screen flex-col bg-white text-[#1f2937]" suppressHydrationWarning>
+          <SiteHeader />
+          <main className="flex-1">{children}</main>
+          <OfficeAddresses />
+          <SiteFooter />
+        </div>
+      </PageTransition>
     </LanguageProvider>
   );
 }
