@@ -52,7 +52,7 @@ export function InnerHero({
         {/* pt-36 md:pt-40 accounts for the fixed header height */}
         <div className="mx-auto w-full max-w-[1400px] px-6 pt-36 pb-20 md:pt-44 md:pb-28">
           {breadcrumbs && (
-            <nav className="mb-6 flex items-center gap-2 text-[0.65rem] font-black uppercase tracking-[0.25em] text-white/50">
+            <nav className="mb-6 flex items-center gap-2 text-[0.65rem] font-black uppercase tracking-[0.25em] text-white/50 stagger-fade stagger-fade-d1">
               <Link href="/" className="hover:text-white transition-colors">
                 HOME
               </Link>
@@ -73,10 +73,10 @@ export function InnerHero({
               ))}
             </nav>
           )}
-          <h1 className="text-5xl font-black uppercase tracking-tight text-white md:text-8xl drop-shadow-md">
+          <h1 className="text-5xl font-black uppercase tracking-tight text-white md:text-8xl drop-shadow-md stagger-fade stagger-fade-d2">
             {title}
           </h1>
-          <p className="mt-6 max-w-3xl text-lg font-medium leading-relaxed text-slate-200 md:text-xl">
+          <p className="mt-6 max-w-3xl text-lg font-medium leading-relaxed text-slate-200 md:text-xl stagger-fade stagger-fade-d3">
             {subtitle}
           </p>
         </div>

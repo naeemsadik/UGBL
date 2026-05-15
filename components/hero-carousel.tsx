@@ -71,13 +71,13 @@ export function HeroCarousel() {
             className="text-justify text-[40px] leading-[40px] font-bold tracking-normal text-white md:text-[50px] md:leading-[50px] lg:text-[59px] lg:leading-[56px]"
             style={{ textShadow: "1px 0px 20px rgba(0, 0, 0, 0.5)" }}
           >
-            <span className="block">{TAGLINES[idx].key}</span>
-            <span className="block">{TAGLINES[idx].sub}</span>
+            <span className="block stagger-fade stagger-fade-d1">{TAGLINES[idx].key}</span>
+            <span className="block stagger-fade stagger-fade-d2">{TAGLINES[idx].sub}</span>
           </h1>
         </div>
 
         {/* Bottom bar: dots + scroll indicator */}
-        <div className="relative flex items-end justify-between px-8 pb-6 md:px-12">
+        <div className="relative flex items-end justify-between px-8 pb-6 md:px-12 stagger-fade stagger-fade-d3">
           {/* Carousel dots */}
           <div className="flex items-center gap-2.5">
             {HERO_IMAGES.map((_, i) => (
