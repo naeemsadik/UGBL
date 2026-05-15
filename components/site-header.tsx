@@ -169,11 +169,10 @@ function LangSwitcher({ scrolled }: { scrolled: boolean }) {
               key={lang.code}
               type="button"
               onClick={() => setLocale(lang.code)}
-              className={`block w-full px-4 py-2 text-left text-[0.82rem] transition ${
-                locale === lang.code
+              className={`block w-full px-4 py-2 text-left text-[0.82rem] transition ${locale === lang.code
                   ? "bg-[#F6FAFF] text-[#1D2E54] font-medium"
                   : "text-[#3a4f63] font-normal hover:bg-[#F6FAFF] hover:text-[#1D2E54]"
-              }`}
+                }`}
             >
               {lang.label}
             </button>
@@ -256,11 +255,10 @@ function MobileMenu({
                 key={lang.code}
                 type="button"
                 onClick={() => setLocale(lang.code)}
-                className={`rounded-full px-3 py-1.5 text-[0.78rem] font-medium transition ${
-                  locale === lang.code
+                className={`rounded-full px-3 py-1.5 text-[0.78rem] font-medium transition ${locale === lang.code
                     ? "bg-[#1D2E54] text-white"
                     : "bg-gray-50 text-gray-600 hover:bg-gray-100"
-                }`}
+                  }`}
               >
                 {lang.label}
               </button>
@@ -298,18 +296,16 @@ export function SiteHeader() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 bg-white transition-shadow duration-300 ${
-          scrolled ? "shadow-[0_2px_12px_rgba(0,0,0,0.08)]" : ""
-        }`}
+        className={`fixed inset-x-0 top-0 z-50 bg-white transition-shadow duration-300 ${scrolled ? "shadow-[0_2px_12px_rgba(0,0,0,0.08)]" : ""
+          }`}
       >
         {/* Single row: Logo — Nav — Language — Hamburger */}
         <div
-          className={`mx-auto max-w-330 flex items-center px-8 md:px-10 transition-all duration-300 ${
-            scrolled ? "h-17.5" : "h-22.5"
-          }`}
+          className={`flex items-center px-8 md:px-10 xl:px-16 2xl:px-24 transition-all duration-300 ${scrolled ? "h-17.5" : "h-22.5"
+            }`}
         >
-          {/* Logo — stays large, minimal shrink */}
-          <Link href="/" className="shrink-0 pl-4">
+          {/* Logo — stays large, always left-aligned */}
+          <Link href="/" className="shrink-0">
             <Image
               src={logoImg}
               alt="River Tyne"
