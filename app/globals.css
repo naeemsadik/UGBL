@@ -2,19 +2,28 @@
 
 :root {
   /* ── River Tyne exact logo palette ──────────────── */
-  --navy:        #1D2E54;   /* Dark Imperial Blue – text, icons, dark BGs */
-  --navy-dark:   #141F3A;   /* Darker shade for deep sections */
-  --teal:        #49A98F;   /* Ziggurat / Viridian Green – primary accent */
-  --teal-dark:   #3A8A74;   /* Darker teal for hover states */
-  --blue:        #3B71B5;   /* Denim Blue – secondary accent */
-  --blue-light:  #4A86C9;   /* Cerulean – gradient tip */
+  --navy: #1D2E54;
+  /* Dark Imperial Blue – text, icons, dark BGs */
+  --navy-dark: #141F3A;
+  /* Darker shade for deep sections */
+  --teal: #49A98F;
+  /* Ziggurat / Viridian Green – primary accent */
+  --teal-dark: #3A8A74;
+  /* Darker teal for hover states */
+  --blue: #3B71B5;
+  /* Denim Blue – secondary accent */
+  --blue-light: #4A86C9;
+  /* Cerulean – gradient tip */
 
   /* Gradient endpoints from logo */
-  --green-deep:  #2D5B4F;   /* Forest green – gradient base */
-  --green-light: #79C9A1;   /* Seafoam green – gradient tip */
+  --green-deep: #2D5B4F;
+  /* Forest green – gradient base */
+  --green-light: #79C9A1;
+  /* Seafoam green – gradient tip */
 
-  --background:  #F6FAFF;   /* Pale blue-tinted white */
-  --foreground:  #1D2E54;
+  --background: #F6FAFF;
+  /* Pale blue-tinted white */
+  --foreground: #1D2E54;
 }
 
 @theme inline {
@@ -40,19 +49,25 @@ body {
 
 .hero-overlay {
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(29, 46, 84, 0.72) 0%,
-    rgba(29, 46, 84, 0.40) 50%,
-    rgba(29, 46, 84, 0.58) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(29, 46, 84, 0.72) 0%,
+      rgba(29, 46, 84, 0.40) 50%,
+      rgba(29, 46, 84, 0.58) 100%);
 }
 
 /* ── Scroll indicator bounce ─────────────────── */
 @keyframes bounce-slow {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(8px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
 }
+
 .animate-bounce-slow {
   animation: bounce-slow 2s ease-in-out infinite;
 }
@@ -67,6 +82,7 @@ body {
   cursor: pointer;
   transition: all 0.3s;
 }
+
 .hero-dot.active {
   background: var(--teal);
   border-color: var(--teal);
@@ -81,19 +97,26 @@ body {
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
 }
+
 .inner-overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(29, 46, 84, 0.3) 0%,
-    rgba(29, 46, 84, 0.2) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(29, 46, 84, 0.3) 0%,
+      rgba(29, 46, 84, 0.2) 100%);
 }
 
 /* ── Stats counter animation ─────────────────── */
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 .animate-fade-up {
   animation: fade-up 0.6s ease-out both;
 }
@@ -106,11 +129,13 @@ body {
   padding: 1.65rem;
   box-shadow: 0 4px 16px rgba(29, 46, 84, 0.05);
 }
+
 .info-card h2 {
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--navy);
 }
+
 .info-card p {
   margin-top: 0.7rem;
   font-size: 1.04rem;
@@ -129,7 +154,11 @@ body {
   color: var(--navy);
   outline: none;
 }
-.field::placeholder { color: #8c9aad; }
+
+.field::placeholder {
+  color: #8c9aad;
+}
+
 .field:focus {
   border-color: var(--teal);
   box-shadow: 0 0 0 2px rgba(73, 169, 143, 0.2);
@@ -152,6 +181,7 @@ body {
   transition: all 0.25s ease;
   cursor: pointer;
 }
+
 .btn-primary:hover {
   background: var(--navy-dark);
   border-color: var(--navy-dark);
@@ -173,6 +203,7 @@ body {
   transition: all 0.25s ease;
   cursor: pointer;
 }
+
 .btn-outline:hover {
   border-color: #fff;
   background: rgba(255, 255, 255, 0.1);
@@ -185,9 +216,11 @@ body {
   border-radius: 0.5rem;
   min-height: 260px;
 }
+
 .promo-card img {
   transition: transform 0.5s ease;
 }
+
 .promo-card:hover img {
   transform: scale(1.05);
 }
@@ -247,9 +280,11 @@ body {
   .office-card {
     grid-column: span 2;
   }
+
   .office-card:nth-child(4) {
     grid-column: 2 / span 2;
   }
+
   .office-card:nth-child(5) {
     grid-column: 4 / span 2;
   }
@@ -265,9 +300,11 @@ body {
   .office-grid {
     grid-template-columns: 1fr;
   }
+
   .office-addresses-inner {
     padding: 3rem 1.25rem;
   }
+
   .office-section-title {
     font-size: 1.5rem;
   }
