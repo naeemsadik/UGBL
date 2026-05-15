@@ -160,7 +160,7 @@ export default function AboutPage() {
                         <svg className="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H14.017C13.4647 8 13.017 8.44772 13.017 9V15C13.017 16.0523 12.1693 17 11.017 17H10.017C8.91243 17 8.017 17.8954 8.017 19V21H14.017ZM5.017 21L5.017 18C5.017 16.8954 5.91243 16 7.017 16H10.017C10.5693 16 11.017 15.5523 11.017 15V9C11.017 8.44772 10.5693 8 10.017 8H5.017C4.46472 8 4.017 8.44772 4.017 9V15C4.017 16.0523 3.16928 17 2.017 17H1.017C-0.08757 17 -1 17.8954 -1 19V21H5.017Z" /></svg>
                     </div>
                     <blockquote className="text-2xl font-serif italic text-slate-700 mb-8 relative z-10">
-                        "With you for the long haul."
+                        &ldquo;With you for the long haul.&rdquo;
                     </blockquote>
                     <p className="text-lg text-slate-600 mb-8 leading-relaxed relative z-10">
                         Our business model is customer-focused. We offer a personalised, flexible, responsive and reliable service, and look for ways to make it easier for you to do business with us.
