@@ -22,7 +22,6 @@ const navItems: NavItem[] = [
     key: "nav.aboutUs",
     href: "/about",
     children: [
-      { key: "nav.atAGlance", href: "/about" },
       { key: "nav.missionVision", href: "/mission-vision" },
       { key: "nav.policyCompliance", href: "/policy-compliance" },
     ],
