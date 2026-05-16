@@ -114,8 +114,8 @@ export const en = {
   "home.forYou": "for you",
   "home.shippingServices": "Port Agency",
   "home.shippingServicesDesc":
-    "Port & OPA/CPA Agency: support for vessel arrivals, departures, and all port call requirements at major Bangladeshi ports.",
-  "home.charteringServices": "OPA/CPA Agency",
+    "Full-service port agency support for vessel arrivals, departures, and all port call requirements at major Bangladeshi ports.",
+  "home.charteringServices": "Brokering",
   "home.charteringServicesDesc":
     "Expert vessel and cargo brokering connecting shipowners with charterers for optimal shipping solutions.",
   "home.logisticsServices": "Husbandry Services",
