@@ -260,7 +260,7 @@ export const bn: Record<TranslationKey, string> = {
   "offices.dhakaLine1": "তাহের টাওয়ার (৯ম তলা)",
   "offices.dhakaLine2": "প্লট-১০, গুলশান সি/এ, সার্কেল-২",
   "offices.dhakaLine3": "ঢাকা ১২১২, বাংলাদেশ",
-  "offices.dhakaPhone": "+880-2-58811819 | +8802222286574",
+  "offices.dhakaPhone": "+880-2-58811819 ,+8802222286574",
   "offices.dhakaEmail": "info@rivertyneltd.com",
   "offices.chattogramTitle": "চট্টগ্রাম অফিস (নিজস্ব প্রাঙ্গণ)",
   "offices.chattogramLine1": "ইউনুসকো সিটি সেন্টার (৮ম তলা)",

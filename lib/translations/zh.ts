@@ -348,7 +348,7 @@ export const zh: Record<TranslationKey, string> = {
   "offices.dhakaLine1": "Taher Tower (9th Floor)",
   "offices.dhakaLine2": "Plot-10, Gulshan C/A, Circle-2",
   "offices.dhakaLine3": "Dhaka 1212, Bangladesh",
-  "offices.dhakaPhone": "+880-2-58811819 | +8802222286574",
+  "offices.dhakaPhone": "+880-2-58811819 ,+8802222286574",
   "offices.dhakaEmail": "info@rivertyneltd.com",
   "offices.chattogramTitle": "吉大港办事处（自有物业）",
   "offices.chattogramLine1": "Yunusco City Center (8th Floor)",
