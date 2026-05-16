@@ -85,13 +85,13 @@ export const en = {
 
   // Home – About Section
   "home.aboutP1":
-    "River Tyne Ltd is Shipping Agent, Logistics service provider in Bangladesh founded by Managing Director Mahmodul Islam Parvez.",
+    "River Tyne Ltd is shipping and Logistics services provider in Bangladesh founded in 2016 and over the last 10 years, it has been experienced in many shore and offshore logistics services for many potential clients based in Bangladesh and abroad.",
   "home.aboutP2":
-    "River Tyne Ltd has 10 years of experience in handling multiple breakbulk commodities including Coal, Stone, Gypsum, Aggregates, Soybean, Sugar, Chickpeas, Clinker, Manganese Ore, TSP, Lentils, LNG, LPG, Condensate, HSFO, VEG OIL, MOGAS from overseas origin to local delivery sites in the country through Chattogram, Mongla, and Payra ports as per consignee's requirement.",
+    "River Tyne Ltd has 10 years of experience in handling a many project equipment’s shifting, towing and delivering/carrying with maintaining a standard level of safety measurement. We are also, acting as OPA and port agent of vessels carrying various commodities including Coal, Stone, Gypsum, Aggregates, Soybean, Sugar, Chickpeas, Clinker, Manganese Ore, TSP, Lentils, LNG, LPG, Condensate, HSFO, VEG OIL, MOGAS from overseas origin to local delivery sites in the country through Chattogram, Mongla, and Payra ports as per consignee's requirement.",
   "home.aboutP3":
-    "We have the capacity to provide complete logistics solutions in Bangladesh. Nothing is impossible for River Tyne whatever the size or quantity of the cargo or the mode of transportation, the River Tyne logistics team will handle it.",
+    "We have the capacity to provide complete shipping and logistics solutions in Bangladesh. Nothing is impossible for River Tyne whatever the size or quantity of the cargo or the mode of transportation, the River Tyne Ltd.  will handle it with our experienced and skilled team members.",
   "home.aboutP4":
-    "River Tyne Ltd was established in 2016 and the corporate office is situated in the capital city of Dhaka. River Tyne Ltd also has four branch offices located in Chittagong, Khulna, Mongla and Payra. River Tyne has a total strength of 60 staff excluding offshore staff, and operates one seagoing bollard-pull tugboat and one classed oil tanker enlisted with Bangladesh Petroleum Corporation for carrying fuel to different destinations in Bangladesh.",
+    "",
 
   // Home – Connections
   "home.connections": "Connections",
@@ -109,7 +109,7 @@ export const en = {
   "home.forYou": "for you",
   "home.shippingServices": "Port Agency",
   "home.shippingServicesDesc":
-    "Full-service port agency support for vessel arrivals, departures, and all port call requirements at major Bangladeshi ports.",
+    "Port & OPA/CPA Agency: support for vessel arrivals, departures, and all port call requirements at major Bangladeshi ports.",
   "home.charteringServices": "OPA/CPA Agency",
   "home.charteringServicesDesc":
     "Owner's Protecting Agent and Charterer's Protecting Agent services ensuring interests are safeguarded at every port call.",
@@ -169,7 +169,7 @@ export const en = {
     "Comprehensive shipping and logistics support for vessel owners, operators, and cargo clients.",
   "services.websiteStrategy": "Port Agency",
   "services.websiteStrategyDesc":
-    "Full-service port agency handling vessel arrivals, departures, documentation, and port authority liaison.",
+    "Port & OPA/CPA Agency: handling vessel arrivals, departures, documentation, and port authority liaison.",
   "services.uiuxDesign": "OPA/CPA Agency",
   "services.uiuxDesignDesc":
     "Owner's and Charterer's Protecting Agent services ensuring all interests are safeguarded.",
