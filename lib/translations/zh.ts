@@ -373,7 +373,7 @@ export const zh: Record<TranslationKey, string> = {
   "offices.payraLine2": "Town Kalikapara, Hepalia",
   "offices.payraLine3": "Bathghat, Patuakhali",
   "offices.payraLine4": "",
-  "offices.payraPhone": "+8801713017571 and +8801908411380",
+  "offices.payraPhone": "+8801713017571, +8801908411380",
   "offices.payraEmail": "info@rivertyneltd.com",
 
   // Port Detail Common
