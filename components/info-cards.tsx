@@ -27,13 +27,13 @@ export function InfoCards() {
       label: t("home.card2Label"),
       title: t("home.card2Title"),
       image: hero2,
-      href: "/services",
+      href: "/services/port-agency",
     },
     {
       label: t("home.card3Label"),
       title: t("home.card3Title"),
       image: hero3,
-      href: "/port-info",
+      href: "/port-info/chattogram",
     },
     {
       label: t("home.card4Label"),

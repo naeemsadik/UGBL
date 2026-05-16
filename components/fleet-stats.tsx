@@ -98,25 +98,25 @@ export function FleetStats() {
       title: t("home.shippingServices"),
       desc: t("home.shippingServicesDesc"),
       icon: <ShipIcon />,
-      href: "/services",
+      href: "/services/port-agency",
     },
     {
       title: t("home.charteringServices"),
       desc: t("home.charteringServicesDesc"),
       icon: <ShieldIcon />,
-      href: "/services",
+      href: "/services/brokering",
     },
     {
       title: t("home.logisticsServices"),
       desc: t("home.logisticsServicesDesc"),
       icon: <CrewIcon />,
-      href: "/services",
+      href: "/services/husbandry-agency",
     },
     {
       title: t("home.husbandryServices"),
       desc: t("home.husbandryServicesDesc"),
       icon: <BoxIcon />,
-      href: "/services",
+      href: "/services/logistics-agency",
     },
   ];
 

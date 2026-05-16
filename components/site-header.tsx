@@ -28,9 +28,8 @@ const navItems: NavItem[] = [
   },
   {
     key: "nav.services",
-    href: "/services",
+    href: "/services/port-agency",
     children: [
-      { key: "nav.servicesOverview", href: "/services" },
       { key: "nav.portAgency", href: "/services/port-agency" },
       { key: "nav.opaCpaAgency", href: "/services/opa-cpa-agency" },
       { key: "nav.husbandryAgency", href: "/services/husbandry-agency" },
@@ -40,9 +39,8 @@ const navItems: NavItem[] = [
   },
   {
     key: "nav.portInfo",
-    href: "/port-info",
+    href: "/port-info/chattogram",
     children: [
-      { key: "nav.portInfoOverview", href: "/port-info" },
       { key: "nav.chattogramPort", href: "/port-info/chattogram" },
       { key: "nav.matarbariPort", href: "/port-info/matarbari" },
       { key: "nav.payraPort", href: "/port-info/payra" },

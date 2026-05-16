@@ -69,9 +69,9 @@ export const zh: Record<TranslationKey, string> = {
   "home.shippingServices": "航运服务",
   "home.shippingServicesDesc":
     "孟加拉国领先的航运代理之一，处理所有船舶类型和货物运营。",
-  "home.charteringServices": "租船服务",
+  "home.charteringServices": "经纪",
   "home.charteringServicesDesc":
-    "在所有主要港口拥有经验丰富的干货和项目租船部门。",
+    "专业的船舶和货物经纪服务，连接船东与租船人，提供最佳航运解决方案。",
   "home.logisticsServices": "物流服务",
   "home.logisticsServicesDesc":
     "综合物流支持，包括岸上和离岸设备处理。",
@@ -298,7 +298,7 @@ export const zh: Record<TranslationKey, string> = {
   "home.card1Label": "公司概况",
   "home.card1Title": "孟加拉国领先的航运代理和物流提供商",
   "home.card2Label": "我们的服务",
-  "home.card2Title": "港口代理、OPA/CPA、船舶管理和物流解决方案",
+  "home.card2Title": "港口代理、经纪、船舶管理和物流解决方案",
   "home.card3Label": "港口信息",
   "home.card3Title": "在吉大港、马塔巴里、帕亚拉和蒙格拉的运营",
   "home.card4Label": "全球网络",
@@ -330,6 +330,11 @@ export const zh: Record<TranslationKey, string> = {
   "home.promoPortsLabel": "港口信息",
   "home.promoPortsDesc": "在所有主要孟加拉国港口提供运营覆盖，配备专业本地团队。",
   "home.promoPortsCta": "探索港口",
+  "home.portSectionTitle": "我们运营的港口",
+  "home.portChattogramDesc": "孟加拉国主要海港，拥有广泛的货物处理和集装箱运营。",
+  "home.portMatarbariDesc": "支持重型项目货物和现代港口开发的深水门户。",
+  "home.portMonglaDesc": "散货和杂货海上运营的战略二级门户。",
+  "home.portPayraDesc": "为工业和项目货物交通服务的新兴深海接入点。",
 
   // Footer extras
   "footer.aboutLink": "关于我们",
@@ -343,7 +348,7 @@ export const zh: Record<TranslationKey, string> = {
   "offices.dhakaLine1": "Taher Tower (9th Floor)",
   "offices.dhakaLine2": "Plot-10, Gulshan C/A, Circle-2",
   "offices.dhakaLine3": "Dhaka 1212, Bangladesh",
-  "offices.dhakaPhone": "+8802581819, +8802222286574",
+  "offices.dhakaPhone": "+880-2-58811819 | +8802222286574",
   "offices.dhakaEmail": "info@rivertyneltd.com",
   "offices.chattogramTitle": "吉大港办事处（自有物业）",
   "offices.chattogramLine1": "Yunusco City Center (8th Floor)",
