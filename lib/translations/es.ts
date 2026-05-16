@@ -69,9 +69,9 @@ export const es: Record<TranslationKey, string> = {
   "home.shippingServices": "Servicios de Envío",
   "home.shippingServicesDesc":
     "Una de las principales agencias de envío en Bangladesh que maneja todo tipo de embarcaciones y operaciones de carga.",
-  "home.charteringServices": "Servicios de Fletamento",
+  "home.charteringServices": "Corretaje",
   "home.charteringServicesDesc":
-    "Mesa de fletamento experimentada en carga seca y fletamento de proyectos para todos los puertos principales.",
+    "Servicios expertos de corretaje de buques y carga que conectan armadores con fletadores para soluciones de envío óptimas.",
   "home.logisticsServices": "Servicios Logísticos",
   "home.logisticsServicesDesc":
     "Soporte logístico integrado que incluye manejo de equipos en tierra y mar.",
@@ -300,7 +300,7 @@ export const es: Record<TranslationKey, string> = {
   "home.card1Label": "Descripción de la Empresa",
   "home.card1Title": "Agencia de Envíos y Proveedor Logístico Líder en Bangladesh",
   "home.card2Label": "Nuestros Servicios",
-  "home.card2Title": "Agencia Portuaria, OPA/CPA, Gestión Naviera y Soluciones Logísticas",
+  "home.card2Title": "Agencia Portuaria, Corretaje, Gestión Naviera y Soluciones Logísticas",
   "home.card3Label": "Información Portuaria",
   "home.card3Title": "Operaciones en Chattogram, Matarbari, Payra y Mongla",
   "home.card4Label": "Red Global",
@@ -332,6 +332,11 @@ export const es: Record<TranslationKey, string> = {
   "home.promoPortsLabel": "Información Portuaria",
   "home.promoPortsDesc": "Cobertura operativa en todos los principales puertos de Bangladesh con equipos locales dedicados.",
   "home.promoPortsCta": "Explorar Puertos",
+  "home.portSectionTitle": "Puertos en los que Operamos",
+  "home.portChattogramDesc": "Puerto marítimo principal de Bangladesh con amplio manejo de carga y operaciones de contenedores.",
+  "home.portMatarbariDesc": "Puerta de aguas profundas para carga pesada de proyectos y desarrollo portuario moderno.",
+  "home.portMonglaDesc": "Puerta secundaria estratégica para operaciones marinas a granel.",
+  "home.portPayraDesc": "Punto de acceso emergente de aguas profundas para tráfico industrial y de proyectos.",
 
   // Footer extras
   "footer.aboutLink": "Sobre Nosotros",
@@ -345,7 +350,7 @@ export const es: Record<TranslationKey, string> = {
   "offices.dhakaLine1": "Taher Tower (9th Floor)",
   "offices.dhakaLine2": "Plot-10, Gulshan C/A, Circle-2",
   "offices.dhakaLine3": "Dhaka 1212, Bangladesh",
-  "offices.dhakaPhone": "+8802581819, +8802222286574",
+  "offices.dhakaPhone": "+880-2-58811819 | +8802222286574",
   "offices.dhakaEmail": "info@rivertyneltd.com",
   "offices.chattogramTitle": "Oficina de Chattogram (Propia)",
   "offices.chattogramLine1": "Yunusco City Center (8th Floor)",

@@ -33,7 +33,7 @@ export const en = {
   "home.card1Label": "Company Overview",
   "home.card1Title": "Leading Shipping Agency & Logistics Provider in Bangladesh",
   "home.card2Label": "Our Services",
-  "home.card2Title": "Port Agency, OPA/CPA, Husbandry & Logistics Solutions",
+  "home.card2Title": "Port Agency, Brokering, Husbandry & Logistics Solutions",
   "home.card3Label": "Port Information",
   "home.card3Title": "Operations Across Chattogram, Matarbari, Payra & Mongla",
   "home.card4Label": "Global Network",
@@ -71,6 +71,11 @@ export const en = {
   "home.promoPortsDesc":
     "Operational coverage across all major Bangladeshi ports with dedicated local teams.",
   "home.promoPortsCta": "Explore Ports",
+  "home.portSectionTitle": "Ports We Operate In",
+  "home.portChattogramDesc": "Bangladesh's primary seaport with extensive cargo handling and container operations.",
+  "home.portMatarbariDesc": "Deep-sea gateway supporting heavier project cargo and modern port development.",
+  "home.portMonglaDesc": "Strategic secondary gateway for bulk and breakbulk marine operations.",
+  "home.portPayraDesc": "Emerging deep-sea access point for industrial and project cargo traffic.",
 
   // Home – Contact Bar (legacy, used by other pages potentially)
   "home.callCenter": "Call Center",
@@ -110,9 +115,9 @@ export const en = {
   "home.shippingServices": "Port Agency",
   "home.shippingServicesDesc":
     "Full-service port agency support for vessel arrivals, departures, and all port call requirements at major Bangladeshi ports.",
-  "home.charteringServices": "OPA/CPA Agency",
+  "home.charteringServices": "Brokering",
   "home.charteringServicesDesc":
-    "Owner's Protecting Agent and Charterer's Protecting Agent services ensuring interests are safeguarded at every port call.",
+    "Expert vessel and cargo brokering connecting shipowners with charterers for optimal shipping solutions.",
   "home.logisticsServices": "Husbandry Services",
   "home.logisticsServicesDesc":
     "24/7 vessel husbandry support including crew changes, supplies, provisions, and clearance operations.",
@@ -348,7 +353,7 @@ export const en = {
   "offices.dhakaLine1": "Taher Tower (9th Floor)",
   "offices.dhakaLine2": "Plot-10, Gulshan C/A, Circle-2",
   "offices.dhakaLine3": "Dhaka 1212, Bangladesh",
-  "offices.dhakaPhone": "+8802581819, +8802222286574",
+  "offices.dhakaPhone": "+880-2-58811819 | +8802222286574",
   "offices.dhakaEmail": "info@rivertyneltd.com",
   "offices.chattogramTitle": "Chattogram Office ",
   "offices.chattogramLine1": "Yunusco City Center (8th Floor)",

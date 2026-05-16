@@ -71,7 +71,7 @@ export function SiteFooter() {
             {t("footer.aboutLink")}
           </Link>
           <span className="text-gray-200">|</span>
-          <Link href="/services" className="transition hover:text-[#3B71B5]">
+          <Link href="/services/port-agency" className="transition hover:text-[#3B71B5]">
             {t("footer.servicesLink")}
           </Link>
           <span className="text-gray-200">|</span>
