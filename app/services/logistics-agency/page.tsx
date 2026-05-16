@@ -2,8 +2,7 @@ import servicesBg from "@/assets/logistic.png";
 import { ServiceDetailPage } from "@/components/service-detail-page";
 
 const readMoreLinks = [
-  { label: "Port Agency", href: "/services/port-agency" },
-  { label: "OPA/CPA Agency", href: "/services/opa-cpa-agency" },
+  { label: "Port & OPA/CPA Agency", href: "/services/port-agency" },
   { label: "Husbandry Services", href: "/services/husbandry-agency" },
   { label: "Brokering", href: "/services/brokering" },
 ];

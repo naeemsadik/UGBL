@@ -17,24 +17,18 @@ export default function ServicesPage() {
     },
     {
       number: "02",
-      name: t("services.uiuxDesign"),
-      details: t("services.uiuxDesignDesc"),
-      href: "/services/opa-cpa-agency",
-    },
-    {
-      number: "03",
       name: t("services.nextjsDev"),
       details: t("services.nextjsDevDesc"),
       href: "/services/husbandry-agency",
     },
     {
-      number: "04",
+      number: "03",
       name: t("services.seoAnalytics"),
       details: t("services.seoAnalyticsDesc"),
       href: "/services/logistics-agency",
     },
     {
-      number: "05",
+      number: "04",
       name: t("services.brokering"),
       details: t("services.brokeringDesc"),
       href: "/services/brokering",
@@ -59,7 +53,7 @@ export default function ServicesPage() {
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <div className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
             <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-              Five Core Services
+              Four Core Services
             </span>
             <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-5xl">
               Comprehensive maritime and logistics solutions
@@ -143,7 +137,7 @@ export default function ServicesPage() {
                 Complete service coverage
               </p>
               <h2 className="mt-4 text-3xl font-black tracking-tight md:text-4xl">
-                One team, five core service lines
+                One team, four core service lines
               </h2>
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-100 md:text-lg">
                 From port agency to end-to-end logistics, our teams deliver integrated maritime solutions across all major Bangladeshi ports.

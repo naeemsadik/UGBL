@@ -9,8 +9,7 @@ export const zh: Record<TranslationKey, string> = {
   "nav.policyCompliance": "政策与合规",
   "nav.services": "服务",
   "nav.servicesOverview": "服务概览",
-  "nav.portAgency": "港口代理",
-  "nav.opaCpaAgency": "OPA/CPA代理",
+  "nav.portAgency": "港口及OPA/CPA代理",
   "nav.husbandryAgency": "船舶管理代理",
   "nav.logisticsAgency": "物流代理",
   "nav.brokering": "经纪",
@@ -122,12 +121,9 @@ export const zh: Record<TranslationKey, string> = {
   "services.title": "服务",
   "services.subtitle":
     "为船东、运营商和货主提供全面的航运和物流支持。",
-  "services.websiteStrategy": "港口代理",
+  "services.websiteStrategy": "港口及OPA/CPA代理",
   "services.websiteStrategyDesc":
-    "全面的港口代理服务，处理船舶进出港、文件办理和港口当局联络。",
-  "services.uiuxDesign": "OPA/CPA 代理",
-  "services.uiuxDesignDesc":
-    "船东保护代理和租船人保护代理服务，确保所有利益得到保障。",
+    "处理船舶进出港、文件办理和港口当局联络。",
   "services.nextjsDev": "船舶管理代理",
   "services.nextjsDevDesc":
     "24/7船舶管理服务，包括船员换班、物资供应、给养和通关。",

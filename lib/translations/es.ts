@@ -9,8 +9,7 @@ export const es: Record<TranslationKey, string> = {
   "nav.policyCompliance": "Política y Cumplimiento",
   "nav.services": "Servicios",
   "nav.servicesOverview": "Resumen de Servicios",
-  "nav.portAgency": "Agencia Portuaria",
-  "nav.opaCpaAgency": "Agencia OPA/CPA",
+  "nav.portAgency": "Agencia Portuaria y OPA/CPA",
   "nav.husbandryAgency": "Agencia de Gestión Naviera",
   "nav.logisticsAgency": "Agencia Logística",
   "nav.brokering": "Corretaje",
@@ -124,12 +123,9 @@ export const es: Record<TranslationKey, string> = {
   "services.title": "Servicios",
   "services.subtitle":
     "Soporte integral de envío y logística para propietarios de buques, operadores y clientes de carga.",
-  "services.websiteStrategy": "Agencia Portuaria",
+  "services.websiteStrategy": "Agencia Portuaria y OPA/CPA",
   "services.websiteStrategyDesc":
-    "Agencia portuaria integral para llegadas, salidas, documentación y enlace con autoridades portuarias.",
-  "services.uiuxDesign": "Agencia OPA/CPA",
-  "services.uiuxDesignDesc":
-    "Servicios de Agente Protector del Propietario y del Fletador asegurando la protección de todos los intereses.",
+    "Gestión de llegadas, salidas, documentación y enlace con autoridades portuarias.",
   "services.nextjsDev": "Agencia de Gestión Naviera",
   "services.nextjsDevDesc":
     "Gestión naviera 24/7 incluyendo cambios de tripulación, suministros, provisiones y despacho.",
