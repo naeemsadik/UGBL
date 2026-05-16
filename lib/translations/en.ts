@@ -7,8 +7,7 @@ export const en = {
   "nav.policyCompliance": "Policy and Compliance",
   "nav.services": "Services",
   "nav.servicesOverview": "Services Overview",
-  "nav.portAgency": "Port Agency",
-  "nav.opaCpaAgency": "OPA/CPA Agency",
+  "nav.portAgency": "Port & OPA/CPA Agency",
   "nav.husbandryAgency": "Husbandry Services",
   "nav.logisticsAgency": "Logistics Services",
   "nav.brokering": "Brokering",
@@ -172,12 +171,9 @@ export const en = {
   "services.title": "Services",
   "services.subtitle":
     "Comprehensive shipping and logistics support for vessel owners, operators, and cargo clients.",
-  "services.websiteStrategy": "Port Agency",
+  "services.websiteStrategy": "Port & OPA/CPA Agency",
   "services.websiteStrategyDesc":
-    "Port & OPA/CPA Agency: handling vessel arrivals, departures, documentation, and port authority liaison.",
-  "services.uiuxDesign": "OPA/CPA Agency",
-  "services.uiuxDesignDesc":
-    "Owner's and Charterer's Protecting Agent services ensuring all interests are safeguarded.",
+    "Handling vessel arrivals, departures, documentation, and port authority liaison.",
   "services.nextjsDev": "Husbandry Services",
   "services.nextjsDevDesc":
     "24/7 vessel husbandry including crew changes, supplies, provisions, and clearance.",
