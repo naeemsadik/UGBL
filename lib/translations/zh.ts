@@ -5,6 +5,7 @@ export const zh: Record<TranslationKey, string> = {
   "nav.home": "首页",
   "nav.aboutUs": "关于我们",
   "nav.atAGlance": "一目了然",
+  "nav.management": "管理层",
   "nav.missionVision": "使命与愿景",
   "nav.policyCompliance": "政策与合规",
   "nav.services": "服务",

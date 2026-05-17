@@ -5,6 +5,7 @@ export const es: Record<TranslationKey, string> = {
   "nav.home": "Inicio",
   "nav.aboutUs": "Sobre Nosotros",
   "nav.atAGlance": "Un vistazo",
+  "nav.management": "Gestión",
   "nav.missionVision": "Misión y Visión",
   "nav.policyCompliance": "Política y Cumplimiento",
   "nav.services": "Servicios",

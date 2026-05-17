@@ -16,11 +16,11 @@ const HERO_IMAGES = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
 const ROTATE_MS = 6000;
 
 const TAGLINES: { key: string; sub: string }[] = [
-  { key: "Let's Go", sub: "Together" },
+  { key: "Let's Grow", sub: "Together" },
   { key: "Trusted Port Agency", sub: "& Logistics Partner" },
   { key: "Connecting Oceans,", sub: "Delivering Promise" },
   { key: "With You For", sub: "The Long Haul" },
-  { key: "Reliable Shipping", sub: "Across Bangladesh" },
+  { key: "Reliable Shipping", sub: "Across Bangladesh and Beyond" },
   { key: "Excellence In", sub: "Maritime Services" },
   { key: "Your Cargo,", sub: "Our Commitment" },
 ];
@@ -71,8 +71,12 @@ export function HeroCarousel() {
             className="text-justify text-[40px] leading-[40px] font-bold tracking-normal text-white md:text-[50px] md:leading-[50px] lg:text-[59px] lg:leading-[56px]"
             style={{ textShadow: "1px 0px 20px rgba(0, 0, 0, 0.5)" }}
           >
-            <span className="block stagger-fade stagger-fade-d1">{TAGLINES[idx].key}</span>
-            <span className="block stagger-fade stagger-fade-d2">{TAGLINES[idx].sub}</span>
+            <span className="block stagger-fade stagger-fade-d1">
+              {TAGLINES[idx].key}
+            </span>
+            <span className="block stagger-fade stagger-fade-d2">
+              {TAGLINES[idx].sub}
+            </span>
           </h1>
         </div>
 

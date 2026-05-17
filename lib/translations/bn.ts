@@ -4,6 +4,7 @@ export const bn: Record<TranslationKey, string> = {
   "nav.home": "হোম",
   "nav.aboutUs": "আমাদের সম্পর্কে",
   "nav.atAGlance": "এক নজরে",
+  "nav.management": "ম্যানেজমেন্ট",
   "nav.missionVision": "মিশন ও ভিশন",
   "nav.policyCompliance": "নীতি ও সম্মতি",
   "nav.services": "সেবাসমূহ",

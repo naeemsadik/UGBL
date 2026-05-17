@@ -20,8 +20,9 @@ const navItems: NavItem[] = [
   { key: "nav.home", href: "/" },
   {
     key: "nav.aboutUs",
-    href: "/about",
+    href: "#",
     children: [
+      { key: "nav.management", href: "/management" },
       { key: "nav.missionVision", href: "/mission-vision" },
       { key: "nav.policyCompliance", href: "/policy-compliance" },
     ],
@@ -85,22 +86,41 @@ function NavDropdown({
 
   return (
     <div className="group relative flex items-center">
-      <Link href={item.href} className={`${linkCls} gap-1`}>
-        {t(item.key)}
-        <svg
-          className="h-2.5 w-2.5 opacity-50 transition-transform duration-200 group-hover:rotate-180"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </Link>
+      {item.href === "#" ? (
+        <span className={`${linkCls} gap-1 cursor-default`}>
+          {t(item.key)}
+          <svg
+            className="h-2.5 w-2.5 opacity-50 transition-transform duration-200 group-hover:rotate-180"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </span>
+      ) : (
+        <Link href={item.href} className={`${linkCls} gap-1`}>
+          {t(item.key)}
+          <svg
+            className="h-2.5 w-2.5 opacity-50 transition-transform duration-200 group-hover:rotate-180"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </Link>
+      )}
 
       <div className="pointer-events-none absolute left-1/2 top-full z-50 pt-3 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100 -translate-x-1/2">
         <div className="min-w-55 rounded border border-[#e5eaf0] bg-white py-1.5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
@@ -214,13 +234,19 @@ function MobileMenu({
         <div className="px-6 py-5 space-y-1">
           {navItems.map((item) => (
             <div key={item.key}>
-              <Link
-                href={item.href}
-                onClick={onClose}
-                className="block py-2.5 text-[0.82rem] font-medium uppercase tracking-[0.12em] text-[#1D2E54] hover:text-[#49A98F] transition-colors"
-              >
-                {t(item.key)}
-              </Link>
+              {item.href === "#" ? (
+                <span className="block py-2.5 text-[0.82rem] font-medium uppercase tracking-[0.12em] text-[#1D2E54]/50 cursor-default">
+                  {t(item.key)}
+                </span>
+              ) : (
+                <Link
+                  href={item.href}
+                  onClick={onClose}
+                  className="block py-2.5 text-[0.82rem] font-medium uppercase tracking-[0.12em] text-[#1D2E54] hover:text-[#49A98F] transition-colors"
+                >
+                  {t(item.key)}
+                </Link>
+              )}
               {item.children?.map((child) => (
                 <Link
                   key={child.key}
