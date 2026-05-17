@@ -21,6 +21,11 @@ export interface TechnicalSection {
   items: { label: string; value: string; description?: string }[];
 }
 
+export interface FlatCoreSection {
+  title?: string;
+  paragraphs: string[];
+}
+
 export interface BerthRestriction {
   name: string;
   maxLOA?: string;
@@ -65,6 +70,7 @@ export interface PortData {
     items: BerthRestriction[];
   };
   lngTerminals?: LNGTerminalInfo[];
+  flatCoreSections?: FlatCoreSection[];
 }
 
 export const ports: Record<string, PortData> = {
@@ -98,6 +104,47 @@ export const ports: Record<string, PortData> = {
         label: "Role in network",
         value: "Primary seaport",
         description: "Best suited for broad cargo mix and standard port calls.",
+      },
+    ],
+    flatCoreSections: [
+      {
+        title: "Port profile",
+        paragraphs: [
+          "There is no draft restriction at Kutubdia and available FW draft is 14 M and available draft at customary inner anchorage is 11-11.5 M. If vsl's draft is more than 11-11.5 M FW then she has to lighten some quantity of cargo at Kutubdia anchorage to reach shifting FW draft of 11-11.5 M.",
+          "There are three customary inner anchorages namely Alpha, Bravo, and Charlie and among them, Alpha is the deep draft berth. Presently vessels are calling at Chattogram Alpha anchorage with 11-11.5 M FW draft on high water tide on a particular day for discharging bulk cargo without any problem.",
+          "No restriction on LOA, beam, DWT, air draft, etc at Kutubdia and Alpha/Bravo/Charlie anchorages.",
+          "All kinds of bulk cargo (except liquid cargo) discharging done by ship's crane and using grabs by STS operation.",
+          "There is no congestion to arrive any vessel at Kutubdia and customary inner anchorage (A, B, C).",
+          "Vessel can make direct berthing upon arrival by achieving permissible draft to Kutubdia and on high water tide with help of local deep sea/bay pilot at inner anchorage A/B/C.",
+          "Vessel can arrive on high water tide with help of local deep sea/bay pilot at Alpha/Bravo/Charlie anchorage and can sail at any time from Alpha/Bravo/Charlie anchorage.",
+          "At Chattogram vessel can work round the clock even in holiday and vessel can continue work by paying double payment.",
+        ],
+      },
+      {
+        title: "General jetty/berth information",
+        paragraphs: [
+          "The maximum permissible FW draft for entering and leaving Chattogram Port berth is 10.00 M.",
+          "The maximum permissible length for entering Chattogram Port berth is 190.00 Meters.",
+          "The maximum permissible entry length for night navigation is to/from berth 175.00 Meters.",
+          "The maximum permissible draft for main jetty areas (Jetty 2-8) is 8.55 M and Jetty 9-13, CCT-1-3, NCT-1-4, GSJ, DOJ-5 to -7, K (U & A) is 9.50 M up to LOA 186.00 M.",
+          "The vessel LOA 183 M and 160 M permissible draft 9.50 M for DOJ-3 and DOJ-4 respectively.",
+          "The entry permissible draft would however depend on the day's maximum permissible draft.",
+        ],
+      },
+      {
+        title: "Tanker vessel",
+        paragraphs: [
+          "Please find here below all tanker berths restrictions and details information of Chittagong Port:",
+          "BERTH TSP JETTY: Vessel having LOA up to 143.40 M with FW draft 8.25 M can take berth at TSP Jetty. Vessel having LOA more than 143.40 M and up to 175.25 M with FW draft 7.90 M can take berth at TSP Jetty.",
+          "DOJ-3 (Dolphin Oil Jetty-3): Vessel having LOA up to 183.00 M with FW draft 7.60 M can take berth at DOJ-3 Jetty.",
+          "DOJ-4 (Dolphin Oil Jetty-4): Vessel having LOA up to 160.00 M with FW draft 9.50 M can take berth at DOJ-4 Jetty.",
+          "DOJ-5 (Dolphin Oil Jetty-5): Vessel having LOA up to 186.00 M with FW draft 9.50 M can take berth at DOJ-5 Jetty. Vessel having LOA from 186 M to 190 M with FW draft 9.00 M or 0.50 M less than the day's permissible draft can take berth at DOJ-5 under special permission.",
+          "DOJ-6 (Dolphin Oil Jetty-6): Vessel having LOA up to 186.00 M with FW draft 9.50 M can take berth at DOJ-6 Jetty. Vessel having LOA from 186 M to 190 M with FW draft 9.00 M or 0.50 M less than the day's permissible draft can take berth at DOJ-6 under special permission.",
+          "DOJ-7 (Dolphin Oil Jetty-7): Vessel having LOA up to 186.00 M with FW draft 9.50 M can take berth at DOJ-7 Jetty. Vessel having LOA from 186 M to 190 M with FW draft 9.00 M or 0.50 M less than the day's permissible draft can take berth at DOJ-7 under special permission.",
+          "DOJ-8 (Dolphin Oil Jetty-8): Vessel having LOA up to 175.00 M with FW draft 10.00 M depending on prevailing real time hydrological condition can take berth at DOJ-8 Jetty.",
+          "UTT Jetty: Vessel having LOA up to 183.00 M with FW draft 9.50 M can take berth at UTT Jetty.",
+          "Please note all vessels must have at least 16 ropes for safe berthing. Tanker vessels having wire ropes must have at least 12 polypropylene ropes and no other restriction or information other than above.",
+        ],
       },
     ],
     technicalSections: [
