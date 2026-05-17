@@ -259,6 +259,17 @@ export const ports: Record<string, PortData> = {
         description: "Typical rate by terminal self-unloader.",
       },
     ],
+    flatCoreSections: [
+      {
+        title: "Matarbari Coal Jetty",
+        paragraphs: [
+          "Vessel having LOA up to 230 M with fresh water draft 11.5 M can take berth at Matarbari Coal Jetty. No restriction on DWT, beam, air draft. Channel draft 12 M with sufficient UKC. Berthing and unberthing always on HW tide. Density varies 1012-1018 kg/m3 on HW and LW. Lightering is strictly prohibited.",
+          "Pilot will be provided by Chittagong Port. 4 tugs will be used during berthing and unberthing.",
+          "Chittagong Port Authority provide two tugs and agent will have to arrange privately 2 tugs.",
+          "Vessel discharging cargo by terminal self-unloader (bucket type cycling cranes) on conveyor belt and discharge rate between 25,000-30,000 MT/Day IAGW/WP.",
+        ],
+      },
+    ],
     technicalSections: [
       {
         title: "Berthing & Pilotage",
@@ -331,6 +342,21 @@ export const ports: Record<string, PortData> = {
         description: "Operational range for Mongla waters.",
       },
     ],
+    flatCoreSections: [
+      {
+        title: "Mongla Port",
+        paragraphs: [
+          "There is no draft restriction at Fairway Buoy and available draft is 13-14.5 M.",
+          "Max LOA 200 M. At Fairway Buoy for STS operation is permissible by Mongla Port Authority from October to the end of March.",
+          "Vessel with a 8.0-8.5 m draft can enter/depart through the new channel (anchorage area Harbaria-12, Harbaria-13, and Sundarikota 2 to Sundarikota-6).",
+          "Bulk cargo discharging done by ship's crane and grabs by STS operation.",
+          "There is no congestion to call any vessel at Mongla Fairway Buoy and Harbaria anchorage subject to permissible draft.",
+          "Vessel can make direct berthing upon arrival by achieving permissible draft.",
+          "At Mongla vessel can work round the clock even in holiday and vessel can continue work by paying double payment.",
+          "Water density varies 998-1003 kg/m3.",
+        ],
+      },
+    ],
     technicalSections: [
       {
         title: "Anchorage & Berthing",
@@ -400,6 +426,27 @@ export const ports: Record<string, PortData> = {
         label: "STS Season",
         value: "Mid-Sep to March",
         description: "Permissible by Payra Port Authority.",
+      },
+    ],
+    flatCoreSections: [
+      {
+        title: "Payra Port",
+        paragraphs: [
+          "There is no draft restriction at Fairway Buoy and available draft is 13-14 M.",
+          "At Fairway Buoy for STS operation is permissible by Payra Port Authority from mid-September to the end of March.",
+          "Anchorage: A wide anchorage area is established at the outer and inner anchorage of PPA.",
+          "Fairway Buoy Anchorage: Lat 21 21.9 N, Long 090 06.1 E.",
+          "Inner Anchorage: Lat 21 56.0 N, Long 090 17.8 E.",
+          "Vessel with a 6-6.5 m draft can enter/depart through the Rabnabad Channel with the tide.",
+          "Tidal range: Tides are semi-diurnal with prominent diurnal effect. The approx. tidal range is between 1.0 and 3.0 m.",
+          "Pilotage: Pilotage is compulsory.",
+          "Bulk cargo discharging by ship's crane and grabs by STS operation at anchorage.",
+          "There is no congestion to call any vessel at Payra Fairway Buoy and inner anchorage and berth subject to permissible draft.",
+          "Vessel can arrive safely at Payra Port BCCPL service jetty with permissible draft.",
+          "Maximum permissible LOA of a vessel is 200 meters, width 30 meters with draft about at permissible limits.",
+          "At Payra Port vessel can work round the clock even in holiday and vessel can continue work by paying double payment.",
+          "Payra Port water density varies 998-1001 kg/m3.",
+        ],
       },
     ],
     technicalSections: [

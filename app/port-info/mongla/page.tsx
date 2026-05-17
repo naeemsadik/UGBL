@@ -24,6 +24,8 @@ export default async function MonglaPortPage() {
       technicalSections={data.technicalSections}
       berthRestrictions={data.berthRestrictions}
       lngTerminals={data.lngTerminals}
+      mergeCoreSections
+      flatCoreSections={data.flatCoreSections}
       notesTitle={data.notesTitle}
       notes={data.notes}
       ctaTitle={data.ctaTitle}
