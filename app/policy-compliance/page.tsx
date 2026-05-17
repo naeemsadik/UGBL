@@ -162,10 +162,19 @@ export default function PolicyCompliancePage() {
               River Tyne Ltd promotes integrity, professionalism, and
               accountability across all business activities.
             </p>
-            <ul className="mt-3 list-disc space-y-2 pl-6 text-[1.04rem] leading-[1.75] text-[#4a586d]">
-              {ethicsPoints.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
+            <ul className="mt-3 list-disc space-y-3 pl-6 text-[1.04rem] leading-[1.75] text-[#4a586d]">
+              {ethicsPoints.map((item) => {
+                const [title, ...rest] = item.split(":");
+                const description = rest.join(":");
+                return (
+                  <li key={item}>
+                    <span className="font-bold text-[#1D2E54] glazy-title">
+                      {title}
+                    </span>
+                    {description && `:${description}`}
+                  </li>
+                );
+              })}
             </ul>
           </article>
 

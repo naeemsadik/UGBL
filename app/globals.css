@@ -421,3 +421,12 @@ body {
   font-weight: 500;
   line-height: 1.55;
 }
+
+/* ── Glazy title effect for Code of Ethics ───────── */
+.glazy-title {
+  font-weight: 700;
+  background: linear-gradient(180deg, #2a4a8a 0%, #1D2E54 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
