@@ -51,7 +51,7 @@ export default function BrokeringPage() {
         {
           title: "Market Expertise",
           content:
-            "Our brokering team maintains active presence in both the dry bulk and tanker markets, with established relationships with major charterers, shipowners, and commodity traders. We provide transparent, professional brokering services that prioritize our clients' interests in every transaction.",
+            "Our brokering team maintains active presence in both the dry bulk and tanker markets, with established relationships with major charterers, ship owners, and commodity traders. We provide transparent, professional brokering services that prioritize our clients' interests in every transaction.",
         },
         {
           title: "Coverage",
