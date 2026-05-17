@@ -1,8 +1,11 @@
+import Image from "next/image";
+
 import { InnerHero } from "@/components/inner-hero";
 import missionHero from "@/assets/Mission and Vision.jpg";
+import leaderImage from "@/assets/Leader.jpg";
 
 export const metadata = {
-  title: "Management Profile | River Tyne Ltd",
+  title: "Visionary Leader | River Tyne Ltd",
   description:
     "Meet the leadership of River Tyne Ltd — experienced shipping professionals with decades of maritime industry expertise.",
 };
@@ -50,8 +53,8 @@ export default function ManagementPage() {
   return (
     <div className="bg-slate-50">
       <InnerHero
-        title="Management Profile"
-        subtitle="Meet the leadership team driving River Tyne Ltd's commitment to excellence in maritime services."
+        title="Visionary Leader"
+        subtitle="Meet the Visionary Leader driving River Tyne Ltd's commitment to excellence in maritime services."
         backgroundImage={missionHero}
         backgroundPosition="center 60%"
       />
@@ -64,25 +67,17 @@ export default function ManagementPage() {
 
           <div className="p-8 md:p-12">
             <div className="grid gap-10 lg:grid-cols-[280px_1fr] lg:gap-16 items-start">
-              {/* Image placeholder */}
+              {/* Leader image */}
               <div className="flex flex-col items-center gap-4">
-                <div className="relative w-full max-w-[280px] aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-[#1D2E54]/10 to-[#3B71B5]/10 border-2 border-dashed border-[#1D2E54]/20 flex flex-col items-center justify-center gap-3">
-                  <svg
-                    className="h-16 w-16 text-[#1D2E54]/25"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={1}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                    />
-                  </svg>
-                  <p className="text-xs text-[#1D2E54]/40 font-medium uppercase tracking-widest text-center px-4">
-                    Photo Placeholder
-                  </p>
+                <div className="relative w-full max-w-[280px] aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-[#1D2E54]/10 to-[#3B71B5]/10 border border-[#1D2E54]/10">
+                  <Image
+                    src={leaderImage}
+                    alt="Mahmodul Islam Parvez"
+                    fill
+                    sizes="(max-width: 1024px) 70vw, 280px"
+                    className="object-cover"
+                    priority
+                  />
                 </div>
 
                 {/* Name & Title card */}

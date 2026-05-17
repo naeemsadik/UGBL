@@ -3,7 +3,7 @@ export const en = {
   "nav.home": "Home",
   "nav.aboutUs": "About Us",
   "nav.atAGlance": "At a Glance",
-  "nav.management": "Management",
+  "nav.management": "Leadership Profile",
   "nav.missionVision": "Mission and Vision",
   "nav.policyCompliance": "Policy and Compliance",
   "nav.services": "Services",
