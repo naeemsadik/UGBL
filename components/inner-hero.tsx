@@ -7,6 +7,8 @@ type InnerHeroProps = {
   subtitle: string;
   image?: StaticImageData | string;
   backgroundImage?: StaticImageData | string;
+  backgroundSize?: string;
+  backgroundPosition?: string;
   breadcrumbs?: { label: string; href?: string }[];
 };
 
@@ -15,6 +17,8 @@ export function InnerHero({
   subtitle,
   image,
   backgroundImage,
+  backgroundSize = "cover",
+  backgroundPosition = "center",
   breadcrumbs,
 }: InnerHeroProps) {
   const backgroundUrl =
@@ -24,8 +28,8 @@ export function InnerHero({
   const heroStyle: CSSProperties | undefined = backgroundUrl
     ? {
         backgroundImage: `url("${backgroundUrl}")`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundSize,
+        backgroundPosition,
         backgroundRepeat: "no-repeat",
         backgroundColor: "#0d1b2a",
       }

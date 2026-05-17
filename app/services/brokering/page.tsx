@@ -1,5 +1,7 @@
-import servicesBg from "@/assets/services.jpg";
 import { ServiceDetailPage } from "@/components/service-detail-page";
+
+const heroImageUrl =
+  "https://public.axsmarine.com/wp-content/uploads/2026/05/freight-estimation-shipping.webp";
 
 const readMoreLinks = [
   { label: "Port & OPA/CPA Agency", href: "/services/port-agency" },
@@ -24,7 +26,9 @@ export default function BrokeringPage() {
     <ServiceDetailPage
       title="Brokering"
       subtitle="Expert vessel and cargo brokering connecting shipowners with charterers for optimal shipping solutions."
-      heroImage={servicesBg}
+      heroImage={heroImageUrl}
+      heroImageSize="cover"
+      heroImagePosition="center 30%"
       overviewTitle="Comprehensive shipping brokering solutions"
       overview={[
         "River Tyne Ltd offers professional ship brokering and chartering services, acting as an intermediary between shipowners and charterers to facilitate the most advantageous shipping arrangements. Our experienced brokering team brings deep market knowledge and extensive industry connections to deliver optimal outcomes for all parties.",

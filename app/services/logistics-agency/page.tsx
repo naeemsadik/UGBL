@@ -36,9 +36,8 @@ export default function LogisticsAgencyPage() {
         "Clearing and forwarding services",
         "Re-exporting of import cargo",
         "Sea and air freight",
-        "Repair and maintenance services",
         "Chopper hire",
-        "Security services",
+        "Lightening and STS",
         "Freight forwarding",
       ]}
       ctaTitle="Need logistics support?"

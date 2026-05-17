@@ -21,6 +21,8 @@ type ServiceDetailPageProps = {
   title: string;
   subtitle: string;
   heroImage: StaticImageData | string;
+  heroImageSize?: string;
+  heroImagePosition?: string;
   overviewTitle: string;
   overview: string | string[];
   /** Optional bullet list of services offered */
@@ -43,6 +45,8 @@ export function ServiceDetailPage({
   title,
   subtitle,
   heroImage,
+  heroImageSize,
+  heroImagePosition,
   overviewTitle,
   overview,
   serviceItems,
@@ -61,6 +65,8 @@ export function ServiceDetailPage({
         title={title}
         subtitle={subtitle}
         backgroundImage={heroImage}
+        backgroundSize={heroImageSize}
+        backgroundPosition={heroImagePosition}
       />
 
       <section className="mx-auto w-full max-w-[1400px] px-6 py-16 md:py-20">

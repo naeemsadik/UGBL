@@ -39,6 +39,10 @@ export default function HusbandryAgencyPage() {
         "Waste management: Garbage and sludge disposal.",
         "Dry docking: Coordination for vessel dry docking, if required.",
         "General assistance: Any other husbandry-related services required by the owner or principal.",
+        "Cash to Master",
+        "Repair and maintenance services",
+        "Security services",
+        "Under Water Inspection and Cleaning",
       ]}
       additionalSections={[
         {

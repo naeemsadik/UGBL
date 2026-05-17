@@ -89,9 +89,9 @@ export const en = {
 
   // Home – About Section
   "home.aboutP1":
-    "River Tyne Ltd is shipping and Logistics services provider in Bangladesh founded in 2016 and over the last 10 years, it has been experienced in many shore and offshore logistics services for many potential clients based in Bangladesh and abroad.",
+    "River Tyne Ltd is a shipping and Logistics services provider in Bangladesh founded in 2016 and over the last 10 years, it has been experienced in many shore and offshore logistics services for many potential clients based in Bangladesh and abroad.",
   "home.aboutP2":
-    "River Tyne Ltd has 10 years of experience in handling a many project equipment’s shifting, towing and delivering/carrying with maintaining a standard level of safety measurement. We are also, acting as OPA and port agent of vessels carrying various commodities including Coal, Stone, Gypsum, Aggregates, Soybean, Sugar, Chickpeas, Clinker, Manganese Ore, TSP, Lentils, LNG, LPG, Condensate, HSFO, VEG OIL, MOGAS from overseas origin to local delivery sites in the country through Chattogram, Mongla, and Payra ports as per consignee's requirement.",
+    "River Tyne Ltd has 10 years of experience in handling a many project equipment’s shifting, towing and delivering/carrying with maintaining a standard level of safety measurement. We are also, acting as an Opa  and port agent of vessels carrying various commodities including Coal, Stone, Gypsum, Aggregates, Soybean, Sugar, Chickpeas, Clinker, Manganese Ore, TSP, Lentils, LNG, LPG, Condensate, HSFO, VEG OIL, MOGAS from overseas origin to local delivery sites in the country through Chattogram, Mongla, and Payra ports as per consignee's requirement.",
   "home.aboutP3":
     "We have the capacity to provide complete shipping and logistics solutions in Bangladesh. Nothing is impossible for River Tyne whatever the size or quantity of the cargo or the mode of transportation, the River Tyne Ltd.  will handle it with our experienced and skilled team members.",
   "home.aboutP4":
