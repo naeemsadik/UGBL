@@ -7,8 +7,7 @@ export const en = {
   "nav.policyCompliance": "Policy and Compliance",
   "nav.services": "Services",
   "nav.servicesOverview": "Services Overview",
-  "nav.portAgency": "Port Agency",
-  "nav.opaCpaAgency": "OPA/CPA Agency",
+  "nav.portAgency": "Port & OPA/CPA Agency",
   "nav.husbandryAgency": "Husbandry Services",
   "nav.logisticsAgency": "Logistics Services",
   "nav.brokering": "Brokering",
@@ -33,7 +32,7 @@ export const en = {
   "home.card1Label": "Company Overview",
   "home.card1Title": "Leading Shipping Agency & Logistics Provider in Bangladesh",
   "home.card2Label": "Our Services",
-  "home.card2Title": "Port Agency, Brokering, Husbandry & Logistics Solutions",
+  "home.card2Title": "Port & OPA/CPA Agency, Brokering, Husbandry & Logistics Solutions",
   "home.card3Label": "Port Information",
   "home.card3Title": "Operations Across Chattogram, Matarbari, Payra & Mongla",
   "home.card4Label": "Global Network",
@@ -65,7 +64,7 @@ export const en = {
   "home.promoAboutCta": "Read More",
   "home.promoServicesLabel": "Our Services",
   "home.promoServicesDesc":
-    "Comprehensive port agency, husbandry, and logistics solutions tailored to vessel owners and cargo clients.",
+    "Comprehensive Port & OPA/CPA Agency, husbandry, and logistics solutions tailored to vessel owners and cargo clients.",
   "home.promoServicesCta": "Our Services",
   "home.promoPortsLabel": "Port Information",
   "home.promoPortsDesc":
@@ -112,9 +111,9 @@ export const en = {
   "home.ourServicesLabel": "Our Services",
   "home.whatWeCanDo": "What we can do",
   "home.forYou": "for you",
-  "home.shippingServices": "Port Agency",
+  "home.shippingServices": "Port & OPA/CPA Agency",
   "home.shippingServicesDesc":
-    "Full-service port agency support for vessel arrivals, departures, and all port call requirements at major Bangladeshi ports.",
+    "River Tyne Ltd is a shipping agency in Bangladesh, providing comprehensive maritime services across all major ports, including Chattogram, Mongla, and Payra.",
   "home.charteringServices": "Brokering",
   "home.charteringServicesDesc":
     "Expert vessel and cargo brokering connecting shipowners with charterers for optimal shipping solutions.",
@@ -139,7 +138,7 @@ export const en = {
   "footer.aboutLink": "About Us",
   "footer.servicesLink": "Services",
   "footer.ourServices": "Our Services",
-  "footer.portAgency": "Port Agency / Husbandry Services",
+  "footer.portAgency": "Port & OPA/CPA Agency / Husbandry Services",
   "footer.crewChanges": "Crew Changes Support",
   "footer.getInTouch": "Get In Touch",
   "footer.stayUpdated": "Stay Updated",
@@ -172,12 +171,9 @@ export const en = {
   "services.title": "Services",
   "services.subtitle":
     "Comprehensive shipping and logistics support for vessel owners, operators, and cargo clients.",
-  "services.websiteStrategy": "Port Agency",
+  "services.websiteStrategy": "Port & OPA/CPA Agency",
   "services.websiteStrategyDesc":
-    "Port & OPA/CPA Agency: handling vessel arrivals, departures, documentation, and port authority liaison.",
-  "services.uiuxDesign": "OPA/CPA Agency",
-  "services.uiuxDesignDesc":
-    "Owner's and Charterer's Protecting Agent services ensuring all interests are safeguarded.",
+    "Handling vessel arrivals, departures, documentation, and port authority liaison.",
   "services.nextjsDev": "Husbandry Services",
   "services.nextjsDevDesc":
     "24/7 vessel husbandry including crew changes, supplies, provisions, and clearance.",

@@ -2,7 +2,6 @@ import servicesBg from "@/assets/Port Agency .jpeg";
 import { ServiceDetailPage } from "@/components/service-detail-page";
 
 const readMoreLinks = [
-  { label: "OPA/CPA Agency", href: "/services/opa-cpa-agency" },
   { label: "Husbandry Services", href: "/services/husbandry-agency" },
   { label: "Logistics Services", href: "/services/logistics-agency" },
   { label: "Brokering", href: "/services/brokering" },
@@ -23,8 +22,8 @@ const contact = {
 export default function PortAgencyPage() {
   return (
     <ServiceDetailPage
-      title="Port Agency"
-      subtitle="Port & OPA/CPA Agency: handling vessel arrivals, departures, documentation, and port authority liaison."
+      title="Port & OPA/CPA Agency"
+      subtitle="Handling vessel arrivals, departures, documentation, and port authority liaison."
       heroImage={servicesBg}
       overviewTitle="Port & OPA/CPA Agency:"
       overview={[
