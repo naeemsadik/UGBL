@@ -227,7 +227,7 @@ export function Preloader() {
               letterSpacing: "0.04em",
             }}
           >
-            Go
+            Grow
           </div>
           <div
             className="pl-line pl-line--3"

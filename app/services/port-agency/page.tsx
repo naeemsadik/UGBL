@@ -25,9 +25,9 @@ export default function PortAgencyPage() {
       title="Port & OPA/CPA Agency"
       subtitle="Handling vessel arrivals, departures, documentation, and port authority liaison."
       heroImage={servicesBg}
-      overviewTitle="Port & OPA/CPA Agency:"
+      overviewTitle="Port agency"
       overview={[
-        "River Tyne Ltd is a shipping agency in Bangladesh, providing comprehensive maritime services across all major ports, including Chattogram, Mongla, and Payra. We specialize in serving all types of vessels and handling a wide range of cargoes from international origins to final delivery destinations within the country, ensuring efficient, reliable, and compliant port operations tailored to each consignee's requirements.",
+        "River Tyne Ltd is a shipping agency in Bangladesh, providing comprehensive maritime services across all the major ports of Bangladesh including Chattogram, Mongla, Payra, Matarbari and other 148 countries of the world, through our Global Agency Network program. We are specialized in serving all types of vessels and handling a wide range of cargoes from international origins to final delivery destinations within the country, ensuring efficient, reliable, and compliant port operations tailored to each consignee's requirements.",
         "Our extensive experience covers cargoes such as Coal, Stone, Gypsum, Aggregates, Soybean, Sugar, Chickpeas, Clinker, Manganese Ore, TSP, Lentils, LNG, LPG, Condensate, HSFO, Vegetable Oil, MOGAS, and other bulk and liquid commodities.",
       ]}
       serviceItems={[
@@ -40,8 +40,6 @@ export default function PortAgencyPage() {
         "Preparation and submission of cargo manifest to appointed stevedores for efficient cargo operations.",
         "Close coordination with stevedores and terminal operators to ensure safe and efficient handling of containers, break-bulk, dry bulk, and liquid bulk cargoes, while keeping the vessel's Master informed of all shore-side requirements and regulations.",
         "Proven experience in handling Naval vessels at Chattogram Port.",
-        "Arrangement of crew changes, including immigration documentation, flight booking, hotel accommodation, and transportation services.",
-        "Provision of comprehensive ship services, including technical support, repairs, maintenance, and general supplies.",
       ]}
       additionalSections={[
         {
