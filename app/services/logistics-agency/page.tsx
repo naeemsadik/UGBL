@@ -2,24 +2,7 @@
 
 import servicesBg from "@/assets/logistic.png";
 import { ServiceDetailPage } from "@/components/service-detail-page";
-<<<<<<< Updated upstream
-import { downloadLinks } from "@/lib/data/downloads";
-
-const readMoreLinks = [
-  { label: "Port & OPA/CPA Agency", href: "/services/port-agency" },
-  { label: "Husbandry Services", href: "/services/husbandry-agency" },
-  { label: "Brokering", href: "/services/brokering" },
-];
-
-const contact = {
-  phone: "+880-2588-11819",
-  email: "info@rivertyneltd.com",
-  contactHref: "/contact",
-  contactLabel: "Send Message",
-};
-=======
 import { useTranslation } from "@/lib/language-context";
->>>>>>> Stashed changes
 
 export default function LogisticsAgencyPage() {
   const { t } = useTranslation();
@@ -44,30 +27,12 @@ export default function LogisticsAgencyPage() {
 
   return (
     <ServiceDetailPage
-<<<<<<< Updated upstream
-      title="Logistics Services"
-      subtitle="End-to-end logistics solutions covering inland transportation, warehousing, and multimodal cargo delivery."
-=======
       title={t("service.logistics.title")}
       subtitle={t("service.logistics.subtitle")}
->>>>>>> Stashed changes
       heroImage={servicesBg}
       overviewTitle={t("service.logistics.overviewTitle")}
       overview={t("service.logistics.overview")}
       serviceItems={[
-<<<<<<< Updated upstream
-        "Road and river transportation",
-        "Tug boat, launch, and barge supply",
-        "Crane hire",
-        "Warehouse facilities",
-        "Loading and unloading operations",
-        "Clearing and forwarding services",
-        "Re-exporting of import cargo",
-        "Sea and air freight",
-        "Chopper hire",
-        "Lightening and STS",
-        "Freight forwarding",
-=======
         t("service.logistics.item1"),
         t("service.logistics.item2"),
         t("service.logistics.item3"),
@@ -80,7 +45,6 @@ export default function LogisticsAgencyPage() {
         t("service.logistics.item10"),
         t("service.logistics.item11"),
         t("service.logistics.item12"),
->>>>>>> Stashed changes
       ]}
       ctaTitle={t("service.logistics.ctaTitle")}
       ctaText={t("service.logistics.ctaText")}
