@@ -1,15 +1,11 @@
 import servicesBg from "@/assets/Husbandry.jpg";
 import { ServiceDetailPage } from "@/components/service-detail-page";
+import { downloadLinks } from "@/lib/data/downloads";
 
 const readMoreLinks = [
   { label: "Port & OPA/CPA Agency", href: "/services/port-agency" },
   { label: "Logistics Services", href: "/services/logistics-agency" },
   { label: "Brokering", href: "/services/brokering" },
-];
-
-const downloadLinks = [
-  { label: "Company Profile", href: "/downloads/company-profile.pdf" },
-  { label: "Service Brochure", href: "/downloads/service-brochure.pdf" },
 ];
 
 const contact = {

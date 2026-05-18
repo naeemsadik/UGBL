@@ -1,4 +1,5 @@
 import { ServiceDetailPage } from "@/components/service-detail-page";
+import { downloadLinks } from "@/lib/data/downloads";
 
 const heroImageUrl =
   "https://public.axsmarine.com/wp-content/uploads/2026/05/freight-estimation-shipping.webp";
@@ -7,11 +8,6 @@ const readMoreLinks = [
   { label: "Port & OPA/CPA Agency", href: "/services/port-agency" },
   { label: "Husbandry Services", href: "/services/husbandry-agency" },
   { label: "Logistics Services", href: "/services/logistics-agency" },
-];
-
-const downloadLinks = [
-  { label: "Company Profile", href: "/downloads/company-profile.pdf" },
-  { label: "Service Brochure", href: "/downloads/service-brochure.pdf" },
 ];
 
 const contact = {

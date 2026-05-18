@@ -87,7 +87,7 @@ function NavDropdown({
   return (
     <div className="group relative flex items-center">
       {item.href === "#" ? (
-        <span className={`${linkCls} gap-1 cursor-default`}>
+        <span className={`${linkCls} gap-1 cursor-pointer`}>
           {t(item.key)}
           <svg
             className="h-2.5 w-2.5 opacity-50 transition-transform duration-200 group-hover:rotate-180"

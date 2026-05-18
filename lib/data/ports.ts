@@ -1,3 +1,5 @@
+import { downloadLinks } from "@/lib/data/downloads";
+
 export interface PortFact {
   label: string;
   value: string;
@@ -215,11 +217,7 @@ export const ports: Record<string, PortData> = {
       { label: "Payra Port", href: "/port-info/payra" },
       { label: "Matarbari Port", href: "/port-info/matarbari" },
     ],
-    downloadLinks: [
-      { label: "Company Profile", href: "/downloads/company-profile.pdf" },
-      { label: "Draft Chart", href: "/downloads/draft-chart.pdf" },
-      { label: "Tide Table", href: "/downloads/tide-table.pdf" },
-    ],
+    downloadLinks,
     contact: {
       phone: "+880-2588-811813",
       email: "info@rivertyneltd.com",
@@ -298,11 +296,7 @@ export const ports: Record<string, PortData> = {
       { label: "Mongla Port", href: "/port-info/mongla" },
       { label: "Payra Port", href: "/port-info/payra" },
     ],
-    downloadLinks: [
-      { label: "Company Profile", href: "/downloads/company-profile.pdf" },
-      { label: "Draft Chart", href: "/downloads/draft-chart.pdf" },
-      { label: "Tide Table", href: "/downloads/tide-table.pdf" },
-    ],
+    downloadLinks,
     contact: {
       phone: "+880-2588-811813",
       email: "info@rivertyneltd.com",
@@ -384,11 +378,7 @@ export const ports: Record<string, PortData> = {
       { label: "Payra Port", href: "/port-info/payra" },
       { label: "Matarbari Port", href: "/port-info/matarbari" },
     ],
-    downloadLinks: [
-      { label: "Company Profile", href: "/downloads/company-profile.pdf" },
-      { label: "Draft Chart", href: "/downloads/draft-chart.pdf" },
-      { label: "Tide Table", href: "/downloads/tide-table.pdf" },
-    ],
+    downloadLinks,
     contact: {
       phone: "+880-2588-811813",
       email: "info@rivertyneltd.com",
@@ -476,11 +466,7 @@ export const ports: Record<string, PortData> = {
       { label: "Mongla Port", href: "/port-info/mongla" },
       { label: "Matarbari Port", href: "/port-info/matarbari" },
     ],
-    downloadLinks: [
-      { label: "Company Profile", href: "/downloads/company-profile.pdf" },
-      { label: "Draft Chart", href: "/downloads/draft-chart.pdf" },
-      { label: "Tide Table", href: "/downloads/tide-table.pdf" },
-    ],
+    downloadLinks,
     contact: {
       phone: "+880-2588-811813",
       email: "info@rivertyneltd.com",

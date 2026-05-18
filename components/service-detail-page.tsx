@@ -198,6 +198,7 @@ export function ServiceDetailPage({
                   <a
                     key={link.href}
                     href={link.href}
+                    download
                     className="group flex items-center justify-between rounded-lg border border-slate-200 bg-gradient-to-r from-slate-50 to-white p-3 text-xs font-bold text-slate-700 transition-all hover:border-[#3B71B5] hover:bg-blue-50"
                   >
                     <span>{link.label}</span>
