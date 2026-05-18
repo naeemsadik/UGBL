@@ -10,6 +10,7 @@ type InnerHeroProps = {
   backgroundSize?: string;
   backgroundPosition?: string;
   contentAlignment?: "left" | "right";
+  subtitleClassName?: string;
   breadcrumbs?: { label: string; href?: string }[];
 };
 
@@ -21,6 +22,7 @@ export function InnerHero({
   backgroundSize = "cover",
   backgroundPosition = "center",
   contentAlignment = "left",
+  subtitleClassName,
   breadcrumbs,
 }: InnerHeroProps) {
   const backgroundUrl =
@@ -90,7 +92,9 @@ export function InnerHero({
               <h1 className="text-5xl font-black uppercase tracking-tight text-white md:text-8xl drop-shadow-md stagger-fade stagger-fade-d2">
                 {title}
               </h1>
-              <p className="mt-6 text-lg font-medium leading-relaxed text-slate-200 md:text-xl stagger-fade stagger-fade-d3">
+              <p
+                className={`${subtitleClassName ?? "mt-6"} text-lg font-medium leading-relaxed text-slate-200 md:text-xl stagger-fade stagger-fade-d3`}
+              >
                 {subtitle}
               </p>
             </div>

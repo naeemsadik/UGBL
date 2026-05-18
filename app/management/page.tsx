@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { InnerHero } from "@/components/inner-hero";
-import missionHero from "@/assets/Mission and Vision.jpg";
+import missionHero from "@/assets/visionary-leader.jpg";
 import leaderImage from "@/assets/Leader.jpg";
 
 export const metadata = {
@@ -57,6 +57,7 @@ export default function ManagementPage() {
         subtitle="Meet the Visionary Leader driving River Tyne Ltd's commitment to excellence in maritime services."
         backgroundImage={missionHero}
         backgroundPosition="center 60%"
+        subtitleClassName="mt-3 md:mt-4"
       />
 
       <section className="mx-auto w-full max-w-[1200px] px-6 py-16 md:py-20">
