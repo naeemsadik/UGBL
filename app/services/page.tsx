@@ -79,7 +79,8 @@ export default function ServicesPage() {
               What to expect
             </p>
             <p className="mt-4 text-lg leading-relaxed text-slate-200">
-              Each service line is managed by dedicated professionals with deep local knowledge and strong industry networks.
+              Each service line is managed by dedicated professionals with deep
+              local knowledge and strong industry networks.
             </p>
             <div className="mt-8 space-y-4 border-t border-white/10 pt-6">
               {coveragePoints.map((point, index) => (
@@ -118,7 +119,9 @@ export default function ServicesPage() {
               <h3 className="mt-5 text-2xl font-extrabold tracking-tight text-[#1D2E54]">
                 {service.name}
               </h3>
-              <p className="mt-4 text-sm leading-7 text-slate-600">{service.details}</p>
+              <p className="mt-4 text-sm leading-7 text-slate-600">
+                {service.details}
+              </p>
               <p className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#3B71B5]">
                 View details
                 <span aria-hidden>→</span>
@@ -140,7 +143,9 @@ export default function ServicesPage() {
                 One team, four core service lines
               </h2>
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-100 md:text-lg">
-                From port agency to end-to-end logistics, our teams deliver integrated maritime solutions across all major Bangladeshi ports.
+                From port agency to end-to-end logistics, our teams deliver
+                integrated maritime solutions across all major Bangladeshi
+                ports.
               </p>
             </div>
             <div className="rounded-2xl border border-white/15 bg-white/10 px-5 py-4 text-sm font-semibold text-white/90">

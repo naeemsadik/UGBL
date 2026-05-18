@@ -101,22 +101,22 @@ export function FleetStats() {
       href: "/services/port-agency",
     },
     {
-      title: t("home.charteringServices"),
-      desc: t("home.charteringServicesDesc"),
-      icon: <ShieldIcon />,
-      href: "/services/brokering",
+      title: t("home.husbandryServices"),
+      desc: t("home.husbandryServicesDesc"),
+      icon: <BoxIcon />,
+      href: "/services/husbandry-agency",
     },
     {
       title: t("home.logisticsServices"),
       desc: t("home.logisticsServicesDesc"),
       icon: <CrewIcon />,
-      href: "/services/husbandry-agency",
+      href: "/services/logistics-agency",
     },
     {
-      title: t("home.husbandryServices"),
-      desc: t("home.husbandryServicesDesc"),
-      icon: <BoxIcon />,
-      href: "/services/logistics-agency",
+      title: t("home.charteringServices"),
+      desc: t("home.charteringServicesDesc"),
+      icon: <ShieldIcon />,
+      href: "/services/brokering",
     },
   ];
 
