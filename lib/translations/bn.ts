@@ -749,4 +749,15 @@ export const bn: Record<TranslationKey, string> = {
   "service.brokering.sec2Content": "আমরা চট্টগ্রাম, মোংলা, পায়রা এবং মাতারবাড়ির উপর বিশেষ গুরুত্ব দিয়ে বাংলাদেশের সমস্ত প্রধান বন্দর জুড়ে ব্রোকারেজ কার্যক্রম পরিচালনা করি। আমাদের আন্তর্জাতিক সংযোগের সাথে স্থানীয় বাজারের জ্ঞান আমাদের ক্লায়েন্টদের কার্গো আন্দোলনের জন্য প্রতিযোগিতামূলক ভাড়ার হার এবং উপযুক্ত জাহাজের ব্যবস্থা করতে সক্ষম করে।",
   "service.brokering.ctaTitle": "ব্রোকারেজ সহায়তা প্রয়োজন?",
   "service.brokering.ctaText": "রিভার টাইন জাহাজ এবং কার্গো ব্রোকারেজে সহায়তা করতে পারে, প্রতিযোগিতামূলক হারে দক্ষ শিপিং ব্যবস্থার জন্য আপনাকে সঠিক অংশীদারদের সাথে সংযুক্ত করতে পারে।",
+
+  // Backfilled missing keys
+  "nav.management": "Leadership Profile",
+  "nav.brokering": "Brokering",
+  "home.portSectionTitle": "Ports We Operate In",
+  "home.portChattogramDesc": "Bangladesh's primary seaport with extensive cargo handling and container operations.",
+  "home.portMatarbariDesc": "Deep-sea gateway supporting heavier project cargo and modern port development.",
+  "home.portMonglaDesc": "Strategic secondary gateway for bulk and breakbulk marine operations.",
+  "home.portPayraDesc": "Emerging deep-sea access point for industrial and project cargo traffic.",
+  "services.brokering": "Brokering",
+  "services.brokeringDesc": "Expert vessel and cargo brokering connecting shipowners with charterers for optimal shipping solutions.",
 };
