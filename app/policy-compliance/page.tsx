@@ -1,5 +1,8 @@
+"use client";
+
 import policyHero from "@/assets/Policy and Complainace .webp";
 import { InnerHero } from "@/components/inner-hero";
+<<<<<<< Updated upstream
 
 const policies = [
   {
@@ -100,34 +103,98 @@ const hseqPoints = [
   "Maintain compliance with international regulations",
   "Promote continuous improvement",
 ];
+=======
+import { useTranslation } from "@/lib/language-context";
+>>>>>>> Stashed changes
 
 export default function PolicyCompliancePage() {
+  const { t } = useTranslation();
+
+  const policies = [
+    {
+      title: t("policy.quality.title"),
+      summary: t("policy.quality.summary"),
+    },
+    {
+      title: t("policy.hse.title"),
+      summary: t("policy.hse.summary"),
+    },
+    {
+      title: t("policy.energy.title"),
+      summary: t("policy.energy.summary"),
+    },
+    {
+      title: t("policy.security.title"),
+      summary: t("policy.security.summary"),
+    },
+    {
+      title: t("policy.drug.title"),
+      summary: t("policy.drug.summary"),
+    },
+    {
+      title: t("policy.risk.title"),
+      summary: t("policy.risk.summary"),
+    },
+    {
+      title: t("policy.hr.title"),
+      summary: t("policy.hr.summary"),
+    },
+    {
+      title: t("policy.purchasing.title"),
+      summary: t("policy.purchasing.summary"),
+    },
+    {
+      title: t("policy.social.title"),
+      summary: t("policy.social.summary"),
+    },
+    {
+      title: t("policy.cyber.title"),
+      summary: t("policy.cyber.summary"),
+    },
+  ];
+
+  const ethicsPoints = [
+    t("policy.ethics.p1"),
+    t("policy.ethics.p2"),
+    t("policy.ethics.p3"),
+    t("policy.ethics.p4"),
+    t("policy.ethics.p5"),
+  ];
+
+  const hseqPoints = [
+    t("policy.hseq.p1"),
+    t("policy.hseq.p2"),
+    t("policy.hseq.p3"),
+    t("policy.hseq.p4"),
+    t("policy.hseq.p5"),
+  ];
+
   return (
     <div>
       <InnerHero
+<<<<<<< Updated upstream
         title="Compliance and Policy"
         subtitle=""
+=======
+        title={t("policy.heroTitle")}
+        subtitle={t("policy.heroSubtitle")}
+>>>>>>> Stashed changes
         backgroundImage={policyHero}
       />
 
       <section className="mx-auto w-full max-w-[1200px] space-y-8 px-6 py-14">
         <article className="info-card">
-          <h2>Our Commitment</h2>
+          <h2>{t("policy.ourCommitment")}</h2>
           <p>
-            River Tyne Ltd is fully committed to operating in a responsible,
-            ethical, and environmentally sustainable manner. As a Shipping,
-            Husbandry, and Logistics company, we maintain a Zero Tolerance and
-            Zero Pollution philosophy to protect the environment, safeguard
-            personnel, and ensure operational excellence.
+            {t("policy.commitmentP1")}
           </p>
           <p className="mt-4">
-            We continuously identify, assess, and mitigate risks while
-            maintaining strict compliance with international maritime
-            regulations, industry standards, and company management systems.
+            {t("policy.commitmentP2")}
           </p>
         </article>
 
         <article className="info-card">
+<<<<<<< Updated upstream
           <h2>Corporate Policies</h2>
           <p className="mt-3 text-[1.04rem] leading-[1.75] text-[#4a586d]">
             Our operations are governed by a comprehensive Integrated Management
@@ -187,9 +254,39 @@ export default function PolicyCompliancePage() {
             <p className="mt-3 text-[1.04rem] leading-[1.75] text-[#4a586d]">
               Objectives:
             </p>
+=======
+          <h2>{t("policy.corporatePolicies")}</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-6 text-[1.04rem] leading-[1.75] text-[#4a586d]">
+            <li>{t("policy.quality.title")}</li>
+            <li>{t("policy.hse.title")}</li>
+            <li>{t("policy.energy.title")}</li>
+            <li>{t("policy.security.title")}</li>
+            <li>{t("policy.drug.title")}</li>
+            <li>{t("policy.risk.title")}</li>
+            <li>{t("policy.hr.title")}</li>
+            <li>{t("policy.purchasing.title")}</li>
+            <li>{t("policy.social.title")}</li>
+            <li>{t("policy.cyber.title")}</li>
+            <li>{t("policy.codeOfEthics")}</li>
+          </ul>
+        </article>
+
+        <div className="grid gap-8 md:grid-cols-2">
+          <article className="info-card">
+            <h2>{t("policy.codeOfEthics")}</h2>
             <ul className="mt-3 list-disc space-y-2 pl-6 text-[1.04rem] leading-[1.75] text-[#4a586d]">
-              {hseqPoints.map((item) => (
-                <li key={item}>{item}</li>
+              {ethicsPoints.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </article>
+
+          <article className="info-card">
+            <h2>{t("policy.hseq")}</h2>
+>>>>>>> Stashed changes
+            <ul className="mt-3 list-disc space-y-2 pl-6 text-[1.04rem] leading-[1.75] text-[#4a586d]">
+              {hseqPoints.map((item, index) => (
+                <li key={index}>{item}</li>
               ))}
             </ul>
             <p className="mt-3 text-[1.04rem] leading-[1.75] text-[#4a586d]">
@@ -199,6 +296,7 @@ export default function PolicyCompliancePage() {
           </article>
         </div>
 
+<<<<<<< Updated upstream
         <div className="grid gap-5 md:grid-cols-2">
           {policies.map((policy) => (
             <article
@@ -209,6 +307,19 @@ export default function PolicyCompliancePage() {
                 {policy.title}
               </h3>
               {policy.intro && (
+=======
+        <article className="info-card">
+          <h2>{t("policy.policyAreas")}</h2>
+          <div className="mt-4 grid gap-5 md:grid-cols-2">
+            {policies.map((policy, index) => (
+              <div
+                key={index}
+                className="rounded-2xl border border-[#dfe8f2] bg-[#f8fbff] p-5"
+              >
+                <h3 className="text-lg font-semibold text-[#1d2e54]">
+                  {policy.title}
+                </h3>
+>>>>>>> Stashed changes
                 <p className="mt-2 text-[1rem] leading-[1.7] text-[#4a586d]">
                   {policy.intro}
                 </p>
@@ -247,12 +358,9 @@ export default function PolicyCompliancePage() {
         </div>
 
         <article className="info-card">
-          <h2>Continuous Improvement</h2>
+          <h2>{t("policy.continuousImprovement")}</h2>
           <p>
-            River Tyne Ltd reviews its policies annually to ensure
-            effectiveness, compliance, and alignment with industry best
-            practices. Policies are communicated throughout the organization and
-            made available to relevant stakeholders.
+            {t("policy.improvementDesc")}
           </p>
         </article>
       </section>

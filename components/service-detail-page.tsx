@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { StaticImageData } from "next/image";
 import { Download, BookOpen, Phone, Mail } from "lucide-react";
 import { InnerHero } from "@/components/inner-hero";
+import { useTranslation } from "@/lib/language-context";
 
 interface SidebarLink {
   label: string;
@@ -62,6 +63,8 @@ export function ServiceDetailPage({
   downloadLinks,
   contact,
 }: ServiceDetailPageProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-slate-50">
       <InnerHero
@@ -80,7 +83,7 @@ export function ServiceDetailPage({
             {/* Overview */}
             <div className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
               <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                Service overview
+                {t("service.common.overview")}
               </span>
               <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-5xl">
                 {overviewTitle}
@@ -100,10 +103,10 @@ export function ServiceDetailPage({
             {serviceItems && serviceItems.length > 0 && (
               <div className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
                 <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  What we offer
+                  {t("service.common.whatWeOffer")}
                 </span>
                 <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-4xl">
-                  Our Services
+                  {t("service.common.ourServices")}
                 </h2>
                 <div className="mt-8 grid gap-6 md:grid-cols-2">
                   {[
@@ -133,7 +136,7 @@ export function ServiceDetailPage({
             {additionalSections?.map((section) => (
               <div key={section.title} className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
                 <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  Details
+                  {t("service.common.details")}
                 </span>
                 <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-4xl">
                   {section.title}
@@ -170,7 +173,7 @@ export function ServiceDetailPage({
               <div className="mb-4 flex items-center gap-2">
                 <BookOpen className="h-5 w-5 text-[#3B71B5]" />
                 <h3 className="text-xs font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  Other Services
+                  {t("service.common.otherServices")}
                 </h3>
               </div>
               <div className="space-y-2">
@@ -191,7 +194,7 @@ export function ServiceDetailPage({
               <div className="mb-4 flex items-center gap-2">
                 <Download className="h-5 w-5 text-[#3B71B5]" />
                 <h3 className="text-xs font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  Download
+                  {t("service.common.download")}
                 </h3>
               </div>
               <div className="space-y-2">
@@ -240,7 +243,7 @@ export function ServiceDetailPage({
               <div className="mb-4 flex items-center gap-2">
                 <Phone className="h-5 w-5 text-[#3B71B5]" />
                 <h3 className="text-xs font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  Contact Us
+                  {t("service.common.contactUs")}
                 </h3>
               </div>
               <div className="space-y-3">

@@ -1,5 +1,8 @@
+"use client";
+
 import servicesBg from "@/assets/Husbandry.jpg";
 import { ServiceDetailPage } from "@/components/service-detail-page";
+<<<<<<< Updated upstream
 import { downloadLinks } from "@/lib/data/downloads";
 
 const readMoreLinks = [
@@ -14,10 +17,34 @@ const contact = {
   contactHref: "/contact",
   contactLabel: "Send Message",
 };
+=======
+import { useTranslation } from "@/lib/language-context";
+>>>>>>> Stashed changes
 
 export default function HusbandryAgencyPage() {
+  const { t } = useTranslation();
+
+  const readMoreLinks = [
+    { label: t("service.portAgency.title"), href: "/services/port-agency" },
+    { label: t("service.opacpa.title"), href: "/services/opa-cpa-agency" },
+    { label: t("service.logistics.title"), href: "/services/logistics-agency" },
+  ];
+
+  const downloadLinks = [
+    { label: t("service.common.download") + " " + t("about.atGlance.breadcrumbAbout"), href: "/downloads/company-profile.pdf" },
+    { label: t("service.common.download") + " " + t("service.common.details"), href: "/downloads/service-brochure.pdf" },
+  ];
+
+  const contact = {
+    phone: "+880-2588-11819",
+    email: "info@rivertyneltd.com",
+    contactHref: "/contact",
+    contactLabel: t("service.common.contactUs"),
+  };
+
   return (
     <ServiceDetailPage
+<<<<<<< Updated upstream
       title="Husbandry Services"
       subtitle="24/7 vessel husbandry including crew changes, supplies, provisions, and clearance operations."
       heroImage={servicesBg}
@@ -39,17 +66,36 @@ export default function HusbandryAgencyPage() {
         "Repair and maintenance services",
         "Security services",
         "Under Water Inspection and Cleaning",
+=======
+      title={t("service.husbandry.title")}
+      subtitle={t("service.husbandry.subtitle")}
+      heroImage={servicesBg}
+      overviewTitle={t("service.husbandry.overviewTitle")}
+      overview={t("service.husbandry.overview")}
+      serviceItems={[
+        t("service.husbandry.item1"),
+        t("service.husbandry.item2"),
+        t("service.husbandry.item3"),
+        t("service.husbandry.item4"),
+        t("service.husbandry.item5"),
+        t("service.husbandry.item6"),
+        t("service.husbandry.item7"),
+        t("service.husbandry.item8"),
+        t("service.husbandry.item9"),
+        t("service.husbandry.item10"),
+        t("service.husbandry.item11"),
+        t("service.husbandry.item12"),
+>>>>>>> Stashed changes
       ]}
       additionalSections={[
         {
-          title: "24/7 Availability",
-          content:
-            "Our husbandry operations desk is available around the clock, 365 days a year. Whether a vessel needs an emergency crew change at midnight or spare parts clearance on a holiday, our team is always ready to respond. We maintain strong relationships with local suppliers, medical facilities, immigration authorities, and service providers to ensure fast turnaround on all requests.",
+          title: t("service.husbandry.secTitle"),
+          content: t("service.husbandry.secContent"),
         },
       ]}
-      ctaTitle="Need husbandry support?"
-      ctaText="River Tyne provides comprehensive vessel husbandry services at all major Bangladeshi ports with 24/7 availability and rapid response times."
-      ctaLabel="Contact us"
+      ctaTitle={t("service.husbandry.ctaTitle")}
+      ctaText={t("service.husbandry.ctaText")}
+      ctaLabel={t("service.common.contactUs")}
       ctaHref="/contact"
       readMoreLinks={readMoreLinks}
       downloadLinks={downloadLinks}

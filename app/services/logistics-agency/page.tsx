@@ -1,5 +1,8 @@
+"use client";
+
 import servicesBg from "@/assets/logistic.png";
 import { ServiceDetailPage } from "@/components/service-detail-page";
+<<<<<<< Updated upstream
 import { downloadLinks } from "@/lib/data/downloads";
 
 const readMoreLinks = [
@@ -14,16 +17,45 @@ const contact = {
   contactHref: "/contact",
   contactLabel: "Send Message",
 };
+=======
+import { useTranslation } from "@/lib/language-context";
+>>>>>>> Stashed changes
 
 export default function LogisticsAgencyPage() {
+  const { t } = useTranslation();
+
+  const readMoreLinks = [
+    { label: t("service.portAgency.title"), href: "/services/port-agency" },
+    { label: t("service.opacpa.title"), href: "/services/opa-cpa-agency" },
+    { label: t("service.husbandry.title"), href: "/services/husbandry-agency" },
+  ];
+
+  const downloadLinks = [
+    { label: t("service.common.download") + " " + t("about.atGlance.breadcrumbAbout"), href: "/downloads/company-profile.pdf" },
+    { label: t("service.common.download") + " " + t("service.common.details"), href: "/downloads/service-brochure.pdf" },
+  ];
+
+  const contact = {
+    phone: "+880-2588-11819",
+    email: "info@rivertyneltd.com",
+    contactHref: "/contact",
+    contactLabel: t("service.common.contactUs"),
+  };
+
   return (
     <ServiceDetailPage
+<<<<<<< Updated upstream
       title="Logistics Services"
       subtitle="End-to-end logistics solutions covering inland transportation, warehousing, and multimodal cargo delivery."
+=======
+      title={t("service.logistics.title")}
+      subtitle={t("service.logistics.subtitle")}
+>>>>>>> Stashed changes
       heroImage={servicesBg}
-      overviewTitle="Comprehensive logistics support"
-      overview="River Tyne Ltd provides comprehensive, integrated logistics support tailored to the unique needs of our clients. We specialize in handling complex project cargo for both offshore and onshore projects, as well as terminal equipment. We are fully capable of executing complex transport logistics within all government-permissible limits, encompassing break bulk, heavy lift, and Over-Dimensional Cargo (ODC) projects."
+      overviewTitle={t("service.logistics.overviewTitle")}
+      overview={t("service.logistics.overview")}
       serviceItems={[
+<<<<<<< Updated upstream
         "Road and river transportation",
         "Tug boat, launch, and barge supply",
         "Crane hire",
@@ -35,10 +67,24 @@ export default function LogisticsAgencyPage() {
         "Chopper hire",
         "Lightening and STS",
         "Freight forwarding",
+=======
+        t("service.logistics.item1"),
+        t("service.logistics.item2"),
+        t("service.logistics.item3"),
+        t("service.logistics.item4"),
+        t("service.logistics.item5"),
+        t("service.logistics.item6"),
+        t("service.logistics.item7"),
+        t("service.logistics.item8"),
+        t("service.logistics.item9"),
+        t("service.logistics.item10"),
+        t("service.logistics.item11"),
+        t("service.logistics.item12"),
+>>>>>>> Stashed changes
       ]}
-      ctaTitle="Need logistics support?"
-      ctaText="River Tyne can handle your complete logistics requirements from port to final delivery destination, including inland transport, warehousing, and multimodal solutions."
-      ctaLabel="Contact us"
+      ctaTitle={t("service.logistics.ctaTitle")}
+      ctaText={t("service.logistics.ctaText")}
+      ctaLabel={t("service.common.contactUs")}
       ctaHref="/contact"
       readMoreLinks={readMoreLinks}
       downloadLinks={downloadLinks}
