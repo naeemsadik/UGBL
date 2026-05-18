@@ -1,4 +1,4 @@
-export const downloadLinks: { label: string; href: string }[] = [
+export const downloadLinks: { label: string; href: string; disabled?: boolean }[] = [
   {
     label: "Profile River Tyne Ltd.pdf",
     href: "/Profile%20River%20Tyne%20Ltd.pdf",
