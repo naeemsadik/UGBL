@@ -116,9 +116,7 @@ export default function ManagementPage() {
                     <strong> University of Luton, UK </strong>, he joined the
                     family business — one of the leading shipping companies in
                     the country, awarded the{" "}
-                    <span className="font-semibold text-[#1D2E54]">
-                      Best Shipping Company in 2018
-                    </span>{" "}
+                    Best Shipping Company in 2018{" "}
                     by Mongla Port Authority. Currently he is Managing Director
                     of the mother company{" "}
                     <strong>Uni-Global Business Ltd.</strong>,{" "}
@@ -146,30 +144,6 @@ export default function ManagementPage() {
                     lift shipments, warehousing, exhibition shipments, air
                     freight and total logistics.
                   </p>
-                </div>
-
-                {/* Key roles / tags */}
-                <div className="mt-8 flex flex-wrap gap-2">
-                  {[
-                    "Liner Agency",
-                    "NVOCC Operations",
-                    "Tramp Agency",
-                    "Dry Bulk",
-                    "Tanker Operations",
-                    "LCL Consolidation",
-                    "International Freight Forwarding",
-                    "Project Cargo",
-                    "Heavy Lift",
-                    "Ship Owning",
-                    "Chartering",
-                  ].map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-[#1D2E54]/15 bg-[#F3F7FF] px-3 py-1 text-[0.72rem] font-semibold text-[#1D2E54]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
                 </div>
               </div>
             </div>
