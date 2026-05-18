@@ -826,6 +826,29 @@ export const en = {
   "policy.cyber.b3": "Incident reporting and risk monitoring",
   "policy.cyber.b4": "Secure data processing and storage",
   "policy.cyber.b5": "Continuous cybersecurity improvement",
+
+  // Brokering Service
+  "service.brokering.title": "Brokering",
+  "service.brokering.subtitle": "Expert vessel and cargo brokering connecting shipowners with charterers for optimal shipping solutions.",
+  "service.brokering.overviewTitle": "Comprehensive shipping brokering solutions",
+  "service.brokering.overview": "River Tyne Ltd offers professional ship brokering and chartering services, acting as an intermediary between shipowners and charterers to facilitate the most advantageous shipping arrangements. Our experienced brokering team brings deep market knowledge and extensive industry connections to deliver optimal outcomes for all parties. We handle a wide range of brokering activities including dry cargo chartering, tanker fixtures, contract of affreightment (COA) negotiations, and forward freight agreements. Our team stays current with market trends, freight rates, and vessel availability to provide our clients with competitive edge in their shipping operations.",
+  "service.brokering.item1": "Dry cargo chartering for coal, clinker, gypsum, aggregates, and other bulk commodities.",
+  "service.brokering.item2": "Tanker brokering for petroleum products, vegetable oils, and chemical cargoes.",
+  "service.brokering.item3": "Contract of Affreightment (COA) negotiation and documentation support.",
+  "service.brokering.item4": "Forward Freight Agreement (FFA) advisory services for risk management.",
+  "service.brokering.item5": "Vessel fixture coordination and placement services.",
+  "service.brokering.item6": "Market rate analysis and freight forecasting for voyage planning.",
+  "service.brokering.item7": "Cargo matching services connecting shippers with suitable vessel owners.",
+  "service.brokering.item8": "Time charter and bareboat charter arrangement support.",
+  "service.brokering.item9": "Baltic Exchange market intelligence and benchmarking.",
+  "service.brokering.item10": "Post-fixture administrative and documentation support.",
+  "service.brokering.item11": "Laytime calculation and dispute resolution assistance.",
+  "service.brokering.secTitle": "Market Expertise",
+  "service.brokering.secContent": "Our brokering team maintains active presence in both the dry bulk and tanker markets, with established relationships with major charterers, ship owners, and commodity traders. We provide transparent, professional brokering services that prioritize our clients' interests in every transaction.",
+  "service.brokering.sec2Title": "Coverage",
+  "service.brokering.sec2Content": "We facilitate brokering activities across all major Bangladeshi ports, with particular focus on Chattogram, Mongla, Payra, and Matarbari. Our local market knowledge combined with international connections enables us to source competitive freight rates and suitable vessels for our clients' cargo movements.",
+  "service.brokering.ctaTitle": "Need brokering support?",
+  "service.brokering.ctaText": "River Tyne can assist with vessel and cargo brokering, connecting you with the right partners for efficient shipping arrangements at competitive rates.",
 } as const;
 
 
