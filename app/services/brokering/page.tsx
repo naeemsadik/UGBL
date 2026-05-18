@@ -29,6 +29,7 @@ export default function BrokeringPage() {
       heroImage={heroImageUrl}
       heroImageSize="cover"
       heroImagePosition="center 30%"
+      contentAlignment="right"
       overviewTitle="Comprehensive shipping brokering solutions"
       overview={[
         "River Tyne Ltd offers professional ship brokering and chartering services, acting as an intermediary between shipowners and charterers to facilitate the most advantageous shipping arrangements. Our experienced brokering team brings deep market knowledge and extensive industry connections to deliver optimal outcomes for all parties.",

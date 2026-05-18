@@ -9,6 +9,7 @@ type InnerHeroProps = {
   backgroundImage?: StaticImageData | string;
   backgroundSize?: string;
   backgroundPosition?: string;
+  contentAlignment?: "left" | "right";
   breadcrumbs?: { label: string; href?: string }[];
 };
 
@@ -19,6 +20,7 @@ export function InnerHero({
   backgroundImage,
   backgroundSize = "cover",
   backgroundPosition = "center",
+  contentAlignment = "left",
   breadcrumbs,
 }: InnerHeroProps) {
   const backgroundUrl =
@@ -34,6 +36,12 @@ export function InnerHero({
         backgroundColor: "#0d1b2a",
       }
     : undefined;
+  const contentAlignClass =
+    contentAlignment === "right"
+      ? "items-end text-right"
+      : "items-start text-left";
+  const contentWrapperClass =
+    contentAlignment === "right" ? "flex justify-end" : "";
 
   return (
     <section
@@ -55,34 +63,38 @@ export function InnerHero({
       <div className="relative z-10 w-full mb-0 mt-auto">
         {/* pt-36 md:pt-40 accounts for the fixed header height */}
         <div className="mx-auto w-full max-w-[1400px] px-6 pt-36 pb-20 md:pt-44 md:pb-28">
-          {breadcrumbs && (
-            <nav className="mb-6 flex items-center gap-2 text-[0.65rem] font-black uppercase tracking-[0.25em] text-white/50 stagger-fade stagger-fade-d1">
-              <Link href="/" className="hover:text-white transition-colors">
-                HOME
-              </Link>
-              {breadcrumbs.map((bc, i) => (
-                <div key={i} className="flex items-center gap-2">
-                  <span className="opacity-40">/</span>
-                  {bc.href ? (
-                    <Link
-                      href={bc.href}
-                      className="hover:text-white transition-colors"
-                    >
-                      {bc.label}
-                    </Link>
-                  ) : (
-                    <span className="text-white/80">{bc.label}</span>
-                  )}
-                </div>
-              ))}
-            </nav>
-          )}
-          <h1 className="text-5xl font-black uppercase tracking-tight text-white md:text-8xl drop-shadow-md stagger-fade stagger-fade-d2">
-            {title}
-          </h1>
-          <p className="mt-6 max-w-3xl text-lg font-medium leading-relaxed text-slate-200 md:text-xl stagger-fade stagger-fade-d3">
-            {subtitle}
-          </p>
+          <div className={contentWrapperClass}>
+            <div className={`flex max-w-3xl flex-col ${contentAlignClass}`}>
+              {breadcrumbs && (
+                <nav className="mb-6 flex items-center gap-2 text-[0.65rem] font-black uppercase tracking-[0.25em] text-white/50 stagger-fade stagger-fade-d1">
+                  <Link href="/" className="hover:text-white transition-colors">
+                    HOME
+                  </Link>
+                  {breadcrumbs.map((bc, i) => (
+                    <div key={i} className="flex items-center gap-2">
+                      <span className="opacity-40">/</span>
+                      {bc.href ? (
+                        <Link
+                          href={bc.href}
+                          className="hover:text-white transition-colors"
+                        >
+                          {bc.label}
+                        </Link>
+                      ) : (
+                        <span className="text-white/80">{bc.label}</span>
+                      )}
+                    </div>
+                  ))}
+                </nav>
+              )}
+              <h1 className="text-5xl font-black uppercase tracking-tight text-white md:text-8xl drop-shadow-md stagger-fade stagger-fade-d2">
+                {title}
+              </h1>
+              <p className="mt-6 text-lg font-medium leading-relaxed text-slate-200 md:text-xl stagger-fade stagger-fade-d3">
+                {subtitle}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

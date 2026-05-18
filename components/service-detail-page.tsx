@@ -23,6 +23,7 @@ type ServiceDetailPageProps = {
   heroImage: StaticImageData | string;
   heroImageSize?: string;
   heroImagePosition?: string;
+  contentAlignment?: "left" | "right";
   overviewTitle: string;
   overview: string | string[];
   /** Optional bullet list of services offered */
@@ -47,6 +48,7 @@ export function ServiceDetailPage({
   heroImage,
   heroImageSize,
   heroImagePosition,
+  contentAlignment,
   overviewTitle,
   overview,
   serviceItems,
@@ -67,6 +69,7 @@ export function ServiceDetailPage({
         backgroundImage={heroImage}
         backgroundSize={heroImageSize}
         backgroundPosition={heroImagePosition}
+        contentAlignment={contentAlignment}
       />
 
       <section className="mx-auto w-full max-w-[1400px] px-6 py-16 md:py-20">
