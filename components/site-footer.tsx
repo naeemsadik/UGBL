@@ -83,7 +83,7 @@ export function SiteFooter() {
             {t("footer.termsConditions")}
           </Link>
           <span className="text-gray-200">|</span>
-          <Link href="#" className="transition hover:text-[#3B71B5]">
+          <Link href="/policy-compliance" className="transition hover:text-[#3B71B5]">
             {t("footer.privacyPolicy")}
           </Link>
           <span className="text-gray-200">|</span>
