@@ -9,6 +9,7 @@ export interface PortFact {
 export interface SidebarLink {
   label: string;
   href: string;
+  disabled?: boolean;
 }
 
 export interface SidebarContact {

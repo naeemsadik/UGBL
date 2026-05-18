@@ -31,4 +31,9 @@ export const downloadLinks: { label: string; href: string }[] = [
     label: "Tide Table_Pusur River to Mongla.pdf",
     href: "/Tide%20Table_Pusur%20River%20to%20Mongla.pdf",
   },
+  {
+    label: "Brochure",
+    href: "#",
+    disabled: true,
+  },
 ];

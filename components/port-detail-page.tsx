@@ -15,6 +15,7 @@ type PortFact = {
 interface SidebarLink {
   label: string;
   href: string;
+  disabled?: boolean;
 }
 
 interface SidebarContact {
@@ -531,17 +532,43 @@ export function PortDetailPage({
                 </h3>
               </div>
               <div className="space-y-2">
-                {downloadLinks.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    download
-                    className="group flex items-center justify-between rounded-lg border border-slate-200 bg-gradient-to-r from-slate-50 to-white p-3 text-xs font-bold text-slate-700 transition-all hover:border-[#3B71B5] hover:bg-blue-50"
-                  >
-                    <span>{link.label}</span>
-                    <Download className="h-4 w-4 text-[#3B71B5] opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
-                  </a>
-                ))}
+                {downloadLinks.map((link) => {
+                  const isDisabled = Boolean(link.disabled);
+                  const content = (
+                    <>
+                      <span>{link.label}</span>
+                      <Download
+                        className={
+                          isDisabled
+                            ? "h-4 w-4 text-slate-300"
+                            : "h-4 w-4 text-[#3B71B5] opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                        }
+                      />
+                    </>
+                  );
+
+                  if (isDisabled) {
+                    return (
+                      <div
+                        key={link.label}
+                        className="flex items-center justify-between rounded-lg border border-slate-200 bg-gradient-to-r from-slate-50 to-white p-3 text-xs font-bold text-slate-400 cursor-not-allowed"
+                      >
+                        {content}
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      download
+                      className="group flex items-center justify-between rounded-lg border border-slate-200 bg-gradient-to-r from-slate-50 to-white p-3 text-xs font-bold text-slate-700 transition-all hover:border-[#3B71B5] hover:bg-blue-50"
+                    >
+                      {content}
+                    </a>
+                  );
+                })}
               </div>
             </div>
 
