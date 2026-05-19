@@ -17,6 +17,7 @@ export default async function ChattogramPortPage() {
 
   return (
     <PortDetailPage
+      slug={data.slug}
       title={data.title}
       subtitle={data.subtitle}
       heroImage={portImages[data.heroImageName]}

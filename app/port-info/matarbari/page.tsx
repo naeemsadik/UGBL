@@ -12,6 +12,7 @@ export default async function MatarbariPortPage() {
 
   return (
     <PortDetailPage
+      slug={data.slug}
       title={data.title}
       subtitle={data.subtitle}
       heroImage={portImages[data.heroImageName]}
