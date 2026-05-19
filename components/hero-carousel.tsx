@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useTranslation } from "@/lib/language-context";
+import type { TranslationKey } from "@/lib/translations";
 
 import hero1 from "@/assets/hero1.jpeg";
 import hero2 from "@/assets/hero2.jpg";
@@ -15,14 +16,14 @@ import hero7 from "@/assets/hero7.png";
 const HERO_IMAGES = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
 const ROTATE_MS = 6000;
 
-const TAGLINES: { key: string; sub: string }[] = [
-  { key: "Let's Grow", sub: "Together" },
-  { key: "Trusted Port Agency", sub: "& Logistics Partner" },
-  { key: "Connecting Oceans,", sub: "Delivering Promise" },
-  { key: "With You For", sub: "The Long Haul" },
-  { key: "Reliable Shipping", sub: "Across Bangladesh and Beyond" },
-  { key: "Excellence In", sub: "Maritime Services" },
-  { key: "Your Cargo,", sub: "Our Commitment" },
+const TAGLINE_KEYS: { line1: TranslationKey; line2: TranslationKey }[] = [
+  { line1: "hero.tag1Line1", line2: "hero.tag1Line2" },
+  { line1: "hero.tag2Line1", line2: "hero.tag2Line2" },
+  { line1: "hero.tag3Line1", line2: "hero.tag3Line2" },
+  { line1: "hero.tag4Line1", line2: "hero.tag4Line2" },
+  { line1: "hero.tag5Line1", line2: "hero.tag5Line2" },
+  { line1: "hero.tag6Line1", line2: "hero.tag6Line2" },
+  { line1: "hero.tag7Line1", line2: "hero.tag7Line2" },
 ];
 
 export function HeroCarousel() {
@@ -72,10 +73,10 @@ export function HeroCarousel() {
             style={{ textShadow: "1px 0px 20px rgba(0, 0, 0, 0.5)" }}
           >
             <span className="block stagger-fade stagger-fade-d1">
-              {TAGLINES[idx].key}
+              {t(TAGLINE_KEYS[idx].line1)}
             </span>
             <span className="block stagger-fade stagger-fade-d2">
-              {TAGLINES[idx].sub}
+              {t(TAGLINE_KEYS[idx].line2)}
             </span>
           </h1>
         </div>

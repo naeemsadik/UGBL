@@ -154,7 +154,7 @@ export const en = {
   // About Page
   "about.title": "About Us",
   "about.subtitle":
-    "River Tyne Shipping is a leading shipping agency and logistics service provider established in 2022.",
+    "River Tyne Ltd is a leading shipping agency and logistics service provider established in 2016.",
   "about.whoWeAre": "Who We Are",
   "about.whoWeAreDesc":
     "We are a leading shipping agency, logistics service provider, and trading company in Bangladesh, offering comprehensive maritime and supply chain solutions.",
@@ -849,6 +849,40 @@ export const en = {
   "service.brokering.sec2Content": "We facilitate brokering activities across all major Bangladeshi ports, with particular focus on Chattogram, Mongla, Payra, and Matarbari. Our local market knowledge combined with international connections enables us to source competitive freight rates and suitable vessels for our clients' cargo movements.",
   "service.brokering.ctaTitle": "Need brokering support?",
   "service.brokering.ctaText": "River Tyne can assist with vessel and cargo brokering, connecting you with the right partners for efficient shipping arrangements at competitive rates.",
+
+  // Hero Taglines
+  "hero.tag1Line1": "Let's Grow",
+  "hero.tag1Line2": "Together",
+  "hero.tag2Line1": "Trusted Port Agency",
+  "hero.tag2Line2": "& Logistics Partner",
+  "hero.tag3Line1": "Connecting Oceans,",
+  "hero.tag3Line2": "Delivering Promise",
+  "hero.tag4Line1": "With You For",
+  "hero.tag4Line2": "The Long Haul",
+  "hero.tag5Line1": "Reliable Shipping",
+  "hero.tag5Line2": "Across Bangladesh and Beyond",
+  "hero.tag6Line1": "Excellence In",
+  "hero.tag6Line2": "Maritime Services",
+  "hero.tag7Line1": "Your Cargo,",
+  "hero.tag7Line2": "Our Commitment",
+
+  // Management Profile Page
+  "mgmt.heroTitle": "Management",
+  "mgmt.heroSubtitle": "Meet the leadership team driving River Tyne Ltd's commitment to excellence in maritime services.",
+  "mgmt.profileLabel": "Profile",
+  "mgmt.title": "Chairman & Managing Director",
+  "mgmt.name": "Mahmodul Islam Parvez",
+  "mgmt.role": "Chairman & Managing Director",
+  "mgmt.bio1": "Mahmodul Islam Parvez is the Chairman and Managing Director of the Company. He has an impressive gamut of experience in the fields of shipping and logistics since 2004. His more than two decades of experience spans almost all aspects including Liner Agency, NVOCC operations, Tramp Agency & all types of Dry Bulk, Tanker vessel operation, LCL consolidation, International Freight Forwarding, etc.",
+  "mgmt.bio2": "On completion of his University degree in Marketing from the University of Luton, UK, he joined the family business — one of the leading shipping companies in the country, awarded the Best Shipping Company in 2018 by Mongla Port Authority. Currently he is Managing Director of the mother company Uni-Global Business Ltd., River Tyne Ltd., Uni Global Shipping and Logistics Services Limited, and Universe Shipping Lines Ltd.",
+  "mgmt.bio3": "Over the last two decades, he developed capabilities to work in a challenging environment as well as with a cross section of people both home and abroad.",
+  "mgmt.bio4": "In the sphere of ship owning, he has been involved right from sourcing of vessels to arranging of finance, Chartering, Evaluation of technical management and ship demolishing, etc.",
+  "mgmt.bio5": "During the course of his rich career, he has done various roles and at various points of time; additionally, handled activities such as breakbulk shipments, project cargo, heavy lift shipments, warehousing, exhibition shipments, air freight and total logistics.",
+  "mgmt.fleetLabel": "Fleet Ownership",
+  "mgmt.fleetTitle": "Vessel Portfolio",
+  "mgmt.fleetDesc": "Vessels owned and managed under the group's ship-owning portfolio.",
+  "mgmt.photoPlaceholder": "Photo Placeholder",
+  "mgmt.bestShipping": "Best Shipping Company in 2018",
 } as const;
 
 

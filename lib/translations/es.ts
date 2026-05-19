@@ -44,13 +44,12 @@ export const es: Record<TranslationKey, string> = {
 
   // Home – About
   "home.aboutP1":
-    "River Tyne Shipping es uno de los principales agentes de envío, proveedores de servicios logísticos y empresas de fletamento y comercio.",
+    "River Tyne Ltd es un proveedor de servicios de envío y logística en Bangladesh, fundado en 2016, con 10 años de experiencia en servicios logísticos costeros y marítimos para clientes nacionales e internacionales.",
   "home.aboutP2":
-    "River Tyne Shipping cuenta con 17 años de experiencia en el manejo de múltiples productos a granel, incluidos carbón, clinker, piedra y roca desde origen extranjero hasta sitios de entrega locales a través de los puertos de Chattogram / Mongla / Payra.",
+    "River Tyne Ltd cuenta con 10 años de experiencia en traslado de equipos de proyectos, remolque y entrega. También actuamos como agente OPA y portuario de buques que transportan diversas mercancías incluidos carbón, piedra, yeso, soja, azúcar, clinker a través de los puertos de Chattogram, Mongla y Payra.",
   "home.aboutP3":
-    "Tenemos la capacidad de brindar soluciones logísticas completas. Nada es imposible para River Tyne, sin importar el tamaño o la cantidad de la carga o el modo de transporte.",
-  "home.aboutP4":
-    "River Tyne Shipping es una empresa certificada ISO 9001: 2015, líder en agencia de envíos, proveedor de servicios logísticos, fletamento y comercio.",
+    "Tenemos la capacidad de brindar soluciones completas de envío y logística en Bangladesh. Sin importar el tamaño o la cantidad de la carga, River Tyne Ltd lo manejará con nuestro equipo experimentado y capacitado.",
+  "home.aboutP4": "",
 
   // Home – Connections / Response
   "home.connections": "Conexiones:",
@@ -66,37 +65,37 @@ export const es: Record<TranslationKey, string> = {
   "home.ourServicesLabel": "Nuestros Servicios",
   "home.whatWeCanDo": "Lo que podemos hacer",
   "home.forYou": "por usted",
-  "home.shippingServices": "Servicios de Envío",
+  "home.shippingServices": "Agencia Portuaria y OPA/CPA",
   "home.shippingServicesDesc":
-    "Una de las principales agencias de envío en Bangladesh que maneja todo tipo de embarcaciones y operaciones de carga.",
+    "River Tyne Ltd es una agencia naviera en Bangladesh que brinda servicios marítimos integrales en todos los puertos principales, incluidos Chattogram, Mongla y Payra.",
   "home.charteringServices": "Corretaje",
   "home.charteringServicesDesc":
     "Servicios expertos de corretaje de buques y carga que conectan armadores con fletadores para soluciones de envío óptimas.",
-  "home.logisticsServices": "Servicios Logísticos",
+  "home.logisticsServices": "Servicios de Gestión Naviera",
   "home.logisticsServicesDesc":
-    "Soporte logístico integrado que incluye manejo de equipos en tierra y mar.",
-  "home.husbandryServices": "Servicios de Gestión Naviera",
+    "Soporte de gestión naviera 24/7 que incluye cambios de tripulación, suministros, provisiones y operaciones de despacho.",
+  "home.husbandryServices": "Servicios Logísticos",
   "home.husbandryServicesDesc":
-    "Soporte de gestión naviera 24/7 para todas las embarcaciones bajo nuestra agencia.",
+    "Soluciones logísticas de extremo a extremo que cubren transporte terrestre, almacenamiento y entrega de carga multimodal.",
   "home.readMore": "Leer Más",
 
   // Home – GAC
   "home.gacPartnership":
-    "GAC-River Tyne es una asociación entre GAC y River Tyne Shipping, una casa de agencia establecida con sede en Dhaka, con oficinas en los puertos clave de Chattogram y Mongla.",
+    "GAC-River Tyne es una asociación entre GAC y River Tyne Ltd, una casa de agencia establecida con sede en Dhaka, con oficinas en los puertos clave de Chattogram, Mongla y Payra.",
 
   // Certifications
   "home.certifications": "Certificaciones",
 
   // Footer
   "footer.aboutText":
-    "River Tyne Shipping ofrece servicios expertos de envío y marina en todos los principales puertos de Bangladesh.",
+    "River Tyne Ltd ofrece servicios expertos de envío y marina en todos los principales puertos de Bangladesh.",
   "footer.ourServices": "Nuestros Servicios",
   "footer.portAgency": "Agencia Portuaria / Gestión Naviera",
   "footer.crewChanges": "Soporte de Cambio de Tripulación",
   "footer.getInTouch": "Contacto",
   "footer.stayUpdated": "Manténgase Actualizado",
   "footer.stayUpdatedDesc":
-    "Suscríbase a nuestro boletín para las últimas noticias de River Tyne Shipping.",
+    "Suscríbase a nuestro boletín para las últimas noticias de River Tyne Ltd.",
   "footer.yourEmail": "Su Correo Electrónico",
   "footer.subscribe": "Suscribirse",
   "footer.termsConditions": "Términos y Condiciones",
@@ -106,7 +105,7 @@ export const es: Record<TranslationKey, string> = {
   // About Page
   "about.title": "Sobre Nosotros",
   "about.subtitle":
-    "River Tyne Shipping es una agencia de envíos líder y proveedor de servicios logísticos establecida en 2022.",
+    "River Tyne Ltd es una agencia de envíos líder y proveedor de servicios logísticos establecida en 2016.",
   "about.whoWeAre": "Quiénes Somos",
   "about.whoWeAreDesc":
     "Somos una agencia de envíos líder, proveedor de servicios logísticos y empresa comercial en Bangladesh, con soluciones marítimas y de cadena de suministro integrales.",
@@ -195,7 +194,7 @@ export const es: Record<TranslationKey, string> = {
   "portInfo.kicker": "Red de cuatro puertos",
   "portInfo.overviewTitle": "Cobertura construida alrededor de las puertas más importantes de Bangladesh",
   "portInfo.overview":
-    "River Tyne Shipping coordina la actividad en cuatro puertos estratégicos, adaptando el modelo de soporte adecuado a cada ubicación mientras mantiene alineados las escalas de buques, el flujo de carga y el movimiento interior.",
+    "River Tyne Ltd coordina la actividad en cuatro puertos estratégicos, adaptando el modelo de soporte adecuado a cada ubicación mientras mantiene alineados las escalas de buques, el flujo de carga y el movimiento interior.",
   "portInfo.coveragePoint1": "Atención local dedicada en cada puerto",
   "portInfo.coveragePoint2": "Soporte para escalas de buques y movimiento de carga",
   "portInfo.coveragePoint3": "Coordinación flexible para entrega interior",
@@ -321,7 +320,7 @@ export const es: Record<TranslationKey, string> = {
 
   // Home – Promo Cards
   "home.promoAboutLabel": "Sobre Nosotros",
-  "home.promoAboutDesc": "Establecida en 2022, River Tyne Shipping ha construido una reputación de confiabilidad en las principales puertas marítimas de Bangladesh.",
+  "home.promoAboutDesc": "Establecida en 2016, River Tyne Ltd ha construido una reputación de confiabilidad en las principales puertas marítimas de Bangladesh.",
   "home.promoAboutCta": "Leer Más",
   "home.promoServicesLabel": "Nuestros Servicios",
   "home.promoServicesDesc": "Soluciones integrales de agencia portuaria, gestión naviera y logística para propietarios de buques y clientes de carga.",
@@ -847,4 +846,38 @@ export const es: Record<TranslationKey, string> = {
   "policy.cyber.b3": "Reporte de incidentes y monitoreo de riesgos",
   "policy.cyber.b4": "Procesamiento y almacenamiento seguro de datos",
   "policy.cyber.b5": "Mejora continua de la ciberseguridad",
+
+  // Hero Taglines
+  "hero.tag1Line1": "Crezcamos",
+  "hero.tag1Line2": "Juntos",
+  "hero.tag2Line1": "Agencia Portuaria de Confianza",
+  "hero.tag2Line2": "y Socio Logístico",
+  "hero.tag3Line1": "Conectando Océanos,",
+  "hero.tag3Line2": "Cumpliendo Promesas",
+  "hero.tag4Line1": "Con Usted Para",
+  "hero.tag4Line2": "El Largo Plazo",
+  "hero.tag5Line1": "Envíos Confiables",
+  "hero.tag5Line2": "En Bangladesh y Más Allá",
+  "hero.tag6Line1": "Excelencia En",
+  "hero.tag6Line2": "Servicios Marítimos",
+  "hero.tag7Line1": "Su Carga,",
+  "hero.tag7Line2": "Nuestro Compromiso",
+
+  // Management Profile Page
+  "mgmt.heroTitle": "Gestión",
+  "mgmt.heroSubtitle": "Conozca al equipo de liderazgo que impulsa el compromiso de River Tyne Ltd con la excelencia en servicios marítimos.",
+  "mgmt.profileLabel": "Perfil",
+  "mgmt.title": "Presidente y Director General",
+  "mgmt.name": "Mahmodul Islam Parvez",
+  "mgmt.role": "Presidente y Director General",
+  "mgmt.bio1": "Mahmodul Islam Parvez es el Presidente y Director General de la Compañía. Tiene una impresionante gama de experiencia en los campos del envío y la logística desde 2004. Sus más de dos décadas de experiencia abarcan casi todos los aspectos, incluyendo Agencia de Línea, operaciones NVOCC, Agencia Tramp y todo tipo de operaciones de buques graneleros, petroleros, consolidación LCL, transporte internacional de carga, etc.",
+  "mgmt.bio2": "Tras completar su grado universitario en Marketing en la Universidad de Luton, Reino Unido, se unió al negocio familiar, una de las principales empresas navieras del país, galardonada como la Mejor Empresa Naviera en 2018 por la Autoridad Portuaria de Mongla. Actualmente es Director General de la empresa matriz Uni-Global Business Ltd., River Tyne Ltd., Uni Global Shipping and Logistics Services Limited y Universe Shipping Lines Ltd.",
+  "mgmt.bio3": "Durante las últimas dos décadas, ha desarrollado capacidades para trabajar en un entorno desafiante, así como con personas de diversos sectores tanto en el país como en el extranjero.",
+  "mgmt.bio4": "En el ámbito de la propiedad de buques, ha estado involucrado desde la adquisición de embarcaciones hasta la financiación, fletamento, evaluación de la gestión técnica y desguace de buques, etc.",
+  "mgmt.bio5": "Durante su rica carrera, ha desempeñado diversos roles; además, ha manejado actividades como envíos de carga fraccionada, carga de proyectos, envíos de carga pesada, almacenamiento, envíos de exposiciones, carga aérea y logística total.",
+  "mgmt.fleetLabel": "Propiedad de Flota",
+  "mgmt.fleetTitle": "Portafolio de Embarcaciones",
+  "mgmt.fleetDesc": "Embarcaciones poseídas y gestionadas bajo el portafolio de propiedad de buques del grupo.",
+  "mgmt.photoPlaceholder": "Foto Placeholder",
+  "mgmt.bestShipping": "Mejor Empresa Naviera en 2018",
 } as const;

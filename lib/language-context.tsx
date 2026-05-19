@@ -27,12 +27,14 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY) as Locale | null;
-      if (stored && stored in dictionaries) {
+      if (stored && stored in dictionaries && stored !== locale) {
         setLocaleState(stored);
+        document.documentElement.lang = stored.toLowerCase();
       }
     } catch {
       // ignore localStorage errors
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const setLocale = useCallback((newLocale: Locale) => {

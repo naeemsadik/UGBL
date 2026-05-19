@@ -44,13 +44,12 @@ export const zh: Record<TranslationKey, string> = {
 
   // Home – About
   "home.aboutP1":
-    "River Tyne Shipping 是领先的航运代理、物流服务提供商、租船和贸易公司之一。",
+    "River Tyne Ltd 是孟加拉国的航运和物流服务提供商，成立于2016年，在过去10年中，为孟加拉国及海外的众多客户提供了丰富的岸上和离岸物流服务经验。",
   "home.aboutP2":
-    "River Tyne Shipping 拥有17年处理多种散杂货的经验，包括煤炭、熟料、石材和碎石，从海外产地通过吉大港/蒙格拉/帕亚拉港运送到国内交付地点。",
+    "River Tyne Ltd 拥有10年的项目设备转移、拖带和交付经验。我们还作为OPA和港口代理，处理运输煤炭、石材、石膏、大豆、糖、熟料等商品的船舶，通过吉大港、蒙格拉和帕亚拉港口运输到国内交付地点。",
   "home.aboutP3":
-    "我们有能力提供完整的物流解决方案。对 River Tyne 来说没有不可能，无论货物大小或数量、运输方式如何。",
-  "home.aboutP4":
-    "River Tyne Shipping 是通过ISO 9001: 2015认证的领先航运代理、物流服务提供商、租船和贸易公司。",
+    "我们有能力在孟加拉国提供完整的航运和物流解决方案。无论货物大小或数量、运输方式如何，River Tyne Ltd 都将用我们经验丰富的专业团队来处理。",
+  "home.aboutP4": "",
 
   // Home – Connections / Response
   "home.connections": "联系网络：",
@@ -66,35 +65,35 @@ export const zh: Record<TranslationKey, string> = {
   "home.ourServicesLabel": "我们的服务",
   "home.whatWeCanDo": "我们能为您",
   "home.forYou": "做什么",
-  "home.shippingServices": "航运服务",
+  "home.shippingServices": "港口及 OPA/CPA 代理",
   "home.shippingServicesDesc":
-    "孟加拉国领先的航运代理之一，处理所有船舶类型和货物运营。",
+    "River Tyne Ltd 是孟加拉国的航运代理，在吉大港、蒙格拉和帕亚拉等所有主要港口提供全面的海事服务。",
   "home.charteringServices": "经纪",
   "home.charteringServicesDesc":
     "专业的船舶和货物经纪服务，连接船东与租船人，提供最佳航运解决方案。",
-  "home.logisticsServices": "物流服务",
+  "home.logisticsServices": "船舶管理服务",
   "home.logisticsServicesDesc":
-    "综合物流支持，包括岸上和离岸设备处理。",
-  "home.husbandryServices": "船舶管理服务",
+    "包括船员换班、物资供应、食品供应和清关操作在内的24/7船舶管理支持。",
+  "home.husbandryServices": "物流服务",
   "home.husbandryServicesDesc":
-    "为我们代理的所有停靠船舶提供24/7船舶管理支持。",
+    "端到端物流解决方案，涵盖内陆运输、仓储和多式联运货物交付。",
   "home.readMore": "阅读更多",
 
   // Home – GAC
   "home.gacPartnership":
-    "GAC-River Tyne 是 GAC 与 River Tyne Shipping 的合作伙伴关系，后者是一家总部位于达卡的老牌代理公司，在吉大港和蒙格拉的主要港口设有分支机构。",
+    "GAC-River Tyne 是 GAC 与 River Tyne Ltd 的合作伙伴关系，后者是一家总部位于达卡的老牌代理公司，在吉大港、蒙格拉和帕亚拉的主要港口设有分支机构。",
 
   // Certifications
   "home.certifications": "认证资质",
 
   // Footer
-  "footer.aboutText": "River Tyne Shipping 在孟加拉国所有主要港口提供专业的航运和海事服务。",
+  "footer.aboutText": "River Tyne Ltd 在孟加拉国所有主要港口提供专业的航运和海事服务。",
   "footer.ourServices": "我们的服务",
   "footer.portAgency": "港口代理 / 船舶管理服务",
   "footer.crewChanges": "船员换班支持",
   "footer.getInTouch": "联系我们",
   "footer.stayUpdated": "保持更新",
-  "footer.stayUpdatedDesc": "订阅我们的新闻通讯，获取 River Tyne Shipping 的最新消息。",
+  "footer.stayUpdatedDesc": "订阅我们的新闻通讯，获取 River Tyne Ltd 的最新消息。",
   "footer.yourEmail": "您的邮箱",
   "footer.subscribe": "订阅",
   "footer.termsConditions": "条款与条件",
@@ -104,7 +103,7 @@ export const zh: Record<TranslationKey, string> = {
   // About Page
   "about.title": "关于我们",
   "about.subtitle":
-    "River Tyne Shipping 是一家成立于2022年的领先航运代理和物流服务提供商。",
+    "River Tyne Ltd 是一家成立于2016年的领先航运代理和物流服务提供商。",
   "about.whoWeAre": "我们是谁",
   "about.whoWeAreDesc":
     "我们是孟加拉国领先的航运代理、物流服务提供商和贸易公司，提供全面的海事和供应链解决方案。",
@@ -155,7 +154,7 @@ export const zh: Record<TranslationKey, string> = {
   // Portfolio Page
   "portfolio.title": "业绩案例",
   "portfolio.subtitle":
-    "River Tyne Shipping 完成的物流和海事任务概览。",
+    "River Tyne Ltd 完成的物流和海事任务概览。",
   "portfolio.coalVessel": "煤炭船舶卸载计划",
   "portfolio.coalVesselDesc":
     "为大批量熟料和煤炭进口提供端到端的代理和物流支持。",
@@ -193,7 +192,7 @@ export const zh: Record<TranslationKey, string> = {
   "portInfo.kicker": "四港网络",
   "portInfo.overviewTitle": "围绕孟加拉国最重要门户构建的覆盖体系",
   "portInfo.overview":
-    "River Tyne Shipping 协调四个战略港口的业务，为每个地点匹配合适的支持模式，同时让船舶靠泊、货物流转和内陆运输保持一致。",
+    "River Tyne Ltd 协调四个战略港口的业务，为每个地点匹配合适的支持模式，同时让船舶靠泊、货物流转和内陆运输保持一致。",
   "portInfo.coveragePoint1": "每个港口都提供专属本地支持",
   "portInfo.coveragePoint2": "支持船舶挂靠与货物流转",
   "portInfo.coveragePoint3": "为内陆交付提供灵活协调",
@@ -319,7 +318,7 @@ export const zh: Record<TranslationKey, string> = {
 
   // Home – Promo Cards
   "home.promoAboutLabel": "关于我们",
-  "home.promoAboutDesc": "River Tyne Shipping成立于2022年，在孟加拉国主要海上门户建立了可靠的声誉。",
+  "home.promoAboutDesc": "River Tyne Ltd成立于2016年，在孟加拉国主要海上门户建立了可靠的声誉。",
   "home.promoAboutCta": "阅读更多",
   "home.promoServicesLabel": "我们的服务",
   "home.promoServicesDesc": "为船东和货主提供全面的港口代理、船舶管理和物流解决方案。",
@@ -845,4 +844,38 @@ export const zh: Record<TranslationKey, string> = {
   "policy.cyber.b3": "事件报告与风险监测",
   "policy.cyber.b4": "安全的数据处理与存储",
   "policy.cyber.b5": "持续改进网络安全",
+
+  // Hero Taglines
+  "hero.tag1Line1": "携手",
+  "hero.tag1Line2": "共进",
+  "hero.tag2Line1": "值得信赖的港口代理",
+  "hero.tag2Line2": "与物流合作伙伴",
+  "hero.tag3Line1": "连接海洋，",
+  "hero.tag3Line2": "兑现承诺",
+  "hero.tag4Line1": "长期",
+  "hero.tag4Line2": "与您同行",
+  "hero.tag5Line1": "可靠航运",
+  "hero.tag5Line2": "覆盖孟加拉国及更远",
+  "hero.tag6Line1": "卓越的",
+  "hero.tag6Line2": "海事服务",
+  "hero.tag7Line1": "您的货物，",
+  "hero.tag7Line2": "我们的承诺",
+
+  // Management Profile Page
+  "mgmt.heroTitle": "管理层",
+  "mgmt.heroSubtitle": "认识推动 River Tyne Ltd 致力于海事服务卓越的领导团队。",
+  "mgmt.profileLabel": "简介",
+  "mgmt.title": "董事长兼总经理",
+  "mgmt.name": "Mahmodul Islam Parvez",
+  "mgmt.role": "董事长兼总经理",
+  "mgmt.bio1": "Mahmodul Islam Parvez 是公司的董事长兼总经理。自2004年以来，他在航运和物流领域拥有丰富的经验。他超过二十年的经验几乎涵盖了所有方面，包括班轮代理、NVOCC运营、不定期船代理及各类干散货、油轮船舶运营、LCL拼箱、国际货运代理等。",
+  "mgmt.bio2": "在英国卢顿大学完成市场营销学位后，他加入了家族企业——国内领先的航运公司之一，该公司于2018年被蒙格拉港务局授予最佳航运公司奖。目前他是母公司 Uni-Global Business Ltd.、River Tyne Ltd.、Uni Global Shipping and Logistics Services Limited 和 Universe Shipping Lines Ltd. 的总经理。",
+  "mgmt.bio3": "在过去二十年中，他培养了在充满挑战的环境中工作的能力，以及与国内外各界人士合作的能力。",
+  "mgmt.bio4": "在船舶所有权领域，他从船舶采购到融资安排、租船、技术管理评估和拆船等各个环节都有参与。",
+  "mgmt.bio5": "在其丰富的职业生涯中，他担任过各种角色；此外还处理过散杂货运输、项目货物、重吊运输、仓储、展览运输、空运和全程物流等活动。",
+  "mgmt.fleetLabel": "船队所有权",
+  "mgmt.fleetTitle": "船舶组合",
+  "mgmt.fleetDesc": "集团船舶所有权组合下拥有和管理的船舶。",
+  "mgmt.photoPlaceholder": "照片占位符",
+  "mgmt.bestShipping": "2018年最佳航运公司",
 } as const;
