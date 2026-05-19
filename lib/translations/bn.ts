@@ -254,19 +254,19 @@ export const bn: Record<TranslationKey, string> = {
   "offices.sectionTitle": "আমাদের অফিসসমূহ",
   "offices.sectionSubtitle":
     "শিপিং ও লজিস্টিক সহায়তার জন্য বাংলাদেশ জুড়ে আমাদের যেকোনো অফিসে যোগাযোগ করুন।",
-  "offices.dhakaTitle": "ঢাকা অফিস (নিজস্ব প্রাঙ্গণ)",
+  "offices.dhakaTitle": "ঢাকা অফিস ",
   "offices.dhakaLine1": "তাহের টাওয়ার (৯ম তলা)",
   "offices.dhakaLine2": "প্লট-১০, গুলশান সি/এ, সার্কেল-২",
   "offices.dhakaLine3": "ঢাকা ১২১২, বাংলাদেশ",
   "offices.dhakaPhone": "+৮৮০২৫৮১৮১৯, +৮৮০২২২২২৮৬৫৭৪",
   "offices.dhakaEmail": "info@rivertyneltd.com",
-  "offices.chattogramTitle": "চট্টগ্রাম অফিস (নিজস্ব প্রাঙ্গণ)",
+  "offices.chattogramTitle": "চট্টগ্রাম অফিস ",
   "offices.chattogramLine1": "ইউনুসকো সিটি সেন্টার (৮ম তলা)",
   "offices.chattogramLine2": "৮০৭, সি.ডি.এ এভিনিউ জিইসি সার্কেল",
   "offices.chattogramLine3": "চট্টগ্রাম ৪১০০, বাংলাদেশ",
   "offices.chattogramPhone": "+৮৮০-৩১ ২৮৬৬৩২৭",
   "offices.chattogramEmail": "info@rivertyneltd.com",
-  "offices.khulnaTitle": "খুলনা / মোংলা অফিস (ভাড়া)",
+  "offices.khulnaTitle": "খুলনা অফিস ",
   "offices.khulnaLine1": "খান টাওয়ার",
   "offices.khulnaLine2": "এ-৫০ (২য় তলা), কে.ডি.এ. মজিদ শরণি",
   "offices.khulnaLine3": "শিববাড়ী, খুলনা -৯১০০",
@@ -661,7 +661,7 @@ export const bn: Record<TranslationKey, string> = {
   "policy.policyAreas": "পলিসি এলাকাসমূহ",
   "policy.continuousImprovement": "ক্রমাগত উন্নতি",
   "policy.improvementDesc": "রিভার টাইন লিমিটেড কার্যকারিতা, সম্মতি এবং শিল্পের সর্বোত্তম অনুশীলনের সাথে সামঞ্জস্য নিশ্চিত করতে প্রতি বছর তার পলিসিসমূহ পর্যালোচনা করে। পলিসিসমূহ সম্পূর্ণ সংস্থায় প্রচার করা হয় এবং প্রাসঙ্গিক স্টেকহোল্ডারদের জন্য উপলব্ধ করা হয়।",
-  
+
   // Ethics Points
   "policy.ethics.p1": "নিষ্ঠা ও স্বচ্ছতা: আমরা কর্মী, গ্রাহক, সরবরাহকারী এবং অংশীজনদের সাথে খোলামেলা, সততা এবং পেশাদারভাবে ব্যবসা পরিচালনা করি।",
   "policy.ethics.p2": "স্বাধীনতা ও দুর্নীতি বিরোধী: কোম্পানি কঠোরভাবে কোনো ঘুষ, দুর্নীতি বা কোম্পানির পদ থেকে প্রাপ্ত ব্যক্তিগত লাভ নিষিদ্ধ করে।",

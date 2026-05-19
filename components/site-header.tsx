@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTranslation } from "@/lib/language-context";
-import type { Locale } from "@/lib/translations";
 import type { TranslationKey } from "@/lib/translations";
+import { GoogleTranslate } from "@/components/google-translate";
 
 import logoImg from "@/assets/River Tyne Ltd. logo transparent.png";
 
@@ -139,63 +139,24 @@ function NavDropdown({
   );
 }
 
-/* ─── Language switcher (reusable) ────────────────── */
-function LangSwitcher({ scrolled }: { scrolled: boolean }) {
-  const { locale, setLocale, t } = useTranslation();
-
+/* ─── Language switcher (Google Translate powered) ── */
+function LangSwitcher() {
   return (
-    <div className="group relative">
-      <button
-        type="button"
-        className="inline-flex items-center gap-1 font-bold uppercase text-[14px] leading-5 tracking-normal transition-colors duration-200 text-[#1D2E54] hover:text-[#49A98F]"
-        aria-label={t("nav.selectLanguage")}
+    <div className="relative flex items-center gap-1.5">
+      <svg
+        className="h-4 w-4 text-[#1D2E54] opacity-60"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={2}
       >
-        {locale === "EN"
-          ? "EN"
-          : locale === "ES"
-            ? "ES"
-            : locale === "ZH"
-              ? "中文"
-              : "বাং"}
-        <svg
-          className="h-2.5 w-2.5 opacity-50 transition-transform duration-200 group-hover:rotate-180"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </button>
-
-      <div className="pointer-events-none absolute right-0 top-full z-50 pt-3 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
-        <div className="min-w-37.5 rounded border border-[#e5eaf0] bg-white py-1.5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
-          {(
-            [
-              { code: "EN" as Locale, label: "English" },
-              { code: "ES" as Locale, label: "Español" },
-              { code: "ZH" as Locale, label: "中文" },
-              { code: "BN" as Locale, label: "বাংলা" },
-            ] as const
-          ).map((lang) => (
-            <button
-              key={lang.code}
-              type="button"
-              onClick={() => setLocale(lang.code)}
-              className={`block w-full px-4 py-2 text-left text-[0.82rem] transition ${locale === lang.code
-                  ? "bg-[#F6FAFF] text-[#1D2E54] font-medium"
-                  : "text-[#3a4f63] font-normal hover:bg-[#F6FAFF] hover:text-[#1D2E54]"
-                }`}
-            >
-              {lang.label}
-            </button>
-          ))}
-        </div>
-      </div>
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M12 21a9 9 0 100-18 9 9 0 000 18zM3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 014 9 15 15 0 01-4 9 15 15 0 01-4-9 15 15 0 014-9z"
+        />
+      </svg>
+      <GoogleTranslate />
     </div>
   );
 }
@@ -262,31 +223,9 @@ function MobileMenu({
         </div>
 
         <div className="border-t border-gray-100 px-6 py-4">
-          <p className="mb-2 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-gray-400">
-            Language
+          <p className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-gray-400">
+            Use the language selector in the navigation bar to translate
           </p>
-          <div className="flex flex-wrap gap-2">
-            {(
-              [
-                { code: "EN" as Locale, label: "English" },
-                { code: "ES" as Locale, label: "Español" },
-                { code: "ZH" as Locale, label: "中文" },
-                { code: "BN" as Locale, label: "বাংলা" },
-              ] as const
-            ).map((lang) => (
-              <button
-                key={lang.code}
-                type="button"
-                onClick={() => setLocale(lang.code)}
-                className={`rounded-full px-3 py-1.5 text-[0.78rem] font-medium transition ${locale === lang.code
-                    ? "bg-[#1D2E54] text-white"
-                    : "bg-gray-50 text-gray-600 hover:bg-gray-100"
-                  }`}
-              >
-                {lang.label}
-              </button>
-            ))}
-          </div>
         </div>
       </nav>
     </div>
@@ -345,9 +284,8 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          {/* Language — always visible inline */}
           <div className="hidden lg:block shrink-0">
-            <LangSwitcher scrolled={true} />
+            <LangSwitcher />
           </div>
 
           {/* Mobile hamburger */}
