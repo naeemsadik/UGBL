@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTranslation } from "@/lib/language-context";
+import type { Locale } from "@/lib/translations";
 import type { TranslationKey } from "@/lib/translations";
-import { GoogleTranslate } from "@/components/google-translate";
+import { GoogleTranslateLoader, setGoogleTranslateLanguage, resetGoogleTranslate } from "@/components/google-translate";
 
 import logoImg from "@/assets/River Tyne Ltd. logo transparent.png";
 
@@ -139,24 +140,96 @@ function NavDropdown({
   );
 }
 
-/* ─── Language switcher (Google Translate powered) ── */
+/* ─── Language switcher (hybrid: EN/BN manual + ES/ZH Google Translate) ── */
+type LangOption = {
+  code: string;
+  label: string;
+  short: string;
+  mode: "manual" | "google";
+  locale?: Locale;
+  gtCode?: string; // Google Translate language code
+};
+
+const LANGUAGES: LangOption[] = [
+  { code: "en", label: "English", short: "EN", mode: "manual", locale: "EN" },
+  { code: "bn", label: "বাংলা", short: "বাং", mode: "manual", locale: "BN" },
+  { code: "es", label: "Español", short: "ES", mode: "google", gtCode: "es" },
+  { code: "zh", label: "中文", short: "中文", mode: "google", gtCode: "zh-CN" },
+];
+
 function LangSwitcher() {
+  const { locale, setLocale } = useTranslation();
+  const [activeLang, setActiveLang] = useState("en");
+
+  const handleLanguageChange = (lang: LangOption) => {
+    setActiveLang(lang.code);
+
+    if (lang.mode === "manual") {
+      // Use TypeScript translation files
+      resetGoogleTranslate();
+      setLocale(lang.locale!);
+    } else {
+      // Use Google Translate: keep English as base, translate via widget
+      setLocale("EN");
+      // Small delay to let the page re-render in English first
+      setTimeout(() => {
+        setGoogleTranslateLanguage(lang.gtCode!);
+      }, 100);
+    }
+  };
+
   return (
-    <div className="relative flex items-center gap-1.5">
-      <svg
-        className="h-4 w-4 text-[#1D2E54] opacity-60"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
+    <div className="group relative flex items-center">
+      {/* Hidden Google Translate loader */}
+      <GoogleTranslateLoader />
+
+      <button
+        type="button"
+        className="inline-flex items-center gap-1.5 font-bold uppercase text-[14px] leading-5 tracking-normal transition-colors duration-200 text-[#1D2E54] hover:text-[#49A98F]"
       >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 21a9 9 0 100-18 9 9 0 000 18zM3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 014 9 15 15 0 01-4 9 15 15 0 01-4-9 15 15 0 014-9z"
-        />
-      </svg>
-      <GoogleTranslate />
+        <svg
+          className="h-4 w-4 opacity-60"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 21a9 9 0 100-18 9 9 0 000 18zM3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 014 9 15 15 0 01-4 9 15 15 0 01-4-9 15 15 0 014-9z"
+          />
+        </svg>
+        {LANGUAGES.find((l) => l.code === activeLang)?.short ?? "EN"}
+        <svg
+          className="h-2.5 w-2.5 opacity-50 transition-transform duration-200 group-hover:rotate-180"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <div className="pointer-events-none absolute right-0 top-full z-50 pt-3 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
+        <div className="min-w-37.5 rounded border border-[#e5eaf0] bg-white py-1.5 shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
+          {LANGUAGES.map((lang) => (
+            <button
+              key={lang.code}
+              type="button"
+              onClick={() => handleLanguageChange(lang)}
+              className={`block w-full px-4 py-2 text-left text-[0.82rem] transition ${
+                activeLang === lang.code
+                  ? "bg-[#F6FAFF] text-[#1D2E54] font-medium"
+                  : "text-[#3a4f63] font-normal hover:bg-[#F6FAFF] hover:text-[#1D2E54]"
+              }`}
+            >
+              {lang.label}
+            </button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
@@ -223,9 +296,34 @@ function MobileMenu({
         </div>
 
         <div className="border-t border-gray-100 px-6 py-4">
-          <p className="text-[0.68rem] font-medium uppercase tracking-[0.18em] text-gray-400">
-            Use the language selector in the navigation bar to translate
+          <p className="mb-2 text-[0.68rem] font-medium uppercase tracking-[0.18em] text-gray-400">
+            Language
           </p>
+          <div className="flex flex-wrap gap-2">
+            {LANGUAGES.map((lang) => (
+              <button
+                key={lang.code}
+                type="button"
+                onClick={() => {
+                  if (lang.mode === "manual") {
+                    resetGoogleTranslate();
+                    setLocale(lang.locale!);
+                  } else {
+                    setLocale("EN");
+                    setTimeout(() => setGoogleTranslateLanguage(lang.gtCode!), 100);
+                  }
+                  onClose();
+                }}
+                className={`rounded-full px-3 py-1.5 text-[0.78rem] font-medium transition ${
+                  locale === lang.locale && lang.mode === "manual"
+                    ? "bg-[#1D2E54] text-white"
+                    : "bg-gray-50 text-gray-600 hover:bg-gray-100"
+                }`}
+              >
+                {lang.label}
+              </button>
+            ))}
+          </div>
         </div>
       </nav>
     </div>
