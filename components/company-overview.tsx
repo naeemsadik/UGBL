@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslation } from "@/lib/language-context";
+import { Quote } from "lucide-react";
 
 export function CompanyOverview() {
   const { t } = useTranslation();
@@ -41,9 +42,15 @@ export function CompanyOverview() {
         </div>
 
         {/* ISO commitment */}
-        <p className="mt-10 border-t border-[#e5eaf0] pt-8 text-center text-[0.95rem] italic leading-7 text-[#5a6a7d]">
-          {t("home.isoCommitment")}
-        </p>
+        <div className="relative mt-16 overflow-hidden rounded-2xl bg-gradient-to-tr from-[#1D2E54] to-[#49A98F] p-8 shadow-xl md:p-12">
+          <Quote className="absolute left-6 top-6 h-24 w-24 rotate-180 text-white/10 md:left-10 md:top-10" />
+          <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center justify-center px-6 text-center md:px-16">
+            <p className="text-lg font-semibold leading-relaxed text-white md:text-2xl">
+              {t("home.isoCommitment")}
+            </p>
+          </div>
+          <Quote className="absolute bottom-6 right-6 h-24 w-24 text-white/10 md:bottom-10 md:right-10" />
+        </div>
       </div>
     </section>
   );
