@@ -44,18 +44,18 @@ export const es: Record<TranslationKey, string> = {
 
   // Home – About
   "home.aboutP1":
-    "Universe Shipping Lines. es uno de los principales agentes de envío, proveedores de servicios logísticos y empresas de fletamento y comercio.",
+    "River Tyne Shipping es uno de los principales agentes de envío, proveedores de servicios logísticos y empresas de fletamento y comercio.",
   "home.aboutP2":
-    "Universe Shipping Lines cuenta con 17 años de experiencia en el manejo de múltiples productos a granel, incluidos carbón, clinker, piedra y roca desde origen extranjero hasta sitios de entrega locales a través de los puertos de Chattogram / Mongla / Payra.",
+    "River Tyne Shipping cuenta con 17 años de experiencia en el manejo de múltiples productos a granel, incluidos carbón, clinker, piedra y roca desde origen extranjero hasta sitios de entrega locales a través de los puertos de Chattogram / Mongla / Payra.",
   "home.aboutP3":
-    "Tenemos la capacidad de brindar soluciones logísticas completas. Nada es imposible para Universe, sin importar el tamaño o la cantidad de la carga o el modo de transporte.",
+    "Tenemos la capacidad de brindar soluciones logísticas completas. Nada es imposible para River Tyne, sin importar el tamaño o la cantidad de la carga o el modo de transporte.",
   "home.aboutP4":
-    "Universe Shipping Lines. es una empresa certificada ISO 9001: 2015, líder en agencia de envíos, proveedor de servicios logísticos, fletamento y comercio.",
+    "River Tyne Shipping es una empresa certificada ISO 9001: 2015, líder en agencia de envíos, proveedor de servicios logísticos, fletamento y comercio.",
 
   // Home – Connections / Response
   "home.connections": "Conexiones:",
   "home.connectionsDesc":
-    "Los principales pueden aprovechar las excelentes conexiones y relaciones locales de Universe con los sectores público y privado de la industria naviera.",
+    "Los principales pueden aprovechar las excelentes conexiones y relaciones locales de River Tyne con los sectores público y privado de la industria naviera.",
   "home.response": "Respuesta 24/7:",
   "home.responseDesc":
     "Además del rápido retorno para todas las escalas portuarias, los clientes también pueden esperar respuesta a todas las consultas dentro de 24 horas.",
@@ -82,21 +82,21 @@ export const es: Record<TranslationKey, string> = {
 
   // Home – GAC
   "home.gacPartnership":
-    "GAC-Universe es una asociación entre GAC y Universe Shipping Lines, una casa de agencia establecida con sede en Dhaka, con oficinas en los puertos clave de Chattogram y Mongla.",
+    "GAC-River Tyne es una asociación entre GAC y River Tyne Shipping, una casa de agencia establecida con sede en Dhaka, con oficinas en los puertos clave de Chattogram y Mongla.",
 
   // Certifications
   "home.certifications": "Certificaciones",
 
   // Footer
   "footer.aboutText":
-    "Universe Shipping Lines ofrece servicios expertos de envío y marina en todos los principales puertos de Bangladesh.",
+    "River Tyne Shipping ofrece servicios expertos de envío y marina en todos los principales puertos de Bangladesh.",
   "footer.ourServices": "Nuestros Servicios",
   "footer.portAgency": "Agencia Portuaria / Gestión Naviera",
   "footer.crewChanges": "Soporte de Cambio de Tripulación",
   "footer.getInTouch": "Contacto",
   "footer.stayUpdated": "Manténgase Actualizado",
   "footer.stayUpdatedDesc":
-    "Suscríbase a nuestro boletín para las últimas noticias de Universe Shipping Lines.",
+    "Suscríbase a nuestro boletín para las últimas noticias de River Tyne Shipping.",
   "footer.yourEmail": "Su Correo Electrónico",
   "footer.subscribe": "Suscribirse",
   "footer.termsConditions": "Términos y Condiciones",
@@ -106,7 +106,7 @@ export const es: Record<TranslationKey, string> = {
   // About Page
   "about.title": "Sobre Nosotros",
   "about.subtitle":
-    "Universe Shipping Lines es una agencia de envíos líder y proveedor de servicios logísticos establecida en 2022.",
+    "River Tyne Shipping es una agencia de envíos líder y proveedor de servicios logísticos establecida en 2022.",
   "about.whoWeAre": "Quiénes Somos",
   "about.whoWeAreDesc":
     "Somos una agencia de envíos líder, proveedor de servicios logísticos y empresa comercial en Bangladesh, con soluciones marítimas y de cadena de suministro integrales.",
@@ -157,7 +157,7 @@ export const es: Record<TranslationKey, string> = {
   // Portfolio Page
   "portfolio.title": "Portafolio",
   "portfolio.subtitle":
-    "Una muestra de asignaciones logísticas y marítimas realizadas por Universe Shipping Lines.",
+    "Una muestra de asignaciones logísticas y marítimas realizadas por River Tyne Shipping.",
   "portfolio.coalVessel": "Programa de Descarga de Buques de Carbón",
   "portfolio.coalVesselDesc":
     "Soporte integral de agencia y logística para importaciones de alto volumen de clinker y carbón.",
@@ -274,7 +274,7 @@ export const es: Record<TranslationKey, string> = {
   "contact.contactInfo": "Información de Contacto",
   "contact.contactInfoDesc":
     "Taher Tower (Piso 9), Gulshan Circle-2, Dhaka. El soporte por correo electrónico y línea directa está disponible las 24 horas para todas las llamadas activas.",
-  "contact.email": "Correo: operations@universelogistics.com",
+  "contact.email": "Correo: operations@rivertyneshipping.com",
   "contact.phone": "Teléfono: +880 258811819",
   "contact.hours": "Horario: Mesa de soporte 24/7",
   "contact.sendMessage": "Enviar un Mensaje",
@@ -810,41 +810,41 @@ export const es: Record<TranslationKey, string> = {
   "service.brokering.ctaTitle": "¿Necesita soporte de corretaje?",
   "service.brokering.ctaText": "River Tyne puede ayudar con el corretaje de buques y carga, conectándolo con los socios adecuados para arreglos de envío eficientes a tarifas competitivas.",
 
-  // Backfilled missing keys
-  "policy.risk.intro": "River Tyne proactively identifies, assesses, and manages operational and environmental risks to:",
-  "policy.risk.b1": "Protect stakeholders and business objectives",
-  "policy.risk.b2": "Preserve company reputation",
-  "policy.risk.b3": "Ensure sustainable growth",
-  "policy.risk.b4": "Maintain operational continuity",
-  "policy.risk.footer": "Risk management processes are regularly reviewed through internal audits and management reviews.",
-  "policy.hr.intro": "River Tyne recognizes people as its most valuable asset.",
-  "policy.hr.shoreLabel": "Shore Personnel:",
-  "policy.hr.shoreB1": "Qualified employees with defined responsibilities",
-  "policy.hr.shoreB2": "Continuous training and professional development",
-  "policy.hr.shoreB3": "Performance evaluation systems",
-  "policy.hr.seafarersLabel": "Seafarers:",
-  "policy.hr.seafarersB1": "Qualified and competent crew",
-  "policy.hr.seafarersB2": "Structured familiarization and training programs",
-  "policy.hr.seafarersB3": "Protection of seafarers' welfare and working conditions",
-  "policy.purchasing.intro": "River Tyne ensures responsible procurement practices by:",
-  "policy.purchasing.b1": "Working with approved suppliers",
-  "policy.purchasing.b2": "Maintaining quality and cost efficiency",
-  "policy.purchasing.b3": "Minimizing environmental impact",
-  "policy.purchasing.b4": "Ensuring transparency and fairness",
-  "policy.drug.intro": "River Tyne Ltd maintains a strict Drug & Alcohol-Free Workplace.",
-  "policy.drug.b1": "Possession or use of drugs or alcohol onboard company vessels is prohibited",
-  "policy.drug.b2": "All vessels operate as Dry Vessels",
-  "policy.drug.b3": "Random and unannounced testing may be conducted",
-  "policy.drug.b4": "Violations may result in disciplinary action or dismissal",
-  "policy.security.intro": "We maintain a secure operational environment through preventive security measures designed to protect ships, personnel, cargo, and property from unlawful acts.",
-  "policy.security.footer": "Security practices comply with SOLAS Chapter XI-2 and the ISPS Code.",
-  "policy.social.intro": "River Tyne encourages responsible use of social media while protecting company reputation.",
-  "policy.social.footer": "Employees must avoid unauthorized use of company logos, confidential information, or misleading content. Violations may lead to disciplinary or legal action.",
-  "policy.cyber.intro": "River Tyne implements an Information Security Management System aligned with ISO/IEC 27001 standards.",
-  "policy.cyber.bulletsLabel": "Commitments include:",
-  "policy.cyber.b1": "Protection of company and client information",
-  "policy.cyber.b2": "Controlled system access",
-  "policy.cyber.b3": "Incident reporting and risk monitoring",
-  "policy.cyber.b4": "Secure data processing and storage",
-  "policy.cyber.b5": "Continuous cybersecurity improvement",
+  // Policy detail bullets
+  "policy.risk.intro": "River Tyne identifica, evalúa y gestiona proactivamente los riesgos operativos y ambientales para:",
+  "policy.risk.b1": "Proteger a las partes interesadas y los objetivos del negocio",
+  "policy.risk.b2": "Preservar la reputación de la empresa",
+  "policy.risk.b3": "Garantizar un crecimiento sostenible",
+  "policy.risk.b4": "Mantener la continuidad operativa",
+  "policy.risk.footer": "Los procesos de gestión de riesgos se revisan regularmente mediante auditorías internas y revisiones de la dirección.",
+  "policy.hr.intro": "River Tyne reconoce a las personas como su activo más valioso.",
+  "policy.hr.shoreLabel": "Personal en tierra:",
+  "policy.hr.shoreB1": "Empleados calificados con responsabilidades definidas",
+  "policy.hr.shoreB2": "Formación continua y desarrollo profesional",
+  "policy.hr.shoreB3": "Sistemas de evaluación del desempeño",
+  "policy.hr.seafarersLabel": "Gente de mar:",
+  "policy.hr.seafarersB1": "Tripulación calificada y competente",
+  "policy.hr.seafarersB2": "Programas de familiarización y formación estructurados",
+  "policy.hr.seafarersB3": "Protección del bienestar y las condiciones laborales de la tripulación",
+  "policy.purchasing.intro": "River Tyne garantiza prácticas de adquisición responsables mediante:",
+  "policy.purchasing.b1": "Trabajar con proveedores aprobados",
+  "policy.purchasing.b2": "Mantener calidad y eficiencia de costos",
+  "policy.purchasing.b3": "Minimizar el impacto ambiental",
+  "policy.purchasing.b4": "Garantizar transparencia y equidad",
+  "policy.drug.intro": "River Tyne Ltd mantiene un lugar de trabajo estrictamente libre de drogas y alcohol.",
+  "policy.drug.b1": "Se prohíbe la posesión o el uso de drogas o alcohol a bordo de los buques de la empresa",
+  "policy.drug.b2": "Todos los buques operan como buques secos",
+  "policy.drug.b3": "Se pueden realizar pruebas aleatorias y sin previo aviso",
+  "policy.drug.b4": "Las infracciones pueden resultar en medidas disciplinarias o despido",
+  "policy.security.intro": "Mantenemos un entorno operativo seguro mediante medidas preventivas diseñadas para proteger buques, personal, carga y propiedad de actos ilícitos.",
+  "policy.security.footer": "Las prácticas de seguridad cumplen con SOLAS Capítulo XI-2 y el Código ISPS.",
+  "policy.social.intro": "River Tyne fomenta el uso responsable de las redes sociales mientras protege la reputación de la empresa.",
+  "policy.social.footer": "Los empleados deben evitar el uso no autorizado de los logotipos de la empresa, información confidencial o contenido engañoso. Las infracciones pueden dar lugar a acciones disciplinarias o legales.",
+  "policy.cyber.intro": "River Tyne implementa un Sistema de Gestión de Seguridad de la Información alineado con la norma ISO/IEC 27001.",
+  "policy.cyber.bulletsLabel": "Los compromisos incluyen:",
+  "policy.cyber.b1": "Protección de la información de la empresa y del cliente",
+  "policy.cyber.b2": "Acceso controlado a sistemas",
+  "policy.cyber.b3": "Reporte de incidentes y monitoreo de riesgos",
+  "policy.cyber.b4": "Procesamiento y almacenamiento seguro de datos",
+  "policy.cyber.b5": "Mejora continua de la ciberseguridad",
 } as const;

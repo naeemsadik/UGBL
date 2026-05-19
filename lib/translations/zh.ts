@@ -44,18 +44,18 @@ export const zh: Record<TranslationKey, string> = {
 
   // Home – About
   "home.aboutP1":
-    "Universe Shipping Lines. 是领先的航运代理、物流服务提供商、租船和贸易公司之一。",
+    "River Tyne Shipping 是领先的航运代理、物流服务提供商、租船和贸易公司之一。",
   "home.aboutP2":
-    "Universe Shipping Lines 拥有17年处理多种散杂货的经验，包括煤炭、熟料、石材和碎石，从海外产地通过吉大港/蒙格拉/帕亚拉港运送到国内交付地点。",
+    "River Tyne Shipping 拥有17年处理多种散杂货的经验，包括煤炭、熟料、石材和碎石，从海外产地通过吉大港/蒙格拉/帕亚拉港运送到国内交付地点。",
   "home.aboutP3":
-    "我们有能力提供完整的物流解决方案。对Universe来说没有不可能，无论货物大小或数量、运输方式如何。",
+    "我们有能力提供完整的物流解决方案。对 River Tyne 来说没有不可能，无论货物大小或数量、运输方式如何。",
   "home.aboutP4":
-    "Universe Shipping Lines. 是通过ISO 9001: 2015认证的领先航运代理、物流服务提供商、租船和贸易公司。",
+    "River Tyne Shipping 是通过ISO 9001: 2015认证的领先航运代理、物流服务提供商、租船和贸易公司。",
 
   // Home – Connections / Response
   "home.connections": "联系网络：",
   "home.connectionsDesc":
-    "委托方可以利用Universe在航运行业与公共和私营部门的卓越本地联系和关系。",
+    "委托方可以利用 River Tyne 在航运行业与公共和私营部门的卓越本地联系和关系。",
   "home.response": "24/7 响应：",
   "home.responseDesc":
     "除了为所有港口停靠提供快速周转外，客户还可以期望在24小时内对所有查询做出回应。",
@@ -82,19 +82,19 @@ export const zh: Record<TranslationKey, string> = {
 
   // Home – GAC
   "home.gacPartnership":
-    "GAC-Universe是GAC与Universe Shipping Lines的合作伙伴关系，后者是一家总部位于达卡的老牌代理公司，在吉大港和蒙格拉的主要港口设有分支机构。",
+    "GAC-River Tyne 是 GAC 与 River Tyne Shipping 的合作伙伴关系，后者是一家总部位于达卡的老牌代理公司，在吉大港和蒙格拉的主要港口设有分支机构。",
 
   // Certifications
   "home.certifications": "认证资质",
 
   // Footer
-  "footer.aboutText": "Universe Shipping Lines 在孟加拉国所有主要港口提供专业的航运和海事服务。",
+  "footer.aboutText": "River Tyne Shipping 在孟加拉国所有主要港口提供专业的航运和海事服务。",
   "footer.ourServices": "我们的服务",
   "footer.portAgency": "港口代理 / 船舶管理服务",
   "footer.crewChanges": "船员换班支持",
   "footer.getInTouch": "联系我们",
   "footer.stayUpdated": "保持更新",
-  "footer.stayUpdatedDesc": "订阅我们的新闻通讯，获取 Universe Shipping Lines 的最新消息。",
+  "footer.stayUpdatedDesc": "订阅我们的新闻通讯，获取 River Tyne Shipping 的最新消息。",
   "footer.yourEmail": "您的邮箱",
   "footer.subscribe": "订阅",
   "footer.termsConditions": "条款与条件",
@@ -104,7 +104,7 @@ export const zh: Record<TranslationKey, string> = {
   // About Page
   "about.title": "关于我们",
   "about.subtitle":
-    "Universe Shipping Lines 是一家成立于2022年的领先航运代理和物流服务提供商。",
+    "River Tyne Shipping 是一家成立于2022年的领先航运代理和物流服务提供商。",
   "about.whoWeAre": "我们是谁",
   "about.whoWeAreDesc":
     "我们是孟加拉国领先的航运代理、物流服务提供商和贸易公司，提供全面的海事和供应链解决方案。",
@@ -155,7 +155,7 @@ export const zh: Record<TranslationKey, string> = {
   // Portfolio Page
   "portfolio.title": "业绩案例",
   "portfolio.subtitle":
-    "Universe Shipping Lines完成的物流和海事任务概览。",
+    "River Tyne Shipping 完成的物流和海事任务概览。",
   "portfolio.coalVessel": "煤炭船舶卸载计划",
   "portfolio.coalVesselDesc":
     "为大批量熟料和煤炭进口提供端到端的代理和物流支持。",
@@ -272,7 +272,7 @@ export const zh: Record<TranslationKey, string> = {
   "contact.contactInfo": "联系信息",
   "contact.contactInfoDesc":
     "Taher Tower（9楼），Gulshan Circle-2，达卡。电子邮件和热线支持全天候可用。",
-  "contact.email": "邮箱: operations@universelogistics.com",
+  "contact.email": "邮箱: operations@rivertyneshipping.com",
   "contact.phone": "电话: +880 258811819",
   "contact.hours": "时间: 24/7 支持台",
   "contact.sendMessage": "发送消息",
@@ -808,41 +808,41 @@ export const zh: Record<TranslationKey, string> = {
   "service.brokering.ctaTitle": "需要经纪支持吗？",
   "service.brokering.ctaText": "River Tyne 可以协助进行船舶和货物经纪，将您与合适的合作伙伴联系起来，以极具竞争力的价格实现高效的运输安排。",
 
-  // Backfilled missing keys
-  "policy.risk.intro": "River Tyne proactively identifies, assesses, and manages operational and environmental risks to:",
-  "policy.risk.b1": "Protect stakeholders and business objectives",
-  "policy.risk.b2": "Preserve company reputation",
-  "policy.risk.b3": "Ensure sustainable growth",
-  "policy.risk.b4": "Maintain operational continuity",
-  "policy.risk.footer": "Risk management processes are regularly reviewed through internal audits and management reviews.",
-  "policy.hr.intro": "River Tyne recognizes people as its most valuable asset.",
-  "policy.hr.shoreLabel": "Shore Personnel:",
-  "policy.hr.shoreB1": "Qualified employees with defined responsibilities",
-  "policy.hr.shoreB2": "Continuous training and professional development",
-  "policy.hr.shoreB3": "Performance evaluation systems",
-  "policy.hr.seafarersLabel": "Seafarers:",
-  "policy.hr.seafarersB1": "Qualified and competent crew",
-  "policy.hr.seafarersB2": "Structured familiarization and training programs",
-  "policy.hr.seafarersB3": "Protection of seafarers' welfare and working conditions",
-  "policy.purchasing.intro": "River Tyne ensures responsible procurement practices by:",
-  "policy.purchasing.b1": "Working with approved suppliers",
-  "policy.purchasing.b2": "Maintaining quality and cost efficiency",
-  "policy.purchasing.b3": "Minimizing environmental impact",
-  "policy.purchasing.b4": "Ensuring transparency and fairness",
-  "policy.drug.intro": "River Tyne Ltd maintains a strict Drug & Alcohol-Free Workplace.",
-  "policy.drug.b1": "Possession or use of drugs or alcohol onboard company vessels is prohibited",
-  "policy.drug.b2": "All vessels operate as Dry Vessels",
-  "policy.drug.b3": "Random and unannounced testing may be conducted",
-  "policy.drug.b4": "Violations may result in disciplinary action or dismissal",
-  "policy.security.intro": "We maintain a secure operational environment through preventive security measures designed to protect ships, personnel, cargo, and property from unlawful acts.",
-  "policy.security.footer": "Security practices comply with SOLAS Chapter XI-2 and the ISPS Code.",
-  "policy.social.intro": "River Tyne encourages responsible use of social media while protecting company reputation.",
-  "policy.social.footer": "Employees must avoid unauthorized use of company logos, confidential information, or misleading content. Violations may lead to disciplinary or legal action.",
-  "policy.cyber.intro": "River Tyne implements an Information Security Management System aligned with ISO/IEC 27001 standards.",
-  "policy.cyber.bulletsLabel": "Commitments include:",
-  "policy.cyber.b1": "Protection of company and client information",
-  "policy.cyber.b2": "Controlled system access",
-  "policy.cyber.b3": "Incident reporting and risk monitoring",
-  "policy.cyber.b4": "Secure data processing and storage",
-  "policy.cyber.b5": "Continuous cybersecurity improvement",
+  // Policy detail bullets
+  "policy.risk.intro": "River Tyne 主动识别、评估并管理运营与环境风险，以：",
+  "policy.risk.b1": "保护相关方和业务目标",
+  "policy.risk.b2": "维护公司声誉",
+  "policy.risk.b3": "确保可持续增长",
+  "policy.risk.b4": "保持运营连续性",
+  "policy.risk.footer": "风险管理流程会通过内部审计和管理评审定期复核。",
+  "policy.hr.intro": "River Tyne 认为员工是最宝贵的资产。",
+  "policy.hr.shoreLabel": "岸基人员：",
+  "policy.hr.shoreB1": "具备明确职责的合格员工",
+  "policy.hr.shoreB2": "持续培训与职业发展",
+  "policy.hr.shoreB3": "绩效评估体系",
+  "policy.hr.seafarersLabel": "海员：",
+  "policy.hr.seafarersB1": "合格且胜任的船员",
+  "policy.hr.seafarersB2": "结构化的熟悉与培训计划",
+  "policy.hr.seafarersB3": "保护船员福利与工作条件",
+  "policy.purchasing.intro": "River Tyne 通过以下方式确保负责任的采购实践：",
+  "policy.purchasing.b1": "与经批准的供应商合作",
+  "policy.purchasing.b2": "保持质量与成本效率",
+  "policy.purchasing.b3": "将环境影响降到最低",
+  "policy.purchasing.b4": "确保透明与公平",
+  "policy.drug.intro": "River Tyne Ltd 维持严格的无毒品和无酒精工作场所。",
+  "policy.drug.b1": "禁止在公司船舶上持有或使用毒品或酒精",
+  "policy.drug.b2": "所有船舶均作为干船运营",
+  "policy.drug.b3": "可进行随机且不预先通知的检测",
+  "policy.drug.b4": "违规可能导致纪律处分或解雇",
+  "policy.security.intro": "我们通过预防性安全措施维持安全的运营环境，以保护船舶、人员、货物和财产免受非法行为侵害。",
+  "policy.security.footer": "安全实践符合 SOLAS 第 XI-2 章和 ISPS 规则。",
+  "policy.social.intro": "River Tyne 在保护公司声誉的同时，鼓励负责任地使用社交媒体。",
+  "policy.social.footer": "员工必须避免未经授权使用公司标识、机密信息或误导性内容。违规可能导致纪律或法律处理。",
+  "policy.cyber.intro": "River Tyne 实施符合 ISO/IEC 27001 标准的信息安全管理体系。",
+  "policy.cyber.bulletsLabel": "承诺包括：",
+  "policy.cyber.b1": "保护公司与客户信息",
+  "policy.cyber.b2": "受控的系统访问",
+  "policy.cyber.b3": "事件报告与风险监测",
+  "policy.cyber.b4": "安全的数据处理与存储",
+  "policy.cyber.b5": "持续改进网络安全",
 } as const;
