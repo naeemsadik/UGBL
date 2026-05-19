@@ -44,6 +44,24 @@ export function GoogleTranslate() {
       "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
     script.async = true;
     document.head.appendChild(script);
+
+    // Google Translate dynamically injects the dropdown.
+    // We poll until it exists, then change the default "Select Language" text to "English".
+    const checkAndChangeText = setInterval(() => {
+      const select = document.querySelector(".goog-te-combo") as HTMLSelectElement;
+      if (select && select.options.length > 0) {
+        select.options[0].text = "English";
+        // Also ensure any dynamically added text nodes by Google are hidden or replaced
+        const defaultOption = select.options[0];
+        if (defaultOption.innerHTML !== "English") {
+            defaultOption.innerHTML = "English";
+        }
+        clearInterval(checkAndChangeText);
+      }
+    }, 100);
+
+    // Clean up interval on unmount
+    return () => clearInterval(checkAndChangeText);
   }, []);
 
   return (
