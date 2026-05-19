@@ -5,6 +5,7 @@ import type { StaticImageData } from "next/image";
 import { Download, BookOpen, Phone, Mail } from "lucide-react";
 import { InnerHero } from "@/components/inner-hero";
 import { useTranslation } from "@/lib/language-context";
+import { getTranslatedPortData } from "@/lib/data/ports-i18n";
 
 type PortFact = {
   label: string;
@@ -54,6 +55,7 @@ type LNGTerminalInfo = {
 };
 
 type PortDetailPageProps = {
+  slug: string;
   title: string;
   subtitle: string;
   heroImage: StaticImageData;
@@ -82,32 +84,21 @@ type PortDetailPageProps = {
   flatCoreSections?: FlatCoreSection[];
 };
 
-export function PortDetailPage({
-  title,
-  subtitle,
-  heroImage,
-  overviewTitle,
-  overview,
-  facts,
-  mapTitle,
-  mapDescription,
-  mapQuery,
-  notesTitle,
-  notes,
-  ctaTitle,
-  ctaText,
-  ctaLabel,
-  ctaHref,
-  readMoreLinks,
-  downloadLinks,
-  contact,
-  technicalSections,
-  berthRestrictions,
-  lngTerminals,
-  mergeCoreSections,
-  flatCoreSections,
-}: PortDetailPageProps) {
-  const { t } = useTranslation();
+export function PortDetailPage(props: PortDetailPageProps) {
+  const { t, locale } = useTranslation();
+
+  // Apply Bengali translation overlay if needed
+  const translated = getTranslatedPortData(props, locale) as PortDetailPageProps;
+
+  const {
+    heroImage, mapQuery, ctaHref, readMoreLinks,
+    downloadLinks, contact, technicalSections,
+    berthRestrictions, lngTerminals, mergeCoreSections,
+    title, subtitle, overviewTitle, overview, facts,
+    mapTitle, mapDescription, notesTitle, notes,
+    ctaTitle, ctaText, ctaLabel, flatCoreSections,
+  } = translated;
+
   const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&output=embed`;
   const mapLinkUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
   const hasFlatCoreSections = Boolean(
