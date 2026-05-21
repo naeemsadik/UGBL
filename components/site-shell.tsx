@@ -7,6 +7,7 @@ import { OfficeAddresses } from "@/components/office-addresses";
 import { LanguageProvider } from "@/lib/language-context";
 import { Preloader } from "@/components/preloader";
 import { PageTransition } from "@/components/page-transition";
+import { Chatbot } from "@/components/chatbot";
 
 type SiteShellProps = {
   children: ReactNode;
@@ -22,6 +23,7 @@ export function SiteShell({ children }: SiteShellProps) {
           <main className="flex-1">{children}</main>
           <OfficeAddresses />
           <SiteFooter />
+          <Chatbot />
         </div>
       </PageTransition>
     </LanguageProvider>
