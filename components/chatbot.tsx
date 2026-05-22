@@ -1279,11 +1279,11 @@ export function Chatbot() {
       )}
 
       {/* Floating Trigger Button */}
-      <div className="relative group/bot mt-4">
+      <div className="relative group mt-4">
         {!isOpen && (
-          <div className="absolute right-[80px] top-1/2 -translate-y-1/2 hidden sm:flex items-center">
-            <div className="animate-in fade-in slide-in-from-right-4 duration-500 max-w-[200px] whitespace-nowrap bg-white text-[#1D2E54] text-xs font-semibold px-3 py-2 rounded-xl shadow-lg border border-slate-200">
-              <span className="flex items-center gap-1.5">
+          <div className="absolute bottom-[84px] left-1/2 -translate-x-1/2 hidden sm:group-hover:flex items-center">
+            <div className="animate-in fade-in slide-in-from-right-4 duration-500 max-w-[220px] whitespace-nowrap bg-white text-[#1D2E54] text-xs font-semibold px-3 py-2 rounded-xl shadow-lg border border-slate-200 text-center">
+              <span className="flex items-center gap-2 justify-center">
                 <img
                   src="/bot.png"
                   alt="Chatbot"
@@ -1297,8 +1297,8 @@ export function Chatbot() {
                       ? "与我们聊天"
                       : "Chat with us!"}
               </span>
-              {/* Tooltip triangle */}
-              <div className="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 bg-white border-r border-t border-slate-200 rotate-45" />
+              {/* Tooltip triangle (points down toward button) */}
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-3 h-3 bg-white border-r border-t border-slate-200 rotate-45" />
             </div>
           </div>
         )}
