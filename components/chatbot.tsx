@@ -1112,9 +1112,16 @@ export function Chatbot() {
       {isOpen && (
         <div
           ref={chatWindowRef}
-          className="mb-4 flex flex-col h-[500px] w-[360px] sm:w-[380px] max-w-[92vw] overflow-hidden rounded-2xl border border-slate-200/60 bg-white/95 backdrop-blur-md shadow-2xl transition-all duration-300 ease-out animate-in slide-in-from-bottom-5 fade-in"
+          className="mb-4 flex flex-col h-[460px] w-[360px] sm:w-[380px] max-w-[92vw] max-h-[80vh] overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-lg shadow-xl transition-all duration-300 ease-out animate-in slide-in-from-bottom-5 fade-in"
         >
-          {/* Header Panel */}
+          {/* Gradient animation keyframes */}
+          <style>{`
+          @keyframes gradientPulse {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+          }
+        `}</style>
           <div className="flex items-center justify-between bg-[#1D2E54] px-4 py-3.5 text-white">
             <div className="flex items-center gap-2.5">
               <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-[#49A98F] to-[#79C9A1] shadow-inner">
@@ -1160,19 +1167,17 @@ export function Chatbot() {
             {messages.map((msg) => (
               <div
                 key={msg.id}
-                className={`flex w-full flex-col ${
-                  msg.sender === "user"
-                    ? "items-end animate-in slide-in-from-right-3 fade-in"
-                    : "items-start animate-in slide-in-from-left-3 fade-in"
-                }`}
+                className={`flex w-full flex-col ${msg.sender === "user"
+                  ? "items-end animate-in slide-in-from-right-3 fade-in"
+                  : "items-start animate-in slide-in-from-left-3 fade-in"
+                  }`}
               >
                 {/* Bubble Container */}
                 <div
-                  className={`max-w-[85%] rounded-2xl px-4 py-3 shadow-sm border ${
-                    msg.sender === "user"
-                      ? "bg-[#1D2E54] border-[#1D2E54]/20 text-white rounded-tr-none"
-                      : "bg-white border-slate-200/50 text-slate-800 rounded-tl-none"
-                  }`}
+                  className={`max-w-[85%] rounded-2xl px-4 py-3 shadow-sm border ${msg.sender === "user"
+                    ? "bg-[#1D2E54] border-[#1D2E54]/20 text-white rounded-tr-none"
+                    : "bg-white border-slate-200/50 text-slate-800 rounded-tl-none"
+                    }`}
                 >
                   {msg.sender === "user" ? (
                     <p className="text-sm leading-relaxed">{msg.text}</p>
@@ -1302,10 +1307,26 @@ export function Chatbot() {
             </div>
           </div>
         )}
+        <style>{`
+                    @keyframes gradientPulse {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+          }
+          @keyframes jump {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+          }
+        `}</style>
         <button
           onClick={toggleChat}
           aria-label={isOpen ? "Close chat" : "Open chat"}
-          className="relative flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-tr from-[#1D2E54] to-[#49A98F] text-white shadow-xl hover:scale-105 active:scale-95 hover:rotate-[6deg] transition-all duration-300 cursor-pointer"
+          className="relative flex h-14 w-14 items-center justify-center rounded-full text-white shadow-xl hover:scale-110 active:scale-95 hover:rotate-[6deg] hover:shadow-[0_0_15px_#49A98F] transition-all duration-300 cursor-pointer animate-pulse"
+          style={{
+            background: 'linear-gradient(45deg, #1D2E54, #49A98F, #79C9A1, #1D2E54)',
+            backgroundSize: '200% 200%',
+            animation: 'gradientPulse 6s ease infinite, jump 2s ease-in-out infinite',
+          }}
         >
           {isOpen ? (
             <X className="h-6 w-6 transition-transform duration-300 rotate-0" />
