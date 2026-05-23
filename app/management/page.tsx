@@ -55,7 +55,7 @@ export default function ManagementPage() {
         title={t("mgmt.heroTitle")}
         subtitle={t("mgmt.heroSubtitle")}
         backgroundImage={missionHero}
-        backgroundPosition="center 60%"
+        backgroundPosition="center 35%"
         subtitleClassName="mt-3 md:mt-4"
       />
 
