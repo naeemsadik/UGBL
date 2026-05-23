@@ -5,19 +5,6 @@ import type { StaticImageData } from "next/image";
 import { InnerHero } from "@/components/inner-hero";
 import { useTranslation } from "@/lib/language-context";
 
-interface SidebarLink {
-  label: string;
-  href: string;
-  disabled?: boolean;
-}
-
-interface SidebarContact {
-  phone: string;
-  email: string;
-  contactHref: string;
-  contactLabel: string;
-}
-
 type ServiceDetailPageProps = {
   title: string;
   subtitle: string;
@@ -70,91 +57,97 @@ export function ServiceDetailPage({
         contentAlignment={contentAlignment}
       />
 
-      <section className="mx-auto w-full max-w-[1400px] px-6 py-16 md:py-20">
-        <div className="grid lg:grid-cols-[80%_20%] lg:items-start gap-8">
-          <div className="grid gap-8">
-            {/* Overview */}
-            <div className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
-              <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                {t("service.common.overview")}
+      <section className="mx-auto w-full max-w-[1600px] px-6 lg:px-12 py-16 md:py-24">
+        {/* Unified Premium Content Container */}
+        <div className="rounded-[32px] border border-slate-100 bg-white p-6 sm:p-8 md:p-12 xl:p-16 shadow-[0_24px_70px_rgba(15,23,42,0.06)]">
+
+          {/* ── Service Overview ──────────────────────── */}
+          <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
+            {t("service.common.overview")}
+          </span>
+          <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-5xl leading-tight">
+            {overviewTitle}
+          </h2>
+          <div className="mt-6 space-y-6 text-base leading-relaxed text-slate-600 md:text-lg w-full">
+            {Array.isArray(overview) ? (
+              overview.map((paragraph, index) => (
+                <p key={`overview-${index}`}>{paragraph}</p>
+              ))
+            ) : (
+              overview.split("\n\n").map((paragraph, index) => (
+                <p key={`overview-${index}`}>{paragraph}</p>
+              ))
+            )}
+          </div>
+          {/* ── What We Offer ────────────────────────── */}
+          {serviceItems && serviceItems.length > 0 && (
+            <div className="mt-12 border-t border-slate-100 pt-12">
+              <span className="inline-flex items-center rounded-full bg-[#49A98F]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#49A98F]">
+                {t("service.common.whatWeOffer")}
               </span>
-              <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-5xl">
-                {overviewTitle}
-              </h2>
-              <div className="mt-5 max-w-none space-y-4 text-base leading-relaxed text-slate-600 md:text-lg">
-                {Array.isArray(overview) ? (
-                  overview.map((paragraph, index) => (
-                    <p key={`overview-${index}`}>{paragraph}</p>
-                  ))
-                ) : (
-                  <p>{overview}</p>
-                )}
+              <h3 className="mt-5 text-2xl font-black tracking-tight text-[#1D2E54] md:text-4xl leading-tight">
+                {t("service.common.ourServices")}
+              </h3>
+              <div className="mt-8 grid gap-5 md:grid-cols-2">
+                {[
+                  serviceItems.slice(0, Math.ceil(serviceItems.length / 2)),
+                  serviceItems.slice(Math.ceil(serviceItems.length / 2)),
+                ].map((items, columnIndex) => (
+                  <div
+                    key={`services-col-${columnIndex}`}
+                    className={
+                      columnIndex === 0
+                        ? "rounded-2xl border border-[#1D2E54]/10 bg-[#F3F7FF] p-6 shadow-sm"
+                        : "rounded-2xl border border-[#49A98F]/12 bg-[#F2FBF8] p-6 shadow-sm"
+                    }
+                  >
+                    <ul className="list-disc space-y-3 pl-5 text-base font-semibold leading-relaxed text-slate-700">
+                      {items.map((item) => (
+                        <li key={item} className="marker:text-[#1D2E54]">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
-
-            {/* Service Items List */}
-            {serviceItems && serviceItems.length > 0 && (
-              <div className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
-                <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  {t("service.common.whatWeOffer")}
-                </span>
-                <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-4xl">
-                  {t("service.common.ourServices")}
-                </h2>
-                <div className="mt-8 grid gap-6 md:grid-cols-2">
-                  {[
-                    serviceItems.slice(0, Math.ceil(serviceItems.length / 2)),
-                    serviceItems.slice(Math.ceil(serviceItems.length / 2)),
-                  ].map((items, columnIndex) => (
-                    <div
-                      key={`services-col-${columnIndex}`}
-                      className={
-                        columnIndex === 0
-                          ? "rounded-2xl border border-[#1D2E54]/10 bg-[#F3F7FF] p-5"
-                          : "rounded-2xl border border-[#49A98F]/12 bg-[#F2FBF8] p-5"
-                      }
-                    >
-                      <ul className="list-disc space-y-3 pl-5 text-lg font-semibold leading-6 text-slate-700">
-                        {items.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+          )}
+          {/* ── Additional Content Sections ───────────── */}
+          {additionalSections && additionalSections.length > 0 && (
+            <div className="mt-10 border-t border-slate-100 pt-10 space-y-8">
+              {additionalSections.map((section) => (
+                <div key={section.title} className="space-y-4 w-full">
+                  <h3 className="text-2xl font-black tracking-tight text-[#1D2E54] md:text-3xl leading-snug">
+                    {section.title}
+                  </h3>
+                  <div className="space-y-4 text-base leading-relaxed text-slate-600 md:text-lg">
+                    {section.content.split("\n\n").map((paragraph, index) => (
+                      <p key={`sec-p-${index}`}>{paragraph}</p>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )}
+              ))}
+            </div>
+          )}
 
-            {/* Additional Sections */}
-            {additionalSections?.map((section) => (
-              <div
-                key={section.title}
-                className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10"
-              >
-                <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  {t("service.common.details")}
-                </span>
-                <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-4xl">
-                  {section.title}
-                </h2>
-                <p className="mt-5 max-w-none text-base leading-relaxed text-slate-600 md:text-lg">
-                  {section.content}
-                </p>
-              </div>
-            ))}
 
-            {/* CTA Block */}
-            <div className="rounded-[28px] bg-[#1D2E54] p-8 text-white shadow-[0_24px_70px_rgba(29,46,84,0.28)] md:p-10">
-              <div className="rounded-[24px] border border-white/10 bg-white/5 p-6">
-                <p className="text-[0.68rem] font-black uppercase tracking-[0.24em] text-white/55">
-                  {ctaTitle}
-                </p>
-                <p className="mt-3 text-sm leading-6 text-slate-200">
-                  {ctaText}
-                </p>
+
+          {/* ── CTA Banner ───────────────────────────── */}
+          <div className="mt-12 border-t border-slate-100 pt-12">
+            <div className="rounded-[24px] bg-[#1D2E54] p-8 text-white shadow-[0_20px_50px_rgba(29,46,84,0.18)] md:p-10">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
+                <div className="max-w-3xl">
+                  <p className="text-[0.68rem] font-black uppercase tracking-[0.24em] text-white/55">
+                    {ctaTitle}
+                  </p>
+                  <p className="mt-3 text-sm md:text-base leading-relaxed text-slate-200">
+                    {ctaText}
+                  </p>
+                </div>
                 <Link
                   href={ctaHref}
-                  className="mt-5 inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-black text-[#1D2E54] transition-transform duration-300 hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 text-sm font-black text-[#1D2E54] transition-all duration-300 hover:bg-[#49A98F] hover:text-white hover:-translate-y-0.5 shadow-md shrink-0 self-start md:self-center"
                 >
                   {ctaLabel}
                 </Link>
@@ -162,8 +155,6 @@ export function ServiceDetailPage({
             </div>
           </div>
 
-          {/* Sidebar */}
-          <div className="grid gap-8">{/* contact removed */}</div>
         </div>
       </section>
     </div>
