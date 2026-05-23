@@ -1121,7 +1121,7 @@ export function Chatbot() {
                 <img
                   src="/bot.png"
                   alt="Chatbot"
-                  className="h-6 w-6 bg-white p-0.5 rounded-full shadow-sm object-contain border border-white"
+                  className="h-6 w-6 bg-white p-0.5 rounded-full shadow-sm object-contain border border-white brightness-0 invert"
                 />
               </div>
               <div>
@@ -1287,7 +1287,7 @@ export function Chatbot() {
                 <img
                   src="/bot.png"
                   alt="Chatbot"
-                  className="h-4 w-4 bg-white p-0.5 rounded-full border border-slate-100 shadow-sm object-contain"
+                  className="h-4 w-4 bg-white p-0.5 rounded-full border border-slate-100 shadow-sm object-contain brightness-0 invert"
                 />
                 {locale === "BN"
                   ? "আমাদের সাথে চ্যাট করুন"
@@ -1313,7 +1313,7 @@ export function Chatbot() {
             <img
               src="/bot.png"
               alt="Chatbot"
-              className="h-7 w-7 bg-white p-1 rounded-full shadow-md object-contain transition-transform duration-300 hover:scale-110"
+              className="h-9 w-9 object-contain brightness-0 invert transition-transform duration-300 hover:scale-110"
             />
           )}
 
