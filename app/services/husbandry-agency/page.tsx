@@ -7,23 +7,7 @@ import { useTranslation } from "@/lib/language-context";
 export default function HusbandryAgencyPage() {
   const { t } = useTranslation();
 
-  const readMoreLinks = [
-    { label: t("service.portAgency.title"), href: "/services/port-agency" },
-    { label: t("service.opacpa.title"), href: "/services/opa-cpa-agency" },
-    { label: t("service.logistics.title"), href: "/services/logistics-agency" },
-  ];
-
-  const downloadLinks = [
-    { label: t("service.common.download") + " " + t("about.atGlance.breadcrumbAbout"), href: "/downloads/company-profile.pdf" },
-    { label: t("service.common.download") + " " + t("service.common.details"), href: "/downloads/service-brochure.pdf" },
-  ];
-
-  const contact = {
-    phone: "+880-2588-11819",
-    email: "info@rivertyneltd.com",
-    contactHref: "/contact",
-    contactLabel: t("service.common.contactUs"),
-  };
+  // readMoreLinks, downloadLinks, and contact removed for services
 
   return (
     <ServiceDetailPage
@@ -45,6 +29,8 @@ export default function HusbandryAgencyPage() {
         t("service.husbandry.item10"),
         t("service.husbandry.item11"),
         t("service.husbandry.item12"),
+        t("service.husbandry.item13"),
+        t("service.husbandry.item14"),
       ]}
       additionalSections={[
         {
@@ -56,9 +42,6 @@ export default function HusbandryAgencyPage() {
       ctaText={t("service.husbandry.ctaText")}
       ctaLabel={t("service.common.contactUs")}
       ctaHref="/contact"
-      readMoreLinks={readMoreLinks}
-      downloadLinks={downloadLinks}
-      contact={contact}
     />
   );
 }

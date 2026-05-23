@@ -7,23 +7,7 @@ import { useTranslation } from "@/lib/language-context";
 export default function PortAgencyPage() {
   const { t } = useTranslation();
 
-  const readMoreLinks = [
-    { label: t("service.opacpa.title"), href: "/services/opa-cpa-agency" },
-    { label: t("service.husbandry.title"), href: "/services/husbandry-agency" },
-    { label: t("service.logistics.title"), href: "/services/logistics-agency" },
-  ];
-
-  const downloadLinks = [
-    { label: t("service.common.download") + " " + t("about.atGlance.breadcrumbAbout"), href: "/downloads/company-profile.pdf" },
-    { label: t("service.common.download") + " " + t("service.common.details"), href: "/downloads/service-brochure.pdf" },
-  ];
-
-  const contact = {
-    phone: "+880-2588-11819",
-    email: "info@rivertyneltd.com",
-    contactHref: "/contact",
-    contactLabel: t("service.common.contactUs"),
-  };
+  // readMoreLinks, downloadLinks, and contact removed for services
 
   return (
     <ServiceDetailPage
@@ -54,9 +38,6 @@ export default function PortAgencyPage() {
       ctaText={t("service.portAgency.ctaText")}
       ctaLabel={t("service.common.contactUs")}
       ctaHref="/contact"
-      readMoreLinks={readMoreLinks}
-      downloadLinks={downloadLinks}
-      contact={contact}
     />
   );
 }

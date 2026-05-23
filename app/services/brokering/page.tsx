@@ -9,23 +9,7 @@ const heroImageUrl =
 export default function BrokeringPage() {
   const { t } = useTranslation();
 
-  const readMoreLinks = [
-    { label: t("service.portAgency.title"), href: "/services/port-agency" },
-    { label: t("service.husbandry.title"), href: "/services/husbandry-agency" },
-    { label: t("service.logistics.title"), href: "/services/logistics-agency" },
-  ];
-
-  const downloadLinks = [
-    { label: t("service.common.download") + " " + t("about.atGlance.breadcrumbAbout"), href: "/downloads/company-profile.pdf" },
-    { label: t("service.common.download") + " " + t("service.common.details"), href: "/downloads/service-brochure.pdf" },
-  ];
-
-  const contact = {
-    phone: "+880-2588-11819",
-    email: "info@rivertyneltd.com",
-    contactHref: "/contact",
-    contactLabel: t("service.common.contactUs"),
-  };
+  // contact removed for services
 
   return (
     <ServiceDetailPage
@@ -64,9 +48,6 @@ export default function BrokeringPage() {
       ctaText={t("service.brokering.ctaText")}
       ctaLabel={t("service.common.contactUs")}
       ctaHref="/contact"
-      readMoreLinks={readMoreLinks}
-      downloadLinks={downloadLinks}
-      contact={contact}
     />
   );
 }

@@ -55,7 +55,7 @@ export default function ManagementPage() {
         title={t("mgmt.heroTitle")}
         subtitle={t("mgmt.heroSubtitle")}
         backgroundImage={missionHero}
-        backgroundPosition="center 35%"
+        backgroundPosition="center 15%"
         subtitleClassName="mt-3 md:mt-4"
       />
 
@@ -120,9 +120,7 @@ export default function ManagementPage() {
           <h2 className="mt-5 text-2xl font-black tracking-tight text-[#1D2E54] md:text-3xl">
             {t("mgmt.fleetTitle")}
           </h2>
-          <p className="mt-2 text-sm text-slate-500">
-            {t("mgmt.fleetDesc")}
-          </p>
+          <p className="mt-2 text-sm text-slate-500">{t("mgmt.fleetDesc")}</p>
 
           <div className="mt-8 overflow-x-auto rounded-2xl border border-slate-100">
             <table className="w-full text-sm">

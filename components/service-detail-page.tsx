@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import type { StaticImageData } from "next/image";
-import { Download, BookOpen, Phone, Mail } from "lucide-react";
 import { InnerHero } from "@/components/inner-hero";
 import { useTranslation } from "@/lib/language-context";
 
@@ -39,9 +38,7 @@ type ServiceDetailPageProps = {
   ctaText: string;
   ctaLabel: string;
   ctaHref: string;
-  readMoreLinks: SidebarLink[];
-  downloadLinks: SidebarLink[];
-  contact: SidebarContact;
+  // contact removed: sidebar contact section not shown for services
 };
 
 export function ServiceDetailPage({
@@ -59,9 +56,6 @@ export function ServiceDetailPage({
   ctaText,
   ctaLabel,
   ctaHref,
-  readMoreLinks,
-  downloadLinks,
-  contact,
 }: ServiceDetailPageProps) {
   const { t } = useTranslation();
 
@@ -78,7 +72,6 @@ export function ServiceDetailPage({
 
       <section className="mx-auto w-full max-w-[1400px] px-6 py-16 md:py-20">
         <div className="grid lg:grid-cols-[80%_20%] lg:items-start gap-8">
-
           <div className="grid gap-8">
             {/* Overview */}
             <div className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
@@ -134,7 +127,10 @@ export function ServiceDetailPage({
 
             {/* Additional Sections */}
             {additionalSections?.map((section) => (
-              <div key={section.title} className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
+              <div
+                key={section.title}
+                className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10"
+              >
                 <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
                   {t("service.common.details")}
                 </span>
@@ -167,109 +163,7 @@ export function ServiceDetailPage({
           </div>
 
           {/* Sidebar */}
-          <div className="grid gap-8">
-            {/* Read More / Other Services */}
-            <div className="rounded-[20px] border border-white/60 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
-              <div className="mb-4 flex items-center gap-2">
-                <BookOpen className="h-5 w-5 text-[#3B71B5]" />
-                <h3 className="text-xs font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  {t("service.common.otherServices")}
-                </h3>
-              </div>
-              <div className="space-y-2">
-                {readMoreLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="block rounded-lg border border-slate-200 bg-gradient-to-r from-slate-50 to-white p-3 text-xs font-bold text-slate-700 transition-all hover:border-[#3B71B5] hover:bg-blue-50"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Download Section */}
-            <div className="rounded-[20px] border border-white/60 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
-              <div className="mb-4 flex items-center gap-2">
-                <Download className="h-5 w-5 text-[#3B71B5]" />
-                <h3 className="text-xs font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  {t("service.common.download")}
-                </h3>
-              </div>
-              <div className="space-y-2">
-                {downloadLinks.map((link) => {
-                  const isDisabled = Boolean(link.disabled);
-                  const content = (
-                    <>
-                      <span>{link.label}</span>
-                      <Download
-                        className={
-                          isDisabled
-                            ? "h-4 w-4 text-slate-300"
-                            : "h-4 w-4 text-[#3B71B5] opacity-0 transition-opacity duration-200 group-hover:opacity-100"
-                        }
-                      />
-                    </>
-                  );
-
-                  if (isDisabled) {
-                    return (
-                      <div
-                        key={link.label}
-                        className="flex items-center justify-between rounded-lg border border-slate-200 bg-gradient-to-r from-slate-50 to-white p-3 text-xs font-bold text-slate-400 cursor-not-allowed"
-                      >
-                        {content}
-                      </div>
-                    );
-                  }
-
-                  return (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      download
-                      className="group flex items-center justify-between rounded-lg border border-slate-200 bg-gradient-to-r from-slate-50 to-white p-3 text-xs font-bold text-slate-700 transition-all hover:border-[#3B71B5] hover:bg-blue-50"
-                    >
-                      {content}
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Contact Section */}
-           <div className="rounded-[20px] border border-white/60 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
-              <div className="mb-4 flex items-center gap-2">
-                <Phone className="h-5 w-5 text-[#3B71B5]" />
-                <h3 className="text-xs font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-                  {t("service.common.contactUs")}
-                </h3>
-              </div>
-              <div className="space-y-3">
-                <a
-                  href={`tel:${contact.phone.replace(/[^\d+]/g, "")}`}
-                  className="flex items-center gap-2 rounded-lg border border-slate-200 bg-gradient-to-r from-slate-50 to-white p-3 text-xs font-bold text-slate-700 transition-all hover:border-[#3B71B5] hover:bg-blue-50"
-                >
-                  <Phone className="h-4 w-4 shrink-0" />
-                  <span>{contact.phone}</span>
-                </a>
-                <a
-                  href={`mailto:${contact.email}`}
-                  className="flex items-center gap-2 rounded-lg border border-slate-200 bg-gradient-to-r from-slate-50 to-white p-3 text-xs font-bold text-slate-700 transition-all hover:border-[#3B71B5] hover:bg-blue-50"
-                >
-                  <Mail className="h-4 w-4 shrink-0" />
-                  <span className="truncate">{contact.email}</span>
-                </a>
-                <Link
-                  href={contact.contactHref}
-                  className="block rounded-lg border border-[#1D2E54] bg-[#1D2E54] p-3 text-center text-xs font-bold text-white transition-all hover:bg-[#3B71B5]"
-                >
-                  {contact.contactLabel}
-                </Link>
-              </div>
-            </div>
-          </div>
+          <div className="grid gap-8">{/* contact removed */}</div>
         </div>
       </section>
     </div>
