@@ -46,6 +46,35 @@ const fleetData = [
   },
 ];
 
+const highlightedPhrases = [
+  "Mahmodul Islam Parvez",
+  "University of Luton, UK",
+  "Uni-Global Business Ltd.",
+  "River Tyne Ltd.",
+  "Uni Global Shipping and Logistics Services Limited",
+  "Universe Shipping Lines Ltd.",
+];
+
+function renderHighlightedText(text: string) {
+  const pattern = new RegExp(
+    `(${highlightedPhrases.map((phrase) => phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
+    "g",
+  );
+
+  return text.split(pattern).map((segment, index) =>
+    highlightedPhrases.includes(segment) ? (
+      <strong
+        key={`${segment}-${index}`}
+        className="font-semibold text-slate-900"
+      >
+        {segment}
+      </strong>
+    ) : (
+      <span key={`${segment}-${index}`}>{segment}</span>
+    ),
+  );
+}
+
 export default function ManagementPage() {
   const { t } = useTranslation();
 
@@ -66,10 +95,10 @@ export default function ManagementPage() {
           <div className="h-1.5 w-full bg-gradient-to-r from-[#1D2E54] via-[#3B71B5] to-[#49A98F]" />
 
           <div className="p-8 md:p-12">
-            <div className="grid gap-10 lg:grid-cols-[280px_1fr] lg:gap-16 items-start">
+            <div className="grid gap-10 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-12 items-start">
               {/* Leader image */}
               <div className="flex flex-col items-center gap-4">
-                <div className="relative w-full max-w-[280px] aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-[#1D2E54]/10 to-[#3B71B5]/10 border border-[#1D2E54]/10">
+                <div className="relative w-full max-w-[240px] aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-[#1D2E54]/10 to-[#3B71B5]/10 border border-[#1D2E54]/10">
                   <Image
                     src={leaderImage}
                     alt={t("mgmt.name")}
@@ -81,7 +110,7 @@ export default function ManagementPage() {
                 </div>
 
                 {/* Name & Title card */}
-                <div className="w-full max-w-[280px] rounded-xl bg-[#1D2E54] px-5 py-4 text-center">
+                <div className="w-full max-w-[240px] rounded-xl bg-[#1D2E54] px-5 py-4 text-center">
                   <p className="text-base font-black text-white leading-snug">
                     {t("mgmt.name")}
                   </p>
@@ -92,17 +121,17 @@ export default function ManagementPage() {
               </div>
 
               {/* Bio */}
-              <div>
-                <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
+              <div className="w-full max-w-[920px]">
+                <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.18em] text-[#1D2E54]">
                   {t("mgmt.profileLabel")}
                 </span>
                 <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-4xl">
                   {t("mgmt.title")}
                 </h2>
 
-                <div className="mt-6 space-y-4 text-[1rem] leading-[1.85] text-slate-600">
-                  <p>{t("mgmt.bio1")}</p>
-                  <p>{t("mgmt.bio2")}</p>
+                <div className="mt-6 space-y-6 text-[18px] leading-8 tracking-[-0.01em] text-justify text-slate-700 [hyphens:auto] [text-justify:inter-word] md:text-[19px] md:leading-9">
+                  <p>{renderHighlightedText(t("mgmt.bio1"))}</p>
+                  <p>{renderHighlightedText(t("mgmt.bio2"))}</p>
                   <p>{t("mgmt.bio3")}</p>
                   <p>{t("mgmt.bio4")}</p>
                   <p>{t("mgmt.bio5")}</p>
