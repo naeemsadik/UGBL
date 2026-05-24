@@ -7,13 +7,13 @@ import type { TranslationKey } from "@/lib/translations";
 
 import hero1 from "@/assets/hero1.jpeg";
 import hero2 from "@/assets/hero2.jpg";
-import hero3 from "@/assets/hero8.jpg";
+//import hero3 from "@/assets/hero8.jpg";
 import hero4 from "@/assets/hero4.jpg";
 import hero5 from "@/assets/hero5.jpg";
 import hero6 from "@/assets/hero6.jpeg";
 import hero7 from "@/assets/hero7.png";
 
-const HERO_IMAGES = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
+const HERO_IMAGES = [hero1, hero2, hero4, hero5, hero6, hero7];
 const ROTATE_MS = 6000;
 
 const TAGLINE_KEYS: { line1: TranslationKey; line2: TranslationKey }[] = [
