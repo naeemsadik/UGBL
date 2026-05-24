@@ -17,6 +17,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rivertyneshipping.example"),
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+  },
   title: {
     default: "River Tyne Shipping",
     template: "%s | River Tyne Shipping",
@@ -36,7 +40,10 @@ export default function RootLayout({
       className={`${inter.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full font-[family-name:var(--font-inter)]" suppressHydrationWarning>
+      <body
+        className="min-h-full font-[family-name:var(--font-inter)]"
+        suppressHydrationWarning
+      >
         <SiteShell>{children}</SiteShell>
       </body>
     </html>
