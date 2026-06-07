@@ -354,7 +354,7 @@ export const es: Record<TranslationKey, string> = {
   "offices.chattogramLine3": "Chattogram 4100, Bangladesh",
   "offices.chattogramPhone": "+880-31 2866327",
   "offices.chattogramEmail": "info@rivertyneltd.com",
-  "offices.khulnaTitle": "Oficina de Khulna / Mongla (Alquilada)",
+  "offices.khulnaTitle": "Oficina de Khulna (Alquilada)",
   "offices.khulnaLine1": "Khan Tower",
   "offices.khulnaLine2": "A-50 (2nd Floor), K.D.A. Majid Sharani",
   "offices.khulnaLine3": "Shibbari, Khulna -9100",

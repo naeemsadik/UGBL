@@ -85,16 +85,7 @@ const offices = [
     phone: "offices.khulnaPhone" as const,
     email: "offices.khulnaEmail" as const,
   },
-  {
-    titleKey: "offices.monglaPortTitle" as const,
-    lines: [
-      { type: "address" as const, key: "offices.monglaPortLine1" as const },
-      { type: "address" as const, key: "offices.monglaPortLine2" as const },
-      { type: "address" as const, key: "offices.monglaPortLine3" as const },
-    ],
-    phone: "offices.monglaPortPhone" as const,
-    email: "offices.monglaPortEmail" as const,
-  },
+
   {
     titleKey: "offices.payraTitle" as const,
     lines: [
@@ -116,7 +107,9 @@ export function OfficeAddresses() {
       {/* Background overlay */}
       <div className="office-addresses-inner">
         <h2 className="office-section-title">{t("offices.sectionTitle")}</h2>
-        <p className="office-section-subtitle">{t("offices.sectionSubtitle")}</p>
+        <p className="office-section-subtitle">
+          {t("offices.sectionSubtitle")}
+        </p>
 
         <div className="office-grid">
           {offices.map((office) => (

@@ -3,7 +3,7 @@ export const en = {
   "nav.home": "Home",
   "nav.aboutUs": "About Us",
   "nav.atAGlance": "At a Glance",
-  "nav.management": "Leadership Profile",
+  "nav.management": "Management Profile",
   "nav.missionVision": "Mission and Vision",
   "nav.policyCompliance": "Policy and Compliance",
   "nav.services": "Services",
@@ -358,7 +358,7 @@ export const en = {
   "offices.chattogramLine3": "Chattogram 4100, Bangladesh",
   "offices.chattogramPhone": "+880-31 2866327",
   "offices.chattogramEmail": "info@rivertyneltd.com",
-  "offices.khulnaTitle": "Khulna / Mongla Office ",
+  "offices.khulnaTitle": "Khulna Office",
   "offices.khulnaLine1": "Khan Tower",
   "offices.khulnaLine2": "A-50 (2nd Floor), K.D.A. Majid Sharani",
   "offices.khulnaLine3": "Shibbari, Khulna -9100",
@@ -887,7 +887,7 @@ export const en = {
 
   // Management Profile Page
   "mgmt.heroTitle": "Management",
-  "mgmt.heroSubtitle": "Meet the leadership team driving River Tyne Ltd's commitment to excellence in maritime services.",
+  "mgmt.heroSubtitle": "Meet the management team driving River Tyne Ltd's commitment to excellence in maritime services.",
   "mgmt.profileLabel": "Profile",
   "mgmt.title": "Chairman & Managing Director",
   "mgmt.name": "Mahmodul Islam Parvez",

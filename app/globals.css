@@ -295,29 +295,9 @@ body {
 /* ── Grid ─────────────────────────────────────────── */
 .office-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 1fr;
   gap: 0.65rem;
-}
-
-@media (min-width: 961px) {
-  .office-card {
-    grid-column: span 2;
-  }
-
-  .office-card:nth-child(4) {
-    grid-column: 2 / span 2;
-  }
-
-  .office-card:nth-child(5) {
-    grid-column: 4 / span 2;
-  }
-}
-
-@media (max-width: 960px) {
-  .office-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 600px) {

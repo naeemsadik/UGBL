@@ -34,14 +34,6 @@ export const OFFICES = [
     yPct: 64.5,
   },
   {
-    id: "mongla",
-    label: "Mongla",
-    sublabel: "Port Office",
-    // 89.58°E, 22.49°N → x≈147, y≈422
-    xPct: 33.6,
-    yPct: 70.2,
-  },
-  {
     id: "payra",
     label: "Payra",
     sublabel: "Port Office",

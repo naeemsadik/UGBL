@@ -46,18 +46,6 @@ const OFFICE_DATA = [
     isHQ: false,
   },
   {
-    id: "mongla",
-    titleKey: "offices.monglaPortTitle" as const,
-    lines: [
-      "offices.monglaPortLine1" as const,
-      "offices.monglaPortLine2" as const,
-      "offices.monglaPortLine3" as const,
-    ],
-    phoneKey: "offices.monglaPortPhone" as const,
-    emailKey: "offices.monglaPortEmail" as const,
-    isHQ: false,
-  },
-  {
     id: "payra",
     titleKey: "offices.payraTitle" as const,
     lines: [
