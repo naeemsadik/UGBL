@@ -358,7 +358,7 @@ export const en = {
   "offices.chattogramLine3": "Chattogram 4100, Bangladesh",
   "offices.chattogramPhone": "+880-31 2866327",
   "offices.chattogramEmail": "info@rivertyneltd.com",
-  "offices.khulnaTitle": "Khulna Office",
+  "offices.khulnaTitle": "Khulna/Mongla Office",
   "offices.khulnaLine1": "Khan Tower",
   "offices.khulnaLine2": "A-50 (2nd Floor), K.D.A. Majid Sharani",
   "offices.khulnaLine3": "Shibbari, Khulna -9100",

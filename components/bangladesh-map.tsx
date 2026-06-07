@@ -27,7 +27,7 @@ export const OFFICES = [
   },
   {
     id: "khulna",
-    label: "Khulna",
+    label: "Khulna/Mongla",
     sublabel: "Branch Office",
     // 89.56°E, 22.82°N → x≈145, y≈388
     xPct: 33.1,

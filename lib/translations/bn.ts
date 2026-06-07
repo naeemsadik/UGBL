@@ -266,7 +266,7 @@ export const bn: Record<TranslationKey, string> = {
   "offices.chattogramLine3": "চট্টগ্রাম ৪১০০, বাংলাদেশ",
   "offices.chattogramPhone": "+৮৮০-৩১ ২৮৬৬৩২৭",
   "offices.chattogramEmail": "info@rivertyneltd.com",
-  "offices.khulnaTitle": "খুলনা অফিস ",
+  "offices.khulnaTitle": "খুলনা/মোংলা অফিস ",
   "offices.khulnaLine1": "খান টাওয়ার",
   "offices.khulnaLine2": "এ-৫০ (২য় তলা), কে.ডি.এ. মজিদ শরণি",
   "offices.khulnaLine3": "শিববাড়ী, খুলনা -৯১০০",
