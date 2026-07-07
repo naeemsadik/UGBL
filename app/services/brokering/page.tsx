@@ -7,7 +7,7 @@ const heroImageUrl =
   "https://public.axsmarine.com/wp-content/uploads/2026/05/freight-estimation-shipping.webp";
 
 export default function BrokeringPage() {
-  const { t } = useTranslation();
+  const { t, tImage } = useTranslation();
 
   // contact removed for services
 
@@ -15,7 +15,7 @@ export default function BrokeringPage() {
     <ServiceDetailPage
       title={t("service.brokering.title")}
       subtitle={t("service.brokering.subtitle")}
-      heroImage={heroImageUrl}
+      heroImage={tImage("image.serviceBrokeringBg", heroImageUrl)}
       heroImageSize="cover"
       heroImagePosition="center 30%"
       contentAlignment="right"

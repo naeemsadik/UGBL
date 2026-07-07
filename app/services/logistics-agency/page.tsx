@@ -5,7 +5,7 @@ import { ServiceDetailPage } from "@/components/service-detail-page";
 import { useTranslation } from "@/lib/language-context";
 
 export default function LogisticsAgencyPage() {
-  const { t } = useTranslation();
+  const { t, tImage } = useTranslation();
 
   // readMoreLinks, downloadLinks, and contact removed for services
 
@@ -13,7 +13,7 @@ export default function LogisticsAgencyPage() {
     <ServiceDetailPage
       title={t("service.logistics.title")}
       subtitle={t("service.logistics.subtitle")}
-      heroImage={servicesBg}
+      heroImage={tImage("image.serviceLogisticsBg", servicesBg)}
       overviewTitle={t("service.logistics.overviewTitle")}
       overview={t("service.logistics.overview")}
       serviceItems={[

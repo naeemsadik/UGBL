@@ -5,7 +5,7 @@ import { ServiceDetailPage } from "@/components/service-detail-page";
 import { useTranslation } from "@/lib/language-context";
 
 export default function PortAgencyPage() {
-  const { t } = useTranslation();
+  const { t, tImage } = useTranslation();
 
   // readMoreLinks, downloadLinks, and contact removed for services
 
@@ -13,7 +13,7 @@ export default function PortAgencyPage() {
     <ServiceDetailPage
       title={t("service.portAgency.title")}
       subtitle={t("service.portAgency.subtitle")}
-      heroImage={servicesBg}
+      heroImage={tImage("image.servicePortBg", servicesBg)}
       overviewTitle={t("service.portAgency.overviewTitle")}
       overview={t("service.portAgency.overview")}
       serviceItemsLabel={null}

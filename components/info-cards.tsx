@@ -14,34 +14,35 @@ import hero4 from "@/assets/hero4.jpg";
  * matching the Pacific Basin layout exactly.
  */
 export function InfoCards() {
-  const { t } = useTranslation();
+  const { t, tImage } = useTranslation();
 
   const cards = [
     {
       label: t("home.card1Label"),
       title: t("home.card1Title"),
-      image: hero1,
+      image: tImage("image.infoCard1", hero1),
       href: "/mission-vision",
     },
     {
       label: t("home.card2Label"),
       title: t("home.card2Title"),
-      image: hero2,
+      image: tImage("image.infoCard2", hero2),
       href: "/services/port-agency",
     },
     {
       label: t("home.card3Label"),
       title: t("home.card3Title"),
-      image: hero3,
+      image: tImage("image.infoCard3", hero3),
       href: "/port-info/chattogram",
     },
     {
       label: t("home.card4Label"),
       title: t("home.card4Title"),
-      image: hero4,
+      image: tImage("image.infoCard4", hero4),
       href: "/contact",
     },
   ];
+
 
   return (
     <section className="bg-[#1D2E54]">

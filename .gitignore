@@ -51,3 +51,7 @@ scripts/
 contact-form-smtp-refactor.md
 port-api.md
 Final_Shipping_Services_Website_Content.docx
+
+# CMS local uploads & content overrides
+data/content-overrides.json
+public/uploads/

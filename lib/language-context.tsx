@@ -14,6 +14,8 @@ type LanguageContextValue = {
   locale: Locale;
   setLocale: (locale: Locale) => void;
   t: (key: TranslationKey) => string;
+  tImage: (key: string, defaultImage: any) => any;
+  reloadOverrides: () => Promise<void>;
 };
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
@@ -22,6 +24,19 @@ const STORAGE_KEY = "ugbl-locale";
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>("EN");
+  const [overrides, setOverrides] = useState<Record<string, string>>({});
+
+  const loadOverrides = useCallback(async (currentLocale: Locale) => {
+    try {
+      const res = await fetch(`/api/content?locale=${currentLocale}`);
+      if (res.ok) {
+        const data = await res.json();
+        setOverrides(data);
+      }
+    } catch (err) {
+      console.error("Failed to load content overrides:", err);
+    }
+  }, []);
 
   // Hydrate from localStorage on mount
   useEffect(() => {
@@ -30,9 +45,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       if (stored && stored in dictionaries && stored !== locale) {
         setLocaleState(stored);
         document.documentElement.lang = stored.toLowerCase();
+        loadOverrides(stored);
+      } else {
+        loadOverrides(locale);
       }
     } catch {
-      // ignore localStorage errors
+      loadOverrides(locale);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -46,17 +64,35 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
     // Update the html lang attribute
     document.documentElement.lang = newLocale.toLowerCase();
-  }, []);
+    loadOverrides(newLocale);
+  }, [loadOverrides]);
 
   const t = useCallback(
     (key: TranslationKey): string => {
+      if (overrides && overrides[key]) {
+        return overrides[key];
+      }
       return dictionaries[locale][key] ?? dictionaries.EN[key] ?? key;
     },
-    [locale]
+    [locale, overrides]
   );
 
+  const tImage = useCallback(
+    (key: string, defaultImage: any): any => {
+      if (overrides && overrides[key]) {
+        return overrides[key];
+      }
+      return defaultImage;
+    },
+    [overrides]
+  );
+
+  const reloadOverrides = useCallback(async () => {
+    await loadOverrides(locale);
+  }, [locale, loadOverrides]);
+
   return (
-    <LanguageContext value={{ locale, setLocale, t }}>
+    <LanguageContext value={{ locale, setLocale, t, tImage, reloadOverrides }}>
       {children}
     </LanguageContext>
   );
@@ -69,3 +105,4 @@ export function useTranslation() {
   }
   return context;
 }
+

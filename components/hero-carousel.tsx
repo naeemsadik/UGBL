@@ -13,7 +13,6 @@ import hero5 from "@/assets/hero5.jpg";
 import hero6 from "@/assets/hero6.jpeg";
 import hero7 from "@/assets/hero7.png";
 
-const HERO_IMAGES = [hero1, hero2, hero4, hero5, hero6, hero7];
 const ROTATE_MS = 6000;
 
 const TAGLINE_KEYS: { line1: TranslationKey; line2: TranslationKey }[] = [
@@ -28,7 +27,16 @@ const TAGLINE_KEYS: { line1: TranslationKey; line2: TranslationKey }[] = [
 
 export function HeroCarousel() {
   const [idx, setIdx] = useState(0);
-  const { t } = useTranslation();
+  const { t, tImage } = useTranslation();
+
+  const HERO_IMAGES = [
+    tImage("image.hero0", hero1),
+    tImage("image.hero1", hero2),
+    tImage("image.hero2", hero4),
+    tImage("image.hero3", hero5),
+    tImage("image.hero4", hero6),
+    tImage("image.hero5", hero7),
+  ];
 
   useEffect(() => {
     const timer = setInterval(
@@ -36,7 +44,7 @@ export function HeroCarousel() {
       ROTATE_MS,
     );
     return () => clearInterval(timer);
-  }, []);
+  }, [HERO_IMAGES.length]);
 
   const scrollDown = () => {
     window.scrollTo({ top: window.innerHeight - 80, behavior: "smooth" });
@@ -48,7 +56,7 @@ export function HeroCarousel() {
       <div className="absolute inset-0" aria-hidden>
         {HERO_IMAGES.map((img, i) => (
           <Image
-            key={img.src}
+            key={typeof img === "string" ? img : img.src}
             src={img}
             alt=""
             fill
@@ -60,6 +68,7 @@ export function HeroCarousel() {
           />
         ))}
       </div>
+
 
       {/* Overlay */}
       <div className="hero-overlay relative z-10 flex flex-col">
