@@ -39,8 +39,8 @@ export const zh: Record<TranslationKey, string> = {
   "home.workingHoursSub": "周日至周四 24/7",
   "home.workingHoursValue": "非工作时间：请通过电子邮件联系",
   "home.ourLocation": "我们的位置",
-  "home.ourLocationSub": "Taher Tower（9楼）",
-  "home.ourLocationValue": "Gulshan Circle-2, 达卡",
+  "home.ourLocationSub": "集团总部",
+  "home.ourLocationValue": "吉大港, 孟加拉国",
 
   // Home – About
   "home.aboutP1":
@@ -270,7 +270,7 @@ export const zh: Record<TranslationKey, string> = {
     "联系我们获取代理预约、租船支持和端到端物流协助。",
   "contact.contactInfo": "联系信息",
   "contact.contactInfoDesc":
-    "Taher Tower（9楼），Gulshan Circle-2，达卡。电子邮件和热线支持全天候可用。",
+    "集团总部，吉大港，孟加拉国。电子邮件和热线支持全天候可用。",
   "contact.email": "邮箱: operations@rivertyneshipping.com",
   "contact.phone": "电话: +880 258811819",
   "contact.hours": "时间: 24/7 支持台",
@@ -340,16 +340,16 @@ export const zh: Record<TranslationKey, string> = {
   "offices.sectionTitle": "我们的办事处",
   "offices.sectionSubtitle":
     "联系我们在孟加拉国各地的任何办事处，获取航运和物流支持。",
-  "offices.dhakaTitle": "达卡办事处（自有物业）",
+  "offices.dhakaTitle": "达卡办事处",
   "offices.dhakaLine1": "Taher Tower (9th Floor)",
   "offices.dhakaLine2": "Plot-10, Gulshan C/A, Circle-2",
   "offices.dhakaLine3": "Dhaka 1212, Bangladesh",
   "offices.dhakaPhone": "+880-2-58811819 ,+8802222286574",
   "offices.dhakaEmail": "info@rivertyneltd.com",
-  "offices.chattogramTitle": "吉大港办事处（自有物业）",
-  "offices.chattogramLine1": "Yunusco City Center (8th Floor)",
-  "offices.chattogramLine2": "807, C.D.A Avenue GEC Circle",
-  "offices.chattogramLine3": "Chattogram 4100, Bangladesh",
+  "offices.chattogramTitle": "吉大港办事处",
+  "offices.chattogramLine1": "Rancon FC Khan Plaza (8th Floor)",
+  "offices.chattogramLine2": "1407 Sheikh Mujib Road, Chowmohani",
+  "offices.chattogramLine3": "Chattogram-4100, Bangladesh",
   "offices.chattogramPhone": "+880-31 2866327",
   "offices.chattogramEmail": "info@rivertyneltd.com",
   "offices.khulnaTitle": "库尔纳/蒙格拉办事处（租赁）",
