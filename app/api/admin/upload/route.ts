@@ -29,7 +29,18 @@ export async function POST(request: NextRequest) {
 
     // Set up directory paths
     const uploadDir = path.join(process.cwd(), "public", "uploads");
-    await fs.mkdir(uploadDir, { recursive: true });
+    
+    try {
+      await fs.mkdir(uploadDir, { recursive: true });
+    } catch (mkdirError: any) {
+      console.error("[upload-api] Directory creation failed:", mkdirError);
+      if (mkdirError.code === "EROFS" || mkdirError.message?.includes("read-only")) {
+        return NextResponse.json(
+          { error: "Server filesystem is read-only. Serverless environments (like Vercel) require external media storage (like Cloudinary)." },
+          { status: 400 }
+        );
+      }
+    }
 
     // Generate unique file name
     const timestamp = Date.now();
@@ -41,14 +52,26 @@ export async function POST(request: NextRequest) {
     // Save to public/uploads
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
-    await fs.writeFile(filePath, buffer);
+    
+    try {
+      await fs.writeFile(filePath, buffer);
+    } catch (writeError: any) {
+      console.error("[upload-api] File write failed:", writeError);
+      if (writeError.code === "EROFS" || writeError.message?.includes("read-only")) {
+        return NextResponse.json(
+          { error: "Server filesystem is read-only. Serverless environments (like Vercel) require external media storage (like Cloudinary)." },
+          { status: 400 }
+        );
+      }
+      throw writeError; // Let outer catch block handle other write errors
+    }
 
     const publicUrl = `/uploads/${uniqueFileName}`;
     console.info(`[upload-api] File uploaded successfully: ${publicUrl}`);
 
     return NextResponse.json({ url: publicUrl });
-  } catch (error) {
+  } catch (error: any) {
     console.error("Upload API error:", error);
-    return NextResponse.json({ error: "Failed to upload file" }, { status: 500 });
+    return NextResponse.json({ error: "Failed to upload file: " + (error.message || "Unknown error") }, { status: 500 });
   }
 }
