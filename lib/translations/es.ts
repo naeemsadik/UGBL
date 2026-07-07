@@ -39,8 +39,8 @@ export const es: Record<TranslationKey, string> = {
   "home.workingHoursSub": "Domingo - Jueves 24/7",
   "home.workingHoursValue": "FHL : Contacte por correo electrónico",
   "home.ourLocation": "Nuestra Ubicación",
-  "home.ourLocationSub": "Taher Tower (Piso 9)",
-  "home.ourLocationValue": "Gulshan Circle-2, Dhaka",
+  "home.ourLocationSub": "Oficina Central Corporativa",
+  "home.ourLocationValue": "Chattogram, Bangladesh",
 
   // Home – About
   "home.aboutP1":
@@ -272,7 +272,7 @@ export const es: Record<TranslationKey, string> = {
     "Póngase en contacto para citas de agencia, soporte de fletamento y asistencia logística integral.",
   "contact.contactInfo": "Información de Contacto",
   "contact.contactInfoDesc":
-    "Taher Tower (Piso 9), Gulshan Circle-2, Dhaka. El soporte por correo electrónico y línea directa está disponible las 24 horas para todas las llamadas activas.",
+    "Oficina Central Corporativa, Chattogram, Bangladesh. El soporte por correo electrónico y línea directa está disponible las 24 horas para todas las llamadas activas.",
   "contact.email": "Correo: operations@rivertyneshipping.com",
   "contact.phone": "Teléfono: +880 258811819",
   "contact.hours": "Horario: Mesa de soporte 24/7",
@@ -342,16 +342,16 @@ export const es: Record<TranslationKey, string> = {
   "offices.sectionTitle": "Nuestras Oficinas",
   "offices.sectionSubtitle":
     "Comuníquese con cualquiera de nuestras oficinas en Bangladesh para soporte de envío y logística.",
-  "offices.dhakaTitle": "Oficina de Dhaka (Propia)",
+  "offices.dhakaTitle": "Oficina de Dhaka (Sucursal)",
   "offices.dhakaLine1": "Taher Tower (9th Floor)",
   "offices.dhakaLine2": "Plot-10, Gulshan C/A, Circle-2",
   "offices.dhakaLine3": "Dhaka 1212, Bangladesh",
   "offices.dhakaPhone": "+880-2-58811819 ,+8802222286574",
   "offices.dhakaEmail": "info@rivertyneltd.com",
-  "offices.chattogramTitle": "Oficina de Chattogram (Propia)",
-  "offices.chattogramLine1": "Yunusco City Center (8th Floor)",
-  "offices.chattogramLine2": "807, C.D.A Avenue GEC Circle",
-  "offices.chattogramLine3": "Chattogram 4100, Bangladesh",
+  "offices.chattogramTitle": "Oficina de Chattogram (Oficina Central)",
+  "offices.chattogramLine1": "Rancon FC Khan Plaza (8th Floor)",
+  "offices.chattogramLine2": "1407 Sheikh Mujib Road, Chowmohani",
+  "offices.chattogramLine3": "Chattogram-4100, Bangladesh",
   "offices.chattogramPhone": "+880-31 2866327",
   "offices.chattogramEmail": "info@rivertyneltd.com",
   "offices.khulnaTitle": "Oficina de Khulna/Mongla (Alquilada)",

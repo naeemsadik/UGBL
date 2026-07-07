@@ -86,7 +86,7 @@ export const en = {
   "home.workingHoursValue": "AOH : Please contact via email",
   "home.ourLocation": "Our Location",
   "home.ourLocationSub": "Corporate Head Office",
-  "home.ourLocationValue": "Dhaka, Bangladesh",
+  "home.ourLocationValue": "Chattogram, Bangladesh",
 
   // Home – About Section
   "home.aboutP1":
@@ -101,7 +101,7 @@ export const en = {
   // Home – Connections
   "home.connections": "Connections",
   "home.connectionsDesc":
-    "Principals can tap into River Tyne's excellent local connections and relations with both public and private sectors in the shipping industry. These include customs & port authorities, embassies, classification societies, shipping associations, terminals operators, stevedores, shipyard facilities and suppliers.",
+    "River Tyne Ltd is the Global Network Partner Agent of JOHNASIA SHIPPING. Principals can tap into River Tyne's excellent local connections and relations with both public and private sectors in the shipping industry. These include customs & port authorities, embassies, classification societies, shipping associations, terminals operators, stevedores, shipyard facilities and suppliers.",
   "home.response": "24/7 Response",
   "home.responseDesc":
     "In addition to fast turnaround for all port calls, clients can also expect response to all inquiries within 24 hours. Our efficient operations are aimed at reducing time at port and ultimately minimize costs for Principals.",
@@ -322,7 +322,7 @@ export const en = {
     "Get in touch for agency appointments, chartering support, and end-to-end logistics assistance.",
   "contact.contactInfo": "Contact Information",
   "contact.contactInfoDesc":
-    "Corporate Head Office, Dhaka, Bangladesh. Email and hotline support are available around the clock for all active calls.",
+    "Corporate Head Office, Chattogram, Bangladesh. Email and hotline support are available around the clock for all active calls.",
   "contact.email": "Email: operations@rivertyneshipping.com",
   "contact.phone": "Phone: +880 258811819",
   "contact.hours": "Hours: 24/7 support desk",
@@ -346,16 +346,16 @@ export const en = {
   "offices.sectionTitle": "Our Offices",
   "offices.sectionSubtitle":
     "Reach out to any of our offices across Bangladesh for shipping and logistics support.",
-  "offices.dhakaTitle": "Dhaka Office ",
+  "offices.dhakaTitle": "Dhaka Office",
   "offices.dhakaLine1": "Taher Tower (9th Floor)",
   "offices.dhakaLine2": "Plot-10, Gulshan C/A, Circle-2",
   "offices.dhakaLine3": "Dhaka 1212, Bangladesh",
   "offices.dhakaPhone": "+880-2-58811819 ,+8802222286574",
   "offices.dhakaEmail": "info@rivertyneltd.com",
-  "offices.chattogramTitle": "Chattogram Office ",
-  "offices.chattogramLine1": "Yunusco City Center (8th Floor)",
-  "offices.chattogramLine2": "807, C.D.A Avenue GEC Circle",
-  "offices.chattogramLine3": "Chattogram 4100, Bangladesh",
+  "offices.chattogramTitle": "Chattogram Office",
+  "offices.chattogramLine1": "Rancon FC Khan Plaza (8th Floor)",
+  "offices.chattogramLine2": "1407 Sheikh Mujib Road, Chowmohani",
+  "offices.chattogramLine3": "Chattogram-4100, Bangladesh",
   "offices.chattogramPhone": "+880-31 2866327",
   "offices.chattogramEmail": "info@rivertyneltd.com",
   "offices.khulnaTitle": "Khulna/Mongla Office",
@@ -771,7 +771,7 @@ export const en = {
   "policy.policyAreas": "Policy Areas",
   "policy.continuousImprovement": "Continuous Improvement",
   "policy.improvementDesc": "River Tyne Ltd reviews its policies annually to ensure effectiveness, compliance, and alignment with industry best practices. Policies are communicated throughout the organization and made available to relevant stakeholders.",
-  
+
   // Ethics Points
   "policy.ethics.p1": "Fairness & Transparency: We conduct business openly, honestly, and professionally with employees, clients, suppliers, and stakeholders.",
   "policy.ethics.p2": "Independence & Anti-Corruption: The Company strictly prohibits bribery, corruption, or personal gain derived from company position.",

@@ -10,20 +10,20 @@
 */
 export const OFFICES = [
   {
-    id: "dhaka",
-    label: "Dhaka",
-    sublabel: "Head Office",
-    // 90.40°E, 23.72°N → x≈224, y≈297
-    xPct: 51.2,
-    yPct: 49.4,
-  },
-  {
     id: "chattogram",
     label: "Chattogram",
-    sublabel: "Branch Office",
+    sublabel: "Head Office",
     // 91.82°E, 22.34°N → x≈357, y≈437
     xPct: 81.6,
     yPct: 72.7,
+  },
+  {
+    id: "dhaka",
+    label: "Dhaka",
+    sublabel: "Branch Office",
+    // 90.40°E, 23.72°N → x≈224, y≈297
+    xPct: 51.2,
+    yPct: 49.4,
   },
   {
     id: "khulna",

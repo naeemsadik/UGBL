@@ -10,18 +10,6 @@ import contactBg from "@/assets/contactus.jpg";
 /* ── Office detail data (addresses pulled from translations) ── */
 const OFFICE_DATA = [
   {
-    id: "dhaka",
-    titleKey: "offices.dhakaTitle" as const,
-    lines: [
-      "offices.dhakaLine1" as const,
-      "offices.dhakaLine2" as const,
-      "offices.dhakaLine3" as const,
-    ],
-    phoneKey: "offices.dhakaPhone" as const,
-    emailKey: "offices.dhakaEmail" as const,
-    isHQ: true,
-  },
-  {
     id: "chattogram",
     titleKey: "offices.chattogramTitle" as const,
     lines: [
@@ -31,6 +19,18 @@ const OFFICE_DATA = [
     ],
     phoneKey: "offices.chattogramPhone" as const,
     emailKey: "offices.chattogramEmail" as const,
+    isHQ: true,
+  },
+  {
+    id: "dhaka",
+    titleKey: "offices.dhakaTitle" as const,
+    lines: [
+      "offices.dhakaLine1" as const,
+      "offices.dhakaLine2" as const,
+      "offices.dhakaLine3" as const,
+    ],
+    phoneKey: "offices.dhakaPhone" as const,
+    emailKey: "offices.dhakaEmail" as const,
     isHQ: false,
   },
   {
@@ -87,7 +87,7 @@ function EmailIcon() {
 /* ── Main page ── */
 export default function ContactPage() {
   const { t } = useTranslation();
-  const [activeId, setActiveId] = useState<string>("dhaka");
+  const [activeId, setActiveId] = useState<string>("chattogram");
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   // Form state

@@ -55,16 +55,7 @@ function EmailIcon() {
 
 /* ── Office data ───────────────────────────────────── */
 const offices = [
-  {
-    titleKey: "offices.dhakaTitle" as const,
-    lines: [
-      { type: "address" as const, key: "offices.dhakaLine1" as const },
-      { type: "address" as const, key: "offices.dhakaLine2" as const },
-      { type: "address" as const, key: "offices.dhakaLine3" as const },
-    ],
-    phone: "offices.dhakaPhone" as const,
-    email: "offices.dhakaEmail" as const,
-  },
+
   {
     titleKey: "offices.chattogramTitle" as const,
     lines: [
@@ -74,6 +65,16 @@ const offices = [
     ],
     phone: "offices.chattogramPhone" as const,
     email: "offices.chattogramEmail" as const,
+  },
+  {
+    titleKey: "offices.dhakaTitle" as const,
+    lines: [
+      { type: "address" as const, key: "offices.dhakaLine1" as const },
+      { type: "address" as const, key: "offices.dhakaLine2" as const },
+      { type: "address" as const, key: "offices.dhakaLine3" as const },
+    ],
+    phone: "offices.dhakaPhone" as const,
+    email: "offices.dhakaEmail" as const,
   },
   {
     titleKey: "offices.khulnaTitle" as const,
