@@ -76,7 +76,7 @@ function renderHighlightedText(text: string) {
 }
 
 export default function ManagementPage() {
-  const { t } = useTranslation();
+  const { t, tVisibility } = useTranslation();
 
   return (
     <div className="bg-slate-50">
@@ -142,76 +142,78 @@ export default function ManagementPage() {
         </div>
 
         {/* Fleet Ownership Table */}
-        <div className="mt-10 rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
-          <span className="inline-flex items-center rounded-full bg-[#49A98F]/12 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#49A98F]">
-            {t("mgmt.fleetLabel")}
-          </span>
-          <h2 className="mt-5 text-2xl font-black tracking-tight text-[#1D2E54] md:text-3xl">
-            {t("mgmt.fleetTitle")}
-          </h2>
-          <p className="mt-2 text-sm text-slate-500">{t("mgmt.fleetDesc")}</p>
+        {tVisibility("visibility.mgmtVesselPortfolio") && (
+          <div className="mt-10 rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
+            <span className="inline-flex items-center rounded-full bg-[#49A98F]/12 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#49A98F]">
+              {t("mgmt.fleetLabel")}
+            </span>
+            <h2 className="mt-5 text-2xl font-black tracking-tight text-[#1D2E54] md:text-3xl">
+              {t("mgmt.fleetTitle")}
+            </h2>
+            <p className="mt-2 text-sm text-slate-500">{t("mgmt.fleetDesc")}</p>
 
-          <div className="mt-8 overflow-x-auto rounded-2xl border border-slate-100">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="bg-[#1D2E54] text-white">
-                  {[
-                    "SN",
-                    "Name",
-                    "Capacity",
-                    "Type",
-                    "Flag",
-                    "IMO No.",
-                    "Status",
-                  ].map((h) => (
-                    <th
-                      key={h}
-                      className="px-4 py-3.5 text-left text-[0.68rem] font-black uppercase tracking-[0.18em] whitespace-nowrap first:rounded-tl-2xl last:rounded-tr-2xl"
-                    >
-                      {h}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {fleetData.map((row, i) => (
-                  <tr
-                    key={row.sn}
-                    className={`border-t border-slate-100 transition-colors hover:bg-slate-50 ${
-                      i % 2 === 0 ? "bg-white" : "bg-slate-50/50"
-                    }`}
-                  >
-                    <td className="px-4 py-3.5 font-bold text-[#1D2E54]">
-                      {row.sn}
-                    </td>
-                    <td className="px-4 py-3.5 font-semibold text-slate-800 whitespace-nowrap">
-                      {row.name}
-                    </td>
-                    <td className="px-4 py-3.5 text-slate-600 whitespace-nowrap">
-                      {row.capacity}
-                    </td>
-                    <td className="px-4 py-3.5 text-slate-600">{row.type}</td>
-                    <td className="px-4 py-3.5 text-slate-600">{row.flag}</td>
-                    <td className="px-4 py-3.5 font-mono text-xs text-slate-500">
-                      {row.imo}
-                    </td>
-                    <td className="px-4 py-3.5">
-                      <span
-                        className={`inline-flex rounded-full px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-wide ${
-                          row.status === "Operational"
-                            ? "bg-[#49A98F]/15 text-[#2d7a65]"
-                            : "bg-slate-100 text-slate-500"
-                        }`}
+            <div className="mt-8 overflow-x-auto rounded-2xl border border-slate-100">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-[#1D2E54] text-white">
+                    {[
+                      "SN",
+                      "Name",
+                      "Capacity",
+                      "Type",
+                      "Flag",
+                      "IMO No.",
+                      "Status",
+                    ].map((h) => (
+                      <th
+                        key={h}
+                        className="px-4 py-3.5 text-left text-[0.68rem] font-black uppercase tracking-[0.18em] whitespace-nowrap first:rounded-tl-2xl last:rounded-tr-2xl"
                       >
-                        {row.status}
-                      </span>
-                    </td>
+                        {h}
+                      </th>
+                    ))}
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {fleetData.map((row, i) => (
+                    <tr
+                      key={row.sn}
+                      className={`border-t border-slate-100 transition-colors hover:bg-slate-50 ${
+                        i % 2 === 0 ? "bg-white" : "bg-slate-50/50"
+                      }`}
+                    >
+                      <td className="px-4 py-3.5 font-bold text-[#1D2E54]">
+                        {row.sn}
+                      </td>
+                      <td className="px-4 py-3.5 font-semibold text-slate-800 whitespace-nowrap">
+                        {row.name}
+                      </td>
+                      <td className="px-4 py-3.5 text-slate-600 whitespace-nowrap">
+                        {row.capacity}
+                      </td>
+                      <td className="px-4 py-3.5 text-slate-600">{row.type}</td>
+                      <td className="px-4 py-3.5 text-slate-600">{row.flag}</td>
+                      <td className="px-4 py-3.5 font-mono text-xs text-slate-500">
+                        {row.imo}
+                      </td>
+                      <td className="px-4 py-3.5">
+                        <span
+                          className={`inline-flex rounded-full px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-wide ${
+                            row.status === "Operational"
+                              ? "bg-[#49A98F]/15 text-[#2d7a65]"
+                              : "bg-slate-100 text-slate-500"
+                          }`}
+                        >
+                          {row.status}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
+        )}
       </section>
     </div>
   );

@@ -212,6 +212,7 @@ const SECTIONS = [
       { key: "visibility.portDownloads", type: "boolean", label: "Show Ports Sidebar Downloads Panel" },
       { key: "visibility.portContactInfo", type: "boolean", label: "Show Ports Sidebar Contact Panel" },
       // Global Sections
+      { key: "visibility.mgmtVesselPortfolio", type: "boolean", label: "Show Management Profile's Vessel Portfolio (Ship Ownership)" },
       { key: "visibility.officeAddresses", type: "boolean", label: "Show Global Office Addresses grid" },
       { key: "visibility.siteFooter", type: "boolean", label: "Show Global Site Footer" },
     ],
