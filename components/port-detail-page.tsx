@@ -85,7 +85,7 @@ type PortDetailPageProps = {
 };
 
 export function PortDetailPage(props: PortDetailPageProps) {
-  const { t, locale } = useTranslation();
+  const { t, locale, tVisibility } = useTranslation();
 
   // Apply Bengali translation overlay if needed
   const translated = getTranslatedPortData(props, locale) as PortDetailPageProps;
@@ -133,7 +133,7 @@ export function PortDetailPage(props: PortDetailPageProps) {
                 {overview}
               </p>
 
-              {!hasFlatCoreSections && (
+              {!hasFlatCoreSections && tVisibility("visibility.portFacts") && (
                 <div className="mt-8 grid gap-4 md:grid-cols-2">
                   {facts.map((fact) => (
                     <div
@@ -177,7 +177,7 @@ export function PortDetailPage(props: PortDetailPageProps) {
                       </div>
                     ))}
 
-                  {!hasFlatCoreSections &&
+                  {!hasFlatCoreSections && tVisibility("visibility.portTechnicalSpecs") &&
                     technicalSections?.map((section) => (
                       <div key={section.title}>
                         <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
@@ -209,7 +209,7 @@ export function PortDetailPage(props: PortDetailPageProps) {
                       </div>
                     ))}
 
-                  {!hasFlatCoreSections && berthRestrictions && (
+                  {!hasFlatCoreSections && berthRestrictions && tVisibility("visibility.portBerthRestrictions") && (
                     <div>
                       <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
                         {t("port.common.restrictions")}
@@ -265,7 +265,7 @@ export function PortDetailPage(props: PortDetailPageProps) {
             </div>
 
             {/* Technical Sections */}
-            {!shouldMergeCoreSections &&
+            {!shouldMergeCoreSections && tVisibility("visibility.portTechnicalSpecs") &&
               technicalSections?.map((section) => (
                 <div
                   key={section.title}
@@ -301,7 +301,7 @@ export function PortDetailPage(props: PortDetailPageProps) {
               ))}
 
             {/* Berth Restrictions */}
-            {!shouldMergeCoreSections && berthRestrictions && (
+            {!shouldMergeCoreSections && berthRestrictions && tVisibility("visibility.portBerthRestrictions") && (
               <div className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
                 <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
                   {t("port.common.restrictions")}
@@ -354,7 +354,7 @@ export function PortDetailPage(props: PortDetailPageProps) {
             )}
 
             {/* LNG Terminals */}
-            {lngTerminals && lngTerminals.length > 0 && (
+            {lngTerminals && lngTerminals.length > 0 && tVisibility("visibility.portLngTerminals") && (
               <div className="rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
                 <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
                   {t("port.common.specializedTerminals")}
@@ -444,24 +444,27 @@ export function PortDetailPage(props: PortDetailPageProps) {
               </div>
             )}
 
-            <div className="rounded-[28px] bg-[#1D2E54] p-8 text-white shadow-[0_24px_70px_rgba(29,46,84,0.28)] md:p-10">
-              <div className="rounded-[24px] border border-white/10 bg-white/5 p-6">
-                <p className="text-[0.68rem] font-black uppercase tracking-[0.24em] text-white/55">
-                  {ctaTitle}
-                </p>
-                <p className="mt-3 text-sm leading-6 text-slate-200">
-                  {t("port.common.supportText")}
-                </p>
-                <Link
-                  href={ctaHref}
-                  className="mt-5 inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-black text-[#1D2E54] transition-transform duration-300 hover:-translate-y-0.5"
-                >
-                  {ctaLabel}
-                </Link>
+            {tVisibility("visibility.ctaBanner") && (
+              <div className="rounded-[28px] bg-[#1D2E54] p-8 text-white shadow-[0_24px_70px_rgba(29,46,84,0.28)] md:p-10">
+                <div className="rounded-[24px] border border-white/10 bg-white/5 p-6">
+                  <p className="text-[0.68rem] font-black uppercase tracking-[0.24em] text-white/55">
+                    {ctaTitle}
+                  </p>
+                  <p className="mt-3 text-sm leading-6 text-slate-200">
+                    {t("port.common.supportText")}
+                  </p>
+                  <Link
+                    href={ctaHref}
+                    className="mt-5 inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-black text-[#1D2E54] transition-transform duration-300 hover:-translate-y-0.5"
+                  >
+                    {ctaLabel}
+                  </Link>
+                </div>
               </div>
-            </div>
+            )}
 
-            <section className="rounded-[28px] border border-white/60 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-8">
+            {tVisibility("visibility.portMap") && (
+              <section className="rounded-[28px] border border-white/60 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-8">
               <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
                 {mapTitle}
               </span>
@@ -490,11 +493,13 @@ export function PortDetailPage(props: PortDetailPageProps) {
                 />
               </div>
             </section>
+            )}
           </div>
 
           <div className="grid gap-8">
             {/* Read More Section */}
-            <div className="rounded-[20px] border border-white/60 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+            {readMoreLinks && readMoreLinks.length > 0 && tVisibility("visibility.portSidebarLinks") && (
+              <div className="rounded-[20px] border border-white/60 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
               <div className="mb-4 flex items-center gap-2">
                 <BookOpen className="h-5 w-5 text-[#3B71B5]" />
                 <h3 className="text-xs font-black uppercase tracking-[0.24em] text-[#1D2E54]">
@@ -512,10 +517,12 @@ export function PortDetailPage(props: PortDetailPageProps) {
                   </Link>
                 ))}
               </div>
-            </div>
+              </div>
+            )}
 
             {/* Download Section */}
-            <div className="rounded-[20px] border border-white/60 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+            {downloadLinks && downloadLinks.length > 0 && tVisibility("visibility.portDownloads") && (
+              <div className="rounded-[20px] border border-white/60 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
               <div className="mb-4 flex items-center gap-2">
                 <Download className="h-5 w-5 text-[#3B71B5]" />
                 <h3 className="text-xs font-black uppercase tracking-[0.24em] text-[#1D2E54]">
@@ -561,10 +568,12 @@ export function PortDetailPage(props: PortDetailPageProps) {
                   );
                 })}
               </div>
-            </div>
+              </div>
+            )}
 
             {/* Contact Section */}
-            <div className="rounded-[20px] border border-white/60 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+            {contact && tVisibility("visibility.portContactInfo") && (
+              <div className="rounded-[20px] border border-white/60 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
               <div className="mb-4 flex items-center gap-2">
                 <Phone className="h-5 w-5 text-[#3B71B5]" />
                 <h3 className="text-xs font-black uppercase tracking-[0.24em] text-[#1D2E54]">
@@ -593,7 +602,8 @@ export function PortDetailPage(props: PortDetailPageProps) {
                   {contact.contactLabel}
                 </Link>
               </div>
-            </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

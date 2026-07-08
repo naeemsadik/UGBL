@@ -101,7 +101,11 @@ const offices = [
 ];
 
 export function OfficeAddresses() {
-  const { t } = useTranslation();
+  const { t, tVisibility } = useTranslation();
+
+  if (!tVisibility("visibility.officeAddresses")) {
+    return null;
+  }
 
   return (
     <section className="office-addresses" id="office-addresses">

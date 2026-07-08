@@ -187,6 +187,35 @@ const SECTIONS = [
       { key: "image.serviceBrokeringBg", type: "image", label: "Brokering Service Page Hero" },
     ],
   },
+  {
+    id: "site-visibility",
+    label: "Visibility Controls",
+    keys: [
+      // Home Page
+      { key: "visibility.homeHero", type: "boolean", label: "Show Homepage Hero Banner" },
+      { key: "visibility.homeInfoCards", type: "boolean", label: "Show Homepage Info Cards" },
+      { key: "visibility.homeCompanyOverview", type: "boolean", label: "Show Homepage Company Overview" },
+      // Inner Pages (Ports/Services) Common
+      { key: "visibility.innerHero", type: "boolean", label: "Show Inner Page Hero Banner Image" },
+      { key: "visibility.ctaBanner", type: "boolean", label: "Show Bottom CTA Contact Banner" },
+      // Service Pages Detail
+      { key: "visibility.serviceOverview", type: "boolean", label: "Show Services Overview Section" },
+      { key: "visibility.serviceWhatWeOffer", type: "boolean", label: "Show Services 'What We Offer' List" },
+      { key: "visibility.serviceAdditionalSections", type: "boolean", label: "Show Services Additional Sections" },
+      // Port Pages Detail
+      { key: "visibility.portFacts", type: "boolean", label: "Show Ports Facts List" },
+      { key: "visibility.portTechnicalSpecs", type: "boolean", label: "Show Ports Technical Specifications" },
+      { key: "visibility.portBerthRestrictions", type: "boolean", label: "Show Ports Berth Restrictions Table" },
+      { key: "visibility.portLngTerminals", type: "boolean", label: "Show Ports Specialized LNG Terminals" },
+      { key: "visibility.portMap", type: "boolean", label: "Show Ports Location Map" },
+      { key: "visibility.portSidebarLinks", type: "boolean", label: "Show Ports Sidebar Links Panel" },
+      { key: "visibility.portDownloads", type: "boolean", label: "Show Ports Sidebar Downloads Panel" },
+      { key: "visibility.portContactInfo", type: "boolean", label: "Show Ports Sidebar Contact Panel" },
+      // Global Sections
+      { key: "visibility.officeAddresses", type: "boolean", label: "Show Global Office Addresses grid" },
+      { key: "visibility.siteFooter", type: "boolean", label: "Show Global Site Footer" },
+    ],
+  },
 ];
 
 export default function AdminDashboardPage() {
@@ -269,9 +298,9 @@ export default function AdminDashboardPage() {
   // Detect unsaved changes in current section
   const getUnsavedKeys = () => {
     const unsaved: string[] = [];
-    activeSection.keys.forEach(({ key }) => {
-      const draftVal = draftOverrides[key] || "";
-      const serverVal = serverOverrides[key] || "";
+    activeSection.keys.forEach(({ key, type }) => {
+      const draftVal = draftOverrides[key] ?? (type === "boolean" ? "true" : "");
+      const serverVal = serverOverrides[key] ?? (type === "boolean" ? "true" : "");
       if (draftVal !== serverVal) {
         unsaved.push(key);
       }
@@ -601,8 +630,8 @@ export default function AdminDashboardPage() {
                 </div>
               ) : (
                 filteredKeys.map((item) => {
-                  const draftVal = draftOverrides[item.key] || "";
-                  const serverVal = serverOverrides[item.key] || "";
+                  const draftVal = draftOverrides[item.key] ?? (item.type === "boolean" ? "true" : "");
+                  const serverVal = serverOverrides[item.key] ?? (item.type === "boolean" ? "true" : "");
                   const isModifiedLocally = draftVal !== serverVal;
                   const isOverriddenOnServer = !!serverOverrides[item.key];
 
@@ -708,6 +737,25 @@ export default function AdminDashboardPage() {
                             rows={4}
                             className="w-full rounded-xl border border-slate-800 bg-slate-950/80 p-3.5 text-sm text-white placeholder-slate-700 outline-none transition focus:border-slate-800"
                           />
+                        ) : item.type === "boolean" ? (
+                          <div className="flex items-center gap-3">
+                            <button
+                              type="button"
+                              onClick={() => handleFieldChange(item.key, draftVal === "true" ? "false" : "true")}
+                              className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out outline-none ${
+                                draftVal === "true" ? "bg-[#49A98F]" : "bg-slate-800"
+                              }`}
+                            >
+                              <span
+                                className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${
+                                  draftVal === "true" ? "translate-x-5" : "translate-x-0"
+                                }`}
+                              />
+                            </button>
+                            <span className="text-xs font-semibold text-slate-400">
+                              {draftVal === "true" ? "Visible / Enabled" : "Hidden / Disabled"}
+                            </span>
+                          </div>
                         ) : (
                           <input
                             type="text"

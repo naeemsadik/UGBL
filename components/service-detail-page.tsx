@@ -69,7 +69,7 @@ export function ServiceDetailPage({
   ctaLabel,
   ctaHref,
 }: ServiceDetailPageProps) {
-  const { t } = useTranslation();
+  const { t, tVisibility } = useTranslation();
 
   return (
     <div className="bg-slate-50">
@@ -86,22 +86,26 @@ export function ServiceDetailPage({
         {/* Card 1: Main Service Content Container */}
         <div className="rounded-[32px] border border-slate-100 bg-white p-6 sm:p-8 md:p-12 xl:p-16 shadow-[0_24px_70px_rgba(15,23,42,0.06)]">
           {/* ── Service Overview ──────────────────────── */}
-          <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
-            {t("service.common.overview")}
-          </span>
-          <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-5xl leading-tight">
-            {overviewTitle}
-          </h2>
-          <div className="mt-6 space-y-6 text-base leading-relaxed text-slate-600 md:text-lg w-full">
-            {(Array.isArray(overview) ? overview : overview.split("\n\n")).map(
-              (paragraph, index) => (
-                <p key={`overview-${index}`}>{paragraph}</p>
-              )
-            )}
-          </div>
+          {tVisibility("visibility.serviceOverview") && (
+            <>
+              <span className="inline-flex items-center rounded-full bg-[#1D2E54]/10 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#1D2E54]">
+                {t("service.common.overview")}
+              </span>
+              <h2 className="mt-5 text-3xl font-black tracking-tight text-[#1D2E54] md:text-5xl leading-tight">
+                {overviewTitle}
+              </h2>
+              <div className="mt-6 space-y-6 text-base leading-relaxed text-slate-600 md:text-lg w-full">
+                {(Array.isArray(overview) ? overview : overview.split("\n\n")).map(
+                  (paragraph, index) => (
+                    <p key={`overview-${index}`}>{paragraph}</p>
+                  )
+                )}
+              </div>
+            </>
+          )}
 
           {/* ── What We Offer ────────────────────────── */}
-          {serviceItems && serviceItems.length > 0 && (
+          {serviceItems && serviceItems.length > 0 && tVisibility("visibility.serviceWhatWeOffer") && (
             <div
               className={
                 serviceItemsCompact
@@ -155,7 +159,7 @@ export function ServiceDetailPage({
         </div>
 
         {/* Card 2+: Additional Content Sections */}
-        {additionalSections && additionalSections.length > 0 && additionalSections.map((section) => (
+        {additionalSections && additionalSections.length > 0 && tVisibility("visibility.serviceAdditionalSections") && additionalSections.map((section) => (
           <div key={section.title} className="rounded-[32px] border border-slate-100 bg-white p-6 sm:p-8 md:p-12 xl:p-16 shadow-[0_24px_70px_rgba(15,23,42,0.06)]">
             {/* ── Section Overview ── */}
             {section.titleStyle === "heading" ? (
@@ -219,24 +223,26 @@ export function ServiceDetailPage({
         ))}
 
         {/* Standalone CTA Banner */}
-        <div className="rounded-[24px] bg-[#1D2E54] p-8 text-white shadow-[0_20px_50px_rgba(29,46,84,0.18)] md:p-10">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
-            <div className="max-w-3xl">
-              <p className="text-[0.68rem] font-black uppercase tracking-[0.24em] text-white/55">
-                {ctaTitle}
-              </p>
-              <p className="mt-3 text-sm md:text-base leading-relaxed text-slate-200">
-                {ctaText}
-              </p>
+        {tVisibility("visibility.ctaBanner") && (
+          <div className="rounded-[24px] bg-[#1D2E54] p-8 text-white shadow-[0_20px_50px_rgba(29,46,84,0.18)] md:p-10">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
+              <div className="max-w-3xl">
+                <p className="text-[0.68rem] font-black uppercase tracking-[0.24em] text-white/55">
+                  {ctaTitle}
+                </p>
+                <p className="mt-3 text-sm md:text-base leading-relaxed text-slate-200">
+                  {ctaText}
+                </p>
+              </div>
+              <Link
+                href={ctaHref}
+                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 text-sm font-black text-[#1D2E54] transition-all duration-300 hover:bg-[#49A98F] hover:text-white hover:-translate-y-0.5 shadow-md shrink-0 self-start md:self-center"
+              >
+                {ctaLabel}
+              </Link>
             </div>
-            <Link
-              href={ctaHref}
-              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 text-sm font-black text-[#1D2E54] transition-all duration-300 hover:bg-[#49A98F] hover:text-white hover:-translate-y-0.5 shadow-md shrink-0 self-start md:self-center"
-            >
-              {ctaLabel}
-            </Link>
           </div>
-        </div>
+        )}
       </section>
     </div>
   );

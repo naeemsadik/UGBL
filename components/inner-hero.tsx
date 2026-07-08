@@ -1,6 +1,7 @@
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import type { CSSProperties } from "react";
+import { useTranslation } from "@/lib/language-context";
 
 type InnerHeroProps = {
   title: string;
@@ -25,10 +26,40 @@ export function InnerHero({
   subtitleClassName,
   breadcrumbs,
 }: InnerHeroProps) {
+  const { tVisibility } = useTranslation();
+  const showHero = tVisibility("visibility.innerHero");
+
   const backgroundUrl =
     typeof backgroundImage === "string"
       ? backgroundImage
       : backgroundImage?.src;
+
+  const contentAlignClass =
+    contentAlignment === "right"
+      ? "items-end text-right"
+      : "items-start text-left";
+  const contentWrapperClass =
+    contentAlignment === "right" ? "flex justify-end" : "";
+
+  if (!showHero) {
+    return (
+      <section className="w-full bg-slate-50 border-b border-slate-200/80 pt-32 pb-8 md:pt-40 md:pb-12">
+        <div className="mx-auto w-full max-w-[1400px] px-6">
+          <div className={contentWrapperClass}>
+            <div className={`flex max-w-3xl flex-col ${contentAlignClass}`}>
+              <h1 className="text-3xl font-black tracking-tight text-[#1D2E54] md:text-5xl leading-tight">
+                {title}
+              </h1>
+              <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+                {subtitle}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   const heroStyle: CSSProperties | undefined = backgroundUrl
     ? {
         backgroundImage: `url("${backgroundUrl}")`,
@@ -38,12 +69,7 @@ export function InnerHero({
         backgroundColor: "#0d1b2a",
       }
     : undefined;
-  const contentAlignClass =
-    contentAlignment === "right"
-      ? "items-end text-right"
-      : "items-start text-left";
-  const contentWrapperClass =
-    contentAlignment === "right" ? "flex justify-end" : "";
+
 
   return (
     <section

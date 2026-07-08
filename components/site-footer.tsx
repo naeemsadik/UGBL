@@ -4,7 +4,11 @@ import Link from "next/link";
 import { useTranslation } from "@/lib/language-context";
 
 export function SiteFooter() {
-  const { t } = useTranslation();
+  const { t, tVisibility } = useTranslation();
+
+  if (!tVisibility("visibility.siteFooter")) {
+    return null;
+  }
 
   return (
     <footer className="bg-white">

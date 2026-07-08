@@ -15,6 +15,7 @@ type LanguageContextValue = {
   setLocale: (locale: Locale) => void;
   t: (key: TranslationKey) => string;
   tImage: (key: string, defaultImage: any) => any;
+  tVisibility: (key: string, defaultVisible?: boolean) => boolean;
   reloadOverrides: () => Promise<void>;
 };
 
@@ -87,16 +88,27 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     [overrides]
   );
 
+  const tVisibility = useCallback(
+    (key: string, defaultVisible = true): boolean => {
+      if (overrides && overrides[key] !== undefined) {
+        return overrides[key] === "true";
+      }
+      return defaultVisible;
+    },
+    [overrides]
+  );
+
   const reloadOverrides = useCallback(async () => {
     await loadOverrides(locale);
   }, [locale, loadOverrides]);
 
   return (
-    <LanguageContext value={{ locale, setLocale, t, tImage, reloadOverrides }}>
+    <LanguageContext value={{ locale, setLocale, t, tImage, tVisibility, reloadOverrides }}>
       {children}
     </LanguageContext>
   );
 }
+
 
 export function useTranslation() {
   const context = useContext(LanguageContext);
