@@ -352,7 +352,7 @@ export const en = {
   "offices.dhakaLine3": "Dhaka 1212, Bangladesh",
   "offices.dhakaPhone": "+880-2-58811819 ,+8802222286574",
   "offices.dhakaEmail": "info@rivertyneltd.com",
-  "offices.chattogramTitle": "Chattogram Office",
+  "offices.chattogramTitle": "Chattogram Office(Head Office)",
   "offices.chattogramLine1": "Rancon FC Khan Plaza (8th Floor)",
   "offices.chattogramLine2": "1407 Sheikh Mujib Road, Chowmohani",
   "offices.chattogramLine3": "Chattogram-4100, Bangladesh",
