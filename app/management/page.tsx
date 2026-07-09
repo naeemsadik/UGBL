@@ -142,7 +142,7 @@ export default function ManagementPage() {
         </div>
 
         {/* Fleet Ownership Table */}
-        {tVisibility("visibility.mgmtVesselPortfolio") && (
+        {tVisibility("visibility.mgmtVesselPortfolio", false) && (
           <div className="mt-10 rounded-[28px] border border-white/60 bg-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.08)] md:p-10">
             <span className="inline-flex items-center rounded-full bg-[#49A98F]/12 px-4 py-1 text-[0.7rem] font-black uppercase tracking-[0.24em] text-[#49A98F]">
               {t("mgmt.fleetLabel")}

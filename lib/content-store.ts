@@ -96,8 +96,8 @@ export async function writeOverrides(data: OverrideData): Promise<void> {
       );
       return;
     } catch (error) {
-      console.error("Error saving overrides to MongoDB:", error);
-      throw new Error("Database error saving overrides. Please check your MongoDB configuration.");
+      console.error("Error saving overrides to MongoDB, falling back to local file:", error);
+      // Fall through to local file persistence instead of throwing
     }
   }
 
@@ -107,7 +107,7 @@ export async function writeOverrides(data: OverrideData): Promise<void> {
     await fs.writeFile(OVERRIDES_FILE, JSON.stringify(data, null, 2), "utf8");
   } catch (error) {
     console.error("Failed to write local overrides file:", error);
-    throw new Error("Failed to save content overrides. Server filesystem is read-only (please configure MONGODB_URI in environment variables).");
+    throw new Error("Failed to save content overrides. Both MongoDB and local file storage failed.");
   }
 }
 
