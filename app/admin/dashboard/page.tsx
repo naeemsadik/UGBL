@@ -19,6 +19,7 @@ import {
   X,
 } from "lucide-react";
 import { useTranslation } from "@/lib/language-context";
+import { dictionaries } from "@/lib/translations";
 
 // Define the editor sections
 const SECTIONS = [
@@ -330,7 +331,7 @@ export default function AdminDashboardPage() {
 
     try {
       const res = await fetch("/api/admin/content", {
-        method: "PUT",
+        method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           locale: activeLocale,
@@ -631,7 +632,8 @@ export default function AdminDashboardPage() {
                 </div>
               ) : (
                 filteredKeys.map((item) => {
-                  const draftVal = draftOverrides[item.key] ?? (item.type === "boolean" ? "true" : "");
+                  const baseVal = (dictionaries[activeLocale] as Record<string, string>)?.[item.key] ?? (dictionaries.EN as Record<string, string>)?.[item.key] ?? "";
+                  const draftVal = draftOverrides[item.key] ?? (item.type === "boolean" ? "true" : baseVal);
                   const serverVal = serverOverrides[item.key] ?? (item.type === "boolean" ? "true" : "");
                   const isModifiedLocally = draftVal !== serverVal;
                   const isOverriddenOnServer = !!serverOverrides[item.key];
@@ -734,7 +736,7 @@ export default function AdminDashboardPage() {
                           <textarea
                             value={draftVal}
                             onChange={(e) => handleFieldChange(item.key, e.target.value)}
-                            placeholder="Insert text content..."
+                            placeholder={baseVal || "Insert text content..."}
                             rows={4}
                             className="w-full rounded-xl border border-slate-800 bg-slate-950/80 p-3.5 text-sm text-white placeholder-slate-700 outline-none transition focus:border-slate-800"
                           />
@@ -762,7 +764,7 @@ export default function AdminDashboardPage() {
                             type="text"
                             value={draftVal}
                             onChange={(e) => handleFieldChange(item.key, e.target.value)}
-                            placeholder="Insert text line..."
+                            placeholder={baseVal || "Insert text line..."}
                             className="w-full rounded-xl border border-slate-800 bg-slate-950/80 px-3.5 py-2.5 text-sm text-white placeholder-slate-700 outline-none transition focus:border-slate-800"
                           />
                         )}
